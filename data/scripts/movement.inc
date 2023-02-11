@@ -6,6 +6,46 @@ Common_Movement_ExclamationMark:
 	emote_exclamation_mark
 	step_end
 
+Common_Movement_Heart:
+	emote_heart
+	step_end
+
+Common_Movement_SingleQuestionMark:
+	emote_single_question_mark
+	step_end
+
+Common_Movement_DoubleExclamationMark:
+	emote_double_exclamation_mark
+	step_end
+
+Common_Movement_DoubleQuestionMark:
+	emote_double_question_mark
+	step_end
+
+Common_Movement_CrossEyes:
+	emote_cross_eyes
+	step_end
+
+Common_Movement_DizzySpiral:
+	emote_dizzy_spiral
+	step_end
+
+Common_Movement_AngryEyes:
+	emote_angry_eyes
+	step_end
+
+Common_Movement_ZeeZeeZee:
+	emote_zee_zee_zee
+	step_end
+
+Common_Movement_AnimeEyes:
+	emote_anime_eyes
+	step_end
+
+Common_Movement_DotDotDot:
+	emote_dot_dot_dot
+	step_end
+
 Common_Movement_Delay48:
 	delay_16
 	delay_16

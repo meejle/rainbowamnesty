@@ -52,6 +52,15 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_UseDive                   @ FLDEFF_USE_DIVE
 	.4byte gFieldEffectScript_PokeballTrail             @ FLDEFF_POKEBALL_TRAIL
 	.4byte gFieldEffectScript_HeartIcon                 @ FLDEFF_HEART_ICON
+	.4byte gFieldEffectScript_SingleQuestionMarkIcon      @ FLDEFF_SINGLE_QUESTION_MARK_ICON
+	.4byte gFieldEffectScript_DoubleExclamationMarkIcon      @ FLDEFF_DOUBLE_EXCLAMATION_MARK_ICON
+	.4byte gFieldEffectScript_DoubleQuestionMarkIcon      @ FLDEFF_DOUBLE_QUESTION_MARK_ICON
+	.4byte gFieldEffectScript_CrossEyesIcon      @ FLDEFF_CROSS_EYES_ICON
+	.4byte gFieldEffectScript_DizzySpiralIcon      @ FLDEFF_DIZZY_SPIRAL_ICON
+	.4byte gFieldEffectScript_AngryEyesIcon      @ FLDEFF_ANGRY_EYES_ICON
+	.4byte gFieldEffectScript_ZeeZeeZeeIcon      @ FLDEFF_ZEE_ZEE_ZEE_ICON
+	.4byte gFieldEffectScript_AnimeEyesIcon      @ FLDEFF_ANIME_EYES_ICON
+	.4byte gFieldEffectScript_DotDotDotIcon      @ FLDEFF_DOT_DOT_DOT_ICON
 	.4byte gFieldEffectScript_Nop47                     @ FLDEFF_NOP_47
 	.4byte gFieldEffectScript_Nop48                     @ FLDEFF_NOP_48
 	.4byte gFieldEffectScript_AshPuff                   @ FLDEFF_ASH_PUFF
@@ -261,6 +270,42 @@ gFieldEffectScript_PokeballTrail::
 
 gFieldEffectScript_HeartIcon::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect0, FldEff_HeartIcon
+	field_eff_end
+
+gFieldEffectScript_SingleQuestionMarkIcon::
+	field_eff_callnative FldEff_SingleQuestionMarkIcon
+	field_eff_end
+
+gFieldEffectScript_DoubleExclamationMarkIcon::
+	field_eff_callnative FldEff_DoubleExclamationMarkIcon
+	field_eff_end
+
+gFieldEffectScript_DoubleQuestionMarkIcon::
+	field_eff_callnative FldEff_DoubleQuestionMarkIcon
+	field_eff_end
+
+gFieldEffectScript_CrossEyesIcon::
+	field_eff_callnative FldEff_CrossEyesIcon
+	field_eff_end
+
+gFieldEffectScript_DizzySpiralIcon::
+	field_eff_callnative FldEff_DizzySpiralIcon
+	field_eff_end
+
+gFieldEffectScript_AngryEyesIcon::
+	field_eff_callnative FldEff_AngryEyesIcon
+	field_eff_end
+
+gFieldEffectScript_ZeeZeeZeeIcon::
+	field_eff_callnative FldEff_ZeeZeeZeeIcon
+	field_eff_end
+
+gFieldEffectScript_AnimeEyesIcon::
+	field_eff_callnative FldEff_AnimeEyesIcon
+	field_eff_end
+
+gFieldEffectScript_DotDotDotIcon::
+	field_eff_callnative FldEff_DotDotDotIcon
 	field_eff_end
 
 gFieldEffectScript_Nop47::
