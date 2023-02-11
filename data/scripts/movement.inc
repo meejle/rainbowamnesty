@@ -7,10 +7,6 @@ Common_Movement_ExclamationMark:
 	step_end
 
 Common_Movement_Heart:
-	emote_heart
-	step_end
-
-Common_Movement_SingleQuestionMark:
 	emote_single_question_mark
 	step_end
 

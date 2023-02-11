@@ -90,11 +90,96 @@ LittlerootTown_BrendansHouse_1F_EventScript_PetalburgGymReport::
 
 LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor::
 	lockall
+
+
 	playse SE_PIN
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_PIN
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_DoubleExclamationMark
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_RG_HELP_OPEN
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_QuestionMark
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_RG_HELP_OPEN
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_DoubleQuestionMark
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_SHINY
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Heart
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_M_STAT_DECREASE
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_CrossEyes
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_M_ATTRACT2
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_DizzySpiral
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_FAILURE
 	applymovement LOCALID_RIVAL_MOM, Common_Movement_AngryEyes
 	waitmovement 0
 	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
 	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_M_SNORE
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_ZeeZeeZee
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	playse SE_M_DETECT
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_AnimeEyes
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_DotDotDot
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_RIVAL_MOM, Common_Movement_Delay48
+	waitmovement 0
+
+
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	applymovement LOCALID_RIVAL_MOM, LittlerootTown_BrendansHouse_1F_Movement_RivalMomApproach
 	waitmovement 0

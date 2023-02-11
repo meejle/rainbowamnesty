@@ -249,7 +249,7 @@ static const union AnimCmd *const sSpriteAnimTable_Icons[] =
 static const struct SpriteTemplate sSpriteTemplate_ExclamationQuestionMark =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_ExclamationQuestionMark,
@@ -260,7 +260,7 @@ static const struct SpriteTemplate sSpriteTemplate_ExclamationQuestionMark =
 static const struct SpriteTemplate sSpriteTemplate_HeartIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = FLDEFF_PAL_TAG_GENERAL_0,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_HeartIcon,
@@ -271,7 +271,7 @@ static const struct SpriteTemplate sSpriteTemplate_HeartIcon =
 static const struct SpriteTemplate sSpriteTemplate_SingleQuestionMarkIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_SingleQuestionMarkIcon,
@@ -282,7 +282,7 @@ static const struct SpriteTemplate sSpriteTemplate_SingleQuestionMarkIcon =
 static const struct SpriteTemplate sSpriteTemplate_DoubleExclamationMarkIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_DoubleExclamationMarkIcon,
@@ -293,7 +293,7 @@ static const struct SpriteTemplate sSpriteTemplate_DoubleExclamationMarkIcon =
 static const struct SpriteTemplate sSpriteTemplate_DoubleQuestionMarkIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_DoubleQuestionMarkIcon,
@@ -304,7 +304,7 @@ static const struct SpriteTemplate sSpriteTemplate_DoubleQuestionMarkIcon =
 static const struct SpriteTemplate sSpriteTemplate_CrossEyesIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_CrossEyesIcon,
@@ -315,7 +315,7 @@ static const struct SpriteTemplate sSpriteTemplate_CrossEyesIcon =
 static const struct SpriteTemplate sSpriteTemplate_DizzySpiralIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_DizzySpiralIcon,
@@ -326,7 +326,7 @@ static const struct SpriteTemplate sSpriteTemplate_DizzySpiralIcon =
 static const struct SpriteTemplate sSpriteTemplate_AngryEyesIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_AngryEyesIcon,
@@ -337,7 +337,7 @@ static const struct SpriteTemplate sSpriteTemplate_AngryEyesIcon =
 static const struct SpriteTemplate sSpriteTemplate_ZeeZeeZeeIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_ZeeZeeZeeIcon,
@@ -348,7 +348,7 @@ static const struct SpriteTemplate sSpriteTemplate_ZeeZeeZeeIcon =
 static const struct SpriteTemplate sSpriteTemplate_AnimeEyesIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_AnimeEyesIcon,
@@ -359,7 +359,7 @@ static const struct SpriteTemplate sSpriteTemplate_AnimeEyesIcon =
 static const struct SpriteTemplate sSpriteTemplate_DotDotDotIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_DotDotDotIcon,
@@ -885,7 +885,7 @@ u8 FldEff_ExclamationMarkIcon(void)
 
 u8 FldEff_QuestionMarkIcon(void)
 {
-    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ExclamationQuestionMark, 0, 0, 0x52);
+    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ExclamationQuestionMark, 0, 0, 0x53);
 
     if (spriteId != MAX_SPRITES)
         SetIconSpriteData(&gSprites[spriteId], FLDEFF_QUESTION_MARK_ICON, 1);
@@ -895,7 +895,7 @@ u8 FldEff_QuestionMarkIcon(void)
 
 u8 FldEff_HeartIcon(void)
 {
-    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_HeartIcon, 0, 0, 0x52);
+    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_HeartIcon, 0, 0, 0x53);
 
     if (spriteId != MAX_SPRITES)
     {
