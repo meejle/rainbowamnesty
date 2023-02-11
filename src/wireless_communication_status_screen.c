@@ -334,7 +334,7 @@ static void Task_WirelessCommunicationScreen(u8 taskId)
 
 #undef tState
 
-static void WCSS_AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 * str, u8 x, u8 y, u8 mode)
+static void WCSS_AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 mode)
 {
     u8 color[3];
 
@@ -372,39 +372,7 @@ static void WCSS_AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 * 
 
 static u32 CountPlayersInGroupAndGetActivity(struct RfuPlayer * player, u32 * groupCounts)
 {
-    int i, j, k;
-    u32 activity = player->rfu.data.activity;
-
-    #define group_activity(i) (sActivityGroupInfo[(i)][0])
-    #define group_type(i)     (sActivityGroupInfo[(i)][1])
-    #define group_players(i)  (sActivityGroupInfo[(i)][2])
-
-    for (i = 0; i < ARRAY_COUNT(sActivityGroupInfo); i++)
-    {
-#ifdef UBFIX
-        // GROUPTYPE_NONE is -1, and shouldn't be used as an index into groupCounts.
-        // In theory the only activity with this group type (ACTIVITY_SEARCH) wouldn't
-        // satisfy the condition below, but not necessarily.
-        if (group_type(i) == GROUPTYPE_NONE)
-            continue;
-#endif
-        if (activity == group_activity(i) && player->groupScheduledAnim == UNION_ROOM_SPAWN_IN)
-        {
-            if (group_players(i) == 0)
-            {
-                k = 0;
-                for (j = 0; j < RFU_CHILD_MAX; j++)
-                    if (player->rfu.data.partnerInfo[j] != 0) k++;
-                k++;
-                groupCounts[group_type(i)] += k;
-            }
-            else
-            {
-                groupCounts[group_type(i)] += group_players(i);
-            }
-        }
-    }
-    return activity;
+    return;
 
     #undef group_activity
     #undef group_type
