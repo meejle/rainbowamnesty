@@ -49,7 +49,7 @@ LV          = 34
 '¡'         = 52
 PK          = 53
 PKMN        = 53 54
-POKEBLOCK   = 55 56 57 58 59
+POKEBLOCK   = 55 56
 'Í'         = 5A
 '%'         = 5B
 '('         = 5C
@@ -155,6 +155,9 @@ SUPER_RE    = A0
 'ü'         = F6
 TALL_PLUS   = FC 0C FB
 '$'         = FF
+
+MATTMCK     = 57 E1 D5 E8 E8 E1 D7 DF
+COPYRIGHT   = 58
 
 @ Hiragana
 'あ' = 01

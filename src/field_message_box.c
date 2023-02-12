@@ -6,6 +6,8 @@
 #include "match_call.h"
 #include "field_message_box.h"
 
+#include "field_name_box.h"
+
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
 
 static void ExpandStringAndStartDrawFieldMessage(const u8 *, bool32);
