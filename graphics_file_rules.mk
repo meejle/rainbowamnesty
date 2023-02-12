@@ -281,16 +281,31 @@ $(TILESETGFXDIR)/secondary/mystery_events_house/tiles.4bpp: %.4bpp: %.png
 $(FONTGFXDIR)/small.latfont: $(FONTGFXDIR)/latin_small.png
 	$(GFX) $< $@
 
+$(FONTGFXDIR)/small_subpixel.latfont: $(FONTGFXDIR)/latin_small_subpixel.png
+	$(GFX) $< $@
+
 $(FONTGFXDIR)/normal.latfont: $(FONTGFXDIR)/latin_normal.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/normal_subpixel.latfont: $(FONTGFXDIR)/latin_normal_subpixel.png
 	$(GFX) $< $@
 
 $(FONTGFXDIR)/short.latfont: $(FONTGFXDIR)/latin_short.png
 	$(GFX) $< $@
 
+$(FONTGFXDIR)/short_subpixel.latfont: $(FONTGFXDIR)/latin_short_subpixel.png
+	$(GFX) $< $@
+
 $(FONTGFXDIR)/narrow.latfont: $(FONTGFXDIR)/latin_narrow.png
 	$(GFX) $< $@
 
+$(FONTGFXDIR)/narrow_subpixel.latfont: $(FONTGFXDIR)/latin_narrow_subpixel.png
+	$(GFX) $< $@
+
 $(FONTGFXDIR)/small_narrow.latfont: $(FONTGFXDIR)/latin_small_narrow.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/small_narrow_subpixel.latfont: $(FONTGFXDIR)/latin_small_narrow_subpixel.png
 	$(GFX) $< $@
 
 $(FONTGFXDIR)/small.hwjpnfont: $(FONTGFXDIR)/japanese_small.png
