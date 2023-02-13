@@ -156,9 +156,6 @@ SUPER_RE    = A0
 TALL_PLUS   = FC 0C FB
 '$'         = FF
 
-MATTMCK     = 57 E1 D5 E8 E8 E1 D7 DF
-COPYRIGHT   = 58
-
 @ Hiragana
 'あ' = 01
 'い' = 02

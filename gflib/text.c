@@ -961,7 +961,7 @@ void TextPrinterDrawDownArrow(struct TextPrinter *textPrinter)
                 textPrinter->printerTemplate.windowId,
                 arrowTiles,
                 0,
-                sDownArrowYCoords[subStruct->downArrowYPosIdx],
+                sDownArrowYCoords[subStruct->downArrowYPosIdx], // Makes the arrow bounce up and down
                 8,
                 16,
                 textPrinter->printerTemplate.currentX,
@@ -970,7 +970,7 @@ void TextPrinterDrawDownArrow(struct TextPrinter *textPrinter)
                 16);
             CopyWindowToVram(textPrinter->printerTemplate.windowId, COPYWIN_GFX);
 
-            subStruct->downArrowDelay = 8;
+            subStruct->downArrowDelay = 8; // Controls the speed of the bouncing (default is 8)
             subStruct->downArrowYPosIdx++;
         }
     }

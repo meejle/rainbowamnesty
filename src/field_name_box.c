@@ -158,7 +158,7 @@ static void AddTextPrinterForName() {
     
     printer.currentChar = gStringVar3;
     printer.windowId = sNameboxWindowId;
-    printer.fontId = 1; // Can use FONT_NARROW, etc, here.
+    printer.fontId = FONT_SMALL_NARROW_SUBPIXEL; // Can use FONT_NARROW, etc, here.
     printer.x = 5; 
     printer.y = 0;
     printer.currentX = printer.x;
