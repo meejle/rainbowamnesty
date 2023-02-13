@@ -89,6 +89,9 @@ static EWRAM_DATA struct CreditsData *sCreditsData = {0};
 
 static const u16 sCredits_Pal[] = INCBIN_U16("graphics/credits/credits.gbapal");
 static const u32 sCreditsCopyrightEnd_Gfx[] = INCBIN_U32("graphics/credits/the_end_copyright.4bpp.lz");
+static const u16 sTheEndCopyright_Pal[] = INCBIN_U16("graphics/credits/the_end_copyright.gbapal");
+static const u32 sTheEndCopyright_Tilemap[] = INCBIN_U32("graphics/credits/the_end_copyright.bin.lz");
+static const u32 sTheEndScreen_Tilemap[] = INCBIN_U32("graphics/credits/the_end_screen.bin.lz");
 
 static void SpriteCB_CreditsMonBg(struct Sprite *);
 static void Task_WaitPaletteFade(u8);
@@ -118,51 +121,6 @@ static void SpriteCB_Player(struct Sprite *);
 static void SpriteCB_Rival(struct Sprite *);
 static u8 CreateCreditsMonSprite(u16, s16, s16, u16);
 static void DeterminePokemonToShow(void);
-
-static const u8 sTheEnd_LetterMap_T[] =
-{
-    0,    1, 0,
-    0xFF, 1, 0xFF,
-    0xFF, 1, 0xFF,
-    0xFF, 1, 0xFF,
-    0xFF, 1, 0xFF,
-};
-
-static const u8 sTheEnd_LetterMap_H[] =
-{
-    1, 0xFF, 1,
-    1, 0xFF, 1,
-    1, 2,    1,
-    1, 0xFF, 1,
-    1, 0xFF, 1,
-};
-
-static const u8 sTheEnd_LetterMap_E[] =
-{
-    1, 0, 0,
-    1, 0xFF, 0xFF,
-    1, 2,    2,
-    1, 0xFF, 0xFF,
-    1, 0x80, 0x80,
-};
-
-static const u8 sTheEnd_LetterMap_N[] =
-{
-    1, 3, 1,
-    1, 4, 1,
-    1, 5, 1,
-    1, 0xC4, 1,
-    1, 0xC3, 1,
-};
-
-static const u8 sTheEnd_LetterMap_D[] =
-{
-    1, 6, 7,
-    1, 8, 9,
-    1, 0xFF, 1,
-    1, 0x88, 0x89,
-    1, 0x86, 0x87,
-};
 
 #include "data/credits.h"
 
@@ -1286,61 +1244,17 @@ static void ResetCreditsTasks(u8 taskId)
     gIntroCredits_MovingSceneryState = INTROCRED_SCENERY_DESTROY;
 }
 
-static void LoadTheEndScreen(u16 tileOffsetLoad, u16 tileOffsetWrite, u16 palOffset)
+static void LoadTheEndScreen(u16 tilesetAddress, u16 tilemapAddress, u16 paletteAddress)
 {
-    u16 baseTile;
-    u16 i;
-
-    LZ77UnCompVram(sCreditsCopyrightEnd_Gfx, (void *)(VRAM + tileOffsetLoad));
-    LoadPalette(gIntroCopyright_Pal, palOffset, sizeof(gIntroCopyright_Pal));
-
-    baseTile = (palOffset / 16) << 12;
-
-    for (i = 0; i < 32 * 32; i++)
-        ((u16 *) (VRAM + tileOffsetWrite))[i] = baseTile + 1;
+    LZ77UnCompVram(sCreditsCopyrightEnd_Gfx, (void *)(VRAM + tilesetAddress));
+    LZ77UnCompVram(sTheEndCopyright_Tilemap, (void *)(VRAM + tilemapAddress));
+    LoadPalette(sTheEndCopyright_Pal, paletteAddress, 0x20);
 }
 
-static u16 GetLetterMapTile(u8 baseTiles)
+static void DrawTheEnd(u16 tilemapAddress, u16 paletteAddress)
 {
-    u16 out = (baseTiles & 0x3F) + 80;
-
-    if (baseTiles == 0xFF)
-        return 1;
-
-    if (baseTiles & (1 << 7))
-        out |= 1 << 11;
-    if (baseTiles & (1 << 6))
-        out |= 1 << 10;
-
-    return out;
-}
-
-static void DrawLetterMapTiles(const u8 baseTiles[], u8 baseX, u8 baseY, u16 offset, u16 palette)
-{
-    u8 y, x;
-    const u16 tileOffset = (palette / 16) << 12;
-
-    for (y = 0; y < 5; y++)
-    {
-        for (x = 0; x < 3; x++)
-            ((u16 *) (VRAM + offset + (baseY + y) * 64))[baseX + x] = tileOffset + GetLetterMapTile(baseTiles[y * 3 + x]);
-    }
-}
-
-static void DrawTheEnd(u16 offset, u16 palette)
-{
-    u16 pos;
-    u16 baseTile = (palette / 16) << 12;
-
-    for (pos = 0; pos < 32 * 32; pos++)
-        ((u16 *) (VRAM + offset))[pos] = baseTile + 1;
-
-    DrawLetterMapTiles(sTheEnd_LetterMap_T, 3, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_H, 7, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_E, 11, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_E, 16, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_N, 20, 7, offset, palette);
-    DrawLetterMapTiles(sTheEnd_LetterMap_D, 24, 7, offset, palette);
+    LZ77UnCompVram(sTheEndScreen_Tilemap, (void *)(VRAM + tilemapAddress));
+    LoadPalette(sTheEndCopyright_Pal, paletteAddress, 0x20);
 }
 
 #define sState data[0]

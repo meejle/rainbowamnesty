@@ -123,7 +123,7 @@ static const struct CreditsEntry sCreditsEntry_AddScript1[] = {11, FALSE, sCredi
 static const u8 sCreditsText_AddScript2[] = _("{FONT_NARROW}Faith120   FieryMewtwo   hjk321   ipatix");
 static const struct CreditsEntry sCreditsEntry_AddScript2[] = {11, FALSE, sCreditsText_AddScript2};
 
-static const u8 sCreditsText_AddScript3[] = _("{FONT_NARROW}Jaizu   jrz3   jrz3   ketsuban   Kurausukun");
+static const u8 sCreditsText_AddScript3[] = _("{FONT_NARROW}Jaizu   jrz3   ketsuban   Kurausukun");
 static const struct CreditsEntry sCreditsEntry_AddScript3[] = {11, FALSE, sCreditsText_AddScript3};
 static const u8 sCreditsText_AddScript4[] = _("{FONT_NARROW}LOuroboros   NotToDisturb   ProfLeonDiasBackup");
 static const struct CreditsEntry sCreditsEntry_AddScript4[] = {11, FALSE, sCreditsText_AddScript4};
@@ -423,27 +423,6 @@ static const struct CreditsEntry sCreditsEntry_DevelopedBy[] = {11, TRUE, sCredi
 static const u8 sCreditsText_DevelopedBy1[] = _("{FONT_NARROW}GAME FREAK inc.");
 static const struct CreditsEntry sCreditsEntry_DevelopedBy1[] = {11, FALSE, sCreditsText_DevelopedBy1};
 
-static const u8 sCreditsText_Copyright1[] = _("{FONT_NARROW}{COPYRIGHT}{FONT_NORMAL} Pokémon.\n{FONT_NARROW}{COPYRIGHT}{FONT_NORMAL} Nintendo\n{FONT_NARROW}{COPYRIGHT}{FONT_NORMAL} Creatures Inc.\n{FONT_NARROW}{COPYRIGHT}{FONT_NORMAL} GAME FREAK inc.");
-static const struct CreditsEntry sCreditsEntry_Copyright1[] = {11, FALSE, sCreditsText_Copyright1};
-
-static const u8 sCreditsText_Copyright2[] = _("{FONT_NARROW}Nintendo, The Pokémon Company, and");
-static const struct CreditsEntry sCreditsEntry_Copyright2[] = {11, FALSE, sCreditsText_Copyright2};
-static const u8 sCreditsText_Copyright3[] = _("{FONT_NARROW}GAME FREAK inc. are the authors of");
-static const struct CreditsEntry sCreditsEntry_Copyright3[] = {11, FALSE, sCreditsText_Copyright3};
-static const u8 sCreditsText_Copyright4[] = _("{FONT_NARROW}this software for the purpose of copyright.");
-static const struct CreditsEntry sCreditsEntry_Copyright4[] = {11, FALSE, sCreditsText_Copyright4};
-static const u8 sCreditsText_Copyright5[] = _("{FONT_NARROW}All rights reserved.");
-static const struct CreditsEntry sCreditsEntry_Copyright5[] = {11, FALSE, sCreditsText_Copyright5};
-
-static const u8 sCreditsText_Copyright6[] = _("{FONT_NARROW}Nintendo, The Pokémon Company et");
-static const struct CreditsEntry sCreditsEntry_Copyright6[] = {11, FALSE, sCreditsText_Copyright6};
-static const u8 sCreditsText_Copyright7[] = _("{FONT_NARROW}GAME FREAK inc. sont les auteurs de ce");
-static const struct CreditsEntry sCreditsEntry_Copyright7[] = {11, FALSE, sCreditsText_Copyright7};
-static const u8 sCreditsText_Copyright8[] = _("{FONT_NARROW}logiciel au regard du droit d'auteur.");
-static const struct CreditsEntry sCreditsEntry_Copyright8[] = {11, FALSE, sCreditsText_Copyright8};
-static const u8 sCreditsText_Copyright9[] = _("{FONT_NARROW}Tous droits réservés.");
-static const struct CreditsEntry sCreditsEntry_Copyright9[] = {11, FALSE, sCreditsText_Copyright9};
-
 static const u8 sCreditsText_Reserved[] = _("- Page reserved -");
 static const struct CreditsEntry sCreditsEntry_Reserved[] = {11, TRUE, sCreditsText_Reserved};
 
@@ -607,247 +586,247 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
     },
     [PAGE_PARAMETRIC_DESIGNERS] = {
         _,
+        sCreditsEntry_Reserved,
+        _,
+        _,
+        _,
+    },
+    [PAGE_POKEDEX_TEXT] = {
+        _,
+        sCreditsEntry_Reserved,
+        _,
+        _,
+        _,
+    },
+    [PAGE_ENVIRONMENT_AND_TOOL_PROGRAMS_1] = {
+        _,
+        sCreditsEntry_Reserved,
+        _,
+        _,
+        _,
+    },
+    [PAGE_PKMN_DESIGNERS_1] = {
+        _,
         sCreditsEntry_PkmnEmeraldVersion,
         sCreditsEntry_OriginalCredits,
         _,
         _,
     },
-    [PAGE_POKEDEX_TEXT] = {
+    [PAGE_PKMN_DESIGNERS_2] = {
         _,
         sCreditsEntry_Director,
         sCreditsEntry_Director1,
         _,
         _,
     },
-    [PAGE_ENVIRONMENT_AND_TOOL_PROGRAMS_1] = {
+    [PAGE_PKMN_DESIGNERS_3] = {
         sCreditsEntry_ArtDirector,
         sCreditsEntry_ArtDirector1,
         sCreditsEntry_WorldDirector,
         sCreditsEntry_WorldDirector1,
         _,
     },
-    [PAGE_PKMN_DESIGNERS_1] = {
+    [PAGE_PKMN_DESIGNERS_4] = {
         sCreditsEntry_Programmers,
         sCreditsEntry_Programmers1,
         sCreditsEntry_Programmers2,
         sCreditsEntry_Programmers3,
         sCreditsEntry_Programmers4,
     },
-    [PAGE_PKMN_DESIGNERS_2] = {
+    [PAGE_SUPPORT_PROGRAMMERS] = {
         sCreditsEntry_Programmers,
         sCreditsEntry_Programmers5,
         sCreditsEntry_Programmers6,
         sCreditsEntry_Programmers7,
         sCreditsEntry_Programmers8,
     },
-    [PAGE_PKMN_DESIGNERS_3] = {
+    [PAGE_NCL_PRODUCT_TESTING] = {
         sCreditsEntry_Programmers,
         sCreditsEntry_Programmers9,
         sCreditsEntry_Programmers10,
         _,
         _,
     },
-    [PAGE_PKMN_DESIGNERS_4] = {
+    [PAGE_PACKAGE_AND_MANUAL] = {
         sCreditsEntry_GraphicArtists,
         sCreditsEntry_GraphicArtists1,
         sCreditsEntry_GraphicArtists2,
         sCreditsEntry_GraphicArtists3,
         sCreditsEntry_GraphicArtists4,
     },
-    [PAGE_SUPPORT_PROGRAMMERS] = {
+    [PAGE_SPECIAL_THANKS_1] = {
         sCreditsEntry_GraphicArtists,
         sCreditsEntry_GraphicArtists5,
         sCreditsEntry_GraphicArtists6,
         _,
         _,
     },
-    [PAGE_NCL_PRODUCT_TESTING] = {
+    [PAGE_SPECIAL_THANKS_2] = {
         sCreditsEntry_MusicComposition,
         sCreditsEntry_MusicComposition1,
         sCreditsEntry_MusicComposition2,
         sCreditsEntry_SoundEffects,
         sCreditsEntry_SoundEffects1,
     },
-    [PAGE_PACKAGE_AND_MANUAL] = {
+    [PAGE_SPECIAL_THANKS_3] = {
         sCreditsEntry_GameDesigners,
         sCreditsEntry_GameDesigners1,
         sCreditsEntry_GameDesigners2,
         sCreditsEntry_GameDesigners3,
         sCreditsEntry_GameDesigners4,
     },
-    [PAGE_SPECIAL_THANKS_1] = {
+    [PAGE_SPECIAL_THANKS_4] = {
         sCreditsEntry_GameDesigners,
         sCreditsEntry_GameDesigners5,
         sCreditsEntry_GameDesigners6,
         _,
         _,
     },
-    [PAGE_SPECIAL_THANKS_2] = {
+    [PAGE_INFORMATION_SUPERVISORS] = {
         sCreditsEntry_Scenario,
         sCreditsEntry_Scenario1,
         sCreditsEntry_Scenario2,
         sCreditsEntry_Scenario3,
         _,
     },
-    [PAGE_SPECIAL_THANKS_3] = {
+    [PAGE_ARTWORK_1] = {
         sCreditsEntry_Scripting,
         sCreditsEntry_Scripting1,
         sCreditsEntry_MapDesign,
         sCreditsEntry_MapDesign1,
         sCreditsEntry_MapDesign2,
     },
-    [PAGE_SPECIAL_THANKS_4] = {
+    [PAGE_ARTWORK_2] = {
         sCreditsEntry_BFData,
         sCreditsEntry_BFData1,
         sCreditsEntry_Parametrics,
         sCreditsEntry_Parametrics1,
         sCreditsEntry_Parametrics2,
     },
-    [PAGE_INFORMATION_SUPERVISORS] = {
+    [PAGE_ARTWORK_3] = {
         sCreditsEntry_DexText,
         sCreditsEntry_DexText1,
         sCreditsEntry_ToolProg,
         sCreditsEntry_ToolProg1,
         sCreditsEntry_ToolProg2,
     },
-    [PAGE_ARTWORK_1] = {
+    [PAGE_COORDINATORS] = {
         sCreditsEntry_ToolProg,
         sCreditsEntry_ToolProg3,
         sCreditsEntry_ToolProg4,
         _,
         _,
     },
-    [PAGE_ARTWORK_2] = {
+    [PAGE_ENGLISH_VERSION] = {
         sCreditsEntry_PkmnDesign,
         sCreditsEntry_PkmnDesign1,
         sCreditsEntry_PkmnDesign2,
         sCreditsEntry_PkmnDesign3,
         sCreditsEntry_PkmnDesign4,
     },
-    [PAGE_ARTWORK_3] = {
+    [PAGE_TRANSLATOR] = {
         sCreditsEntry_PkmnDesign,
         sCreditsEntry_PkmnDesign5,
         sCreditsEntry_PkmnDesign6,
         sCreditsEntry_PkmnDesign7,
         _,
     },
-    [PAGE_COORDINATORS] = {
+    [PAGE_TEXT_EDITOR] = {
         sCreditsEntry_DebuggingSupport,
         sCreditsEntry_ProgSupport1,
         sCreditsEntry_NCLTesting,
         sCreditsEntry_NCLTesting1,
         _,
     },
-    [PAGE_ENGLISH_VERSION] = {
+    [PAGE_NCL_COORDINATOR] = {
         sCreditsEntry_Manual,
         sCreditsEntry_Manual1,
         sCreditsEntry_SpecialThanks,
         sCreditsEntry_SpecialThanks1,
         sCreditsEntry_SpecialThanks2,
     },
-    [PAGE_TRANSLATOR] = {
+    [PAGE_PROGRAMMERS_5] = {
         sCreditsEntry_SpecialThanks,
         sCreditsEntry_SpecialThanks3,
         sCreditsEntry_SpecialThanks4,
         sCreditsEntry_SpecialThanks5,
         sCreditsEntry_SpecialThanks6,
     },
-    [PAGE_TEXT_EDITOR] = {
+    [PAGE_GRAPHIC_DESIGNER] = {
         sCreditsEntry_SpecialThanks,
         sCreditsEntry_SpecialThanks7,
         sCreditsEntry_SpecialThanks8,
         _,
         _,
     },
-    [PAGE_NCL_COORDINATOR] = {
+    [PAGE_ENVIRONMENT_AND_TOOL_PROGRAMS_2] = {
         sCreditsEntry_InfoSpv,
         sCreditsEntry_InfoSpv1,
         sCreditsEntry_InfoSpv2,
         sCreditsEntry_Artwork,
         sCreditsEntry_Artwork1,
     },
-    [PAGE_PROGRAMMERS_5] = {
+    [PAGE_NOA_TESTING] = {
         sCreditsEntry_Artwork,
         sCreditsEntry_Artwork2,
         sCreditsEntry_Artwork3,
         sCreditsEntry_Artwork4,
         _,
     },
-    [PAGE_GRAPHIC_DESIGNER] = {
+    [PAGE_BRAILLE_CODE_CHECK_1] = {
         sCreditsEntry_Coordination,
         sCreditsEntry_Coordination1,
         sCreditsEntry_Coordination2,
         sCreditsEntry_Coordination3,
         sCreditsEntry_Coordination4,
     },
-    [PAGE_ENVIRONMENT_AND_TOOL_PROGRAMS_2] = {
+    [PAGE_BRAILLE_CODE_CHECK_2] = {
         sCreditsEntry_Translation,
         sCreditsEntry_Translation1,
         sCreditsEntry_TextEdit,
         sCreditsEntry_TextEdit1,
         _,
     },
-    [PAGE_NOA_TESTING] = {
+    [PAGE_SPECIAL_THANKS_5] = {
         sCreditsEntry_NCLcoord,
         sCreditsEntry_NCLcoord1,
         sCreditsEntry_NOAtest,
         sCreditsEntry_NOAtest1,
         sCreditsEntry_NOAtest2,
     },
-    [PAGE_BRAILLE_CODE_CHECK_1] = {
+    [PAGE_TASK_MANAGERS] = {
         sCreditsEntry_Braille,
         sCreditsEntry_Braille1,
         sCreditsEntry_Braille1b,
         sCreditsEntry_Braille2,
         sCreditsEntry_Braille3,
     },
-    [PAGE_BRAILLE_CODE_CHECK_2] = {
+    [PAGE_PRODUCERS] = {
         sCreditsEntry_Braille,
         sCreditsEntry_Braille4,
         sCreditsEntry_Braille5,
         _,
         _,
     },
-    [PAGE_SPECIAL_THANKS_5] = {
+    [PAGE_EXECUTIVE_DIRECTOR] = {
         sCreditsEntry_Taskmgr,
         sCreditsEntry_Taskmgr1,
         sCreditsEntry_Producers,
         sCreditsEntry_Producers1,
         sCreditsEntry_Producers2,
     },
-    [PAGE_TASK_MANAGERS] = {
+    [PAGE_EXECUTIVE_PRODUCERS_1] = {
         sCreditsEntry_Execdir,
         sCreditsEntry_Execdir1,
         sCreditsEntry_Execprod,
         sCreditsEntry_Execprod1,
         sCreditsEntry_Execprod2,
     },
-    [PAGE_PRODUCERS] = {
+    [PAGE_EXECUTIVE_PRODUCERS_2] = {
         _,
         sCreditsEntry_DevelopedBy,
         sCreditsEntry_DevelopedBy1,
         _,
-        _,
-    },
-    [PAGE_EXECUTIVE_DIRECTOR] = {
-        sCreditsEntry_Copyright1,
-        _,
-        _,
-        _,
-        _,
-    },
-    [PAGE_EXECUTIVE_PRODUCERS_1] = {
-        sCreditsEntry_Copyright2,
-        sCreditsEntry_Copyright3,
-        sCreditsEntry_Copyright4,
-        sCreditsEntry_Copyright5,
-        _,
-    },
-    [PAGE_EXECUTIVE_PRODUCERS_2] = {
-        sCreditsEntry_Copyright6,
-        sCreditsEntry_Copyright7,
-        sCreditsEntry_Copyright8,
-        sCreditsEntry_Copyright9,
         _,
     },
 };
