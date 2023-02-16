@@ -1,10 +1,12 @@
 gText_Birch_Welcome::
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
-	.string "PROFESSOR.\p"
-	.string "$"
+	.string "Hello. It's a pleasure to speak to you\nat last.\p"
+	.string "My name is {COLOR GREEN}Professor Magnolia{COLOR DARK_GRAY}.\pI'm currently heading up research here\n"
+	.string "at {COLOR RED}Unova's Amnesty Institute{COLOR DARK_GRAY}.\p"
+	.string "Together, we battle against the forces\nthat have invaded our world.\p"
+	.string "Perhaps you're already aware...\p"
+	.string "{COLOR RED}Team Rainbow Rocket {COLOR DARK_GRAY}now has\nstrongholds in nine regions, and\l"
+	.string "only we remain to oppose them.\p"
+	.string "However!\pWhile they have their “secret weapon”,\nin the form of {COLOR RED}Ultra Wormholes{COLOR DARK_GRAY}...\p$"
 
 gText_Birch_Pokemon::
 	.string "This is what we call a “POKéMON.”\p"
@@ -12,50 +14,29 @@ gText_Birch_Pokemon::
 	.string "$"
 
 gText_Birch_MainSpeech::
-	.string "This world is widely inhabited by\n"
-	.string "creatures known as POKéMON.\p"
-	.string "We humans live alongside POKéMON,\n"
-	.string "at times as friendly playmates, and\l"
-	.string "at times as cooperative workmates.\p"
-	.string "And sometimes, we band together\n"
-	.string "and battle others like us.\p"
-	.string "But despite our closeness, we don't\n"
-	.string "know everything about POKéMON.\p"
-	.string "In fact, there are many, many\n"
-	.string "secrets surrounding POKéMON.\p"
-	.string "To unravel POKéMON mysteries,\n"
-	.string "I've been undertaking research.\l"
-	.string "That's what I do.\p"
-	.string "$"
+	.string "But I'm getting ahead of myself.\p$"
 
 gText_Birch_AndYouAre::
-	.string "And you are?$"
+	.string "Now, these old eyes don't work as well\nas they used to. So tell me...\p$"
 
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?$"
+	.string "Are you a boy, or a girl?$"
 
 gText_Birch_WhatsYourName::
-	.string "All right.\n"
-	.string "What's your name?$"
+	.string "Very well. And what's your name?$"
 
 gText_Birch_SoItsPlayer::
-	.string "So it's {PLAYER}{KUN}?$"
+	.string "“{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}”... did I get that right?$"
 
 gText_Birch_YourePlayer::
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
-	.string "$"
+	.string "Well, {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, I think you'll fit in just\nfine.\p"
+	.string "If nothing else, I highly doubt\n{COLOR RED}Team Rainbow Rocket {COLOR DARK_GRAY}would suspect\l"
+	.string "someone like you.\p"
+	.string "Kindly make your way to\n{COLOR RED}Mistralton City{COLOR DARK_GRAY}.\p"
+	.string "Ah -- don't worry about accommodation.\nWe've already taken care of that.\p$"
 
 gText_Birch_AreYouReady::
-	.string "All right, are you ready?\p"
-	.string "Your very own adventure is about\n"
-	.string "to unfold.\p"
-	.string "Take courage, and leap into the\n"
-	.string "world of POKéMON where dreams,\l"
-	.string "adventure, and friendships await!\p"
-	.string "Well, I'll be expecting you later.\n"
-	.string "Come see me in my POKéMON LAB.\p"
-	.string "$"
+	.string "I'll give you some time to {COLOR BLUE}explore and\nsettle in{COLOR DARK_GRAY}.\p"
+	.string "When the time is right, {COLOR RED}Agent Looker\n{COLOR DARK_GRAY}will send for you.\p"
+	.string "Until then, just {COLOR BLUE}keep your head down{COLOR DARK_GRAY},\nOK?\p"
+	.string "Well, I'll look forward to meeting you in\nperson. Good luck!\p$"

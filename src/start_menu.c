@@ -1061,9 +1061,13 @@ static u8 SaveFileExistsCallback(void)
     {
         ShowSaveMessage(gText_DifferentSaveFile, SaveConfirmOverwriteDefaultNoCallback);
     }
-    else
+    else if (gSaveBlock2Ptr->optionsConfirm == OPTIONS_CONFIRM_YES)
     {
         ShowSaveMessage(gText_AlreadySavedFile, SaveConfirmOverwriteCallback);
+    }
+    else
+    {
+        sSaveDialogCallback = SaveSavingMessageCallback;
     }
 
     return SAVE_IN_PROGRESS;

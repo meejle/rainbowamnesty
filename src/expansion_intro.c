@@ -264,7 +264,7 @@ void Task_HandleExpansionIntro(u8 taskId)
         DestroyTask(taskId);
         CreateTask(Task_Scene1_Load, 0);
         SetMainCallback2(MainCB2_Intro);
-//      SetMainCallback2(CB2_StartCreditsSequence);
+//        SetMainCallback2(CB2_StartCreditsSequence);
         break;
     }
 }
