@@ -118,19 +118,19 @@ static const struct CreditsEntry sCreditsEntry_DebugSupport1[] = {11, FALSE, sCr
 
 static const u8 sCreditsText_AdditionalScripting[] = _("Additional programming");
 static const struct CreditsEntry sCreditsEntry_AdditionalScripting[] = {11, TRUE, sCreditsText_AdditionalScripting};
-static const u8 sCreditsText_AddScript1[] = _("{FONT_NARROW}aueuaio   Blackforest92   daniilS   devolov");
+static const u8 sCreditsText_AddScript1[] = _("{FONT_NARROW}aueuaio   Blackforest92   daniilS   Delta231");
 static const struct CreditsEntry sCreditsEntry_AddScript1[] = {11, FALSE, sCreditsText_AddScript1};
-static const u8 sCreditsText_AddScript2[] = _("{FONT_NARROW}ellabrella   Faith120   FieryMewtwo   hjk321");
+static const u8 sCreditsText_AddScript2[] = _("{FONT_NARROW}devolov   ellabrella   Faith120   FieryMewtwo");
 static const struct CreditsEntry sCreditsEntry_AddScript2[] = {11, FALSE, sCreditsText_AddScript2};
 
-static const u8 sCreditsText_AddScript3[] = _("{FONT_NARROW}ipatix   Jaizu   jrz3   ketsuban");
+static const u8 sCreditsText_AddScript3[] = _("{FONT_NARROW}hjk321   ipatix   Jaizu   jrz3");
 static const struct CreditsEntry sCreditsEntry_AddScript3[] = {11, FALSE, sCreditsText_AddScript3};
-static const u8 sCreditsText_AddScript4[] = _("{FONT_NARROW}Kurausukun   LOuroboros   NotToDisturb");
+static const u8 sCreditsText_AddScript4[] = _("{FONT_NARROW}ketsuban   Kurausukun   LOuroboros");
 static const struct CreditsEntry sCreditsEntry_AddScript4[] = {11, FALSE, sCreditsText_AddScript4};
 
-static const u8 sCreditsText_AddScript5[] = _("{FONT_NARROW}ProfLeonDiasBackup   Samu   ShinyDragonHunter");
+static const u8 sCreditsText_AddScript5[] = _("{FONT_NARROW}NotToDisturb   ProfLeonDiasBackup   Samu");
 static const struct CreditsEntry sCreditsEntry_AddScript5[] = {11, FALSE, sCreditsText_AddScript5};
-static const u8 sCreditsText_AddScript6[] = _("{FONT_NARROW}SonikkuA-DatH   tustin2121   {FONT_NORMAL}{JPN}セケツ");
+static const u8 sCreditsText_AddScript6[] = _("{FONT_NARROW}ShinyDragonHunter   SonikkuA-DatH   tustin2121   {FONT_NORMAL}{JPN}セケツ");
 static const struct CreditsEntry sCreditsEntry_AddScript6[] = {11, FALSE, sCreditsText_AddScript6};
 
 static const u8 sCreditsText_Porymap[] = _("Built using Porymap");
