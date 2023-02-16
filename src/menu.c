@@ -2161,8 +2161,42 @@ void BufferSaveMenuText(u8 textId, u8 *dest, u8 color)
                 if (FlagGet(curFlag))
                     flagCount++;
             }
-            *string = flagCount + CHAR_0;
-            *endOfString = EOS;
+            if (flagCount == 0)
+            {
+                StringCopy(string, gText_Rank0);
+            }
+            if (flagCount == 1)
+            {
+                StringCopy(string, gText_Rank1);
+            }
+            if (flagCount == 2)
+            {
+                StringCopy(string, gText_Rank2);
+            }
+            if (flagCount == 3)
+            {
+                StringCopy(string, gText_Rank3);
+            }
+            if (flagCount == 4)
+            {
+                StringCopy(string, gText_Rank4);
+            }
+            if (flagCount == 5)
+            {
+                StringCopy(string, gText_Rank5);
+            }
+            if (flagCount == 6)
+            {
+                StringCopy(string, gText_Rank6);
+            }
+            if (flagCount == 7)
+            {
+                StringCopy(string, gText_Rank7);
+            }
+            else
+            {
+                StringCopy(string, gText_Rank8);
+            }
             break;
     }
 }

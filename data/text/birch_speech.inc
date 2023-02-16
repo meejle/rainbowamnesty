@@ -26,7 +26,7 @@ gText_Birch_WhatsYourName::
 	.string "Very well. And what's your name?$"
 
 gText_Birch_SoItsPlayer::
-	.string "“{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}”... did I get that right?$"
+	.string "“{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}”...\ndid I get that right?$"
 
 gText_Birch_YourePlayer::
 	.string "Well, {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, I think you'll fit in just\nfine.\p"

@@ -2179,7 +2179,42 @@ static void MainMenu_FormatSavegameBadges(void)
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
     AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
     ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, str, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    if (badgeCount == 0)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank0, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
+    }
+    else if (badgeCount == 1)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank1, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
+    }
+    else if (badgeCount == 2)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank2, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
+    }
+    else if (badgeCount == 3)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank3, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
+    }
+    else if (badgeCount == 4)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank4, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
+    }
+    else if (badgeCount == 5)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank5, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
+    }
+    else if (badgeCount == 6)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank6, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
+    }
+    else if (badgeCount == 7)
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank7, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
+    }
+    else
+    {
+        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank8, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
+    }
 }
 
 static void LoadMainMenuWindowFrameTiles(u8 bgId, u16 tileOffset)

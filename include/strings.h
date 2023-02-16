@@ -3031,4 +3031,14 @@ extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
 
+extern const u8 gText_Rank0[];
+extern const u8 gText_Rank1[];
+extern const u8 gText_Rank2[];
+extern const u8 gText_Rank3[];
+extern const u8 gText_Rank4[];
+extern const u8 gText_Rank5[];
+extern const u8 gText_Rank6[];
+extern const u8 gText_Rank7[];
+extern const u8 gText_Rank8[];
+
 #endif // GUARD_STRINGS_H
