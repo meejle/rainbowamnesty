@@ -105,7 +105,9 @@ static void LoadLinkPartnerObjectEventSpritePalette(u8, u8, u8);
 static void Task_PetalburgGymSlideOpenRoomDoors(u8);
 static void PetalburgGymSetDoorMetatiles(u8, u16);
 static void Task_PCTurnOnEffect(u8);
+static void Task_IntroPCTurnOnEffect(u8);
 static void PCTurnOnEffect(struct Task *);
+static void IntroPCTurnOnEffect(struct Task *);
 static void PCTurnOnEffect_SetMetatile(s16, s8, s8);
 static void PCTurnOffEffect(void);
 static void Task_LotteryCornerComputerEffect(u8);
@@ -1000,11 +1002,31 @@ void DoPCTurnOnEffect(void)
     }
 }
 
+void DoIntroPCTurnOnEffect(void)
+{
+    if (FuncIsActiveTask(Task_IntroPCTurnOnEffect) != TRUE) // Bypasses the check on where the player is standing
+    {
+        u8 taskId = CreateTask(Task_IntroPCTurnOnEffect, 8);
+        gTasks[taskId].tPaused = FALSE;
+        gTasks[taskId].tTaskId = taskId;
+        gTasks[taskId].tFlickerCount = 0;
+        gTasks[taskId].tTimer = 0;
+        gTasks[taskId].tIsScreenOn = FALSE;
+    }
+}
+
 static void Task_PCTurnOnEffect(u8 taskId)
 {
     struct Task *task = &gTasks[taskId];
     if (!task->tPaused)
         PCTurnOnEffect(task);
+}
+
+static void Task_IntroPCTurnOnEffect(u8 taskId)
+{
+    struct Task *task = &gTasks[taskId];
+    if (!task->tPaused)
+        IntroPCTurnOnEffect(task);
 }
 
 static void PCTurnOnEffect(struct Task *task)
@@ -1033,6 +1055,28 @@ static void PCTurnOnEffect(struct Task *task)
             dy = -1;
             break;
         }
+
+        // Update map
+        PCTurnOnEffect_SetMetatile(task->tIsScreenOn, dx, dy);
+        DrawWholeMapView();
+        
+        // Screen flickers 5 times. Odd number and starting with the
+        // screen off means the animation ends with the screen on.
+        task->tIsScreenOn ^= 1;
+        if (++task->tFlickerCount == 5)
+            DestroyTask(task->tTaskId);
+    }
+    task->tTimer++;
+}
+
+static void IntroPCTurnOnEffect(struct Task *task)
+{
+    s8 dx = -1; // Position of PC (relative to the player) is now hardcoded
+    s8 dy = -3;
+
+    if (task->tTimer == 6)
+    {
+        task->tTimer = 0;
 
         // Update map
         PCTurnOnEffect_SetMetatile(task->tIsScreenOn, dx, dy);

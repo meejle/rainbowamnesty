@@ -226,6 +226,7 @@ gSpecials::
 	def_special ScriptGetPokedexInfo
 	def_special ShowPokedexRatingMessage
 	def_special DoPCTurnOnEffect
+	def_special DoIntroPCTurnOnEffect
 	def_special DoPCTurnOffEffect
 	def_special SetDeptStoreFloor
 	def_special DoLotteryCornerComputerEffect

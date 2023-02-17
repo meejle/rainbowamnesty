@@ -4410,6 +4410,16 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/border.bin",
       "blockdata_filepath": "data/layouts/SootopolisCity_MysteryEventsHouse_1F_StairsUnblocked/map.bin"
+    },
+    {
+      "id": "LAYOUT_RA_MISTRALTON_PLAYERS_HOUSE_2F",
+      "name": "RA_Mistralton_PlayersHouse_2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/RA_Mistralton_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/RA_Mistralton_PlayersHouse_2F/map.bin"
     }
   ]
 }

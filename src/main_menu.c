@@ -1378,7 +1378,7 @@ static void Task_NewGameBirchSpeechSub_WaitForLotad(u8 taskId)
     switch (tState)
     {
         case 0:
-            if (sprite->callback == SpriteCallbackDummy)
+            if (sprite->callback != SpriteCallbackDummy)
                 return;
             sprite->oam.affineMode = ST_OAM_AFFINE_OFF;
             break;
