@@ -4,12 +4,17 @@ RA_Mistralton_PlayersHouse_2F_MapScripts::
 	.byte 0
 
 RA_PlayersHouse_2F_Script_OnTransition:
+	goto_if_gt VAR_RA_PLAYERSHOUSE_INTRO_STATE, 1, RA_PlayersHouse_2F_Script_Return
 	setflag FLAG_SYS_PREVENT_MAP_FADE
+	setflag FLAG_SYS_PREVENT_MAP_MUSIC
 	end
 
 RA_PlayersHouse_2F_Script_OnFrame:
 	map_script_2 VAR_RA_PLAYERSHOUSE_INTRO_STATE, 0, RA_PlayersHouse_2F_Script_GetEmail
 	.2byte 0
+
+RA_PlayersHouse_2F_Script_Return::
+	return
 
 RA_PlayersHouse_2F_Script_GetEmail::
 	lockall
@@ -37,7 +42,7 @@ RA_PlayersHouse_2F_Script_GetEmail::
 	delay 96
 	msgbox RA_PlayersHouse_2F_Text_GotEmail, MSGBOX_DEFAULT
 	closemessage
-	playse MUS_RG_PALLET
+	playbgm MUS_RG_PALLET TRUE
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 1
 	releaseall
 	end
@@ -98,6 +103,7 @@ RA_PlayersHouse_2F_Script_ResetApproach::
 	end
 
 RA_PlayersHouse_2F_Script_ReadEmail::
+	goto_if_eq VAR_RA_PLAYERSHOUSE_INTRO_STATE, 2, RA_PlayersHouse_2F_Script_ReadEmailAgain
 	lock
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 2
 	setvar VAR_RA_DIRECTION_OF_APPROACH, 5
@@ -108,6 +114,25 @@ RA_PlayersHouse_2F_Script_ReadEmail::
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail2, MSGBOX_DEFAULT
 	closemessage
 	hidenamebox
+	playse SE_PC_OFF
+	special DoPCTurnOffEffect
+	release
+	end
+
+RA_PlayersHouse_2F_Script_ReadEmailAgain::
+	lock
+	playse SE_PC_LOGIN
+	special DoPCTurnOnEffect
+	delay 32
+	msgbox RA_PlayersHouse_2F_Text_LookerEmail, MSGBOX_DEFAULT
+	closemessage
+	namebox name_looker
+	playse SE_SELECT
+	msgbox RA_PlayersHouse_2F_Text_LookerEmail2, MSGBOX_DEFAULT
+	closemessage
+	hidenamebox
+	playse SE_PC_OFF
+	special DoPCTurnOffEffect
 	release
 	end
 
@@ -187,8 +212,8 @@ RA_PlayersHouse_2F_Text_NotTimeForBed:
 	.string "be going back to bed!$"
 
 RA_PlayersHouse_2F_Text_ShouldReadEmailFirst:
-	.string "I should {COLOR BLUE}check my email{COLOR DARK_GRAY} before I go\n"
-	.string "anywhere else...$"
+	.string "I should {COLOR BLUE}check my email{COLOR DARK_GRAY} before I do\n"
+	.string "anything else...$"
 
 RA_PlayersHouse_2F_Text_LookerEmail:
 	.string "It's an email from {COLOR RED}Agent Looker{COLOR DARK_GRAY}.$"
@@ -215,7 +240,7 @@ RA_PlayersHouse_2F_Text_LookAtTV:
 RA_PlayersHouse_2F_Text_LookAtBoxes:
 	.string "I should really get around to unpacking\n"
 	.string "the rest of my stuff...\p"
-	.string "But not right now!$"
+	.string "But not now!$"
 
 RA_PlayersHouse_2F_Text_LookAtBook:
 	.string "It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}manual\n"

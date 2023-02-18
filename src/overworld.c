@@ -1150,7 +1150,6 @@ void Overworld_ResetMapMusic(void)
 void Overworld_PlaySpecialMapMusic(void)
 {
     u16 music = GetCurrLocationDefaultMusic();
-
     if (music != MUS_ABNORMAL_WEATHER && music != MUS_NONE)
     {
         if (gSaveBlock1Ptr->savedMusic)
@@ -1161,7 +1160,7 @@ void Overworld_PlaySpecialMapMusic(void)
             music = MUS_SURF;
     }
 
-    if (music != GetCurrentMapMusic())
+    if (music != GetCurrentMapMusic() && !FlagGet(FLAG_SYS_PREVENT_MAP_FADE))
         PlayNewMapMusic(music);
 }
 
