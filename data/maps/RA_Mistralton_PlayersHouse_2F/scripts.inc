@@ -122,6 +122,7 @@ RA_PlayersHouse_2F_Script_ReadEmail::
 RA_PlayersHouse_2F_Script_ReadEmailAgain::
 	lock
 	playse SE_PC_LOGIN
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOnEffect
 	delay 32
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail, MSGBOX_DEFAULT
@@ -216,20 +217,30 @@ RA_PlayersHouse_2F_Text_ShouldReadEmailFirst:
 	.string "anything else...$"
 
 RA_PlayersHouse_2F_Text_LookerEmail:
-	.string "It's an email from {COLOR RED}Agent Looker{COLOR DARK_GRAY}.$"
+	.string "It's an email from {COLOR GREEN}Agent Looker{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_2F_Text_LookerEmail2:
-	.string "Lorem ipsum dolor sit amet, consectetur\n"
-	.string "adipiscing elit.\p"
-	.string "Mauris accumsan eu eros eu sodales!\p"
-	.string "Mauris sed metus tempus, iaculis nunc\n"
-	.string "vel, gravida dui. Cras vel tempor felis.$"
+	.string "My young friend,\p"
+	.string "The time, it has finally come!\p"
+	.string "That is to say, it is time for you to\n"
+	.string "{COLOR BLUE}start your training{COLOR DARK_GRAY} at the {COLOR RED}Institute{COLOR DARK_GRAY}!\p"
+	.string "Do not worry! We plan to -- ah, how to\n"
+	.string "put this -- “go easy on you”, at first.\p"
+	.string "When you read this, head for the\n"
+	.string "building of {COLOR RED}Mistralton Cargo Service{COLOR DARK_GRAY}.\p"
+	.string "Make haste, you understand, but not\n"
+	.string "speed! {COLOR BLUE}If you need to go anywhere else\l"
+	.string "in town first, that is OK with me.{COLOR DARK_GRAY}\p"
+	.string "Young {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, I look forward to the\n"
+	.string "making of your acquaintance!\p"
+	.string "Best wishes! :-)\n"
+	.string "{COLOR GREEN}Looker{COLOR DARK_GRAY}$"
 
 RA_PlayersHouse_2F_Text_LookAtGCN:
 	.string "It's a {COLOR RED}Retroid Pocket 3+{COLOR DARK_GRAY}!\p"
-	.string "A {COLOR RED}Mini HDMI cable{COLOR DARK_GRAY} and a {COLOR RED}Nintendo Switch\n"
+	.string "A mini HDMI cable and a {COLOR RED}Nintendo Switch\n"
 	.string "Pro Controller{COLOR DARK_GRAY} are connected, so I can\l"
-	.string "play {COLOR RED}ROM hacks{COLOR DARK_GRAY} on the big screen!$"
+	.string "play ROM hacks on the big screen!$"
 
 RA_PlayersHouse_2F_Text_LookAtTV:
 	.string "The {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}accommodation\n"
@@ -246,14 +257,13 @@ RA_PlayersHouse_2F_Text_LookAtBook:
 	.string "It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}manual\n"
 	.string "for new recruits...\p"
 	.string "Lesson number 1:\n"
-	.string "{COLOR BLUE}Open the menu {COLOR DARK_GRAY}with {COLOR RED}Start{COLOR DARK_GRAY}.\p"
+	.string "{COLOR BLUE}Open the menu with Start.{COLOR DARK_GRAY}\p"
 	.string "Lesson number 2:\n"
-	.string "{COLOR BLUE}Record your progress{COLOR DARK_GRAY} with {COLOR RED}Save{COLOR DARK_GRAY}.\p"
+	.string "{COLOR BLUE}Record your progress with Save.{COLOR DARK_GRAY}\p"
 	.string "The rest is too technical for me to\n"
 	.string "understand.$"
 
 RA_PlayersHouse_2F_Text_LookAtClock:
-	.string "Hmm...\p"
 	.string "It's probably about time I {COLOR BLUE}set the\n"
 	.string "clock {COLOR DARK_GRAY}in my room...$"
 

@@ -36,7 +36,7 @@ gText_Birch_YourePlayer::
 	.string "Ah -- don't worry about accommodation.\nWe've already taken care of that.\p$"
 
 gText_Birch_AreYouReady::
-	.string "I'll give you some time to {COLOR BLUE}explore and\nsettle in{COLOR DARK_GRAY}.\p"
-	.string "When the time is right, {COLOR RED}Agent Looker\n{COLOR DARK_GRAY}will send for you.\p"
-	.string "Until then, just {COLOR BLUE}keep your head down{COLOR DARK_GRAY},\nOK?\p"
+	.string "I'll give you some time to explore and\nsettle in.\p"
+	.string "When the time is right, {COLOR GREEN}Agent Looker\n{COLOR DARK_GRAY}will send for you.\p"
+	.string "Until then, just keep your head down,\nOK?\p"
 	.string "Well, I'll look forward to meeting you in\nperson. Good luck!\p$"

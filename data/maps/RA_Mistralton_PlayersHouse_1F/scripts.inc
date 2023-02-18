@@ -71,7 +71,7 @@ RA_PlayersHouse_1F_Text_WantToWatchCredits:
 
 RA_PlayersHouse_1F_Text_FoundBadgeInFridge:
 	.string "You found an {COLOR RED}Institute Badge {COLOR DARK_GRAY}in the\n"
-	.string "fridge! Your rank increased to {COLOR BLUE}Recruit{COLOR DARK_GRAY}!$"
+	.string "fridge! Your rank increased to Recruit!$"
 
 RA_PlayersHouse_1F_Text_FoundBadgeInFridge2:
 	.string "That was a nice surprise.$"
