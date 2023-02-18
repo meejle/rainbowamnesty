@@ -38,7 +38,8 @@
     "gMapGroup_IndoorRoute124"
   ],
   "gMapGroup_RA_Mistralton": [
-    "RA_Mistralton_PlayersHouse_2F"
+    "RA_Mistralton_PlayersHouse_2F",
+    "RA_Mistralton_PlayersHouse_1F"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",

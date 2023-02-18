@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/RA_Mistralton_PlayersHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/RA_Mistralton_PlayersHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RA_MISTRALTON_PLAYERS_HOUSE_1F",
+      "name": "RA_Mistralton_PlayersHouse_1F_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/RA_Mistralton_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/RA_Mistralton_PlayersHouse_1F/map.bin"
     }
   ]
 }

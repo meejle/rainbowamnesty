@@ -1061,3 +1061,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/RA_Mistralton_PlayersHouse_2F/scripts.inc"
+
+	.include "data/maps/RA_Mistralton_PlayersHouse_1F/scripts.inc"
