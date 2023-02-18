@@ -8,7 +8,7 @@ gText_AlreadySavedFile::
 
 gText_SavingDontTurnOff::
 	.string "Saving...\n"
-	.string "{COLOR BLUE}Don't close the emulator.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}Don't close the emulator{COLOR DARK_GRAY}.$"
 
 gText_PlayerSavedGame::
 	.string "{COLOR DARK_GRAY}Your adventure has been saved.$"
@@ -29,4 +29,4 @@ gText_SaveError::
 
 gText_SavingDontTurnOffPower::
 	.string "Saving...\n"
-	.string "{COLOR BLUE}Don't close the emulator.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}Don't close the emulator{COLOR DARK_GRAY}.$"

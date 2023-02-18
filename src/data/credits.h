@@ -130,8 +130,10 @@ static const struct CreditsEntry sCreditsEntry_AddScript4[] = {11, FALSE, sCredi
 
 static const u8 sCreditsText_AddScript5[] = _("{FONT_NARROW}Mkol103   NotToDisturb   ProfLeonDiasBackup   Samu");
 static const struct CreditsEntry sCreditsEntry_AddScript5[] = {11, FALSE, sCreditsText_AddScript5};
-static const u8 sCreditsText_AddScript6[] = _("{FONT_NARROW}ShinyDragonHunter   SonikkuA-DatH   tustin2121   {FONT_NORMAL}{JPN}セケツ");
+static const u8 sCreditsText_AddScript6[] = _("{FONT_NARROW}ShinyDragonHunter   SonikkuA-DatH   tustin2121"); // Long line
 static const struct CreditsEntry sCreditsEntry_AddScript6[] = {11, FALSE, sCreditsText_AddScript6};
+static const u8 sCreditsText_AddScript7[] = _("{FONT_NARROW}{FONT_NORMAL}{JPN}セケツ");
+static const struct CreditsEntry sCreditsEntry_AddScript7[] = {11, FALSE, sCreditsText_AddScript7};
 
 static const u8 sCreditsText_Porymap[] = _("Built using Porymap");
 static const struct CreditsEntry sCreditsEntry_Porymap[] = {11, TRUE, sCreditsText_Porymap};
@@ -490,7 +492,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         sCreditsEntry_AdditionalScripting,
         sCreditsEntry_AddScript5,
         sCreditsEntry_AddScript6,
-        _,
+        sCreditsEntry_AddScript7,
         _,
     },
     [PAGE_GRAPHIC_DESIGNERS_1] = {

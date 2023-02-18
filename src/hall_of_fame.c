@@ -366,45 +366,53 @@ static void CB2_HallOfFame(void)
 
 static bool8 InitHallOfFameScreen(void)
 {
-    switch (gMain.state)
+    if (FlagGet(FLAG_RA_WATCHING_CREDITS) != TRUE)
     {
-    case 0:
-        SetVBlankCallback(NULL);
-        ClearVramOamPltt_LoadHofPal();
-        sHofGfxPtr = AllocZeroed(sizeof(*sHofGfxPtr));
-        gMain.state = 1;
-        break;
-    case 1:
-        LoadHofGfx();
-        gMain.state++;
-        break;
-    case 2:
-        SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_ALL);
-        SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 7));
-        SetGpuReg(REG_OFFSET_BLDY, 0);
-        InitHofBgs();
-        sHofGfxPtr->state = 0;
-        gMain.state++;
-        break;
-    case 3:
-        if (!LoadHofBgs())
+        switch (gMain.state)
         {
-            SetVBlankCallback(VBlankCB_HallOfFame);
-            BeginNormalPaletteFade(PALETTES_ALL, 0, 0x10, 0, RGB_BLACK);
+        case 0:
+            SetVBlankCallback(NULL);
+            ClearVramOamPltt_LoadHofPal();
+            sHofGfxPtr = AllocZeroed(sizeof(*sHofGfxPtr));
+            gMain.state = 1;
+            break;
+        case 1:
+            LoadHofGfx();
             gMain.state++;
+            break;
+        case 2:
+            SetGpuReg(REG_OFFSET_BLDCNT, BLDCNT_TGT1_BG1 | BLDCNT_EFFECT_BLEND | BLDCNT_TGT2_ALL);
+            SetGpuReg(REG_OFFSET_BLDALPHA, BLDALPHA_BLEND(16, 7));
+            SetGpuReg(REG_OFFSET_BLDY, 0);
+            InitHofBgs();
+            sHofGfxPtr->state = 0;
+            gMain.state++;
+            break;
+        case 3:
+            if (!LoadHofBgs())
+            {
+                SetVBlankCallback(VBlankCB_HallOfFame);
+                BeginNormalPaletteFade(PALETTES_ALL, 0, 0x10, 0, RGB_BLACK);
+                gMain.state++;
+            }
+            break;
+        case 4:
+            UpdatePaletteFade();
+            if (!gPaletteFade.active)
+            {
+                SetMainCallback2(CB2_HallOfFame);
+                PlayBGM(MUS_HALL_OF_FAME);
+                return FALSE;
+            }
+            break;
         }
-        break;
-    case 4:
-        UpdatePaletteFade();
-        if (!gPaletteFade.active)
-        {
-            SetMainCallback2(CB2_HallOfFame);
-            PlayBGM(MUS_HALL_OF_FAME);
-            return FALSE;
-        }
-        break;
+        return TRUE;
     }
-    return TRUE;
+    else
+    {
+        SetMainCallback2(CB2_StartCreditsSequence);
+        return;
+    }
 }
 
 #define tDontSaveData       data[0]
