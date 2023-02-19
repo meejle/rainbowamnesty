@@ -1931,6 +1931,9 @@ const u32 gItemIconPalette_Ruby[] = INCBIN_U32("graphics/items/icon_palettes/rub
 
 const u32 gItemIconPalette_Sapphire[] = INCBIN_U32("graphics/items/icon_palettes/sapphire.gbapal.lz");
 
+const u32 gItemIcon_PokePass[] = INCBIN_U32("graphics/items/icons/poke_pass.4bpp.lz");
+const u32 gItemIconPalette_PokePass[] = INCBIN_U32("graphics/items/icon_palettes/poke_pass.gbapal.lz");
+
 //const u32 gItemIcon_AbilityShield[] = INCBIN_U32("graphics/items/icons/ability_shield.4bpp.lz");
 //const u32 gItemIconPalette_AbilityShield[] = INCBIN_U32("graphics/items/icon_palettes/ability_shield.gbapal.lz");
 

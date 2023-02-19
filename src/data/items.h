@@ -9918,4 +9918,16 @@ const struct Item gItems[] =
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 30,
     },
+
+    [ITEM_POKE_PASS] =
+    {
+        .name = _("Poké Pass"),
+        .itemId = ITEM_POKE_PASS,
+        .price = 0,
+        .description = sPokePassDesc,
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };
