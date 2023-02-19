@@ -119,7 +119,7 @@ MtChimney_EventScript_LavaCookieLady::
 
 MtChimney_EventScript_BagIsFull::
 	msgbox gText_TooBadBagIsFull, MSGBOX_DEFAULT
-	hidemoneybox
+	@hidemoneybox
 	release
 	end
 

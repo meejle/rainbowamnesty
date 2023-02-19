@@ -99,10 +99,10 @@ RA_Mistralton_Text_GymDoorSign:
 	.string "BY ORDER OF {COLOR RED}TEAM RAINBOW ROCKET{COLOR DARK_GRAY}$"
 
 RA_Mistralton_Text_PlayerDoorSign:
-	.string "{PLAYER}'s House$"
+	.string "{COLOR GREEN}{PLAYER}'s{COLOR DARK_GRAY} House$"
 
 RA_Mistralton_Text_PkmnCentreSign:
-	.string "The door is locked.\p"
+	.string "The door won't open.\p"
 	.string "Looks like I need something called a\n"
 	.string "{COLOR RED}Poké Pass {COLOR DARK_GRAY}to get in.$"
 

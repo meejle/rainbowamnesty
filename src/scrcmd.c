@@ -2327,6 +2327,18 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
     return TRUE;
 }
 
+bool8 ScrCmd_showitemdesc(struct ScriptContext *ctx)
+{
+    DrawHeaderBox();
+    return FALSE;
+}
+
+bool8 ScrCmd_hideitemdesc(struct ScriptContext *ctx)
+{
+    HideHeaderBox();
+    return FALSE;
+}
+
 bool8 ScrCmd_namebox(struct ScriptContext *ctx) {
     const u8 *name = (const u8 *)ScriptReadWord(ctx);
 

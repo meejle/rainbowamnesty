@@ -65,9 +65,9 @@ RA_PlayersHouse_1F_Script_CreditsSaveIssue::
 	end
 
 RA_PlayersHouse_1F_Text_WantToWatchCredits:
-	.string "Do you want to {COLOR BLUE}watch the credits{COLOR DARK_GRAY}?\p"
-	.string "You {COLOR BLUE}won't be able to skip them{COLOR DARK_GRAY}, so we'll\n"
-	.string "save your adventure first.$"
+	.string "{COLOR BLUE}Do you want to watch the credits?\p"
+	.string "{COLOR BLUE}You won't be able to skip them, so you'll\n"
+	.string "{COLOR BLUE}have to save your progress first.{COLOR DARK_GRAY}$"
 
 RA_PlayersHouse_1F_Text_FoundBadgeInFridge:
 	.string "You found an {COLOR RED}Institute Badge {COLOR DARK_GRAY}in the\n"

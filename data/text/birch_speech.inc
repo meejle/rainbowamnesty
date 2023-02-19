@@ -9,8 +9,6 @@ gText_Birch_Welcome::
 	.string "However!\pWhile they have their “secret weapon”,\nin the form of {COLOR RED}Ultra Wormholes{COLOR DARK_GRAY}...\p$"
 
 gText_Birch_Pokemon::
-	.string "This is what we call a “POKéMON.”\p"
-	.string "\n"
 	.string "$"
 
 gText_Birch_MainSpeech::
@@ -31,7 +29,7 @@ gText_Birch_SoItsPlayer::
 gText_Birch_YourePlayer::
 	.string "Well, {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, I think you'll fit in just\nfine.\p"
 	.string "If nothing else, I highly doubt\n{COLOR RED}Team Rainbow Rocket {COLOR DARK_GRAY}would suspect\l"
-	.string "someone like you.\p"
+	.string "someone as young as you.\p"
 	.string "Kindly make your way to\n{COLOR RED}Mistralton City{COLOR DARK_GRAY}.\p"
 	.string "Ah -- don't worry about accommodation.\nWe've already taken care of that.\p$"
 

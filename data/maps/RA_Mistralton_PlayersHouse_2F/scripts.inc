@@ -44,7 +44,6 @@ RA_PlayersHouse_2F_Script_GetEmail::
 	closemessage
 	playbgm MUS_RG_PALLET TRUE
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 1
-	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
 	releaseall
 	end
@@ -123,12 +122,13 @@ RA_PlayersHouse_2F_Script_ReadEmail::
 
 RA_PlayersHouse_2F_Script_ReadEmailAgain::
 	lock
+	msgbox RA_PlayersHouse_2F_Text_LookerEmail3, MSGBOX_YESNO
+	closemessage
+	goto_if_eq VAR_RESULT, NO, RA_PlayersHouse_2F_Script_DontReadEmailAgain
 	playse SE_PC_LOGIN
 	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOnEffect
 	delay 32
-	msgbox RA_PlayersHouse_2F_Text_LookerEmail, MSGBOX_DEFAULT
-	closemessage
 	namebox name_looker
 	playse SE_SELECT
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail2, MSGBOX_DEFAULT
@@ -136,6 +136,10 @@ RA_PlayersHouse_2F_Script_ReadEmailAgain::
 	hidenamebox
 	playse SE_PC_OFF
 	special DoPCTurnOffEffect
+	release
+	end
+
+RA_PlayersHouse_2F_Script_DontReadEmailAgain::
 	release
 	end
 
@@ -204,18 +208,18 @@ RA_PlayersHouse_2F_Move_ReturnToWest:
 	step_end
 
 RA_PlayersHouse_2F_Text_2WeeksLater:
-	.string "{COLOR GREEN}Two weeks later\n"
+	.string "{COLOR BLUE}Two weeks later\n"
 	.string "Mistralton City - {PLAYER}'s house$"
 
 RA_PlayersHouse_2F_Text_GotEmail:
-	.string "Sounds like I've got a {COLOR BLUE}new email{COLOR DARK_GRAY}...$"
+	.string "Sounds like I've got a new email...$"
 
 RA_PlayersHouse_2F_Text_NotTimeForBed:
 	.string "It's tempting, but now isn't the time to\n"
 	.string "be going back to bed!$"
 
 RA_PlayersHouse_2F_Text_ShouldReadEmailFirst:
-	.string "I should {COLOR BLUE}check my email{COLOR DARK_GRAY} before I do\n"
+	.string "I should check my email before I do\n"
 	.string "anything else...$"
 
 RA_PlayersHouse_2F_Text_LookerEmail:
@@ -225,18 +229,21 @@ RA_PlayersHouse_2F_Text_LookerEmail2:
 	.string "My young friend,\p"
 	.string "The time, it has finally come!\p"
 	.string "That is to say, it is time for you to\n"
-	.string "{COLOR BLUE}start your training{COLOR DARK_GRAY} at the {COLOR RED}Institute{COLOR DARK_GRAY}!\p"
+	.string "start your training at the {COLOR RED}Institute{COLOR DARK_GRAY}!\p"
 	.string "Do not worry! We plan to -- ah, how to\n"
 	.string "put this -- “go easy on you”, at first.\p"
 	.string "When you read this, head for the\n"
 	.string "building of {COLOR RED}Mistralton Cargo Service{COLOR DARK_GRAY}.\p"
 	.string "Make haste, you understand, but not\n"
-	.string "speed! {COLOR BLUE}If you need to go anywhere else\l"
-	.string "in town first, that is OK with me.{COLOR DARK_GRAY}\p"
+	.string "speed! If you need to go anywhere else\l"
+	.string "in town first, that is OK with me.\p"
 	.string "Young {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, I look forward to the\n"
 	.string "making of your acquaintance!\p"
 	.string "Best wishes! :-)\n"
 	.string "{COLOR GREEN}Looker{COLOR DARK_GRAY}$"
+
+RA_PlayersHouse_2F_Text_LookerEmail3:
+	.string "Should I read {COLOR GREEN}Looker's {COLOR DARK_GRAY}email again?$"
 
 RA_PlayersHouse_2F_Text_LookAtGCN:
 	.string "It's a {COLOR RED}Retroid Pocket 3+{COLOR DARK_GRAY}!\p"
@@ -257,17 +264,17 @@ RA_PlayersHouse_2F_Text_LookAtBoxes:
 
 RA_PlayersHouse_2F_Text_LookAtBook:
 	.string "It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}manual\n"
-	.string "for new recruits...\p"
+	.string "for new recruits.\p"
 	.string "Lesson number 1:\n"
-	.string "{COLOR BLUE}Open the menu with Start.{COLOR DARK_GRAY}\p"
+	.string "Open the menu with Start.\p"
 	.string "Lesson number 2:\n"
-	.string "{COLOR BLUE}Record your progress with Save.{COLOR DARK_GRAY}\p"
+	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
 	.string "The rest is too technical for me to\n"
-	.string "understand.$"
+	.string "understand...$"
 
 RA_PlayersHouse_2F_Text_LookAtClock:
-	.string "It's probably about time I {COLOR BLUE}set the\n"
-	.string "clock {COLOR DARK_GRAY}in my room...$"
+	.string "It's probably about time I set the\n"
+	.string "clock in my room...$"
 
 name_looker:
 	.string "Looker$"

@@ -147,7 +147,7 @@ static const u8 sBasePaletteColorMapTypes[32] =
     COLOR_MAP_DARK_CONTRAST,
     COLOR_MAP_DARK_CONTRAST,
     COLOR_MAP_DARK_CONTRAST,
-    COLOR_MAP_DARK_CONTRAST,
+    COLOR_MAP_NONE,
 };
 
 const u16 gFogPalette[] = INCBIN_U16("graphics/weather/fog.gbapal");
