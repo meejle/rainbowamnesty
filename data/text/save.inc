@@ -30,3 +30,15 @@ gText_SaveError::
 gText_SavingDontTurnOffPower::
 	.string "Saving...\n"
 	.string "{COLOR BLUE}Don't close the emulator{COLOR DARK_GRAY}.$"
+
+gText_SavingIShouldWriteSomething::
+	.string "I should write something.\n"
+	.string "{COLOR BLUE}Saving... Don't close the emulator{COLOR DARK_GRAY}.$"
+
+gText_SavingLetsDoIt::
+	.string "Let's do it.\n"
+	.string "{COLOR BLUE}Saving... Don't close the emulator{COLOR DARK_GRAY}.$"
+
+gText_SavingIllJustAddThis::
+	.string "I'll just add this...\n"
+	.string "{COLOR BLUE}Saving... Don't close the emulator{COLOR DARK_GRAY}.$"

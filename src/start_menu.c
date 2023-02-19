@@ -1069,7 +1069,7 @@ static u8 SaveFileExistsCallback(void)
     {
         sSaveDialogCallback = SaveSavingMessageCallback;
     }
-
+    
     return SAVE_IN_PROGRESS;
 }
 
@@ -1106,7 +1106,30 @@ static u8 SaveOverwriteInputCallback(void)
 
 static u8 SaveSavingMessageCallback(void)
 {
-    ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
+    if (FlagGet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING))
+    {
+        ShowSaveMessage(gText_SavingLetsDoIt, SaveDoSaveCallback);
+        FlagClear(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING);
+        FlagSet(FLAG_SYS_LAST_SAVEMSG_LETSDOIT);
+    }
+    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_LETSDOIT))
+    {
+        ShowSaveMessage(gText_SavingIllJustAddThis, SaveDoSaveCallback);
+        FlagClear(FLAG_SYS_LAST_SAVEMSG_LETSDOIT);
+        FlagSet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
+    }
+    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS))
+    {
+        ShowSaveMessage(gText_SavingIShouldWriteSomething, SaveDoSaveCallback);
+        FlagClear(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
+        FlagSet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING);
+    }
+    else // Fallback if none of the flags are set
+    {
+        ShowSaveMessage(gText_SavingIllJustAddThis, SaveDoSaveCallback);
+        FlagSet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
+    }
+
     return SAVE_IN_PROGRESS;
 }
 

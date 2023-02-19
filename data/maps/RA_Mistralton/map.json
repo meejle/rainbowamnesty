@@ -24,7 +24,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -102,8 +102,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "RA_Mistralton_EventScript_ItemPokeBall",
+      "flag": "FLAG_RA_ITEM_MISTRALTON_POKE_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
@@ -115,7 +115,7 @@
       "movement_range_y": 5,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -128,7 +128,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -141,7 +141,7 @@
       "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     },
     {
@@ -154,7 +154,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_Mistralton_Script_DotDotDot",
       "flag": "0"
     }
   ],
@@ -171,6 +171,141 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 43,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CargoSign"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_ShutterDown"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_ShutterDown"
+    },
+    {
+      "type": "sign",
+      "x": 38,
+      "y": 43,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 52,
+      "y": 54,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_PlayerDoorSign"
+    },
+    {
+      "type": "sign",
+      "x": 41,
+      "y": 42,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_LockedDoor"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 11,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_GymDoorSign"
+    },
+    {
+      "type": "sign",
+      "x": 44,
+      "y": 51,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_PkmnCentreSign"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 51,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 46,
+      "y": 51,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Common_EventScript_ShowPokemonCenterSign"
+    },
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 36,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CheckpointSign"
+    },
+    {
+      "type": "sign",
+      "x": 54,
+      "y": 36,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CheckpointSign"
+    },
+    {
+      "type": "sign",
+      "x": 55,
+      "y": 36,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CheckpointSign"
+    },
+    {
+      "type": "sign",
+      "x": 39,
+      "y": 59,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CheckpointSign"
+    },
+    {
+      "type": "sign",
+      "x": 40,
+      "y": 59,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CheckpointSign"
+    },
+    {
+      "type": "sign",
+      "x": 41,
+      "y": 59,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_Mistralton_Script_CheckpointSign"
+    }
   ]
 }

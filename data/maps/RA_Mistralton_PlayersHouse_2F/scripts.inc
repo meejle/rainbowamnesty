@@ -44,6 +44,8 @@ RA_PlayersHouse_2F_Script_GetEmail::
 	closemessage
 	playbgm MUS_RG_PALLET TRUE
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 1
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_B_DASH
 	releaseall
 	end
 

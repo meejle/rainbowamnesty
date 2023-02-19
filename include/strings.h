@@ -316,6 +316,9 @@ extern const u8 gText_Sound[];
 extern const u8 gText_Frame[];
 extern const u8 gText_OptionMenuCancel[];
 extern const u8 gText_ButtonMode[];
+extern const u8 gText_SaveRemind[];
+extern const u8 gText_SaveRemindYes[];
+extern const u8 gText_SaveRemindNo[];
 
 extern const u8 gText_MaleSymbol[];
 extern const u8 gText_FemaleSymbol[];
@@ -3040,5 +3043,11 @@ extern const u8 gText_Rank5[];
 extern const u8 gText_Rank6[];
 extern const u8 gText_Rank7[];
 extern const u8 gText_Rank8[];
+
+extern const u8 gText_SavingIShouldWriteSomething[];
+extern const u8 gText_SavingLetsDoIt[];
+extern const u8 gText_SavingIllJustAddThis[];
+
+extern const u8 gText_LetsGetYouSetUp[];
 
 #endif // GUARD_STRINGS_H

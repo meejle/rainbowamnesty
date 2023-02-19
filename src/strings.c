@@ -280,11 +280,11 @@ const u8 *const gPyramidBagMenu_ReturnToStrings[] =
 };
 
 const u8 gText_ReturnToVar1[] = _("Return to\n{STR_VAR_1}.");
-const u8 gText_ItemsPocket[] = _("ITEMS");
-const u8 gText_PokeBallsPocket[] = _("POKé BALLS");
+const u8 gText_ItemsPocket[] = _("Items");
+const u8 gText_PokeBallsPocket[] = _("Poké Balls");
 const u8 gText_TMHMPocket[] = _("TMs & HMs");
-const u8 gText_BerriesPocket[] = _("BERRIES");
-const u8 gText_KeyItemsPocket[] = _("KEY ITEMS");
+const u8 gText_BerriesPocket[] = _("Berries");
+const u8 gText_KeyItemsPocket[] = _("Key Items");
 
 const u8 *const gPocketNamesStringsTable[] =
 {
@@ -1488,12 +1488,15 @@ const u8 gText_ButtonMode[] = _("Button mode");
 const u8 gText_TextSpeedSlow[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}1");
 const u8 gText_TextSpeedMid[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}2");
 const u8 gText_TextSpeedFast[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}3");
-const u8 gText_BattleSceneOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}On");
-const u8 gText_BattleSceneOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Off");
+const u8 gText_BattleSceneOn[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Yes");
+const u8 gText_BattleSceneOff[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}No");
 const u8 gText_BattleStyleShift[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Yes");
 const u8 gText_BattleStyleSet[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}No");
 const u8 gText_SoundMono[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Yes");
 const u8 gText_SoundStereo[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}No");
+const u8 gText_SaveRemind[] = _("{FONT_SMALL}Remind to save at key moments");
+const u8 gText_SaveRemindYes[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Yes");
+const u8 gText_SaveRemindNo[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}No");
 const u8 gText_FrameType[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Type");
 const u8 gText_FrameTypeNumber[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}");
 const u8 gText_ButtonTypeNormal[] = _("{COLOR GREEN}{SHADOW LIGHT_GREEN}Normal");
@@ -1834,3 +1837,5 @@ const u8 gText_Rank5[] = _("Lieutenant");
 const u8 gText_Rank6[] = _("Captain");
 const u8 gText_Rank7[] = _("Commander");
 const u8 gText_Rank8[] = _("Chief");
+
+const u8 gText_LetsGetYouSetUp[] = _("First, let's check the Options.");
