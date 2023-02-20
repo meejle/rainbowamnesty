@@ -1065,3 +1065,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/RA_Mistralton_PlayersHouse_1F/scripts.inc"
 
 	.include "data/maps/RA_Mistralton/scripts.inc"
+
+	.include "data/maps/RA_Mistralton_AmnestyHQ_2F/scripts.inc"
+
+	.include "data/maps/RA_Mistralton_AmnestyHQ_1F/scripts.inc"

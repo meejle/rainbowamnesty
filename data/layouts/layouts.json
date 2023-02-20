@@ -4440,6 +4440,26 @@
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/RA_Mistralton/border.bin",
       "blockdata_filepath": "data/layouts/RA_Mistralton/map.bin"
+    },
+    {
+      "id": "LAYOUT_RA_MISTRALTON_AMNESTY_HQ_2F",
+      "name": "RA_Mistralton_AmnestyHQ_2F_Layout",
+      "width": 24,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/RA_Mistralton_AmnestyHQ_2F/border.bin",
+      "blockdata_filepath": "data/layouts/RA_Mistralton_AmnestyHQ_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_RA_MISTRALTON_AMNESTY_HQ_1F",
+      "name": "RA_Mistralton_AmnestyHQ_1F_Layout",
+      "width": 24,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_LilycoveMuseum",
+      "border_filepath": "data/layouts/RA_Mistralton_AmnestyHQ_1F/border.bin",
+      "blockdata_filepath": "data/layouts/RA_Mistralton_AmnestyHQ_1F/map.bin"
     }
   ]
 }

@@ -4,8 +4,8 @@ gText_ConfirmSave::
 	.string "my progress?$"
 
 gText_AlreadySavedFile::
-	.string "{COLOR BLUE}Is it OK to overwrite the existing save\n"
-	.string "{COLOR BLUE}data?{COLOR DARK_GRAY}$"
+	.string "Is it OK to overwrite the existing save\n"
+	.string "data?$"
 
 gText_SavingDontTurnOff::
 	.string "{COLOR BLUE}Saving... Don't close the emulator.{COLOR DARK_GRAY}$"
@@ -29,16 +29,20 @@ gText_SaveError::
 	.string "{COLOR BLUE}correctly.{COLOR DARK_GRAY}$"
 
 gText_SavingDontTurnOffPower::
-	.string "{COLOR BLUE}Saving... Don't close the emulator.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}Saving. Don't close the emulator.{COLOR DARK_GRAY}$"
 
 gText_SavingIShouldWriteSomething::
-	.string "I should write something.\n"
-	.string "{COLOR BLUE}Saving... Don't close the emulator.{COLOR DARK_GRAY}$"
+	.string "I should write something...\n"
+	.string "{COLOR BLUE}Saving. Don't close the emulator.{COLOR DARK_GRAY}$"
 
 gText_SavingLetsDoIt::
-	.string "Let's do it.\n"
-	.string "{COLOR BLUE}Saving... Don't close the emulator.{COLOR DARK_GRAY}$"
+	.string "Let's do it...\n"
+	.string "{COLOR BLUE}Saving. Don't close the emulator.{COLOR DARK_GRAY}$"
 
 gText_SavingIllJustAddThis::
-	.string "I'll just add this.\n"
-	.string "{COLOR BLUE}Saving... Don't close the emulator.{COLOR DARK_GRAY}$"
+	.string "I'll just add this...\n"
+	.string "{COLOR BLUE}Saving. Don't close the emulator.{COLOR DARK_GRAY}$"
+
+gText_SavingNowThen::
+	.string "Now then...\n"
+	.string "{COLOR BLUE}Saving. Don't close the emulator.{COLOR DARK_GRAY}$"

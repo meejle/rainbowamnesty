@@ -9,6 +9,8 @@
 #define MAP_RA_MISTRALTON_PLAYERS_HOUSE_2F (0 | (0 << 8))
 #define MAP_RA_MISTRALTON_PLAYERS_HOUSE_1F (1 | (0 << 8))
 #define MAP_RA_MISTRALTON                  (2 | (0 << 8))
+#define MAP_RA_MISTRALTON_AMNESTY_HQ_2F    (3 | (0 << 8))
+#define MAP_RA_MISTRALTON_AMNESTY_HQ_1F    (4 | (0 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PETALBURG_CITY      (0 | (1 << 8))
