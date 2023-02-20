@@ -774,8 +774,8 @@ static void Task_DisplayMainMenu(u8 taskId)
             default:
                 FillWindowPixelBuffer(0, PIXEL_FILL(0xA));
                 FillWindowPixelBuffer(1, PIXEL_FILL(0xA));
-                AddTextPrinterParameterized3(0, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
-                AddTextPrinterParameterized3(1, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
+                AddTextPrinterParameterized3(0, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
+                AddTextPrinterParameterized3(1, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
                 PutWindowTilemap(0);
                 PutWindowTilemap(1);
                 CopyWindowToVram(0, COPYWIN_GFX);
@@ -787,9 +787,9 @@ static void Task_DisplayMainMenu(u8 taskId)
                 FillWindowPixelBuffer(2, PIXEL_FILL(0xA));
                 FillWindowPixelBuffer(3, PIXEL_FILL(0xA));
                 FillWindowPixelBuffer(4, PIXEL_FILL(0xA));
-                AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
-                AddTextPrinterParameterized3(3, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
-                AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
+                AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
+                AddTextPrinterParameterized3(3, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
+                AddTextPrinterParameterized3(4, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
                 MainMenu_FormatSavegameText();
                 PutWindowTilemap(2);
                 PutWindowTilemap(3);
@@ -802,64 +802,10 @@ static void Task_DisplayMainMenu(u8 taskId)
                 DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[4], MAIN_MENU_BORDER_TILE);
                 break;
             case HAS_MYSTERY_GIFT:
-                FillWindowPixelBuffer(2, PIXEL_FILL(0xA));
-                FillWindowPixelBuffer(3, PIXEL_FILL(0xA));
-                FillWindowPixelBuffer(4, PIXEL_FILL(0xA));
-                FillWindowPixelBuffer(5, PIXEL_FILL(0xA));
-                AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
-                AddTextPrinterParameterized3(3, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
-                AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuMysteryGift);
-                AddTextPrinterParameterized3(5, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
-                MainMenu_FormatSavegameText();
-                PutWindowTilemap(2);
-                PutWindowTilemap(3);
-                PutWindowTilemap(4);
-                PutWindowTilemap(5);
-                CopyWindowToVram(2, COPYWIN_GFX);
-                CopyWindowToVram(3, COPYWIN_GFX);
-                CopyWindowToVram(4, COPYWIN_GFX);
-                CopyWindowToVram(5, COPYWIN_GFX);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[2], MAIN_MENU_BORDER_TILE);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[3], MAIN_MENU_BORDER_TILE);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[4], MAIN_MENU_BORDER_TILE);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[5], MAIN_MENU_BORDER_TILE);
+                // Dummied out
                 break;
             case HAS_MYSTERY_EVENTS:
-                FillWindowPixelBuffer(2, PIXEL_FILL(0xA));
-                FillWindowPixelBuffer(3, PIXEL_FILL(0xA));
-                FillWindowPixelBuffer(4, PIXEL_FILL(0xA));
-                FillWindowPixelBuffer(5, PIXEL_FILL(0xA));
-                FillWindowPixelBuffer(6, PIXEL_FILL(0xA));
-                AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
-                AddTextPrinterParameterized3(3, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
-                AddTextPrinterParameterized3(4, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuMysteryGift2);
-                AddTextPrinterParameterized3(5, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuMysteryEvents);
-                AddTextPrinterParameterized3(6, FONT_NORMAL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
-                MainMenu_FormatSavegameText();
-                PutWindowTilemap(2);
-                PutWindowTilemap(3);
-                PutWindowTilemap(4);
-                PutWindowTilemap(5);
-                PutWindowTilemap(6);
-                CopyWindowToVram(2, COPYWIN_GFX);
-                CopyWindowToVram(3, COPYWIN_GFX);
-                CopyWindowToVram(4, COPYWIN_GFX);
-                CopyWindowToVram(5, COPYWIN_GFX);
-                CopyWindowToVram(6, COPYWIN_GFX);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[2], MAIN_MENU_BORDER_TILE);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[3], MAIN_MENU_BORDER_TILE);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[4], MAIN_MENU_BORDER_TILE);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[5], MAIN_MENU_BORDER_TILE);
-                DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[6], MAIN_MENU_BORDER_TILE);
-                tScrollArrowTaskId = AddScrollIndicatorArrowPair(&sScrollArrowsTemplate_MainMenu, &sCurrItemAndOptionMenuCheck);
-                gTasks[tScrollArrowTaskId].func = Task_ScrollIndicatorArrowPairOnMainMenu;
-                if (sCurrItemAndOptionMenuCheck == 4)
-                {
-                    ChangeBgY(0, 0x2000, BG_COORD_ADD);
-                    ChangeBgY(1, 0x2000, BG_COORD_ADD);
-                    tIsScrolled = TRUE;
-                    gTasks[tScrollArrowTaskId].tArrowTaskIsScrolled = TRUE;
-                }
+                // Dummied out
                 break;
         }
         gTasks[taskId].func = Task_HighlightSelectedMainMenuItem;
@@ -2111,7 +2057,7 @@ void NewGameBirchSpeech_SetDefaultPlayerName(u8 nameId)
 static void CreateMainMenuErrorWindow(const u8 *str)
 {
     FillWindowPixelBuffer(7, PIXEL_FILL(1));
-    AddTextPrinterParameterized(7, FONT_NORMAL, str, 0, 1, 2, 0);
+    AddTextPrinterParameterized(7, FONT_NORMAL_SUBPIXEL, str, 0, 1, 2, 0);
     PutWindowTilemap(7);
     CopyWindowToVram(7, COPYWIN_GFX);
     DrawMainMenuWindowBorder(&sWindowTemplates_MainMenu[7], MAIN_MENU_BORDER_TILE);
@@ -2130,8 +2076,8 @@ static void MainMenu_FormatSavegameText(void)
 static void MainMenu_FormatSavegamePlayer(void)
 {
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPlayer);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gSaveBlock2Ptr->playerName, 100), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gSaveBlock2Ptr->playerName);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gSaveBlock2Ptr->playerName, 100), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gSaveBlock2Ptr->playerName);
 }
 
 static void MainMenu_FormatSavegameTime(void)
@@ -2140,11 +2086,11 @@ static void MainMenu_FormatSavegameTime(void)
     u8 *ptr;
 
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
     ptr = ConvertIntToDecimalStringN(str, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
     *ptr = 0xF0;
     ConvertIntToDecimalStringN(ptr + 1, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, str, 0xD0), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, str, 0xD0), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
 }
 
 static void MainMenu_FormatSavegamePokedex(void)
@@ -2159,9 +2105,9 @@ static void MainMenu_FormatSavegamePokedex(void)
         else
             dexCount = GetHoennPokedexCount(FLAG_GET_SEEN);
         StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
-        AddTextPrinterParameterized3(2, FONT_NORMAL, 0, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
         ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, str, 100), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, str, 100), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
     }
 }
 
@@ -2177,43 +2123,43 @@ static void MainMenu_FormatSavegameBadges(void)
             badgeCount++;
     }
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
-    AddTextPrinterParameterized3(2, FONT_NORMAL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
     ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
     if (badgeCount == 0)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank0, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank0, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
     }
     else if (badgeCount == 1)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank1, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank1, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
     }
     else if (badgeCount == 2)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank2, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank2, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
     }
     else if (badgeCount == 3)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank3, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank3, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
     }
     else if (badgeCount == 4)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank4, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank4, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
     }
     else if (badgeCount == 5)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank5, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank5, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
     }
     else if (badgeCount == 6)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank6, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank6, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
     }
     else if (badgeCount == 7)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank7, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank7, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
     }
     else
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, gText_Rank8, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank8, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
     }
 }
 
@@ -2266,9 +2212,9 @@ static void NewGameBirchSpeech_ClearGenderWindow(u8 windowId, bool8 copyToVram)
 
 static void NewGameBirchSpeech_ClearWindow(u8 windowId)
 {
-    u8 bgColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_BACKGROUND);
-    u8 maxCharWidth = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_WIDTH);
-    u8 maxCharHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT);
+    u8 bgColor = GetFontAttribute(FONT_NORMAL_SUBPIXEL, FONTATTR_COLOR_BACKGROUND);
+    u8 maxCharWidth = GetFontAttribute(FONT_NORMAL_SUBPIXEL, FONTATTR_MAX_LETTER_WIDTH);
+    u8 maxCharHeight = GetFontAttribute(FONT_NORMAL_SUBPIXEL, FONTATTR_MAX_LETTER_HEIGHT);
     u8 winWidth = GetWindowAttribute(windowId, WINDOW_WIDTH);
     u8 winHeight = GetWindowAttribute(windowId, WINDOW_HEIGHT);
 

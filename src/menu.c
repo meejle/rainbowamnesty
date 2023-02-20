@@ -547,7 +547,7 @@ void RemoveMapNamePopUpWindow(void)
 void AddTextPrinterWithCallbackForMessage(bool8 canSpeedUp, void (*callback)(struct TextPrinterTemplate *, u16))
 {
     gTextFlags.canABSpeedUpPrint = canSpeedUp;
-    AddTextPrinterParameterized2(0, FONT_NORMAL, gStringVar4, GetPlayerTextSpeedDelay(), callback, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+    AddTextPrinterParameterized2(0, FONT_NORMAL_SUBPIXEL, gStringVar4, GetPlayerTextSpeedDelay(), callback, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
 }
 
 void EraseFieldMessageBox(bool8 copyToVram)
@@ -951,7 +951,8 @@ void RedrawMenuCursor(u8 oldPos, u8 newPos)
     width = GetMenuCursorDimensionByFont(sMenu.fontId, 0);
     height = GetMenuCursorDimensionByFont(sMenu.fontId, 1);
     FillWindowPixelRect(sMenu.windowId, PIXEL_FILL(1), sMenu.left, sMenu.optionHeight * oldPos + sMenu.top, width, height);
-    AddTextPrinterParameterized(sMenu.windowId, sMenu.fontId, gText_SelectorArrow3, sMenu.left, sMenu.optionHeight * newPos + sMenu.top, 0, 0);
+    AddTextPrinterParameterized(sMenu.windowId, FONT_NORMAL_SUBPIXEL, gText_SelectorArrow3, sMenu.left, sMenu.optionHeight * newPos + sMenu.top, 0, 0);
+    // Changes most/all of the other right-arrow cursors?
 }
 
 u8 Menu_MoveCursor(s8 cursorDelta)
@@ -1606,7 +1607,7 @@ void PrintMenuTable(u8 windowId, u8 itemCount, const struct MenuAction *menuActi
     u32 i;
 
     for (i = 0; i < itemCount; i++)
-        AddTextPrinterParameterized(windowId, 1, menuActions[i].text, 8, (i * 16) + 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(windowId, FONT_NORMAL_SUBPIXEL, menuActions[i].text, 8, (i * 16) + 1, TEXT_SKIP_DRAW, NULL);
 
     CopyWindowToVram(windowId, COPYWIN_GFX);
 }
@@ -1647,15 +1648,15 @@ void CreateYesNoMenu(const struct WindowTemplate *window, u16 baseTileNum, u8 pa
 
     printer.currentChar = gText_YesNo;
     printer.windowId = sYesNoWindowId;
-    printer.fontId = FONT_NORMAL;
+    printer.fontId = FONT_NORMAL_SUBPIXEL;
     printer.x = 8;
     printer.y = 1;
     printer.currentX = printer.x;
     printer.currentY = printer.y;
-    printer.fgColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_FOREGROUND);
-    printer.bgColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_BACKGROUND);
-    printer.shadowColor = GetFontAttribute(FONT_NORMAL, FONTATTR_COLOR_SHADOW);
-    printer.unk = GetFontAttribute(FONT_NORMAL, FONTATTR_UNKNOWN);
+    printer.fgColor = GetFontAttribute(FONT_NORMAL_SUBPIXEL, FONTATTR_COLOR_FOREGROUND);
+    printer.bgColor = GetFontAttribute(FONT_NORMAL_SUBPIXEL, FONTATTR_COLOR_BACKGROUND);
+    printer.shadowColor = GetFontAttribute(FONT_NORMAL_SUBPIXEL, FONTATTR_COLOR_SHADOW);
+    printer.unk = GetFontAttribute(FONT_NORMAL_SUBPIXEL, FONTATTR_UNKNOWN);
     printer.letterSpacing = 0;
     printer.lineSpacing = 0;
 
@@ -1670,7 +1671,7 @@ void PrintMenuGridTable(u8 windowId, u8 optionWidth, u8 columns, u8 rows, const 
     for (i = 0; i < rows; i++)
     {
         for (j = 0; j < columns; j++)
-            AddTextPrinterParameterized(windowId, 1, menuActions[(i * columns) + j].text, (optionWidth * j) + 8, (i * 16) + 1, TEXT_SKIP_DRAW, NULL);
+            AddTextPrinterParameterized(windowId, FONT_NORMAL_SUBPIXEL, menuActions[(i * columns) + j].text, (optionWidth * j) + 8, (i * 16) + 1, TEXT_SKIP_DRAW, NULL);
     }
     CopyWindowToVram(windowId, COPYWIN_GFX);
 }
@@ -2005,7 +2006,7 @@ void PrintPlayerNameOnWindow(u8 windowId, const u8 *src, u16 x, u16 y)
 
     StringExpandPlaceholders(gStringVar4, src);
 
-    AddTextPrinterParameterized(windowId, 1, gStringVar4, x, y, TEXT_SKIP_DRAW, 0);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL_SUBPIXEL, gStringVar4, x, y, TEXT_SKIP_DRAW, 0);
 }
 
 static void UnusedBlitBitmapRect(const struct Bitmap *src, struct Bitmap *dst, u16 srcX, u16 srcY, u16 dstX, u16 dstY, u16 width, u16 height)

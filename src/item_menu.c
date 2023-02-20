@@ -260,7 +260,7 @@ static const struct ListMenuTemplate sItemListMenu =
     .lettersSpacing = 0,
     .itemVerticalPadding = 0,
     .scrollMultiple = LIST_NO_MULTIPLE_SCROLL,
-    .fontId = FONT_NARROW,
+    .fontId = FONT_NARROW_SUBPIXEL, // Only changes the right-arrow in the bag screen
     .cursorKind = CURSOR_BLACK_ARROW
 };
 

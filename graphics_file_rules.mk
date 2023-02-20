@@ -305,9 +305,6 @@ $(FONTGFXDIR)/narrow_subpixel.latfont: $(FONTGFXDIR)/latin_narrow_subpixel.png
 $(FONTGFXDIR)/small_narrow.latfont: $(FONTGFXDIR)/latin_small_narrow.png
 	$(GFX) $< $@
 
-$(FONTGFXDIR)/small_narrow_subpixel.latfont: $(FONTGFXDIR)/latin_small_narrow_subpixel.png
-	$(GFX) $< $@
-
 $(FONTGFXDIR)/small.hwjpnfont: $(FONTGFXDIR)/japanese_small.png
 	$(GFX) $< $@
 

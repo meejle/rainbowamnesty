@@ -1054,7 +1054,7 @@ void DrawHeaderBox(void)
         textY = 0;
 
     ShowItemIconSprite(item, TRUE, handleFlash);
-    AddTextPrinterParameterized(sHeaderBoxWindowId, 0, dst, ITEM_ICON_X + 2, textY, 0, NULL);
+    AddTextPrinterParameterized(sHeaderBoxWindowId, FONT_SMALL_SUBPIXEL, dst, ITEM_ICON_X + 2, textY, 0, NULL);
 }
 
 void HideHeaderBox(void)
