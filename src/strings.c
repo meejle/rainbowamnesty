@@ -1837,5 +1837,3 @@ const u8 gText_Rank5[] = _("Lieutenant");
 const u8 gText_Rank6[] = _("Captain");
 const u8 gText_Rank7[] = _("Commander");
 const u8 gText_Rank8[] = _("Chief");
-
-const u8 gText_LetsGetYouSetUp[] = _("First, let's check the Options.");

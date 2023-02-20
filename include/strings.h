@@ -3047,6 +3047,7 @@ extern const u8 gText_Rank8[];
 extern const u8 gText_SavingIShouldWriteSomething[];
 extern const u8 gText_SavingLetsDoIt[];
 extern const u8 gText_SavingIllJustAddThis[];
+extern const u8 gText_SavingNowThen[];
 
 extern const u8 gText_LetsGetYouSetUp[];
 

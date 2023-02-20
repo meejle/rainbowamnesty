@@ -1120,8 +1120,14 @@ static u8 SaveSavingMessageCallback(void)
     }
     else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS))
     {
-        ShowSaveMessage(gText_SavingIShouldWriteSomething, SaveDoSaveCallback);
+        ShowSaveMessage(gText_SavingNowThen, SaveDoSaveCallback);
         FlagClear(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
+        FlagSet(FLAG_SYS_LAST_SAVEMSG_NOWTHEN);
+    }
+    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_NOWTHEN))
+    {
+        ShowSaveMessage(gText_SavingIShouldWriteSomething, SaveDoSaveCallback);
+        FlagClear(FLAG_SYS_LAST_SAVEMSG_NOWTHEN);
         FlagSet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING);
     }
     else // Fallback if none of the flags are set
