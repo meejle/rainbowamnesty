@@ -11,7 +11,7 @@ gText_SavingDontTurnOff::
 	.string "{COLOR BLUE}Saving... Don't close the emulator.{COLOR DARK_GRAY}$"
 
 gText_PlayerSavedGame::
-	.string "My {COLOR RED}Mission Log{COLOR DARK_GRAY} is fully up-to-date!$"
+	.string "My {COLOR RED}Mission Log{COLOR DARK_GRAY} is now up-to-date!$"
 
 gText_DifferentSaveFile::
 	.string "{COLOR BLUE}Warning!\p"
@@ -46,3 +46,14 @@ gText_SavingIllJustAddThis::
 gText_SavingNowThen::
 	.string "Now then...\n"
 	.string "{COLOR BLUE}Saving. Don't close the emulator.{COLOR DARK_GRAY}$"
+
+gText_SavingInGameClock::
+	.string "{COLOR BLUE}By the way...\p"
+	.string "{COLOR BLUE}You now have the ability to adjust the\n"
+	.string "{COLOR BLUE}in-game clock whenever you want.\p"
+	.string "{COLOR BLUE}Just press  {DPAD_LEFT}{COLOR DARK_GRAY}{FONT 10} Left{COLOR BLUE}{FONT 11}  +  {SELECT_BUTTON}  +  {B_BUTTON}\n"
+	.string "{COLOR BLUE}together on the title screen.\p"
+	.string "{COLOR BLUE}In case you can't remember all that...\p"
+	.string "{COLOR BLUE}We've added it to the manual on the\n"
+	.string "{COLOR BLUE}desk in {PLAYER}'s house.{COLOR DARK_GRAY}\p{PAUSE 32}"
+	.string "My {COLOR RED}Mission Log{COLOR DARK_GRAY} is now up-to-date!$"

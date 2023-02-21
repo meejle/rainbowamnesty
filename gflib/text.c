@@ -120,19 +120,19 @@ struct
     u8 height;
 } static const sKeypadIcons[] =
 {
-    [CHAR_A_BUTTON]       = { 0x00,  8, 12 },
-    [CHAR_B_BUTTON]       = { 0x01,  8, 12 },
+    [CHAR_A_BUTTON]       = { 0x00,  7, 12 },
+    [CHAR_B_BUTTON]       = { 0x01,  7, 12 },
     [CHAR_L_BUTTON]       = { 0x02, 16, 12 },
     [CHAR_R_BUTTON]       = { 0x04, 16, 12 },
-    [CHAR_START_BUTTON]   = { 0x06, 24, 12 },
+    [CHAR_START_BUTTON]   = { 0x06, 23, 12 },
     [CHAR_SELECT_BUTTON]  = { 0x09, 24, 12 },
-    [CHAR_DPAD_UP]        = { 0x0C,  8, 12 },
-    [CHAR_DPAD_DOWN]      = { 0x0D,  8, 12 },
-    [CHAR_DPAD_LEFT]      = { 0x0E,  8, 12 },
-    [CHAR_DPAD_RIGHT]     = { 0x0F,  8, 12 },
-    [CHAR_DPAD_UPDOWN]    = { 0x20,  8, 12 },
-    [CHAR_DPAD_LEFTRIGHT] = { 0x21,  8, 12 },
-    [CHAR_DPAD_NONE]      = { 0x22,  8, 12 }
+    [CHAR_DPAD_UP]        = { 0x0C,  7, 12 },
+    [CHAR_DPAD_DOWN]      = { 0x0D,  7, 12 },
+    [CHAR_DPAD_LEFT]      = { 0x0E,  7, 12 },
+    [CHAR_DPAD_RIGHT]     = { 0x0F,  7, 12 },
+    [CHAR_DPAD_UPDOWN]    = { 0x20,  7, 12 },
+    [CHAR_DPAD_LEFTRIGHT] = { 0x21,  7, 12 },
+    [CHAR_DPAD_NONE]      = { 0x22,  7, 12 }
 };
 
 static const u8 sKeypadIconTiles[] = INCBIN_U8("graphics/fonts/keypad_icons.4bpp");

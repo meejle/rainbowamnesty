@@ -243,28 +243,28 @@ static void SpriteCB_Cursor_UpOrRight(struct Sprite *sprite)
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_UP;
             sprite->animDelayCounter = 0;
-            sprite->x = 53;
+            sprite->x = 74;
             sprite->y = 68;
             break;
         case SELECTION_HOURS:
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_UP;
             sprite->animDelayCounter = 0;
-            sprite->x = 86;
+            sprite->x = 98;
             sprite->y = 68;
             break;
         case SELECTION_MINS:
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_UP;
             sprite->animDelayCounter = 0;
-            sprite->x = 101;
+            sprite->x = 113;
             sprite->y = 68;
             break;
         case SELECTION_SECS:
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_UP;
             sprite->animDelayCounter = 0;
-            sprite->x = 116;
+            sprite->x = 128;
             sprite->y = 68;
             break;
         case SELECTION_CONFIRM:
@@ -293,28 +293,28 @@ static void SpriteCB_Cursor_Down(struct Sprite *sprite)
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_DOWN;
             sprite->animDelayCounter = 0;
-            sprite->x = 53;
+            sprite->x = 74;
             sprite->y = 92;
             break;
         case SELECTION_HOURS:
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_DOWN;
             sprite->animDelayCounter = 0;
-            sprite->x = 86;
+            sprite->x = 98;
             sprite->y = 92;
             break;
         case SELECTION_MINS:
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_DOWN;
             sprite->animDelayCounter = 0;
-            sprite->x = 101;
+            sprite->x = 113;
             sprite->y = 92;
             break;
         case SELECTION_SECS:
             sprite->invisible = FALSE;
             sprite->animNum = ARROW_DOWN;
             sprite->animDelayCounter = 0;
-            sprite->x = 116;
+            sprite->x = 128;
             sprite->y = 92;
             break;
         case SELECTION_CONFIRM:
@@ -363,12 +363,13 @@ static void PrintTime(u8 windowId, u8 x, u8 y, u16 days, u8 hours, u8 minutes, u
     u8 *dest = gStringVar4;
 
     // Print days
-    ConvertIntToDecimalStringN(gStringVar1, days, STR_CONV_MODE_RIGHT_ALIGN, 4);
+    ConvertIntToDecimalStringN(gStringVar1, days, STR_CONV_MODE_LEADING_ZEROS, 4);
+    dest = StringCopy(dest, gText_Days);
     dest = StringCopy(dest, gStringVar1);
     dest = StringCopy(dest, gText_Day);
 
     // Print hours
-    ConvertIntToDecimalStringN(gStringVar1, hours, STR_CONV_MODE_RIGHT_ALIGN, 3);
+    ConvertIntToDecimalStringN(gStringVar1, hours, STR_CONV_MODE_LEADING_ZEROS, 2);
     dest = StringCopy(dest, gStringVar1);
     dest = StringCopy(dest, gText_Colon3);
 
@@ -381,14 +382,14 @@ static void PrintTime(u8 windowId, u8 x, u8 y, u16 days, u8 hours, u8 minutes, u
     ConvertIntToDecimalStringN(gStringVar1, seconds, STR_CONV_MODE_LEADING_ZEROS, 2);
     dest = StringCopy(dest, gStringVar1);
 
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gStringVar4, x, y, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL_SUBPIXEL, gStringVar4, x, y, TEXT_SKIP_DRAW, NULL);
 }
 
 static void ShowChooseTimeWindow(u8 windowId, u16 days, u8 hours, u8 minutes, u8 seconds)
 {
     DrawStdFrameWithCustomTileAndPalette(windowId, FALSE, 0x214, 0xE);
     PrintTime(windowId, 0, 1, days, hours, minutes, seconds);
-    AddTextPrinterParameterized(windowId, FONT_NORMAL, gText_Confirm2, 126, 1, 0, NULL);
+    AddTextPrinterParameterized(windowId, FONT_NORMAL_SUBPIXEL, gText_Confirm2, 126, 1, 0, NULL);
     ScheduleBgCopyTilemapToVram(0);
 }
 
@@ -563,7 +564,7 @@ static void VBlankCB(void)
 static void ShowMessage(const u8 *str)
 {
     DrawDialogFrameWithCustomTileAndPalette(1, FALSE, 0x200, 0xF);
-    AddTextPrinterParameterized(1, FONT_NORMAL, str, 0, 1, 0, NULL);
+    AddTextPrinterParameterized(1, FONT_NORMAL_SUBPIXEL, str, 0, 1, 0, NULL);
     ScheduleBgCopyTilemapToVram(0);
 }
 
@@ -578,7 +579,7 @@ static void Task_ShowResetRtcPrompt(u8 taskId)
     case 0:
         DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x214, 0xE);
 
-        AddTextPrinterParameterized(0, FONT_NORMAL, gText_PresentTime, 0, 1, TEXT_SKIP_DRAW, 0);
+        AddTextPrinterParameterized(0, FONT_NORMAL_SUBPIXEL, gText_PresentTime, 0, 1, TEXT_SKIP_DRAW, 0);
         PrintTime(
             0,
             0,
@@ -588,7 +589,7 @@ static void Task_ShowResetRtcPrompt(u8 taskId)
             gLocalTime.minutes,
             gLocalTime.seconds);
 
-        AddTextPrinterParameterized(0, FONT_NORMAL, gText_PreviousTime, 0, 33, TEXT_SKIP_DRAW, 0);
+        AddTextPrinterParameterized(0, FONT_NORMAL_SUBPIXEL, gText_PreviousTime, 0, 33, TEXT_SKIP_DRAW, 0);
         PrintTime(
             0,
             0,
@@ -704,12 +705,11 @@ static void Task_ResetRtcScreen(u8 taskId)
         if (TrySavingData(SAVE_NORMAL) == SAVE_STATUS_OK)
         {
             ShowMessage(gText_SaveCompleted);
-            PlaySE(SE_DING_DONG);
+            PlaySE(SE_SAVE);
         }
         else
         {
             ShowMessage(gText_SaveFailed);
-            PlaySE(SE_BOO);
         }
         tState = MAINSTATE_WAIT_EXIT;
         // fallthrough

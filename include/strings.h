@@ -234,6 +234,7 @@ extern const u8 gText_InGameClockUsable[];
 
 // reset rtc screen texts
 extern const u8 gText_Day[];
+extern const u8 gText_Days[];
 extern const u8 gText_Colon3[];
 extern const u8 gText_Confirm2[];
 extern const u8 gText_PresentTime[];
@@ -287,6 +288,7 @@ extern const u8 gText_SavingPlayer[];
 extern const u8 gText_SavingBadges[];
 extern const u8 gText_SavingPokedex[];
 extern const u8 gText_SavingTime[];
+extern const u8 gText_SavingInGameClock[];
 
 // Battle pyramid menu texts
 extern const u8 gText_BattlePyramidConfirmRest[];

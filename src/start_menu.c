@@ -1156,10 +1156,20 @@ static u8 SaveDoSaveCallback(void)
         saveStatus = TrySavingData(SAVE_NORMAL);
     }
 
-    if (saveStatus == SAVE_STATUS_OK)
+    if (saveStatus == SAVE_STATUS_OK && FlagGet(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET) == TRUE)
+    {
+        FlagClear(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET);
+        PlaySE(SE_SELECT);
+        ShowSaveMessage(gText_SavingInGameClock, SaveSuccessCallback);
+    }
+    else if (saveStatus == SAVE_STATUS_OK && FlagGet(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET) != TRUE)
+    {
         ShowSaveMessage(gText_PlayerSavedGame, SaveSuccessCallback);
+    }
     else
+    {
         ShowSaveMessage(gText_SaveError, SaveErrorCallback);
+    }
 
     SaveStartTimer();
     return SAVE_IN_PROGRESS;

@@ -166,7 +166,14 @@ RA_PlayersHouse_2F_Script_LookAtGCN::
 
 RA_PlayersHouse_2F_Script_LookAtBook::
 	lock
+	goto_if_set FLAG_SET_WALL_CLOCK, RA_PlayersHouse_2F_Script_TwoStepCheck1
 	msgbox RA_PlayersHouse_2F_Text_LookAtBook, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RA_PlayersHouse_2F_Script_TwoStepCheck1::
+	msgbox RA_PlayersHouse_2F_Text_LookAtBookRTC, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
@@ -178,6 +185,7 @@ RA_PlayersHouse_2F_Script_LookAtClock::
 	call PlayersHouse_2F_EventScript_SetWallClock
 	delay 30
 	setflag FLAG_SET_WALL_CLOCK
+	setflag FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET
 	releaseall
 	end
 
@@ -266,15 +274,32 @@ RA_PlayersHouse_2F_Text_LookAtBook:
 	.string "It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}manual\n"
 	.string "for new recruits.\p"
 	.string "Lesson number 1:\n"
-	.string "Open the menu with Start.\p"
+	.string "Use  {START_BUTTON}  to open the Menu.\p"
 	.string "Lesson number 2:\n"
 	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
+	.string "Lesson number 3:\n"
+	.string "Hold  {B_BUTTON}  to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
+	.string "The rest is too technical for me to\n"
+	.string "understand...$"
+
+RA_PlayersHouse_2F_Text_LookAtBookRTC:
+	.string "It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}manual\n"
+	.string "for new recruits.\p"
+	.string "Lesson number 1:\n"
+	.string "Use  {START_BUTTON}  to open the Menu.\p"
+	.string "Lesson number 2:\n"
+	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
+	.string "Lesson number 3:\n"
+	.string "Hold  {B_BUTTON}  to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
+	.string "Lesson number 4:\n"
+	.string "Adjust your {COLOR RED}clock {COLOR DARK_GRAY}by pressing\l"
+	.string "{DPAD_LEFT}{FONT 10} Left{FONT 11}  +  {SELECT_BUTTON}  +  {B_BUTTON}  together\lon the title screen.\p"
 	.string "The rest is too technical for me to\n"
 	.string "understand...$"
 
 RA_PlayersHouse_2F_Text_LookAtClock:
-	.string "It's probably about time I set the\n"
-	.string "clock in my room...$"
+	.string "The {COLOR RED}clock {COLOR DARK_GRAY}is stopped...\p"
+	.string "Better set it and start it!$"
 
 name_looker:
 	.string "Looker$"

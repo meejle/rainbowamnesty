@@ -516,7 +516,7 @@
 #define FLAG_SYS_LAST_SAVEMSG_ADDTHIS        0x1E0
 #define FLAG_SYS_SAVEREMIND_ON               0x1E1
 #define FLAG_SYS_LAST_SAVEMSG_NOWTHEN        0x1E2
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET    0x1E3
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4
