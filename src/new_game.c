@@ -97,6 +97,7 @@ static void SetDefaultOptions(void)
     gSaveBlock2Ptr->optionsBattleSceneOff = FALSE;
     gSaveBlock2Ptr->optionsConfirm = OPTIONS_CONFIRM_YES;
     gSaveBlock2Ptr->optionsSaveRemind = OPTIONS_SAVEREMIND_YES;
+    gSaveBlock2Ptr->optionsTxExp = OPTIONS_TXEXP_YES;
     gSaveBlock2Ptr->regionMapZoom = FALSE;
 }
 

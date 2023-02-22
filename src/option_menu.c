@@ -23,6 +23,7 @@
 #define tBattleStyle data[3]
 #define tConfirm data[4]
 #define tSaveRemind data[5]
+#define tTxExp data[6]
 
 enum
 {
@@ -31,6 +32,7 @@ enum
     MENUITEM_BATTLESTYLE,
     MENUITEM_CONFIRM,
     MENUITEM_SAVEREMIND,
+    MENUITEM_TXEXP,
     MENUITEM_CANCEL,
     MENUITEM_COUNT,
 };
@@ -46,6 +48,7 @@ enum
 #define YPOS_BATTLESTYLE  (MENUITEM_BATTLESTYLE * 16)
 #define YPOS_CONFIRM      (MENUITEM_CONFIRM * 16)
 #define YPOS_SAVEREMIND   (MENUITEM_SAVEREMIND * 16)
+#define YPOS_TXEXP        (MENUITEM_TXEXP * 16)
 
 static void Task_OptionMenuFadeIn(u8 taskId);
 static void Task_OptionMenuProcessInput(u8 taskId);
@@ -62,6 +65,8 @@ static u8 Confirm_ProcessInput(u8 selection);
 static void Confirm_DrawChoices(u8 selection);
 static u8 SaveRemind_ProcessInput(u8 selection);
 static void SaveRemind_DrawChoices(u8 selection);
+static u8 TxExp_ProcessInput(u8 selection);
+static void TxExp_DrawChoices(u8 selection);
 static void DrawHeaderText(void);
 static void DrawOptionMenuTexts(void);
 static void DrawBgWindowFrames(void);
@@ -78,7 +83,8 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_BATTLESCENE] = gText_BattleScene,
     [MENUITEM_BATTLESTYLE] = gText_BattleStyle,
     [MENUITEM_CONFIRM]     = gText_Sound,
-    [MENUITEM_SAVEREMIND]     = gText_SaveRemind,
+    [MENUITEM_SAVEREMIND]  = gText_SaveRemind,
+    [MENUITEM_TXEXP]       = gText_TxExp,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -228,12 +234,14 @@ void CB2_InitOptionMenu(void)
         gTasks[taskId].tBattleStyle = gSaveBlock2Ptr->optionsBattleStyle;
         gTasks[taskId].tConfirm = gSaveBlock2Ptr->optionsConfirm;
         gTasks[taskId].tSaveRemind = gSaveBlock2Ptr->optionsSaveRemind;
+        gTasks[taskId].tTxExp = gSaveBlock2Ptr->optionsTxExp;
 
         TextSpeed_DrawChoices(gTasks[taskId].tTextSpeed);
         BattleScene_DrawChoices(gTasks[taskId].tBattleSceneOff);
         BattleStyle_DrawChoices(gTasks[taskId].tBattleStyle);
         Confirm_DrawChoices(gTasks[taskId].tConfirm);
         SaveRemind_DrawChoices(gTasks[taskId].tSaveRemind);
+        TxExp_DrawChoices(gTasks[taskId].tTxExp);
         HighlightOptionMenuItem(gTasks[taskId].tMenuSelection);
 
         CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
@@ -322,6 +330,13 @@ static void Task_OptionMenuProcessInput(u8 taskId)
             if (previousOption != gTasks[taskId].tSaveRemind)
                 SaveRemind_DrawChoices(gTasks[taskId].tSaveRemind);
             break;
+        case MENUITEM_TXEXP:
+            previousOption = gTasks[taskId].tTxExp;
+            gTasks[taskId].tTxExp = TxExp_ProcessInput(gTasks[taskId].tTxExp);
+
+            if (previousOption != gTasks[taskId].tTxExp)
+                TxExp_DrawChoices(gTasks[taskId].tTxExp);
+            break;
         default:
             return;
         }
@@ -341,6 +356,7 @@ static void Task_OptionMenuSave(u8 taskId)
     gSaveBlock2Ptr->optionsBattleStyle = gTasks[taskId].tBattleStyle;
     gSaveBlock2Ptr->optionsConfirm = gTasks[taskId].tConfirm;
     gSaveBlock2Ptr->optionsSaveRemind = gTasks[taskId].tSaveRemind;
+    gSaveBlock2Ptr->optionsTxExp = gTasks[taskId].tTxExp;
 
     if (gSaveBlock2Ptr->optionsSaveRemind == OPTIONS_SAVEREMIND_YES)
     {
@@ -349,6 +365,15 @@ static void Task_OptionMenuSave(u8 taskId)
     else
     {
         FlagClear(FLAG_SYS_SAVEREMIND_ON);
+    }
+
+    if (gSaveBlock2Ptr->optionsTxExp == OPTIONS_TXEXP_YES)
+    {
+        VarSet(VAR_TX_EXP, 1);
+    }
+    else
+    {
+        VarSet(VAR_TX_EXP, 0);
     }
 
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 16, RGB_BLACK);
@@ -525,6 +550,29 @@ static void SaveRemind_DrawChoices(u8 selection)
 
     DrawOptionMenuChoice(gText_SaveRemindYes, 151, YPOS_SAVEREMIND, styles[0]);
     DrawOptionMenuChoice(gText_SaveRemindNo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SaveRemindNo, 198), YPOS_SAVEREMIND, styles[1]);
+}
+
+static u8 TxExp_ProcessInput(u8 selection)
+{
+    if (JOY_NEW(DPAD_LEFT | DPAD_RIGHT))
+    {
+        selection ^= 1;
+        sArrowPressed = TRUE;
+    }
+
+    return selection;
+}
+
+static void TxExp_DrawChoices(u8 selection)
+{
+    u8 styles[2];
+
+    styles[0] = 0;
+    styles[1] = 0;
+    styles[selection] = 1;
+
+    DrawOptionMenuChoice(gText_TxExpYes, 151, YPOS_TXEXP, styles[0]);
+    DrawOptionMenuChoice(gText_TxExpNo, GetStringRightAlignXOffset(FONT_NORMAL, gText_TxExpNo, 198), YPOS_TXEXP, styles[1]);
 }
 
 static void DrawHeaderText(void)

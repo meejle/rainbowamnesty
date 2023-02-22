@@ -517,6 +517,7 @@ struct SaveBlock2
              u16 optionsBattleSceneOff:1; // whether battle animations are disabled
              u16 optionsConfirm:1; // OPTIONS_CONFIRM_[YES/NO]
              u16 optionsSaveRemind:1; // OPTIONS_SAVEREMIND_[YES/NO]
+             u16 optionsTxExp:1; // OPTIONS_TXEXP_[YES/NO]
              u16 regionMapZoom:1; // whether the map is zoomed in
              //u16 padding1:4;
              //u16 padding2;

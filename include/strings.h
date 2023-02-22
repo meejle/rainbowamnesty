@@ -321,6 +321,9 @@ extern const u8 gText_ButtonMode[];
 extern const u8 gText_SaveRemind[];
 extern const u8 gText_SaveRemindYes[];
 extern const u8 gText_SaveRemindNo[];
+extern const u8 gText_TxExp[];
+extern const u8 gText_TxExpYes[];
+extern const u8 gText_TxExpNo[];
 
 extern const u8 gText_MaleSymbol[];
 extern const u8 gText_FemaleSymbol[];
