@@ -58,7 +58,7 @@ Pokémon games don&rsquo;t always do a good job of explaining their mechanics. T
 **Powered by pokeemerald Expansion:** Created by DizzyEggg  
 **Maintained by:** UltimaSoul, ghoulslash, AsparagusEduardo, ExpoSeed, Pyredrid, MandL127  
 **Main contributors:** Lunos, ShantyTown, mvit, Doesnt, Cancer Fairy, MrDollSteak, Avara, Kurausukun, TheLaw, BreadCrumbs, Syreldar  
-**Contributors:** https://github.com/rh-hidehout/pokeemerald-expansion/graphs/contributors
+**Contributors:** https://github.com/rh-hideout/pokeemerald-expansion/graphs/contributors
 
 **Pokémon Rainbow Amnesty**  
 **Support programmers:** Anon822
