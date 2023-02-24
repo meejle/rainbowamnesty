@@ -63,7 +63,7 @@ Pokémon games don&rsquo;t always do a good job of explaining their mechanics. T
 **Pokémon Rainbow Amnesty**  
 **Support programmers:** Anon822
 
-**Additional programming:** aueuaio, Blackforest92, daniilS, Delta231, devolov, ellabrella, Faith120, FieryMewtwo, hjk321, ipatix, Jaizu, JamesAndrewJackson13, jrz3, ketsuban, Kurausukun, LOuroboros, meekrhino, Mkol103, NotToDisturb, ProfLeonDiasBackup, Samu, ShinyDragonHunter, SonikkuA-DatH, tustin2121, セケツ
+**Additional programming:** aueuaio, Blackforest92, daniilS, Delta231, devolov, ellabrella, Faith120, FieryMewtwo, hjk321, ipatix, Jaizu, JamesAndrewJackson13, jrz3, ketsuban, LOuroboros, meekrhino, Mkol103, NotToDisturb, ProfLeonDiasBackup, Samu, ShinyDragonHunter, SonikkuA-DatH, tustin2121, セケツ
 
 **Built using Porymap:** Created by huderlem  
 **Contributors:** https://github.com/huderlem/porymap/graphs/contributors
