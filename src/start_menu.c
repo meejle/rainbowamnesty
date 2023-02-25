@@ -1107,11 +1107,15 @@ static u8 SaveOverwriteInputCallback(void)
 
 static u8 SaveSavingMessageCallback(void)
 {
+    // Check for pending tutorials
     if (FlagGet(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET) == TRUE)
     {
         ShowSaveMessage(gText_SavingIllJustAddThis, SaveDoRTCSaveCallback);
         FlagSet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
     }
+    // else if...
+
+    // If no tutorials, cycle through the Persona 5 easter eggs
     else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING))
     {
         ShowSaveMessage(gText_SavingLetsDoIt, SaveDoSaveCallback);
