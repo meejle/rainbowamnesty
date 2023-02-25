@@ -125,6 +125,7 @@ static u8 SaveConfirmOverwriteCallback(void);
 static u8 SaveOverwriteInputCallback(void);
 static u8 SaveSavingMessageCallback(void);
 static u8 SaveDoSaveCallback(void);
+static u8 SaveDoRTCSaveCallback(void);
 static u8 SaveSuccessCallback(void);
 static u8 SaveReturnSuccessCallback(void);
 static u8 SaveErrorCallback(void);
@@ -1106,7 +1107,12 @@ static u8 SaveOverwriteInputCallback(void)
 
 static u8 SaveSavingMessageCallback(void)
 {
-    if (FlagGet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING))
+    if (FlagGet(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET) == TRUE)
+    {
+        ShowSaveMessage(gText_SavingIllJustAddThis, SaveDoRTCSaveCallback);
+        FlagSet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
+    }
+    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING))
     {
         ShowSaveMessage(gText_SavingLetsDoIt, SaveDoSaveCallback);
         FlagClear(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING);
@@ -1156,15 +1162,42 @@ static u8 SaveDoSaveCallback(void)
         saveStatus = TrySavingData(SAVE_NORMAL);
     }
 
-    if (saveStatus == SAVE_STATUS_OK && FlagGet(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET))
-    {
-        FlagClear(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET);
-        PlaySE(SE_SELECT);
-        ShowSaveMessage(gText_SavingInGameClock, SaveSuccessCallback);
-    }
-    else if (saveStatus == SAVE_STATUS_OK && !FlagGet(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET))
+    if (saveStatus == SAVE_STATUS_OK)
     {
         ShowSaveMessage(gText_PlayerSavedGame, SaveSuccessCallback);
+    }
+    else
+    {
+        ShowSaveMessage(gText_SaveError, SaveErrorCallback);
+    }
+
+    SaveStartTimer();
+    return SAVE_IN_PROGRESS;
+}
+
+static u8 SaveDoRTCSaveCallback(void)
+{
+    u8 saveStatus;
+
+    FlagClear(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET);
+    IncrementGameStat(GAME_STAT_SAVED_GAME);
+    PausePyramidChallenge();
+
+    if (gDifferentSaveFile == TRUE)
+    {
+        saveStatus = TrySavingData(SAVE_OVERWRITE_DIFFERENT_FILE);
+        gDifferentSaveFile = FALSE;
+    }
+    else
+    {
+        saveStatus = TrySavingData(SAVE_NORMAL);
+    }
+
+    if (saveStatus == SAVE_STATUS_OK)
+    {
+        
+        PlaySE(SE_SELECT);
+        ShowSaveMessage(gText_SavingInGameClock, SaveSuccessCallback);
     }
     else
     {
