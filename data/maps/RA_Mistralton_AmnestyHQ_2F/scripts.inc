@@ -14,7 +14,7 @@ RA_AmnestyHQ_2F_Script_OnFrame:
 	.2byte 0
 
 RA_AmnestyHQ_2F_Script_HideLooker::
-	hideobjectat LOCALID_LOOKER, MAP_RA_MISTRALTON_AMNESTY_HQ_2F
+	removeobject LOCALID_LOOKER
 	setflag FLAG_TEMP_5
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 4
 	end
@@ -27,13 +27,18 @@ RA_AmnestyHQ_2F_Script_PlayerEnters::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
 
-	playse SE_WARP_IN
+	playse SE_EXIT
 	clearflag FLAG_TEMP_5
-	showobjectat LOCALID_LOOKER, MAP_RA_MISTRALTON_AMNESTY_HQ_2F
+	addobject LOCALID_LOOKER
 	applymovement LOCALID_LOOKER, RA_AmnestyHQ_2F_Move_PlayerEnters
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_PlayerFaces
 	waitmovement 0
+	
+	namebox name_looker
+	msgbox RA_AmnestyHQ_1F_Text_LookerGreets, MSGBOX_DEFAULT
+	closemessage
+	hidenamebox
 
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 5
 	releaseall
