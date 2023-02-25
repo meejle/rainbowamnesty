@@ -4,6 +4,7 @@ RA_Mistralton_PlayersHouse_2F_MapScripts::
 	.byte 0
 
 RA_PlayersHouse_2F_Script_OnTransition:
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	goto_if_gt VAR_RA_PLAYERSHOUSE_INTRO_STATE, 1, RA_PlayersHouse_2F_Script_Return
 	setflag FLAG_SYS_PREVENT_MAP_FADE
 	setflag FLAG_SYS_PREVENT_MAP_MUSIC
@@ -31,7 +32,6 @@ RA_PlayersHouse_2F_Script_GetEmail::
 	waitmovement 0
 	delay 192
 	playse MUS_LEVEL_UP
-	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoIntroPCTurnOnEffect
 	delay 48
 	playse SE_PIN
@@ -126,7 +126,6 @@ RA_PlayersHouse_2F_Script_ReadEmailAgain::
 	closemessage
 	goto_if_eq VAR_RESULT, NO, RA_PlayersHouse_2F_Script_DontReadEmailAgain
 	playse SE_PC_LOGIN
-	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOnEffect
 	delay 32
 	namebox name_looker

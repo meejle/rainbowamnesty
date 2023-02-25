@@ -416,10 +416,14 @@ void CB2_FlashNotDetectedScreen(void){
     };
 	
     static const char errorMsg[] = _(
-        "{COLOR RED}Error!\n"
-        "{COLOR DARK_GRAY}Flash memory not detected.\n\n"
-        "Set your emulator's save type\nto Flash 1 Mb / 128 K,\n"
-        "then reload the ROM."
+        "{FONT 13}{COLOR BLUE}Flash memory not detected. Set your\n"
+        "emulator's save type to Flash 1 Mb, then\nreload the ROM. "
+        "Or, try a more modern\nemulator.\n"
+        "{COLOR RED}mGBA {COLOR DARK_GRAY}works well on Windows, macOS, and\n"
+        "Linux, and is available as a"
+        "{COLOR RED} RetroArch{COLOR DARK_GRAY}\ncore. {COLOR RED}My Boy!{COLOR DARK_GRAY} is a"
+        " good option on Android.\n"
+        "More advice: retrogamecorps.com"
     );
 
     if (!gMain.state){
