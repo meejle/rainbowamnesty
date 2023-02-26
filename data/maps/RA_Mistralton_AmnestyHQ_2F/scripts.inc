@@ -23,6 +23,7 @@ RA_AmnestyHQ_2F_Script_HideLooker::
 RA_AmnestyHQ_2F_Script_PlayerEnters::
 	lockall
 
+	setflag FLAG_SYS_POKEDEX_GET
 	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_PlayerEnters
 	waitmovement 0
 	delay 16

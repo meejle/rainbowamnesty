@@ -24,6 +24,7 @@ enum {
     FONT_NORMAL_SUBPIXEL,
     FONT_SHORT_SUBPIXEL,
     FONT_NARROW_SUBPIXEL,
+    FONT_CONTINUE_SUBPIXEL,
 };
 
 // Return values for font functions

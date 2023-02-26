@@ -406,8 +406,10 @@ static const struct WindowTemplate sNewGameBirchSpeechTextWindows[] =
 static const u16 sMainMenuBgPal[] = INCBIN_U16("graphics/interface/main_menu_bg.gbapal");
 static const u16 sMainMenuTextPal[] = INCBIN_U16("graphics/interface/main_menu_text.gbapal");
 
-static const u8 sTextColor_Headers[] = {TEXT_DYNAMIC_COLOR_1, TEXT_DYNAMIC_COLOR_2, TEXT_DYNAMIC_COLOR_3};
-static const u8 sTextColor_MenuInfo[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_WHITE, TEXT_DYNAMIC_COLOR_3};
+static const u8 sTextColor_Headers[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GRAY};
+static const u8 sTextColor_SubHeaders[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_LIGHT_BLUE, TEXT_COLOR_LIGHT_GRAY};
+static const u8 sTextColor_MenuInfo[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+static const u8 sTextColor_PlayerName[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_GREEN, TEXT_COLOR_LIGHT_GRAY};
 
 static const struct BgTemplate sMainMenuBgTemplates[] = {
     {
@@ -795,7 +797,7 @@ static void Task_DisplayMainMenu(u8 taskId)
                 FillWindowPixelBuffer(2, PIXEL_FILL(0xA));
                 FillWindowPixelBuffer(3, PIXEL_FILL(0xA));
                 FillWindowPixelBuffer(4, PIXEL_FILL(0xA));
-                AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
+                AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuContinue);
                 AddTextPrinterParameterized3(3, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuNewGame);
                 AddTextPrinterParameterized3(4, FONT_NORMAL_SUBPIXEL, 0, 1, sTextColor_Headers, TEXT_SKIP_DRAW, gText_MainMenuOption);
                 MainMenu_FormatSavegameText();
@@ -2084,8 +2086,8 @@ static void MainMenu_FormatSavegameText(void)
 static void MainMenu_FormatSavegamePlayer(void)
 {
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPlayer);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gSaveBlock2Ptr->playerName, 100), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gSaveBlock2Ptr->playerName);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 17, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 40, 17, sTextColor_PlayerName, TEXT_SKIP_DRAW, gSaveBlock2Ptr->playerName);
 }
 
 static void MainMenu_FormatSavegameTime(void)
@@ -2094,11 +2096,11 @@ static void MainMenu_FormatSavegameTime(void)
     u8 *ptr;
 
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0x6C, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 104, 17, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
     ptr = ConvertIntToDecimalStringN(str, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
     *ptr = 0xF0;
     ConvertIntToDecimalStringN(ptr + 1, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, str, 0xD0), 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
 }
 
 static void MainMenu_FormatSavegamePokedex(void)
@@ -2113,9 +2115,9 @@ static void MainMenu_FormatSavegamePokedex(void)
         else
             dexCount = GetHoennPokedexCount(FLAG_GET_SEEN);
         StringExpandPlaceholders(gStringVar4, gText_ContinueMenuPokedex);
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0, 33, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
         ConvertIntToDecimalStringN(str, dexCount, STR_CONV_MODE_LEFT_ALIGN, 3);
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, str, 100), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 51, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
     }
 }
 
@@ -2131,43 +2133,43 @@ static void MainMenu_FormatSavegameBadges(void)
             badgeCount++;
     }
     StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 0x6C, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gStringVar4);
+    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 104, 33, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
     ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
     if (badgeCount == 0)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank0, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
     }
     else if (badgeCount == 1)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank1, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
     }
     else if (badgeCount == 2)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank2, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
     }
     else if (badgeCount == 3)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank3, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
     }
     else if (badgeCount == 4)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank4, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
     }
     else if (badgeCount == 5)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank5, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
     }
     else if (badgeCount == 6)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank6, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
     }
     else if (badgeCount == 7)
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank7, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
     }
     else
     {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gText_Rank8, 0xD0), 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
     }
 }
 
