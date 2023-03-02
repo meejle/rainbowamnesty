@@ -275,6 +275,8 @@ static const u16 *const sKantoTrainerCardPals[] =
 };
 
 static const u8 sTrainerCardTextColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
+static const u8 sTrainerCardTextColorsOnGreen[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_GREEN};
+static const u8 sTrainerCardTextColorsOnBlue[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_WHITE, TEXT_COLOR_BLUE};
 static const u8 sTrainerCardStatColors[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_RED, TEXT_COLOR_LIGHT_RED};
 static const u8 sTimeColonInvisibleTextColors[6] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT, TEXT_COLOR_TRANSPARENT};
 
@@ -1002,9 +1004,81 @@ static void PrintNameOnCardFront(void)
     StringCopy(txtPtr, sData->trainerCard.playerName);
     ConvertInternationalString(txtPtr, sData->language);
     if (sData->cardType == CARD_TYPE_FRLG)
+    {
         AddTextPrinterParameterized3(1, FONT_NORMAL, 20, 28, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
+    }
     else
+    {
         AddTextPrinterParameterized3(1, FONT_NORMAL, 16, 33, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
+    }
+
+    if (FlagGet(FLAG_BADGE08_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+    }
+    else if (FlagGet(FLAG_BADGE07_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+    }
+    else if (FlagGet(FLAG_BADGE06_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+    }
+    else if (FlagGet(FLAG_BADGE05_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+    }
+    else if (FlagGet(FLAG_BADGE04_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+    }
+    else if (FlagGet(FLAG_BADGE03_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+    }
+    else if (FlagGet(FLAG_BADGE02_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+    }
+    else if (FlagGet(FLAG_BADGE01_GET) == TRUE)
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
+    }
+    else
+    {
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank0);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks0);
+    }
 }
 
 static void PrintIdOnCard(void)
@@ -1026,7 +1100,7 @@ static void PrintIdOnCard(void)
         top = 9;
     }
 
-    AddTextPrinterParameterized3(1, FONT_NORMAL, xPos, top, sTrainerCardTextColors, TEXT_SKIP_DRAW, buffer);
+    AddTextPrinterParameterized3(1, FONT_NORMAL, xPos, top, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, buffer);
 }
 
 static void PrintMoneyOnCard(void)
@@ -1169,9 +1243,9 @@ static void BufferNameForCardBack(void)
 static void PrintNameOnCardBack(void)
 {
     if (!sData->isHoenn)
-        AddTextPrinterParameterized3(1, FONT_NORMAL, 136, 9, sTrainerCardTextColors, TEXT_SKIP_DRAW, sData->textPlayersCard);
+        AddTextPrinterParameterized3(1, FONT_NORMAL, 136, 9, sTrainerCardTextColorsOnBlue, TEXT_SKIP_DRAW, sData->textPlayersCard);
     else
-        AddTextPrinterParameterized3(1, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, sData->textPlayersCard, 216), 9, sTrainerCardTextColors, TEXT_SKIP_DRAW, sData->textPlayersCard);
+        AddTextPrinterParameterized3(1, FONT_NORMAL, GetStringRightAlignXOffset(FONT_NORMAL, sData->textPlayersCard, 216), 9, sTrainerCardTextColorsOnBlue, TEXT_SKIP_DRAW, sData->textPlayersCard);
 }
 
 static const u8 sText_HofTime[] = _("{STR_VAR_1}:{STR_VAR_2}:{STR_VAR_3}");
@@ -1501,8 +1575,8 @@ static void DrawStarsAndBadgesOnCard(void)
     FillBgTilemapBufferRect(3, 143, 15, yOffsets[sData->isHoenn], sData->trainerCard.stars, 1, 4);
     if (!sData->isLink)
     {
-        x = 4;
-        for (i = 0; i < NUM_BADGES; i++, tileNum += 2, x += 3)
+        x = 3;
+        for (i = 0; i < NUM_BADGES; i++, tileNum += 2, x += 0)
         {
             if (sData->badgeCount[i])
             {

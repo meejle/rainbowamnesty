@@ -14,9 +14,7 @@ RA_PlayersHouse_1F_Script_FoundBadgeInFridge::
 	call Common_EventScript_PlayGymBadgeFanfare
 	msgbox RA_PlayersHouse_1F_Text_FoundBadgeInFridge2, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_DEFEATED_PETALBURG_GYM
-	setvar VAR_PETALBURG_GYM_STATE, 7
-	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE01_GET
 	release
 	end
 

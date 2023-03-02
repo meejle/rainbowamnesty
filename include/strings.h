@@ -3051,6 +3051,12 @@ extern const u8 gText_Rank6[];
 extern const u8 gText_Rank7[];
 extern const u8 gText_Rank8[];
 
+extern const u8 gText_Perks0[];
+extern const u8 gText_Perks1[];
+extern const u8 gText_Perks2[];
+extern const u8 gText_Perks3[];
+extern const u8 gText_Perks4[];
+
 extern const u8 gText_SavingIShouldWriteSomething[];
 extern const u8 gText_SavingLetsDoIt[];
 extern const u8 gText_SavingIllJustAddThis[];
