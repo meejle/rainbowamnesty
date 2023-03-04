@@ -8734,8 +8734,8 @@ RA_Player_Text_Explain_Badge0:
 	.string "{COLOR BLUE}And, you now have access to\n"
 	.string "{COLOR BLUE}Pokémon Centres.\p"
 	.string "{COLOR BLUE}As for the White Band itself...\p"
-	.string "{COLOR BLUE}It's a tasteful pin made by artisans\n"
-	.string "{COLOR BLUE}here in Unova. It's warm to the touch.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}It's an understated lapel pin made here\n"
+	.string "{COLOR BLUE}in Unova. It's warm to the touch.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank1:
 	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
@@ -8751,11 +8751,11 @@ RA_Player_Text_Explain_Badge1:
 	.string "{COLOR BLUE}Your team's Attack\n"
 	.string "{COLOR BLUE}stats also rose a bit.\p"
 	.string "{COLOR BLUE}And, you now have access to\n"
-	.string "{COLOR BLUE}Battle Clubs, like the one here in\l"
+	.string "{COLOR BLUE}Battle Clubs, including the one here in\l"
 	.string "{COLOR BLUE}Mistralton City.\p"
 	.string "{COLOR BLUE}As for the Red Gem itself...\p"
-	.string "{COLOR BLUE}It grew underground in Hoenn, due to\n"
-	.string "{COLOR BLUE}immense heat. It resembles a ruby.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}It formed underground in Hoenn, due\n"
+	.string "{COLOR BLUE}to immense heat. It resembles a ruby.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank2:
 	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
