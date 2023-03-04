@@ -7,14 +7,11 @@ RA_PlayersHouse_1F_Script_OnTransition:
 	end
 
 RA_PlayersHouse_1F_Script_FoundBadgeInFridge::
-	goto_if_eq VAR_PETALBURG_GYM_STATE, 7, RA_PlayersHouse_1F_Script_FridgeIsEmpty
 	lock
-	message RA_PlayersHouse_1F_Text_FoundBadgeInFridge
-	waitmessage
-	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox RA_PlayersHouse_1F_Text_FoundBadgeInFridge2, MSGBOX_DEFAULT
-	closemessage
-	setflag FLAG_BADGE01_GET
+	goto_if_set FLAG_BADGE08_GET, RA_PlayersHouse_1F_Script_FridgeIsEmpty
+	call RA_Player_Gain_Rank
+	call_if_unset FLAG_BADGE00_GET, RA_Player_Gain_PokePass
+	call RA_Player_Gain_Badge
 	release
 	end
 
@@ -75,8 +72,8 @@ RA_PlayersHouse_1F_Text_FoundBadgeInFridge2:
 	.string "That was a nice surprise.$"
 
 RA_PlayersHouse_1F_Text_FridgeIsEmpty:
-	.string "The fridge is now empty. That's not\n"
-	.string "such a nice surprise...$"
+	.string "The {COLOR RED}Fridge of Miracles{COLOR DARK_GRAY} has now\n"
+	.string "bestowed all of its gifts upon you.$"
 
 RA_PlayersHouse_1F_Text_LookAtBoxes:
 	.string "I should really get around to unpacking\n"

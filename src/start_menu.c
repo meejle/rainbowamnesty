@@ -318,7 +318,10 @@ static void BuildNormalStartMenu(void)
         AddStartMenuAction(MENU_ACTION_POKENAV);
     }
 
-    AddStartMenuAction(MENU_ACTION_PLAYER);
+    if (FlagGet(FLAG_BADGE00_GET) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_PLAYER);
+    }
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
@@ -1445,6 +1448,11 @@ static void ShowSaveInfoWindow(void)
         saveInfoWindow.height -= 2;
     }
 
+    if (!FlagGet(FLAG_BADGE00_GET))
+    {
+        saveInfoWindow.height -= 2;
+    }
+
     sSaveInfoWindowId = AddWindow(&saveInfoWindow);
     DrawStdWindowFrame(sSaveInfoWindowId, FALSE);
 
@@ -1463,12 +1471,15 @@ static void ShowSaveInfoWindow(void)
     xOffset = GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gStringVar4, 0x70);
     PrintPlayerNameOnWindow(sSaveInfoWindowId, gText_SavingPlayerName, xOffset - 4, yOffset);
 
-    // Print badge count
-    yOffset += 16;
-    AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL_SUBPIXEL, gText_SavingBadges, 4, yOffset, TEXT_SKIP_DRAW, NULL);
-    BufferSaveMenuText(SAVE_MENU_BADGES, gStringVar4, color);
-    xOffset = GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gStringVar4, 0x70);
-    AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL_SUBPIXEL, gStringVar4, xOffset - 4, yOffset, TEXT_SKIP_DRAW, NULL);
+    if (FlagGet(FLAG_BADGE00_GET) == TRUE)
+    {
+        // Print badge count
+        yOffset += 16;
+        AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL_SUBPIXEL, gText_SavingBadges, 4, yOffset, TEXT_SKIP_DRAW, NULL);
+        BufferSaveMenuText(SAVE_MENU_BADGES, gStringVar4, color);
+        xOffset = GetStringRightAlignXOffset(FONT_NORMAL_SUBPIXEL, gStringVar4, 0x70);
+        AddTextPrinterParameterized(sSaveInfoWindowId, FONT_NORMAL_SUBPIXEL, gStringVar4, xOffset - 4, yOffset, TEXT_SKIP_DRAW, NULL);
+    }
 
     if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
     {

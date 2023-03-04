@@ -1014,59 +1014,51 @@ static void PrintNameOnCardFront(void)
 
     if (FlagGet(FLAG_BADGE08_GET) == TRUE)
     {
-        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank8);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks4);
     }
     else if (FlagGet(FLAG_BADGE07_GET) == TRUE)
     {
-        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank7);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks3);
     }
     else if (FlagGet(FLAG_BADGE06_GET) == TRUE)
     {
-        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank6);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks3);
     }
     else if (FlagGet(FLAG_BADGE05_GET) == TRUE)
     {
-        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank5);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks3);
     }
     else if (FlagGet(FLAG_BADGE04_GET) == TRUE)
     {
-        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank4);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks3);
     }
     else if (FlagGet(FLAG_BADGE03_GET) == TRUE)
     {
-        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank3);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
     }
     else if (FlagGet(FLAG_BADGE02_GET) == TRUE)
     {
-        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Rank2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks1);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 108, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks2);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks3);
-        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 117, sTrainerCardTextColors, TEXT_SKIP_DRAW, gText_Perks4);
+        AddTextPrinterParameterized3(1, FONT_NARROW, 36, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Rank2);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 100, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks1);
+        AddTextPrinterParameterized3(1, FONT_SMALL_NARROW, 164, 112, sTrainerCardTextColorsOnGreen, TEXT_SKIP_DRAW, gText_Perks2);
     }
     else if (FlagGet(FLAG_BADGE01_GET) == TRUE)
     {

@@ -272,6 +272,7 @@ static const u16 sBirchSpeechPlatformBlackPal[] = {RGB_BLACK, RGB_BLACK, RGB_BLA
 #define MENU_HEIGHT_WIN4 2
 #define MENU_HEIGHT_WIN5 2
 #define MENU_HEIGHT_WIN6 2
+#define MENU_HEIGHT_WIN7 3
 
 #define MENU_LEFT_ERROR 2
 #define MENU_TOP_ERROR 15
@@ -2095,12 +2096,25 @@ static void MainMenu_FormatSavegameTime(void)
     u8 str[0x20];
     u8 *ptr;
 
-    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 104, 17, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
-    ptr = ConvertIntToDecimalStringN(str, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
-    *ptr = 0xF0;
-    ConvertIntToDecimalStringN(ptr + 1, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    if (!FlagGet(FLAG_BADGE00_GET))
+    {
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 3, 33, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
+        ptr = ConvertIntToDecimalStringN(str, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+        *ptr = 0xF0;
+        ConvertIntToDecimalStringN(ptr + 1, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 52, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    }
+    else
+    {
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuTime);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 104, 17, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
+        ptr = ConvertIntToDecimalStringN(str, gSaveBlock2Ptr->playTimeHours, STR_CONV_MODE_LEFT_ALIGN, 3);
+        *ptr = 0xF0;
+        ConvertIntToDecimalStringN(ptr + 1, gSaveBlock2Ptr->playTimeMinutes, STR_CONV_MODE_LEADING_ZEROS, 2);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 17, sTextColor_MenuInfo, TEXT_SKIP_DRAW, str);
+    }
+
 }
 
 static void MainMenu_FormatSavegamePokedex(void)
@@ -2127,49 +2141,52 @@ static void MainMenu_FormatSavegameBadges(void)
     u8 badgeCount = 0;
     u32 i;
 
-    for (i = FLAG_BADGE01_GET; i < FLAG_BADGE01_GET + NUM_BADGES; i++)
+    if (FlagGet(FLAG_BADGE00_GET) == TRUE)
     {
-        if (FlagGet(i))
-            badgeCount++;
-    }
-    StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
-    AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 104, 33, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
-    ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
-    if (badgeCount == 0)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
-    }
-    else if (badgeCount == 1)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
-    }
-    else if (badgeCount == 2)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
-    }
-    else if (badgeCount == 3)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
-    }
-    else if (badgeCount == 4)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
-    }
-    else if (badgeCount == 5)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
-    }
-    else if (badgeCount == 6)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
-    }
-    else if (badgeCount == 7)
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
-    }
-    else
-    {
-        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
+        for (i = FLAG_BADGE01_GET; i < FLAG_BADGE01_GET + NUM_BADGES; i++)
+        {
+            if (FlagGet(i))
+                badgeCount++;
+        }
+        StringExpandPlaceholders(gStringVar4, gText_ContinueMenuBadges);
+        AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 104, 33, sTextColor_Headers, TEXT_SKIP_DRAW, gStringVar4);
+        ConvertIntToDecimalStringN(str, badgeCount, STR_CONV_MODE_LEADING_ZEROS, 1);
+        if (badgeCount == 0)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
+        }
+        else if (badgeCount == 1)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
+        }
+        else if (badgeCount == 2)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
+        }
+        else if (badgeCount == 3)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
+        }
+        else if (badgeCount == 4)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
+        }
+        else if (badgeCount == 5)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
+        }
+        else if (badgeCount == 6)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
+        }
+        else if (badgeCount == 7)
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
+        }
+        else
+        {
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
+        }
     }
 }
 

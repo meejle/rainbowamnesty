@@ -8709,3 +8709,368 @@ RA_Magnolia_ThreeDots_FaceLeft::
 	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
 	waitmovement 0
 	return
+
+RA_Player_Text_Gain_Rank0:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} took me on as a\n"
+	.string "{COLOR RED}Trainee{COLOR DARK_GRAY}! My journey starts here!$"
+
+RA_Player_Text_Gain_PokePass:
+	.string "I finally got my own {COLOR RED}Poké Pass{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge0:
+	.string "I got the {COLOR RED}White Band{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge0:
+	.string "{COLOR BLUE}The White Band is your first\n"
+	.string "{COLOR BLUE}Rank Insignia.\p"
+	.string "{COLOR BLUE}You'll gain more Insignia as you rise\n"
+	.string "{COLOR BLUE}through the Amnesty Institute's ranks.\p"
+	.string "{COLOR BLUE}Press  {START_BUTTON}  at any time to check your\n"
+	.string "{COLOR BLUE}Poké Pass and admire your Insignia!\p"
+	.string "{COLOR BLUE}With the White Band, you can catch and\n"
+	.string "{COLOR BLUE}train Pokémon, as long as you're not in\l"
+	.string "{COLOR BLUE}a Restricted Zone.\p"
+	.string "{COLOR BLUE}And, you now have access to\n"
+	.string "{COLOR BLUE}Pokémon Centres.\p"
+	.string "{COLOR BLUE}As for the White Band itself...\p"
+	.string "{COLOR BLUE}It's a tasteful pin made by artisans\n"
+	.string "{COLOR BLUE}here in Unova. It's warm to the touch.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank1:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Recruit{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge1:
+	.string "I got the {COLOR RED}Red Gem{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge1:
+	.string "{COLOR BLUE}With the Red Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 20 will follow your commands.\p"
+	.string "{COLOR BLUE}Your team's Attack\n"
+	.string "{COLOR BLUE}stats also rose a bit.\p"
+	.string "{COLOR BLUE}And, you now have access to\n"
+	.string "{COLOR BLUE}Battle Clubs, like the one here in\l"
+	.string "{COLOR BLUE}Mistralton City.\p"
+	.string "{COLOR BLUE}As for the Red Gem itself...\p"
+	.string "{COLOR BLUE}It grew underground in Hoenn, due to\n"
+	.string "{COLOR BLUE}immense heat. It resembles a ruby.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank2:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Officer{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge2:
+	.string "I got the {COLOR RED}Orange Gem{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge2:
+	.string "{COLOR BLUE}With the Orange Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 30 will follow your commands.\p"
+	.string "{COLOR BLUE}As for the Orange Gem itself...\p"
+	.string "{COLOR BLUE}It washed up on a beach in the Alola\n"
+	.string "{COLOR BLUE}region. It reflects the sun beautifully.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank3:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Sergeant{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge3:
+	.string "I got the {COLOR RED}Yellow Gem{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge3:
+	.string "{COLOR BLUE}With the Yellow Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 40 will follow your commands.\p"
+	.string "{COLOR BLUE}Your team's Speed\n"
+	.string "{COLOR BLUE}stats also rose a bit.\p"
+	.string "{COLOR BLUE}As for the Yellow Gem itself...\p"
+	.string "{COLOR BLUE}It holds a faint electrical charge.\n"
+	.string "{COLOR BLUE}It was found in Kanto's Power Plant.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank4:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Detective{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge4:
+	.string "I got the {COLOR RED}Green Gem{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge4:
+	.string "{COLOR BLUE}With the Green Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 50 will follow your commands.\p"
+	.string "{COLOR BLUE}And, you now have access to\n"
+	.string "{COLOR BLUE}any Research Hubs you come across.\p"
+	.string "{COLOR BLUE}As for the Green Gem itself...\p"
+	.string "{COLOR BLUE}Researchers in Kalos say it contains\n"
+	.string "{COLOR BLUE}living cells from a legendary Pokémon.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank5:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Lieutenant{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge5:
+	.string "I got the {COLOR RED}Blue Gem{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge5:
+	.string "{COLOR BLUE}With the Blue Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 60 will follow your commands.\p"
+	.string "{COLOR BLUE}Your team's Defence\n"
+	.string "{COLOR BLUE}stats also rose a bit.\p"
+	.string "{COLOR BLUE}As for the Blue Gem itself...\p"
+	.string "{COLOR BLUE}It's actually a rare, blue-tinted type\n"
+	.string "{COLOR BLUE}of diamond found only in Sinnoh.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank6:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Captain{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge6:
+	.string "I got the {COLOR RED}Indigo Gem{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge6:
+	.string "{COLOR BLUE}With the Indigo Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 70 will follow your commands.\p"
+	.string "{COLOR BLUE}As for the Indigo Gem itself...\p"
+	.string "{COLOR BLUE}Made from fallen Galarian Wishing Stars,\n"
+	.string "{COLOR BLUE}up close it has a reddish-blue hue.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank7:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Commander{COLOR DARK_GRAY}!$"
+
+RA_Player_Text_Gain_Badge7:
+	.string "I got the {COLOR RED}Violet Gem{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge7:
+	.string "{COLOR BLUE}With the Violet Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 80 will follow your commands.\p"
+	.string "{COLOR BLUE}Your team's Special Attack and\n"
+	.string "{COLOR BLUE}Special Defence stats also rose a bit.\p"
+	.string "{COLOR BLUE}As for the Violet Gem itself...\p"
+	.string "{COLOR BLUE}It's only found in the Paldea region.\n"
+	.string "{COLOR BLUE}Its traditional name is “Uva Violeta”.{COLOR DARK_GRAY}$"
+
+RA_Player_Text_Gain_Rank8:
+	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
+	.string "{COLOR RED}Chief{COLOR DARK_GRAY}! I'm done climbing the ladder!$"
+
+RA_Player_Text_Gain_Badge8:
+	.string "I got the {COLOR RED}Gold Ring{COLOR DARK_GRAY}, and carefully\n"
+	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+
+RA_Player_Text_Explain_Badge8:
+	.string "{COLOR BLUE}With the Gold Ring, all Pokémon\n"
+	.string "{COLOR BLUE}will follow your commands.\p"
+	.string "{COLOR BLUE}And, you can now take part in\n"
+	.string "{COLOR BLUE}the Pokémon League!\p"
+	.string "{COLOR BLUE}As for the Gold Ring itself...\p"
+	.string "{COLOR BLUE}The gold was mined in Johto, and it\n"
+	.string "{COLOR BLUE}looks right at home among the rainbow.{COLOR DARK_GRAY}$"
+
+RA_Player_Gain_Rank::
+	goto_if_set FLAG_BADGE00_GET, RA_Player_Gain_Rank1
+	message RA_Player_Text_Gain_Rank0
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_PokePass::
+	message RA_Player_Text_Gain_PokePass
+	waitmessage
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge::
+	goto_if_set FLAG_BADGE00_GET, RA_Player_Gain_Badge1
+	setvar VAR_0x8000, MUGSHOT_WHITEBAND
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge0
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge0, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE00_GET
+	return
+
+RA_Player_Gain_Rank1::
+	goto_if_set FLAG_BADGE01_GET, RA_Player_Gain_Rank2
+	message RA_Player_Text_Gain_Rank1
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge1::
+	goto_if_set FLAG_BADGE01_GET, RA_Player_Gain_Badge2
+	setvar VAR_0x8000, MUGSHOT_REDGEM
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge1
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge1, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE01_GET
+	return
+
+RA_Player_Gain_Rank2::
+	goto_if_set FLAG_BADGE02_GET, RA_Player_Gain_Rank3
+	message RA_Player_Text_Gain_Rank2
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge2::
+	goto_if_set FLAG_BADGE02_GET, RA_Player_Gain_Badge3
+	setvar VAR_0x8000, MUGSHOT_ORANGEGEM
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge2
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge2, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE02_GET
+	return
+
+RA_Player_Gain_Rank3::
+	goto_if_set FLAG_BADGE03_GET, RA_Player_Gain_Rank4
+	message RA_Player_Text_Gain_Rank3
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge3::
+	goto_if_set FLAG_BADGE03_GET, RA_Player_Gain_Badge4
+	setvar VAR_0x8000, MUGSHOT_YELLOWGEM
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge3
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge3, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE03_GET
+	return
+
+RA_Player_Gain_Rank4::
+	goto_if_set FLAG_BADGE04_GET, RA_Player_Gain_Rank5
+	message RA_Player_Text_Gain_Rank4
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge4::
+	goto_if_set FLAG_BADGE04_GET, RA_Player_Gain_Badge5
+	setvar VAR_0x8000, MUGSHOT_GREENGEM
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge4
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge4, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE04_GET
+	return
+
+RA_Player_Gain_Rank5::
+	goto_if_set FLAG_BADGE05_GET, RA_Player_Gain_Rank6
+	message RA_Player_Text_Gain_Rank5
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge5::
+	goto_if_set FLAG_BADGE05_GET, RA_Player_Gain_Badge6
+	setvar VAR_0x8000, MUGSHOT_BLUEGEM
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge5
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge5, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE05_GET
+	return
+
+RA_Player_Gain_Rank6::
+	goto_if_set FLAG_BADGE06_GET, RA_Player_Gain_Rank7
+	message RA_Player_Text_Gain_Rank6
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge6::
+	goto_if_set FLAG_BADGE06_GET, RA_Player_Gain_Badge7
+	setvar VAR_0x8000, MUGSHOT_INDIGOGEM
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge6
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge6, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE06_GET
+	return
+
+RA_Player_Gain_Rank7::
+	goto_if_set FLAG_BADGE07_GET, RA_Player_Gain_Rank8
+	message RA_Player_Text_Gain_Rank7
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge7::
+	goto_if_set FLAG_BADGE07_GET, RA_Player_Gain_Badge8
+	setvar VAR_0x8000, MUGSHOT_VIOLETGEM
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge7
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge7, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE07_GET
+	return
+
+RA_Player_Gain_Rank8::
+	message RA_Player_Text_Gain_Rank8
+	waitmessage
+	playfanfare MUS_OBTAIN_B_POINTS
+	waitfanfare
+	return
+
+RA_Player_Gain_Badge8::
+	setvar VAR_0x8000, MUGSHOT_GOLDRING
+	callnative DrawMugshot
+	message RA_Player_Text_Gain_Badge8
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	msgbox RA_Player_Text_Explain_Badge8, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
+	setflag FLAG_BADGE08_GET
+	return
