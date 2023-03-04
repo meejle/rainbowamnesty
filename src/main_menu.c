@@ -38,6 +38,7 @@
 #include "window.h"
 #include "mystery_gift_menu.h"
 
+
 /*
  * Main menu state machine
  * -----------------------
@@ -243,6 +244,7 @@ static void MainMenu_FormatSavegamePokedex(void);
 static void MainMenu_FormatSavegameTime(void);
 static void MainMenu_FormatSavegameBadges(void);
 static void NewGameBirchSpeech_CreateDialogueWindowBorder(u8, u8, u8, u8, u8, u8);
+void DrawMugshot(void); //VAR_0x8000 = mugshot id
 
 // .rodata
 
@@ -2154,38 +2156,47 @@ static void MainMenu_FormatSavegameBadges(void)
         if (badgeCount == 0)
         {
             AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank0);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank0);
         }
         else if (badgeCount == 1)
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank1);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank1);
         }
         else if (badgeCount == 2)
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank2);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank2);
         }
         else if (badgeCount == 3)
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank3);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank3);
         }
         else if (badgeCount == 4)
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank4);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank4);
         }
         else if (badgeCount == 5)
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank5);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank5);
         }
         else if (badgeCount == 6)
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank6);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank6);
         }
         else if (badgeCount == 7)
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank7);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank7);
         }
         else
         {
-            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 153, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
+            AddTextPrinterParameterized3(2, FONT_NORMAL_SUBPIXEL, 134, 33, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_Rank8);
+            AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank8);
         }
     }
 }
