@@ -8722,19 +8722,20 @@ RA_Player_Text_Gain_Badge0:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge0:
-	.string "{COLOR BLUE}The White Band is your first\n"
+	.string "{COLOR BLUE}> The White Band is your first\n"
 	.string "{COLOR BLUE}Rank Insignia.\p"
-	.string "{COLOR BLUE}You'll gain more Insignia as you rise\n"
+	.string "{COLOR BLUE}> You'll gain more Insignia as you rise\n"
 	.string "{COLOR BLUE}through the Amnesty Institute's ranks.\p"
-	.string "{COLOR BLUE}Press  {START_BUTTON}  at any time to check your\n"
+	.string "{COLOR BLUE}> Use the  {START_BUTTON}  menu to check your\n"
 	.string "{COLOR BLUE}Poké Pass and admire your Insignia!\p"
-	.string "{COLOR BLUE}With the White Band, you can catch and\n"
-	.string "{COLOR BLUE}train Pokémon, as long as you're not in\l"
-	.string "{COLOR BLUE}a Restricted Zone.\p"
-	.string "{COLOR BLUE}And, you now have access to\n"
+	.string "{COLOR BLUE}> With the White Band, you may catch\n"
+	.string "{COLOR BLUE}and train Pokémon.\p"
+	.string "{COLOR BLUE}> But, you'll still have to follow the\n"
+	.string "{COLOR BLUE}rules when you're in a Restricted Zone.\p"
+	.string "{COLOR BLUE}> And, you now have access to\n"
 	.string "{COLOR BLUE}Pokémon Centres.\p"
-	.string "{COLOR BLUE}As for the White Band itself...\p"
-	.string "{COLOR BLUE}It's an understated lapel pin made here\n"
+	.string "{COLOR BLUE}> As for the White Band itself...\p"
+	.string "{COLOR BLUE}> It's an understated lapel pin made here\n"
 	.string "{COLOR BLUE}in Unova. It's warm to the touch.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank1:
@@ -8746,15 +8747,16 @@ RA_Player_Text_Gain_Badge1:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge1:
-	.string "{COLOR BLUE}With the Red Gem, Pokémon\n"
-	.string "{COLOR BLUE}up to Lv. 20 will follow your commands.\p"
-	.string "{COLOR BLUE}Your team's Attack\n"
+	.string "{COLOR BLUE}> With the Red Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 20 will obey your commands.$"
+
+RA_Player_Text_Explain_Badge1_Stat_Boost:
+	.string "{COLOR BLUE}> Your team's Attack\n"
 	.string "{COLOR BLUE}stats also rose a bit.\p"
-	.string "{COLOR BLUE}And, you now have access to\n"
-	.string "{COLOR BLUE}Battle Clubs, including the one here in\l"
-	.string "{COLOR BLUE}Mistralton City.\p"
-	.string "{COLOR BLUE}As for the Red Gem itself...\p"
-	.string "{COLOR BLUE}It formed underground in Hoenn, due\n"
+	.string "{COLOR BLUE}> And, you now have access to\n"
+	.string "{COLOR BLUE}Battle Clubs.\p"
+	.string "{COLOR BLUE}> As for the Red Gem itself...\p"
+	.string "{COLOR BLUE}> It formed underground in Hoenn, due\n"
 	.string "{COLOR BLUE}to immense heat. It resembles a ruby.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank2:
@@ -8766,10 +8768,10 @@ RA_Player_Text_Gain_Badge2:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge2:
-	.string "{COLOR BLUE}With the Orange Gem, Pokémon\n"
-	.string "{COLOR BLUE}up to Lv. 30 will follow your commands.\p"
-	.string "{COLOR BLUE}As for the Orange Gem itself...\p"
-	.string "{COLOR BLUE}It washed up on a beach in the Alola\n"
+	.string "{COLOR BLUE}> With the Orange Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 30 will obey your commands.\p"
+	.string "{COLOR BLUE}> As for the Orange Gem itself...\p"
+	.string "{COLOR BLUE}> It washed up on a beach in the Alola\n"
 	.string "{COLOR BLUE}region. It reflects the sun beautifully.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank3:
@@ -8781,12 +8783,14 @@ RA_Player_Text_Gain_Badge3:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge3:
-	.string "{COLOR BLUE}With the Yellow Gem, Pokémon\n"
-	.string "{COLOR BLUE}up to Lv. 40 will follow your commands.\p"
-	.string "{COLOR BLUE}Your team's Speed\n"
+	.string "{COLOR BLUE}> With the Yellow Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 40 will obey your commands.$"
+
+RA_Player_Text_Explain_Badge3_Stat_Boost:
+	.string "{COLOR BLUE}> Your team's Speed\n"
 	.string "{COLOR BLUE}stats also rose a bit.\p"
-	.string "{COLOR BLUE}As for the Yellow Gem itself...\p"
-	.string "{COLOR BLUE}It holds a faint electrical charge.\n"
+	.string "{COLOR BLUE}> As for the Yellow Gem itself...\p"
+	.string "{COLOR BLUE}> It holds a faint electrical charge.\n"
 	.string "{COLOR BLUE}It was found in Kanto's Power Plant.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank4:
@@ -8798,12 +8802,12 @@ RA_Player_Text_Gain_Badge4:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge4:
-	.string "{COLOR BLUE}With the Green Gem, Pokémon\n"
-	.string "{COLOR BLUE}up to Lv. 50 will follow your commands.\p"
-	.string "{COLOR BLUE}And, you now have access to\n"
+	.string "{COLOR BLUE}> With the Green Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 50 will obey your commands.\p"
+	.string "{COLOR BLUE}> And, you now have access to\n"
 	.string "{COLOR BLUE}any Research Hubs you come across.\p"
-	.string "{COLOR BLUE}As for the Green Gem itself...\p"
-	.string "{COLOR BLUE}Researchers in Kalos say it contains\n"
+	.string "{COLOR BLUE}> As for the Green Gem itself...\p"
+	.string "{COLOR BLUE}> Researchers in Kalos say it contains\n"
 	.string "{COLOR BLUE}living cells from a legendary Pokémon.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank5:
@@ -8815,13 +8819,15 @@ RA_Player_Text_Gain_Badge5:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge5:
-	.string "{COLOR BLUE}With the Blue Gem, Pokémon\n"
-	.string "{COLOR BLUE}up to Lv. 60 will follow your commands.\p"
-	.string "{COLOR BLUE}Your team's Defence\n"
+	.string "{COLOR BLUE}> With the Blue Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 60 will obey your commands.$"
+
+RA_Player_Text_Explain_Badge5_Stat_Boost:
+	.string "{COLOR BLUE}> Your team's Defence\n"
 	.string "{COLOR BLUE}stats also rose a bit.\p"
-	.string "{COLOR BLUE}As for the Blue Gem itself...\p"
-	.string "{COLOR BLUE}It's actually a rare, blue-tinted type\n"
-	.string "{COLOR BLUE}of diamond found only in Sinnoh.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}> As for the Blue Gem itself...\p"
+	.string "{COLOR BLUE}> It's actually a rare, blue-tinted\n"
+	.string "{COLOR BLUE}type of diamond found only in Sinnoh.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank6:
 	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
@@ -8832,11 +8838,11 @@ RA_Player_Text_Gain_Badge6:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge6:
-	.string "{COLOR BLUE}With the Indigo Gem, Pokémon\n"
-	.string "{COLOR BLUE}up to Lv. 70 will follow your commands.\p"
-	.string "{COLOR BLUE}As for the Indigo Gem itself...\p"
-	.string "{COLOR BLUE}Made from fallen Galarian Wishing Stars,\n"
-	.string "{COLOR BLUE}up close it has a reddish-blue hue.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}> With the Indigo Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 70 will obey your commands.\p"
+	.string "{COLOR BLUE}> As for the Indigo Gem itself...\p"
+	.string "{COLOR BLUE}> It contains bits of Wishing Stars from\n"
+	.string "{COLOR BLUE}Galar. In the light, it looks reddish.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank7:
 	.string "The {COLOR RED}Amnesty Institute{COLOR DARK_GRAY} promoted me to\n"
@@ -8847,12 +8853,14 @@ RA_Player_Text_Gain_Badge7:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge7:
-	.string "{COLOR BLUE}With the Violet Gem, Pokémon\n"
-	.string "{COLOR BLUE}up to Lv. 80 will follow your commands.\p"
-	.string "{COLOR BLUE}Your team's Special Attack and\n"
+	.string "{COLOR BLUE}> With the Violet Gem, Pokémon\n"
+	.string "{COLOR BLUE}up to Lv. 80 will obey your commands.$"
+
+RA_Player_Text_Explain_Badge7_Stat_Boost:
+	.string "{COLOR BLUE}> Your team's Special Attack and\n"
 	.string "{COLOR BLUE}Special Defence stats also rose a bit.\p"
-	.string "{COLOR BLUE}As for the Violet Gem itself...\p"
-	.string "{COLOR BLUE}It's only found in the Paldea region.\n"
+	.string "{COLOR BLUE}> As for the Violet Gem itself...\p"
+	.string "{COLOR BLUE}> It's only found in the Paldea region.\n"
 	.string "{COLOR BLUE}Its traditional name is “Uva Violeta”.{COLOR DARK_GRAY}$"
 
 RA_Player_Text_Gain_Rank8:
@@ -8864,13 +8872,13 @@ RA_Player_Text_Gain_Badge8:
 	.string "attached it to my {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge8:
-	.string "{COLOR BLUE}With the Gold Ring, all Pokémon\n"
-	.string "{COLOR BLUE}will follow your commands.\p"
-	.string "{COLOR BLUE}And, you can now take part in\n"
+	.string "{COLOR BLUE}> With the Gold Ring, all Pokémon\n"
+	.string "{COLOR BLUE}will obey your commands.\p"
+	.string "{COLOR BLUE}> And, you can now take part in\n"
 	.string "{COLOR BLUE}the Pokémon League!\p"
-	.string "{COLOR BLUE}As for the Gold Ring itself...\p"
-	.string "{COLOR BLUE}The gold was mined in Johto, and it\n"
-	.string "{COLOR BLUE}looks right at home among the rainbow.{COLOR DARK_GRAY}$"
+	.string "{COLOR BLUE}> As for the Gold Ring itself...\p"
+	.string "{COLOR BLUE}> The gold was mined in Johto. It looks\n"
+	.string "{COLOR BLUE}right at home among the rainbow colours.{COLOR DARK_GRAY}$"
 
 RA_Player_Gain_Rank::
 	goto_if_set FLAG_BADGE00_GET, RA_Player_Gain_Rank1
@@ -8918,6 +8926,8 @@ RA_Player_Gain_Badge1::
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	msgbox RA_Player_Text_Explain_Badge1, MSGBOX_DEFAULT
+	playse SE_M_STAT_INCREASE
+	msgbox RA_Player_Text_Explain_Badge1_Stat_Boost, MSGBOX_DEFAULT
 	closemessage
 	callnative ClearMugshot
 	setflag FLAG_BADGE01_GET
@@ -8962,6 +8972,8 @@ RA_Player_Gain_Badge3::
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	msgbox RA_Player_Text_Explain_Badge3, MSGBOX_DEFAULT
+	playse SE_M_STAT_INCREASE
+	msgbox RA_Player_Text_Explain_Badge3_Stat_Boost, MSGBOX_DEFAULT
 	closemessage
 	callnative ClearMugshot
 	setflag FLAG_BADGE03_GET
@@ -9006,6 +9018,8 @@ RA_Player_Gain_Badge5::
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	msgbox RA_Player_Text_Explain_Badge5, MSGBOX_DEFAULT
+	playse SE_M_STAT_INCREASE
+	msgbox RA_Player_Text_Explain_Badge5_Stat_Boost, MSGBOX_DEFAULT
 	closemessage
 	callnative ClearMugshot
 	setflag FLAG_BADGE05_GET
@@ -9050,6 +9064,8 @@ RA_Player_Gain_Badge7::
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	msgbox RA_Player_Text_Explain_Badge7, MSGBOX_DEFAULT
+	playse SE_M_STAT_INCREASE
+	msgbox RA_Player_Text_Explain_Badge7_Stat_Boost, MSGBOX_DEFAULT
 	closemessage
 	callnative ClearMugshot
 	setflag FLAG_BADGE07_GET

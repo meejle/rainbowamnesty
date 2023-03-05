@@ -57,7 +57,7 @@
       "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "RA_PlayersHouse_1F_Script_FoundBadgeInFridge"
+      "script": "RA_PlayersHouse_1F_Script_ShouldIFridge"
     },
     {
       "type": "sign",
@@ -98,6 +98,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "RA_PlayersHouse_1F_Script_LookAtBoxes"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
+      "script": "RA_PlayersHouse_1F_Script_ShouldISink"
     }
   ]
 }

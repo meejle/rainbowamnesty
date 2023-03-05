@@ -32,6 +32,8 @@ RA_PlayersHouse_2F_Script_GetEmail::
 	waitmovement 0
 	delay 192
 	playse MUS_LEVEL_UP
+	applymovement 1, Common_Movement_ChatterChatter
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoIntroPCTurnOnEffect
 	delay 48
 	playse SE_PIN
@@ -109,13 +111,13 @@ RA_PlayersHouse_2F_Script_ReadEmail::
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 2
 	setvar VAR_RA_DIRECTION_OF_APPROACH, 5
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail, MSGBOX_DEFAULT
-	closemessage
 	namebox name_looker
 	playse SE_SELECT
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail2, MSGBOX_DEFAULT
 	closemessage
 	hidenamebox
 	playse SE_PC_OFF
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOffEffect
 	release
 	end
@@ -126,6 +128,7 @@ RA_PlayersHouse_2F_Script_ReadEmailAgain::
 	closemessage
 	goto_if_eq VAR_RESULT, NO, RA_PlayersHouse_2F_Script_DontReadEmailAgain
 	playse SE_PC_LOGIN
+	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOnEffect
 	delay 32
 	namebox name_looker
@@ -215,8 +218,8 @@ RA_PlayersHouse_2F_Move_ReturnToWest:
 	step_end
 
 RA_PlayersHouse_2F_Text_2WeeksLater:
-	.string "{COLOR BLUE}Two weeks later\n"
-	.string "Mistralton City - {PLAYER}'s house$"
+	.string "{COLOR BLUE}> Two weeks later\n"
+	.string "{COLOR BLUE}Mistralton City - {PLAYER}'s house{COLOR DARK_GRAY}$"
 
 RA_PlayersHouse_2F_Text_GotEmail:
 	.string "Sounds like I've got a new email...$"
@@ -230,7 +233,7 @@ RA_PlayersHouse_2F_Text_ShouldReadEmailFirst:
 	.string "anything else...$"
 
 RA_PlayersHouse_2F_Text_LookerEmail:
-	.string "It's an email from {COLOR GREEN}Agent Looker{COLOR DARK_GRAY}.$"
+	.string "It's an email from {COLOR GREEN}Chief Looker{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_2F_Text_LookerEmail2:
 	.string "My young friend,\p"
@@ -262,7 +265,7 @@ RA_PlayersHouse_2F_Text_LookAtTV:
 	.string "The {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}accommodation\n"
 	.string "came with a TV, but it doesn't pick up\l"
 	.string "any channels...\p"
-	.string "Thank goodness for gaming!$"
+	.string "At least I have gaming!$"
 
 RA_PlayersHouse_2F_Text_LookAtBoxes:
 	.string "I should really get around to unpacking\n"
