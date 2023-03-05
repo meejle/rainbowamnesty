@@ -6574,6 +6574,22 @@ bool8 MovementAction_EmoteDotDotDot_Step0(struct ObjectEvent *objectEvent, struc
     return TRUE;
 }
 
+bool8 MovementAction_EmoteSweatDrop_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    ObjectEventGetLocalIdAndMap(objectEvent, &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
+    FieldEffectStart(FLDEFF_SWEAT_DROP_ICON);
+    sprite->sActionFuncId = 1;
+    return TRUE;
+}
+
+bool8 MovementAction_EmoteChatterChatter_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
+{
+    ObjectEventGetLocalIdAndMap(objectEvent, &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
+    FieldEffectStart(FLDEFF_CHATTER_CHATTER_ICON);
+    sprite->sActionFuncId = 1;
+    return TRUE;
+}
+
 bool8 MovementAction_RevealTrainer_Step0(struct ObjectEvent *objectEvent, struct Sprite *sprite)
 {
     if (objectEvent->movementType == MOVEMENT_TYPE_BURIED)

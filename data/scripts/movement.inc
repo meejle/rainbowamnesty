@@ -42,6 +42,14 @@ Common_Movement_DotDotDot:
 	emote_dot_dot_dot
 	step_end
 
+Common_Movement_SweatDrop:
+	emote_sweat_drop
+	step_end
+
+Common_Movement_ChatterChatter:
+	emote_chatter_chatter
+	step_end
+
 Common_Movement_Delay48:
 	delay_16
 	delay_16

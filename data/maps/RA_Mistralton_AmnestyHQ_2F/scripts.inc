@@ -38,7 +38,7 @@ RA_AmnestyHQ_2F_Script_PlayerEnters::
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_PlayerFaces
 	waitmovement 0
-	
+
 	namebox name_looker
 	msgbox RA_AmnestyHQ_2F_Text_LookerMagicHappens, MSGBOX_DEFAULT
 	closemessage
@@ -9073,4 +9073,1382 @@ RA_Player_Gain_Badge8::
 	closemessage
 	callnative ClearMugshot
 	setflag FLAG_BADGE08_GET
+	return
+
+RA_Object1_SweatDrop::
+	applymovement 1, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_SweatDrop_FaceUp::
+	applymovement 1, RA_FaceUp
+	waitmovement 0
+	applymovement 1, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_SweatDrop_FaceRight::
+	applymovement 1, RA_FaceRight
+	waitmovement 0
+	applymovement 1, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_SweatDrop_FaceDown::
+	applymovement 1, RA_FaceDown
+	waitmovement 0
+	applymovement 1, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_SweatDrop_FaceLeft::
+	applymovement 1, RA_FaceLeft
+	waitmovement 0
+	applymovement 1, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_Chatter::
+	applymovement 1, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_Chatter_FaceUp::
+	applymovement 1, RA_FaceUp
+	waitmovement 0
+	applymovement 1, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_Chatter_FaceRight::
+	applymovement 1, RA_FaceRight
+	waitmovement 0
+	applymovement 1, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_Chatter_FaceDown::
+	applymovement 1, RA_FaceDown
+	waitmovement 0
+	applymovement 1, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object1_Chatter_FaceLeft::
+	applymovement 1, RA_FaceLeft
+	waitmovement 0
+	applymovement 1, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 1, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_SweatDrop::
+	applymovement 2, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_SweatDrop_FaceUp::
+	applymovement 2, RA_FaceUp
+	waitmovement 0
+	applymovement 2, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_SweatDrop_FaceRight::
+	applymovement 2, RA_FaceRight
+	waitmovement 0
+	applymovement 2, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_SweatDrop_FaceDown::
+	applymovement 2, RA_FaceDown
+	waitmovement 0
+	applymovement 2, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_SweatDrop_FaceLeft::
+	applymovement 2, RA_FaceLeft
+	waitmovement 0
+	applymovement 2, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_Chatter::
+	applymovement 2, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_Chatter_FaceUp::
+	applymovement 2, RA_FaceUp
+	waitmovement 0
+	applymovement 2, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_Chatter_FaceRight::
+	applymovement 2, RA_FaceRight
+	waitmovement 0
+	applymovement 2, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_Chatter_FaceDown::
+	applymovement 2, RA_FaceDown
+	waitmovement 0
+	applymovement 2, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object2_Chatter_FaceLeft::
+	applymovement 2, RA_FaceLeft
+	waitmovement 0
+	applymovement 2, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 2, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_SweatDrop::
+	applymovement 3, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_SweatDrop_FaceUp::
+	applymovement 3, RA_FaceUp
+	waitmovement 0
+	applymovement 3, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_SweatDrop_FaceRight::
+	applymovement 3, RA_FaceRight
+	waitmovement 0
+	applymovement 3, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_SweatDrop_FaceDown::
+	applymovement 3, RA_FaceDown
+	waitmovement 0
+	applymovement 3, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_SweatDrop_FaceLeft::
+	applymovement 3, RA_FaceLeft
+	waitmovement 0
+	applymovement 3, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_Chatter::
+	applymovement 3, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_Chatter_FaceUp::
+	applymovement 3, RA_FaceUp
+	waitmovement 0
+	applymovement 3, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_Chatter_FaceRight::
+	applymovement 3, RA_FaceRight
+	waitmovement 0
+	applymovement 3, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_Chatter_FaceDown::
+	applymovement 3, RA_FaceDown
+	waitmovement 0
+	applymovement 3, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object3_Chatter_FaceLeft::
+	applymovement 3, RA_FaceLeft
+	waitmovement 0
+	applymovement 3, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 3, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_SweatDrop::
+	applymovement 4, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_SweatDrop_FaceUp::
+	applymovement 4, RA_FaceUp
+	waitmovement 0
+	applymovement 4, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_SweatDrop_FaceRight::
+	applymovement 4, RA_FaceRight
+	waitmovement 0
+	applymovement 4, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_SweatDrop_FaceDown::
+	applymovement 4, RA_FaceDown
+	waitmovement 0
+	applymovement 4, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_SweatDrop_FaceLeft::
+	applymovement 4, RA_FaceLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_Chatter::
+	applymovement 4, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_Chatter_FaceUp::
+	applymovement 4, RA_FaceUp
+	waitmovement 0
+	applymovement 4, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_Chatter_FaceRight::
+	applymovement 4, RA_FaceRight
+	waitmovement 0
+	applymovement 4, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_Chatter_FaceDown::
+	applymovement 4, RA_FaceDown
+	waitmovement 0
+	applymovement 4, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object4_Chatter_FaceLeft::
+	applymovement 4, RA_FaceLeft
+	waitmovement 0
+	applymovement 4, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 4, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_SweatDrop::
+	applymovement 5, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_SweatDrop_FaceUp::
+	applymovement 5, RA_FaceUp
+	waitmovement 0
+	applymovement 5, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_SweatDrop_FaceRight::
+	applymovement 5, RA_FaceRight
+	waitmovement 0
+	applymovement 5, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_SweatDrop_FaceDown::
+	applymovement 5, RA_FaceDown
+	waitmovement 0
+	applymovement 5, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_SweatDrop_FaceLeft::
+	applymovement 5, RA_FaceLeft
+	waitmovement 0
+	applymovement 5, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_Chatter::
+	applymovement 5, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_Chatter_FaceUp::
+	applymovement 5, RA_FaceUp
+	waitmovement 0
+	applymovement 5, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_Chatter_FaceRight::
+	applymovement 5, RA_FaceRight
+	waitmovement 0
+	applymovement 5, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_Chatter_FaceDown::
+	applymovement 5, RA_FaceDown
+	waitmovement 0
+	applymovement 5, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object5_Chatter_FaceLeft::
+	applymovement 5, RA_FaceLeft
+	waitmovement 0
+	applymovement 5, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 5, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_SweatDrop::
+	applymovement 6, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_SweatDrop_FaceUp::
+	applymovement 6, RA_FaceUp
+	waitmovement 0
+	applymovement 6, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_SweatDrop_FaceRight::
+	applymovement 6, RA_FaceRight
+	waitmovement 0
+	applymovement 6, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_SweatDrop_FaceDown::
+	applymovement 6, RA_FaceDown
+	waitmovement 0
+	applymovement 6, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_SweatDrop_FaceLeft::
+	applymovement 6, RA_FaceLeft
+	waitmovement 0
+	applymovement 6, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_Chatter::
+	applymovement 6, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_Chatter_FaceUp::
+	applymovement 6, RA_FaceUp
+	waitmovement 0
+	applymovement 6, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_Chatter_FaceRight::
+	applymovement 6, RA_FaceRight
+	waitmovement 0
+	applymovement 6, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_Chatter_FaceDown::
+	applymovement 6, RA_FaceDown
+	waitmovement 0
+	applymovement 6, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object6_Chatter_FaceLeft::
+	applymovement 6, RA_FaceLeft
+	waitmovement 0
+	applymovement 6, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 6, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_SweatDrop::
+	applymovement 7, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_SweatDrop_FaceUp::
+	applymovement 7, RA_FaceUp
+	waitmovement 0
+	applymovement 7, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_SweatDrop_FaceRight::
+	applymovement 7, RA_FaceRight
+	waitmovement 0
+	applymovement 7, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_SweatDrop_FaceDown::
+	applymovement 7, RA_FaceDown
+	waitmovement 0
+	applymovement 7, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_SweatDrop_FaceLeft::
+	applymovement 7, RA_FaceLeft
+	waitmovement 0
+	applymovement 7, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_Chatter::
+	applymovement 7, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_Chatter_FaceUp::
+	applymovement 7, RA_FaceUp
+	waitmovement 0
+	applymovement 7, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_Chatter_FaceRight::
+	applymovement 7, RA_FaceRight
+	waitmovement 0
+	applymovement 7, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_Chatter_FaceDown::
+	applymovement 7, RA_FaceDown
+	waitmovement 0
+	applymovement 7, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object7_Chatter_FaceLeft::
+	applymovement 7, RA_FaceLeft
+	waitmovement 0
+	applymovement 7, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 7, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_SweatDrop::
+	applymovement 8, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_SweatDrop_FaceUp::
+	applymovement 8, RA_FaceUp
+	waitmovement 0
+	applymovement 8, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_SweatDrop_FaceRight::
+	applymovement 8, RA_FaceRight
+	waitmovement 0
+	applymovement 8, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_SweatDrop_FaceDown::
+	applymovement 8, RA_FaceDown
+	waitmovement 0
+	applymovement 8, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_SweatDrop_FaceLeft::
+	applymovement 8, RA_FaceLeft
+	waitmovement 0
+	applymovement 8, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_Chatter::
+	applymovement 8, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_Chatter_FaceUp::
+	applymovement 8, RA_FaceUp
+	waitmovement 0
+	applymovement 8, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_Chatter_FaceRight::
+	applymovement 8, RA_FaceRight
+	waitmovement 0
+	applymovement 8, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_Chatter_FaceDown::
+	applymovement 8, RA_FaceDown
+	waitmovement 0
+	applymovement 8, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object8_Chatter_FaceLeft::
+	applymovement 8, RA_FaceLeft
+	waitmovement 0
+	applymovement 8, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 8, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_SweatDrop::
+	applymovement 9, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_SweatDrop_FaceUp::
+	applymovement 9, RA_FaceUp
+	waitmovement 0
+	applymovement 9, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_SweatDrop_FaceRight::
+	applymovement 9, RA_FaceRight
+	waitmovement 0
+	applymovement 9, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_SweatDrop_FaceDown::
+	applymovement 9, RA_FaceDown
+	waitmovement 0
+	applymovement 9, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_SweatDrop_FaceLeft::
+	applymovement 9, RA_FaceLeft
+	waitmovement 0
+	applymovement 9, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_Chatter::
+	applymovement 9, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_Chatter_FaceUp::
+	applymovement 9, RA_FaceUp
+	waitmovement 0
+	applymovement 9, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_Chatter_FaceRight::
+	applymovement 9, RA_FaceRight
+	waitmovement 0
+	applymovement 9, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_Chatter_FaceDown::
+	applymovement 9, RA_FaceDown
+	waitmovement 0
+	applymovement 9, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object9_Chatter_FaceLeft::
+	applymovement 9, RA_FaceLeft
+	waitmovement 0
+	applymovement 9, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 9, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_SweatDrop::
+	applymovement 10, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_SweatDrop_FaceUp::
+	applymovement 10, RA_FaceUp
+	waitmovement 0
+	applymovement 10, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_SweatDrop_FaceRight::
+	applymovement 10, RA_FaceRight
+	waitmovement 0
+	applymovement 10, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_SweatDrop_FaceDown::
+	applymovement 10, RA_FaceDown
+	waitmovement 0
+	applymovement 10, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_SweatDrop_FaceLeft::
+	applymovement 10, RA_FaceLeft
+	waitmovement 0
+	applymovement 10, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_Chatter::
+	applymovement 10, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_Chatter_FaceUp::
+	applymovement 10, RA_FaceUp
+	waitmovement 0
+	applymovement 10, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_Chatter_FaceRight::
+	applymovement 10, RA_FaceRight
+	waitmovement 0
+	applymovement 10, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_Chatter_FaceDown::
+	applymovement 10, RA_FaceDown
+	waitmovement 0
+	applymovement 10, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Object10_Chatter_FaceLeft::
+	applymovement 10, RA_FaceLeft
+	waitmovement 0
+	applymovement 10, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	applymovement 10, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_SweatDrop::
+	applymovement LOCALID_LOOKER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_SweatDrop_FaceUp::
+	applymovement LOCALID_LOOKER, RA_FaceUp
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_SweatDrop_FaceRight::
+	applymovement LOCALID_LOOKER, RA_FaceRight
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_SweatDrop_FaceDown::
+	applymovement LOCALID_LOOKER, RA_FaceDown
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_SweatDrop_FaceLeft::
+	applymovement LOCALID_LOOKER, RA_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_Chatter::
+	applymovement LOCALID_LOOKER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_Chatter_FaceUp::
+	applymovement LOCALID_LOOKER, RA_FaceUp
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_Chatter_FaceRight::
+	applymovement LOCALID_LOOKER, RA_FaceRight
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_Chatter_FaceDown::
+	applymovement LOCALID_LOOKER, RA_FaceDown
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Looker_Chatter_FaceLeft::
+	applymovement LOCALID_LOOKER, RA_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_LOOKER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_SweatDrop::
+	applymovement LOCALID_MAGNOLIA, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_SweatDrop_FaceUp::
+	applymovement LOCALID_MAGNOLIA, RA_FaceUp
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_SweatDrop_FaceRight::
+	applymovement LOCALID_MAGNOLIA, RA_FaceRight
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_SweatDrop_FaceDown::
+	applymovement LOCALID_MAGNOLIA, RA_FaceDown
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_SweatDrop_FaceLeft::
+	applymovement LOCALID_MAGNOLIA, RA_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_Chatter::
+	applymovement LOCALID_MAGNOLIA, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_Chatter_FaceUp::
+	applymovement LOCALID_MAGNOLIA, RA_FaceUp
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_Chatter_FaceRight::
+	applymovement LOCALID_MAGNOLIA, RA_FaceRight
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_Chatter_FaceDown::
+	applymovement LOCALID_MAGNOLIA, RA_FaceDown
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Magnolia_Chatter_FaceLeft::
+	applymovement LOCALID_MAGNOLIA, RA_FaceLeft
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement LOCALID_MAGNOLIA, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_SweatDrop::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_SweatDrop_FaceUp::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_SweatDrop_FaceRight::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_SweatDrop_FaceDown::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_SweatDrop_FaceLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_SweatDrop
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_Chatter::
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_Chatter_FaceUp::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceUp
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_Chatter_FaceRight::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceRight
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_Chatter_FaceDown::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceDown
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	return
+
+RA_Player_Chatter_FaceLeft::
+	applymovement OBJ_EVENT_ID_PLAYER, RA_FaceLeft
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ChatterChatter
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
 	return

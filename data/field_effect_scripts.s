@@ -81,6 +81,8 @@ gFieldEffectScriptPointers::
 	.4byte gFieldEffectScript_ZeeZeeZeeIcon      @ FLDEFF_ZEE_ZEE_ZEE_ICON
 	.4byte gFieldEffectScript_AnimeEyesIcon      @ FLDEFF_ANIME_EYES_ICON
 	.4byte gFieldEffectScript_DotDotDotIcon      @ FLDEFF_DOT_DOT_DOT_ICON
+	.4byte gFieldEffectScript_SweatDropIcon      @ FLDEFF_SWEAT_DROP_ICON
+	.4byte gFieldEffectScript_ChatterChatterIcon      @ FLDEFF_CHATTER_CHATTER_ICON
 
 gFieldEffectScript_ExclamationMarkIcon1::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect2, FldEff_ExclamationMarkIcon
@@ -306,6 +308,14 @@ gFieldEffectScript_AnimeEyesIcon::
 
 gFieldEffectScript_DotDotDotIcon::
 	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect2, FldEff_DotDotDotIcon
+	field_eff_end
+
+gFieldEffectScript_SweatDropIcon::
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect2, FldEff_SweatDropIcon
+	field_eff_end
+
+gFieldEffectScript_ChatterChatterIcon::
+	field_eff_loadfadedpal_callnative gSpritePalette_GeneralFieldEffect2, FldEff_ChatterChatterIcon
 	field_eff_end
 
 gFieldEffectScript_Nop47::

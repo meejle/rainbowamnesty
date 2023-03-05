@@ -32,6 +32,8 @@ u8 FldEff_AngryEyesIcon(void);
 u8 FldEff_ZeeZeeZeeIcon(void);
 u8 FldEff_AnimeEyesIcon(void);
 u8 FldEff_DotDotDotIcon(void);
+u8 FldEff_SweatDropIcon(void);
+u8 FldEff_ChatterChatterIcon(void);
 u8 GetCurrentApproachingTrainerObjectEventId(void);
 u8 GetChosenApproachingTrainerObjectEventId(u8 arrayId);
 void PlayerFaceTrainerAfterBattle(void);

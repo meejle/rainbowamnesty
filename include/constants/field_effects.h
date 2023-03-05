@@ -77,6 +77,8 @@
 #define FLDEFF_ZEE_ZEE_ZEE_ICON     73
 #define FLDEFF_ANIME_EYES_ICON     74
 #define FLDEFF_DOT_DOT_DOT_ICON     75
+#define FLDEFF_SWEAT_DROP_ICON     76
+#define FLDEFF_CHATTER_CHATTER_ICON     77
 
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1

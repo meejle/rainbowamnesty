@@ -71,6 +71,8 @@ static const u8 sEmotion_AngryEyesGfx[] = INCBIN_U8("graphics/field_effects/pics
 static const u8 sEmotion_ZeeZeeZeeGfx[] = INCBIN_U8("graphics/field_effects/pics/emotion_zee_zee_zee.4bpp");
 static const u8 sEmotion_AnimeEyesGfx[] = INCBIN_U8("graphics/field_effects/pics/emotion_anime_eyes.4bpp");
 static const u8 sEmotion_DotDotDotGfx[] = INCBIN_U8("graphics/field_effects/pics/emotion_dot_dot_dot.4bpp");
+static const u8 sEmotion_SweatDropGfx[] = INCBIN_U8("graphics/field_effects/pics/emotion_sweat.4bpp");
+static const u8 sEmotion_ChatterChatterGfx[] = INCBIN_U8("graphics/field_effects/pics/emotion_chatter.4bpp");
 
 static u8 (*const sDirectionalApproachDistanceFuncs[])(struct ObjectEvent *trainerObj, s16 range, s16 x, s16 y) =
 {
@@ -228,6 +230,22 @@ static const struct SpriteFrameImage sSpriteImageTable_DotDotDotIcon[] =
     }
 };
 
+static const struct SpriteFrameImage sSpriteImageTable_SweatDropIcon[] =
+{
+    {
+        .data = sEmotion_SweatDropGfx,
+        .size = 0x80
+    }
+};
+
+static const struct SpriteFrameImage sSpriteImageTable_ChatterChatterIcon[] =
+{
+    {
+        .data = sEmotion_ChatterChatterGfx,
+        .size = 0x80
+    }
+};
+
 static const union AnimCmd sSpriteAnim_Icons1[] =
 {
     ANIMCMD_FRAME(0, 60),
@@ -363,6 +381,28 @@ static const struct SpriteTemplate sSpriteTemplate_DotDotDotIcon =
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_DotDotDotIcon,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_TrainerIcons
+};
+
+static const struct SpriteTemplate sSpriteTemplate_SweatDropIcon =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
+    .oam = &sOamData_Icons,
+    .anims = sSpriteAnimTable_Icons,
+    .images = sSpriteImageTable_SweatDropIcon,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_TrainerIcons
+};
+
+static const struct SpriteTemplate sSpriteTemplate_ChatterChatterIcon =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = FLDEFF_PAL_TAG_GENERAL_2,
+    .oam = &sOamData_Icons,
+    .anims = sSpriteAnimTable_Icons,
+    .images = sSpriteImageTable_ChatterChatterIcon,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_TrainerIcons
 };
@@ -997,6 +1037,26 @@ u8 FldEff_DotDotDotIcon(void)
 
     if (spriteId != MAX_SPRITES)
         SetIconSpriteData(&gSprites[spriteId], FLDEFF_DOT_DOT_DOT_ICON, 0);
+
+    return 0;
+}
+
+u8 FldEff_SweatDropIcon(void)
+{
+    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_SweatDropIcon, 0, 0, 0x53);
+
+    if (spriteId != MAX_SPRITES)
+        SetIconSpriteData(&gSprites[spriteId], FLDEFF_SWEAT_DROP_ICON, 0);
+
+    return 0;
+}
+
+u8 FldEff_ChatterChatterIcon(void)
+{
+    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ChatterChatterIcon, 0, 0, 0x53);
+
+    if (spriteId != MAX_SPRITES)
+        SetIconSpriteData(&gSprites[spriteId], FLDEFF_CHATTER_CHATTER_ICON, 0);
 
     return 0;
 }

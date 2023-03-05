@@ -167,6 +167,8 @@ u8 MovementAction_EmoteAngryEyes_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_EmoteZeeZeeZee_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_EmoteAnimeEyes_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_EmoteDotDotDot_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_EmoteSweatDrop_Step0(struct ObjectEvent *, struct Sprite *);
+u8 MovementAction_EmoteChatterChatter_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_RevealTrainer_Step0(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_RevealTrainer_Step1(struct ObjectEvent *, struct Sprite *);
 u8 MovementAction_RockSmashBreak_Step0(struct ObjectEvent *, struct Sprite *);
@@ -369,6 +371,8 @@ u8 (*const gMovementActionFuncs_EmoteAngryEyes[])(struct ObjectEvent *, struct S
 u8 (*const gMovementActionFuncs_EmoteZeeZeeZee[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_EmoteAnimeEyes[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_EmoteDotDotDot[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_EmoteSweatDrop[])(struct ObjectEvent *, struct Sprite *);
+u8 (*const gMovementActionFuncs_EmoteChatterChatter[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_RevealTrainer[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_RockSmashBreak[])(struct ObjectEvent *, struct Sprite *);
 u8 (*const gMovementActionFuncs_CutTree[])(struct ObjectEvent *, struct Sprite *);
@@ -538,6 +542,8 @@ u8 (*const *const gMovementActionFuncs[])(struct ObjectEvent *, struct Sprite *)
     [MOVEMENT_ACTION_EMOTE_ZEE_ZEE_ZEE] = gMovementActionFuncs_EmoteZeeZeeZee,
     [MOVEMENT_ACTION_EMOTE_ANIME_EYES] = gMovementActionFuncs_EmoteAnimeEyes,
     [MOVEMENT_ACTION_EMOTE_DOT_DOT_DOT] = gMovementActionFuncs_EmoteDotDotDot,
+    [MOVEMENT_ACTION_EMOTE_SWEAT_DROP] = gMovementActionFuncs_EmoteSweatDrop,
+    [MOVEMENT_ACTION_EMOTE_CHATTER_CHATTER] = gMovementActionFuncs_EmoteChatterChatter,
     [MOVEMENT_ACTION_REVEAL_TRAINER] = gMovementActionFuncs_RevealTrainer,
     [MOVEMENT_ACTION_ROCK_SMASH_BREAK] = gMovementActionFuncs_RockSmashBreak,
     [MOVEMENT_ACTION_CUT_TREE] = gMovementActionFuncs_CutTree,
@@ -1234,6 +1240,16 @@ u8 (*const gMovementActionFuncs_EmoteAnimeEyes[])(struct ObjectEvent *, struct S
 
 u8 (*const gMovementActionFuncs_EmoteDotDotDot[])(struct ObjectEvent *, struct Sprite *) = {
     MovementAction_EmoteDotDotDot_Step0,
+    MovementAction_Finish,
+};
+
+u8 (*const gMovementActionFuncs_EmoteSweatDrop[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_EmoteSweatDrop_Step0,
+    MovementAction_Finish,
+};
+
+u8 (*const gMovementActionFuncs_EmoteChatterChatter[])(struct ObjectEvent *, struct Sprite *) = {
+    MovementAction_EmoteChatterChatter_Step0,
     MovementAction_Finish,
 };
 
