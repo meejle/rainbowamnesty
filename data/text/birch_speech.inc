@@ -15,13 +15,13 @@ gText_Birch_MainSpeech::
 	.string "But I'm getting ahead of myself.\p$"
 
 gText_Birch_AndYouAre::
-	.string "Now, these old eyes don't work as well\nas they used to. So tell me...\p$"
+	.string "Now, my memory doesn't work quite as\nwell as it used to, so remind me...\p$"
 
 gText_Birch_BoyOrGirl::
 	.string "Are you a boy, or a girl?$"
 
 gText_Birch_WhatsYourName::
-	.string "Very well. And what's your name?$"
+	.string "What was your name, again?$"
 
 gText_Birch_SoItsPlayer::
 	.string "“{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}”...\ndid I get that right?$"
