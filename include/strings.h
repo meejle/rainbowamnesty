@@ -371,7 +371,6 @@ extern const u8 gText_ContinueMenuPokedex[];
 extern const u8 gText_ContinueMenuBadges[];
 extern const u8 gText_BirchBoy[];
 extern const u8 gText_BirchGirl[];
-extern const u8 gText_BirchEnby[];
 extern const u8 gText_DefaultNameStu[];
 extern const u8 gText_DefaultNameMilton[];
 extern const u8 gText_DefaultNameTom[];
@@ -3067,9 +3066,8 @@ extern const u8 gText_Perks2[];
 extern const u8 gText_Perks3[];
 extern const u8 gText_Perks4[];
 
-extern const u8 gText_SavingIShouldWriteSomething[];
-extern const u8 gText_SavingLetsDoIt[];
-extern const u8 gText_SavingIllJustAddThis[];
-extern const u8 gText_SavingNowThen[];
+extern const u8 gText_RA_Goal_Title[];
+extern const u8 gText_RA_Goal_1_Line_1[];
+extern const u8 gText_RA_Goal_1_Line_2[];
 
 #endif // GUARD_STRINGS_H

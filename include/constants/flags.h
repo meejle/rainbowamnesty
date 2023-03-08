@@ -41,7 +41,7 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
+#define FLAG_RA_GOAL1_COMPLETE  0x20
 #define FLAG_UNUSED_0x021    0x21 // Unused Flag
 #define FLAG_UNUSED_0x022    0x22 // Unused Flag
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
@@ -511,11 +511,11 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING 0x1DE
-#define FLAG_SYS_LAST_SAVEMSG_LETSDOIT       0x1DF
-#define FLAG_SYS_LAST_SAVEMSG_ADDTHIS        0x1E0
+#define FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING 0x1DE // Unused again
+#define FLAG_SYS_LAST_SAVEMSG_LETSDOIT       0x1DF // Unused again
+#define FLAG_SYS_LAST_SAVEMSG_ADDTHIS        0x1E0 // Unused again
 #define FLAG_SYS_SAVEREMIND_ON               0x1E1
-#define FLAG_SYS_LAST_SAVEMSG_NOWTHEN        0x1E2
+#define FLAG_SYS_LAST_SAVEMSG_NOWTHEN        0x1E2 // Unused again
 #define FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET    0x1E3
 
 // Mystery Gift Flags (Unknown)

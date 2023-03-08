@@ -1113,40 +1113,12 @@ static u8 SaveSavingMessageCallback(void)
     // Check for pending tutorials
     if (FlagGet(FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET) == TRUE)
     {
-        ShowSaveMessage(gText_SavingIllJustAddThis, SaveDoRTCSaveCallback);
-        FlagSet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
+        ShowSaveMessage(gText_SavingDontTurnOff, SaveDoRTCSaveCallback);
     }
     // else if...
-
-    // If no tutorials, cycle through the Persona 5 easter eggs
-    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING))
+    else
     {
-        ShowSaveMessage(gText_SavingLetsDoIt, SaveDoSaveCallback);
-        FlagClear(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING);
-        FlagSet(FLAG_SYS_LAST_SAVEMSG_LETSDOIT);
-    }
-    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_LETSDOIT))
-    {
-        ShowSaveMessage(gText_SavingIllJustAddThis, SaveDoSaveCallback);
-        FlagClear(FLAG_SYS_LAST_SAVEMSG_LETSDOIT);
-        FlagSet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
-    }
-    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS))
-    {
-        ShowSaveMessage(gText_SavingNowThen, SaveDoSaveCallback);
-        FlagClear(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
-        FlagSet(FLAG_SYS_LAST_SAVEMSG_NOWTHEN);
-    }
-    else if (FlagGet(FLAG_SYS_LAST_SAVEMSG_NOWTHEN))
-    {
-        ShowSaveMessage(gText_SavingIShouldWriteSomething, SaveDoSaveCallback);
-        FlagClear(FLAG_SYS_LAST_SAVEMSG_NOWTHEN);
-        FlagSet(FLAG_SYS_LAST_SAVEMSG_WRITESOMETHING);
-    }
-    else // Fallback if none of the flags are set
-    {
-        ShowSaveMessage(gText_SavingIllJustAddThis, SaveDoSaveCallback);
-        FlagSet(FLAG_SYS_LAST_SAVEMSG_ADDTHIS);
+        ShowSaveMessage(gText_SavingDontTurnOff, SaveDoSaveCallback);
     }
 
     return SAVE_IN_PROGRESS;

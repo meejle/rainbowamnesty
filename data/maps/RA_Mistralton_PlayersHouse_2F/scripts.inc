@@ -218,22 +218,23 @@ RA_PlayersHouse_2F_Move_ReturnToWest:
 	step_end
 
 RA_PlayersHouse_2F_Text_2WeeksLater:
-	.string "{COLOR BLUE}> Two weeks later\n"
-	.string "{COLOR BLUE}Mistralton City - {PLAYER}'s house{COLOR DARK_GRAY}$"
+	.string "> Two weeks later\n"
+	.string "{COLOR RED}Mistralton City {COLOR DARK_GRAY}- {COLOR GREEN}{PLAYER}'s {COLOR DARK_GRAY}house...$"
 
 RA_PlayersHouse_2F_Text_GotEmail:
-	.string "Sounds like I've got a new email...$"
+	.string "> It sounds like you've got a new\n"
+	.string "email...$"
 
 RA_PlayersHouse_2F_Text_NotTimeForBed:
-	.string "It's tempting, but now isn't the time to\n"
-	.string "be going back to bed!$"
+	.string "> You're tempted, but now isn't the time\n"
+	.string "to be going back to bed.$"
 
 RA_PlayersHouse_2F_Text_ShouldReadEmailFirst:
-	.string "I should check my email before I do\n"
-	.string "anything else...$"
+	.string "> You should check your emails before\n"
+	.string "you go anywhere else.$"
 
 RA_PlayersHouse_2F_Text_LookerEmail:
-	.string "It's an email from {COLOR GREEN}Chief Looker{COLOR DARK_GRAY}.$"
+	.string "> It's an email from {COLOR GREEN}Chief Looker{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_2F_Text_LookerEmail2:
 	.string "My young friend,\p"
@@ -253,55 +254,56 @@ RA_PlayersHouse_2F_Text_LookerEmail2:
 	.string "{COLOR GREEN}Looker{COLOR DARK_GRAY}$"
 
 RA_PlayersHouse_2F_Text_LookerEmail3:
-	.string "Should I read {COLOR GREEN}Looker's {COLOR DARK_GRAY}email again?$"
+	.string "> Will you read {COLOR GREEN}Looker's {COLOR DARK_GRAY}email again?$"
 
 RA_PlayersHouse_2F_Text_LookAtGCN:
-	.string "It's a {COLOR RED}Retroid Pocket 3+{COLOR DARK_GRAY}!\p"
-	.string "A mini HDMI cable and a {COLOR RED}Nintendo Switch\n"
-	.string "Pro Controller{COLOR DARK_GRAY} are connected, so I can\l"
-	.string "play ROM hacks on the big screen!$"
+	.string "> It's a {COLOR RED}Retroid Pocket 3+{COLOR DARK_GRAY}.\p"
+	.string "> A mini HDMI cable and a {COLOR RED}Nintendo\n"
+	.string "Switch Pro Controller {COLOR DARK_GRAY}are connected.\p"
+	.string "> You've been using it to play your\n"
+	.string "favourite ROM hacks on the TV.$"
 
 RA_PlayersHouse_2F_Text_LookAtTV:
-	.string "The {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}accommodation\n"
-	.string "came with a TV, but it doesn't pick up\l"
-	.string "any channels...\p"
-	.string "At least I have gaming!$"
+	.string "> The {COLOR RED}Amnesty Institute's\n"
+	.string "{COLOR DARK_GRAY}accommodation came with a TV.\p"
+	.string "> It doesn't pick up any channels,\n"
+	.string "so you just use it for gaming.$"
 
 RA_PlayersHouse_2F_Text_LookAtBoxes:
-	.string "I should really get around to unpacking\n"
-	.string "the rest of my stuff...\p"
-	.string "But not now!$"
+	.string "> ...\p"
+	.string "> You wonder if you'll ever get around\n"
+	.string "to unpacking the rest of your boxes...$"
 
 RA_PlayersHouse_2F_Text_LookAtBook:
-	.string "It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}manual\n"
-	.string "for new recruits.\p"
+	.string "> It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}training\n"
+	.string "manual for prospective agents.\p"
 	.string "Lesson number 1:\n"
-	.string "Use  {START_BUTTON}  to open the Menu.\p"
+	.string "Use  {START_BUTTON}  to open the menu.\p"
 	.string "Lesson number 2:\n"
-	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
+	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with {COLOR BLUE}Save{COLOR DARK_GRAY}.\p"
 	.string "Lesson number 3:\n"
 	.string "Hold  {B_BUTTON}  to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
-	.string "The rest is too technical for me to\n"
+	.string "> The rest is too technical for you to\n"
 	.string "understand...$"
 
 RA_PlayersHouse_2F_Text_LookAtBookRTC:
-	.string "It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}manual\n"
-	.string "for new recruits.\p"
+	.string "> It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}training\n"
+	.string "manual for prospective agents.\p"
 	.string "Lesson number 1:\n"
-	.string "Use  {START_BUTTON}  to open the Menu.\p"
+	.string "Use  {START_BUTTON}  to open the menu.\p"
 	.string "Lesson number 2:\n"
-	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
+	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with {COLOR BLUE}Save{COLOR DARK_GRAY}.\p"
 	.string "Lesson number 3:\n"
 	.string "Hold  {B_BUTTON}  to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
 	.string "Lesson number 4:\n"
-	.string "Adjust your {COLOR RED}clock {COLOR DARK_GRAY}by pressing\l"
+	.string "Adjust your clock by pressing\l"
 	.string "{DPAD_LEFT}{FONT 10} Left{FONT 11}  +  {SELECT_BUTTON}  +  {B_BUTTON}  together\lon the title screen.\p"
-	.string "The rest is too technical for me to\n"
+	.string "> The rest is too technical for you to\n"
 	.string "understand...$"
 
 RA_PlayersHouse_2F_Text_LookAtClock:
-	.string "The {COLOR RED}clock {COLOR DARK_GRAY}is stopped...\p"
-	.string "Better set it and start it!$"
+	.string "> The clock is stopped...\p"
+	.string "> You decide to set it and start it.$"
 
 name_looker:
 	.string "Looker$"

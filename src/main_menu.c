@@ -262,14 +262,14 @@ static const u16 sBirchSpeechPlatformBlackPal[] = {RGB_BLACK, RGB_BLACK, RGB_BLA
 #define MENU_TOP_WIN0 1
 #define MENU_TOP_WIN1 5
 #define MENU_TOP_WIN2 1
-#define MENU_TOP_WIN3 9
-#define MENU_TOP_WIN4 13
+#define MENU_TOP_WIN3 12
+#define MENU_TOP_WIN4 16
 #define MENU_TOP_WIN5 17
 #define MENU_TOP_WIN6 21
 #define MENU_WIDTH 26
 #define MENU_HEIGHT_WIN0 2
 #define MENU_HEIGHT_WIN1 2
-#define MENU_HEIGHT_WIN2 6
+#define MENU_HEIGHT_WIN2 9
 #define MENU_HEIGHT_WIN3 2
 #define MENU_HEIGHT_WIN4 2
 #define MENU_HEIGHT_WIN5 2
@@ -329,7 +329,7 @@ static const struct WindowTemplate sWindowTemplates_MainMenu[] =
         .width = MENU_WIDTH,
         .height = MENU_HEIGHT_WIN3,
         .paletteNum = 15,
-        .baseBlock = 0x9D
+        .baseBlock = 0x105
     },
     // OPTION / MYSTERY GIFT
     {
@@ -339,7 +339,7 @@ static const struct WindowTemplate sWindowTemplates_MainMenu[] =
         .width = MENU_WIDTH,
         .height = MENU_HEIGHT_WIN4,
         .paletteNum = 15,
-        .baseBlock = 0xD1
+        .baseBlock = 0x139
     },
     // OPTION / MYSTERY EVENTS
     {
@@ -2199,6 +2199,11 @@ static void MainMenu_FormatSavegameBadges(void)
             AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 192, 1, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_MainMenuContinue_Rank8);
         }
     }
+
+    AddTextPrinterParameterized3(2, FONT_CONTINUE_SUBPIXEL, 0, 50, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_RA_Goal_Title);
+    AddTextPrinterParameterized3(2, FONT_SMALL_SUBPIXEL, 59, 47, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_RA_Goal_1_Line_1);
+    AddTextPrinterParameterized3(2, FONT_SMALL_SUBPIXEL, 59, 59, sTextColor_MenuInfo, TEXT_SKIP_DRAW, gText_RA_Goal_1_Line_2);
+
 }
 
 static void LoadMainMenuWindowFrameTiles(u8 bgId, u16 tileOffset)
