@@ -219,7 +219,7 @@ RA_PlayersHouse_2F_Move_ReturnToWest:
 
 RA_PlayersHouse_2F_Text_2WeeksLater:
 	.string "> Two weeks later\n"
-	.string "{COLOR RED}Mistralton City {COLOR DARK_GRAY}- {COLOR GREEN}{PLAYER}'s {COLOR DARK_GRAY}house...$"
+	.string "{COLOR RED}Mistralton City {COLOR DARK_GRAY}- {COLOR GREEN}{PLAYER}'s {COLOR DARK_GRAY}house$"
 
 RA_PlayersHouse_2F_Text_GotEmail:
 	.string "> It sounds like you've got a new\n"
@@ -278,11 +278,11 @@ RA_PlayersHouse_2F_Text_LookAtBook:
 	.string "> It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}training\n"
 	.string "manual for prospective agents.\p"
 	.string "Lesson number 1:\n"
-	.string "Use  {START_BUTTON}  to open the menu.\p"
+	.string "Use {FONT 14}RS{FONT 11} to open the menu.\p"
 	.string "Lesson number 2:\n"
-	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with {COLOR BLUE}Save{COLOR DARK_GRAY}.\p"
+	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
 	.string "Lesson number 3:\n"
-	.string "Hold  {B_BUTTON}  to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
+	.string "Hold {FONT 14}W{FONT 11} to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
 	.string "> The rest is too technical for you to\n"
 	.string "understand...$"
 
@@ -290,14 +290,14 @@ RA_PlayersHouse_2F_Text_LookAtBookRTC:
 	.string "> It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}training\n"
 	.string "manual for prospective agents.\p"
 	.string "Lesson number 1:\n"
-	.string "Use  {START_BUTTON}  to open the menu.\p"
+	.string "Use {FONT 14}RS{FONT 11} to open the menu.\p"
 	.string "Lesson number 2:\n"
-	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with {COLOR BLUE}Save{COLOR DARK_GRAY}.\p"
+	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
 	.string "Lesson number 3:\n"
-	.string "Hold  {B_BUTTON}  to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
+	.string "Hold {FONT 14}W{FONT 11} to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
 	.string "Lesson number 4:\n"
 	.string "Adjust your clock by pressing\l"
-	.string "{DPAD_LEFT}{FONT 10} Left{FONT 11}  +  {SELECT_BUTTON}  +  {B_BUTTON}  together\lon the title screen.\p"
+	.string "{FONT 14}AB{FONT 11} + {FONT 14}TU{FONT 11} + {FONT 14}W{FONT 11} together\lon the title screen.\p"
 	.string "> The rest is too technical for you to\n"
 	.string "understand...$"
 

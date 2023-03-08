@@ -1,14 +1,6 @@
 RA_Mistralton_MapScripts::
 	.byte 0
 
-RA_Mistralton_Script_ShutterDown::
-	lock
-	msgbox RA_Mistralton_Text_ShutterDown, MSGBOX_DEFAULT
-	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, RA_Mistralton_Move_ReturnSouth
-	release
-	end
-
 RA_Mistralton_Script_GymDoorSign::
 	lock
 	msgbox RA_Mistralton_Text_GymDoorSign, MSGBOX_DEFAULT
@@ -52,7 +44,7 @@ RA_Mistralton_Script_CheckpointSign::
 
 RA_Mistralton_Script_DotDotDot::
 	faceplayer
-	msgbox RA_Mistralton_Text_DotDotDot, MSGBOX_NPC
+	msgbox RA_Lipsum, MSGBOX_NPC
 	closemessage
 	end
 
@@ -88,23 +80,18 @@ RA_Mistralton_Move_ReturnSouth:
 	walk_down
 	step_end
 
-RA_Mistralton_Text_ShutterDown:
-	.string "It's hard to tell, but the shutters are\n"
-	.string "down.\p"
-	.string "Guess I'll come back later.$"
-
 RA_Mistralton_Text_GymDoorSign:
-	.string "There's a sign on the door.\p"
+	.string "> There's a sign on the door.\p"
 	.string "GYM CLOSED - PRIVATE TRAINING ONLY\n"
 	.string "BY ORDER OF {COLOR RED}TEAM RAINBOW ROCKET{COLOR DARK_GRAY}$"
 
 RA_Mistralton_Text_PlayerDoorSign:
-	.string "{COLOR GREEN}{PLAYER}'s{COLOR DARK_GRAY} House$"
+	.string "{COLOR GREEN}{PLAYER}'s{COLOR DARK_GRAY} house$"
 
 RA_Mistralton_Text_PkmnCentreSign:
-	.string "The door won't open.\p"
-	.string "Looks like I need something called a\n"
-	.string "{COLOR RED}Poké Pass {COLOR DARK_GRAY}to get in.$"
+	.string "> The door won't open.\p"
+	.string "> It looks like you need something\n"
+	.string "called a {COLOR RED}Poké Pass {COLOR DARK_GRAY}to get in.$"
 
 RA_Mistralton_Text_CheckpointSign:
 	.string "CHECKPOINT CLOSED UNTIL FURTHER\n"
@@ -125,7 +112,4 @@ RA_Mistralton_Text_GymSign:
 	.string "“The High-Flying Girl”$"
 
 RA_Mistralton_Text_LockedDoor:
-	.string "The door is locked.$"
-
-RA_Mistralton_Text_DotDotDot:
-	.string "...$"
+	.string "> The door is locked.$"

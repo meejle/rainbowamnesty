@@ -8,6 +8,7 @@ gText_Birch_Welcome::
 	.string "only we remain to oppose them.\p"
 	.string "However!\pWhile they have their “secret weapon”,\nin the form of {COLOR RED}Ultra Wormholes{COLOR DARK_GRAY}...\p$"
 
+@ Unused; for some reason this is set in strings.c
 gText_Birch_Pokemon::
 	.string "$"
 
@@ -15,13 +16,15 @@ gText_Birch_MainSpeech::
 	.string "But I'm getting ahead of myself.\p$"
 
 gText_Birch_AndYouAre::
-	.string "Now, my memory doesn't work quite as\nwell as it used to, so remind me...\p$"
+	.string "Now, there's a lot on my plate, so you'll\n"
+    .string "have to forgive my rudeness, but...\p$"
 
+@ Unused
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy, or a girl?$"
+	.string "$"
 
 gText_Birch_WhatsYourName::
-	.string "What was your name, again?$"
+	.string "What did you say your name was, again?$"
 
 gText_Birch_SoItsPlayer::
 	.string "“{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}”...\ndid I get that right?$"

@@ -859,8 +859,8 @@ gText_SandstormIsVicious::
 	.string "It's impossible to keep going.$"
 
 gText_SelectWithoutRegisteredItem::
-	.string "{COLOR BLUE}You can register an item in your bag\n"
-	.string "{COLOR BLUE}to  {SELECT_BUTTON}  for easy use.{COLOR DARK_GRAY}$"
+	.string "> You can register an item in your bag\n"
+	.string "to {FONT 14}TU{FONT 11} for easy use.$"
 
 gText_PokemonTrainerSchoolEmail::
 	.string "There's an e-mail from POKéMON TRAINER\n"

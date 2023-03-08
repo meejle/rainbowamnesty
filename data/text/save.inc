@@ -25,18 +25,17 @@ gText_DifferentSaveFile::
 	.string "the existing save file?$"
 
 gText_SaveError::
-	.string "> Sorry, your progress couldn't be saved.\p"
-	.string "> Your emulator might not be set up\n"
-	.string "correctly.$"
+	.string "> Your progress couldn't be saved. Your\n"
+	.string "emulator might not be set up correctly.$"
 
 gText_SavingDontTurnOffPower::
-	.string "> Saving. Don't close the emulator.$"
+	.string "> Saving... Don't close the emulator.$"
 
 gText_SavingInGameClock::
 	.string "> By the way...\p"
 	.string "> You now have the ability to adjust the\n"
 	.string "in-game clock whenever you want.\p"
-	.string "> Just press  {DPAD_LEFT}{FONT 10} Left{FONT 11}  +  {SELECT_BUTTON}  +  {B_BUTTON}\n"
+	.string "> Just press {FONT 14}AB{FONT 11} + {FONT 14}TU{FONT 11} + {FONT 14}W{FONT 11}\n"
 	.string "together on the title screen.\p"
 	.string "> In case you can't remember all that...\p"
 	.string "> We've added it to the manual on the\n"
