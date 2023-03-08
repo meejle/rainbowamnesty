@@ -10476,3 +10476,9 @@ RA_Player_Chatter_FaceLeft::
 
 name_player:
 	.string "{PLAYER}$"
+
+name_unknown:
+	.string "???$"
+
+name_rival:
+	.string "{RIVAL}$"

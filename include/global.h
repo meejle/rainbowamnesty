@@ -536,6 +536,7 @@ struct SaveBlock2
     /*0x57C*/ struct RankingHall2P hallRecords2P[FRONTIER_LVL_MODE_COUNT][HALL_RECORDS_COUNT]; // From record mixing.
     /*0x624*/ u16 contestLinkResults[CONTEST_CATEGORIES_COUNT][CONTESTANT_COUNT];
     /*0x64C*/ struct BattleFrontier frontier;
+    /*0xF2B*/ u8 rivalName[PLAYER_NAME_LENGTH + 1];
     /*0xF2C*/ u8 itemFlags[ITEM_FLAGS_COUNT];
 }; // sizeof=0xF2C
 

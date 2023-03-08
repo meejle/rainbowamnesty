@@ -302,8 +302,7 @@ Route103_Text_MayLetsBattle:
 	.string "a TRAINER is like.$"
 
 Route103_Text_MayDefeated:
-	.string "Wow! That's great!\n"
-	.string "{PLAYER}{KUN}, you're pretty good!$"
+	.string "Whatever...$"
 
 Route103_Text_MayTimeToHeadBack:
 	.string "MAY: I think I know why my dad has\n"
