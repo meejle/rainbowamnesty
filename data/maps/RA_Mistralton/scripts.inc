@@ -140,7 +140,7 @@ RA_Mistralton_Text_NameTheRival4:
 	.string "My name's {COLOR GREEN}{RIVAL}{COLOR DARK_GRAY}, and you'd better\n"
 	.string "not forget it.\p"
 	.string "Here, maybe this will help you\n"
-	.string "remember...$"
+	.string "remember.$"
 
 RA_Mistralton_Text_GymDoorSign:
 	.string "> There's a sign on the door.\p"

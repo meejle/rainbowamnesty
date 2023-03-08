@@ -8726,7 +8726,7 @@ RA_Player_Text_Explain_Badge0:
 	.string "{COLOR RED}Rank Insignia{COLOR DARK_GRAY}.\p"
 	.string "> You'll gain more {COLOR RED}Insignia {COLOR DARK_GRAY}as you rise\n"
 	.string "through the {COLOR RED}Amnesty Institute's Ranks{COLOR DARK_GRAY}.\p"
-	.string "> Use the  {START_BUTTON}  menu to check your\n"
+	.string "> Use the {FONT 14}RS{FONT 11} menu to check your\n"
 	.string "{COLOR RED}Poké Pass {COLOR DARK_GRAY}and admire your {COLOR RED}Insignia{COLOR DARK_GRAY}!\p"
 	.string "> With the {COLOR RED}White Band{COLOR DARK_GRAY}, you can catch\n"
 	.string "and train Pokémon.\p"
