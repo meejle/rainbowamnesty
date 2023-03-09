@@ -49,10 +49,50 @@ RA_Mistralton_Script_GymDoorSign::
 RA_Mistralton_Script_PlayerDoorSign::
 	lock
 	msgbox RA_Mistralton_Text_PlayerDoorSign, MSGBOX_DEFAULT
+	msgbox RA_Mistralton_Text_PlayerDoorSign_2, MSGBOX_DEFAULT
+	closemessage
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, RA_Mistralton_Move_Debug_Camera_1
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, Common_Movement_Delay48
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_CAMERA, RA_Mistralton_Move_Debug_Camera_2
+	waitmovement 0
+	special RemoveCameraObject
+	call RA_Player_Heart
+	msgbox RA_Mistralton_Text_PlayerDoorSign_3, MSGBOX_DEFAULT
 	closemessage
 	release
 	goto_if_set FLAG_SYS_SAVEREMIND_ON, RA_Mistralton_Script_SaveRemind
 	end
+
+RA_Mistralton_Move_Debug_Camera_1:
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+RA_Mistralton_Move_Debug_Camera_2:
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
 
 RA_Mistralton_Script_SaveRemind::
 	lockall
@@ -114,6 +154,16 @@ RA_Mistralton_Script_LockedDoor::
 	release
 	end
 
+RA_Mistralton_Script_DontForgetToSave::
+	lock
+	faceplayer
+	namebox name_confused_lady
+	msgbox RA_Mistralton_Text_DontForgetToSave, MSGBOX_DEFAULT
+	closemessage
+	hidenamebox
+	release
+	end
+
 RA_Mistralton_Move_ReturnSouth:
 	walk_down
 	step_end
@@ -142,6 +192,16 @@ RA_Mistralton_Text_NameTheRival4:
 	.string "Here, maybe this will help you\n"
 	.string "remember.$"
 
+RA_Mistralton_Text_DontForgetToSave:
+	.string "Don't forget to save your progress\n"
+	.string "regularly.\p"
+	.string "I forgot to save once, and now I can't\n"
+	.string "remember where I live.\p"
+	.string "I just stand around outside all day.\p"
+	.string "...\p"
+	.string "...Oh, to save, just press {FONT 14}RS{FONT 11}.\p"
+	.string "...$"
+
 RA_Mistralton_Text_GymDoorSign:
 	.string "> There's a sign on the door.\p"
 	.string "GYM CLOSED - PRIVATE TRAINING ONLY\n"
@@ -149,6 +209,17 @@ RA_Mistralton_Text_GymDoorSign:
 
 RA_Mistralton_Text_PlayerDoorSign:
 	.string "{COLOR GREEN}{PLAYER}'s{COLOR DARK_GRAY} house$"
+	.string "> ...\p"
+	.string "> You decided to experiment with the\n"
+	.string "in-game camera.$"
+
+RA_Mistralton_Text_PlayerDoorSign_2:
+	.string "> ...\p"
+	.string "> You decided to experiment with the\n"
+	.string "in-game camera.$"
+
+RA_Mistralton_Text_PlayerDoorSign_3:
+	.string "> Nice.$"
 
 RA_Mistralton_Text_PkmnCentreSign:
 	.string "> The door won't open.\p"
@@ -175,3 +246,6 @@ RA_Mistralton_Text_GymSign:
 
 RA_Mistralton_Text_LockedDoor:
 	.string "> The door is locked.$"
+
+name_confused_lady:
+	.string "Confused-looking lady$"
