@@ -7692,7 +7692,7 @@ u16 GetBattleBGM(void)
                 return MUS_VS_RIVAL;
             if (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName))
                 return MUS_VS_TRAINER;
-            return MUS_VS_RIVAL;
+            return MUS_VS_FRONTIER_BRAIN;
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_ELITE_FOUR;
         case TRAINER_CLASS_SALON_MAIDEN:

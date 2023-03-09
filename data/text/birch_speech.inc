@@ -19,10 +19,6 @@ gText_Birch_AndYouAre::
 	.string "Now, there's a lot on my plate, so you'll\n"
     .string "have to forgive my rudeness, but...\p$"
 
-@ Unused
-gText_Birch_BoyOrGirl::
-	.string "$"
-
 gText_Birch_WhatsYourName::
 	.string "What did you say your name was, again?$"
 

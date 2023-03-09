@@ -2,7 +2,6 @@
 #define GUARD_ITEM_MENU_ICONS_H
 
 extern const struct CompressedSpriteSheet gBagMaleSpriteSheet;
-extern const struct CompressedSpriteSheet gBagFemaleSpriteSheet;
 extern const struct CompressedSpritePalette gBagPaletteTable;
 extern const struct CompressedSpriteSheet gBerryCheckCircleSpriteSheet;
 extern const struct CompressedSpritePalette gBerryCheckCirclePaletteTable;

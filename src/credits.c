@@ -1166,40 +1166,20 @@ static bool8 LoadBikeScene(u8 scene, u8 taskId)
         gMain.state++;
         break;
     case 2:
-        if (gSaveBlock2Ptr->playerGender == MALE)
-        {
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsBrendan);
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsRivalMay);
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsBicycle);
-            LoadSpritePalettes(gSpritePalettes_Credits);
+        LoadCompressedSpriteSheet(gSpriteSheet_CreditsBrendan);
+        LoadCompressedSpriteSheet(gSpriteSheet_CreditsRivalMay);
+        LoadCompressedSpriteSheet(gSpriteSheet_CreditsBicycle);
+        LoadSpritePalettes(gSpritePalettes_Credits);
 
-            spriteId = CreateIntroBrendanSprite(120, 46);
-            gTasks[taskId].tPlayerSpriteId = spriteId;
-            gSprites[spriteId].callback = SpriteCB_Player;
-            gSprites[spriteId].anims = sAnims_Player;
+        spriteId = CreateIntroBrendanSprite(120, 46);
+        gTasks[taskId].tPlayerSpriteId = spriteId;
+        gSprites[spriteId].callback = SpriteCB_Player;
+        gSprites[spriteId].anims = sAnims_Player;
 
-            spriteId = CreateIntroMaySprite(DISPLAY_WIDTH + 32, 46);
-            gTasks[taskId].tRivalSpriteId = spriteId;
-            gSprites[spriteId].callback = SpriteCB_Rival;
-            gSprites[spriteId].anims = sAnims_Rival;
-        }
-        else
-        {
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsMay);
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsRivalBrendan);
-            LoadCompressedSpriteSheet(gSpriteSheet_CreditsBicycle);
-            LoadSpritePalettes(gSpritePalettes_Credits);
-
-            spriteId = CreateIntroMaySprite(120, 46);
-            gTasks[taskId].tPlayerSpriteId = spriteId;
-            gSprites[spriteId].callback = SpriteCB_Player;
-            gSprites[spriteId].anims = sAnims_Player;
-
-            spriteId = CreateIntroBrendanSprite(DISPLAY_WIDTH + 32, 46);
-            gTasks[taskId].tRivalSpriteId = spriteId;
-            gSprites[spriteId].callback = SpriteCB_Rival;
-            gSprites[spriteId].anims = sAnims_Rival;
-        };
+        spriteId = CreateIntroMaySprite(DISPLAY_WIDTH + 32, 46);
+        gTasks[taskId].tRivalSpriteId = spriteId;
+        gSprites[spriteId].callback = SpriteCB_Rival;
+        gSprites[spriteId].anims = sAnims_Rival;
         gMain.state++;
         break;
     case 3:

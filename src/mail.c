@@ -129,7 +129,7 @@ static const u8 sTextColors[] = {
 // Either blue or red depending on player's gender
 static const u16 sBgColors[GENDER_COUNT][2] = {
     [MALE]   = { RGB(13, 22, 26), RGB(5, 13, 20) },
-    [FEMALE] = { RGB(28, 15, 17), RGB(20, 6, 14) }
+    [FEMALE] = { RGB(13, 22, 26), RGB(5, 13, 20) }
 };
 
 static const struct MailGraphics sMailGraphics[] = {

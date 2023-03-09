@@ -1371,10 +1371,7 @@ static void Task_Scene2_CreateSprites(u8 taskId)
     u8 spriteId;
 
     // Load sprite sheets
-    if (sIntroCharacterGender == MALE)
-        LoadCompressedSpriteSheet(gSpriteSheet_IntroBrendan);
-    else
-        LoadCompressedSpriteSheet(gSpriteSheet_IntroMay);
+    LoadCompressedSpriteSheet(gSpriteSheet_IntroBrendan);
 
     LoadCompressedSpriteSheet(gSpriteSheet_IntroBicycle);
     LoadCompressedSpriteSheet(gSpriteSheet_IntroFlygon);
@@ -1390,10 +1387,7 @@ static void Task_Scene2_CreateSprites(u8 taskId)
     CreateSprite(&sSpriteTemplate_Manectric, DISPLAY_WIDTH + 32, 128, 0);
     CreateSprite(&sSpriteTemplate_Torchic, DISPLAY_WIDTH + 48, 110, 1);
 
-    if (sIntroCharacterGender == MALE)
-        spriteId = CreateIntroBrendanSprite(DISPLAY_WIDTH + 32, 100);
-    else
-        spriteId = CreateIntroMaySprite(DISPLAY_WIDTH + 32, 100);
+    spriteId = CreateIntroBrendanSprite(DISPLAY_WIDTH + 32, 100);
 
     gSprites[spriteId].callback = SpriteCB_PlayerOnBicycle;
     gSprites[spriteId].anims = sAnims_PlayerBicycle;

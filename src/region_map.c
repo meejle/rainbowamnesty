@@ -1451,11 +1451,6 @@ void CreateRegionMapPlayerIcon(u16 tileTag, u16 paletteTag)
         sRegionMap->playerIconSprite = NULL;
         return;
     }
-    if (gSaveBlock2Ptr->playerGender == FEMALE)
-    {
-        sheet.data = sRegionMapPlayerIcon_MayGfx;
-        palette.data = sRegionMapPlayerIcon_MayPal;
-    }
     LoadSpriteSheet(&sheet);
     LoadSpritePalette(&palette);
     spriteId = CreateSprite(&template, 0, 0, 1);

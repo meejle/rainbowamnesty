@@ -435,16 +435,10 @@ ContestHall_EventScript_SetExitWarpLinkContest::
 	end
 
 LilycoveCity_ContestLobby_EventScript_SetPlayerGfx::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, LilycoveCity_ContestLobby_EventScript_SetPlayerGfxBrendan
-	goto_if_eq VAR_RESULT, FEMALE, LilycoveCity_ContestLobby_EventScript_SetPlayerGfxMay
+	goto LilycoveCity_ContestLobby_EventScript_SetPlayerGfxBrendan
 	return
 
 LilycoveCity_ContestLobby_EventScript_SetPlayerGfxBrendan::
 	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
-	return
-
-LilycoveCity_ContestLobby_EventScript_SetPlayerGfxMay::
-	setvar VAR_OBJ_GFX_ID_3, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
 

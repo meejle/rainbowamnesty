@@ -45,21 +45,11 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	delay 40
 	setvar VAR_TEMP_1, 1
 	call EverGrandeCity_HallOfFame_EventScript_SetGameClearFlags
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, EverGrandeCity_HallOfFame_EventScript_GameClearMale
-	goto_if_eq VAR_RESULT, FEMALE, EverGrandeCity_HallOfFame_EventScript_GameClearFemale
+	goto EverGrandeCity_HallOfFame_EventScript_GameClearMale
 	end
 
 EverGrandeCity_HallOfFame_EventScript_GameClearMale::
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F
-	fadescreenspeed FADE_TO_BLACK, 24
-	special GameClear
-	waitstate
-	releaseall
-	end
-
-EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
-	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
 	waitstate

@@ -8,6 +8,7 @@ RA_Mistralton_Script_Debug_ChooseStarter::
 	fadescreen FADE_TO_BLACK
 	special ChooseStarter
 	waitstate
+	setflag FLAG_SYS_POKEMON_GET
 	end
 
 RA_Mistralton_Script_NameTheRival::
@@ -248,4 +249,4 @@ RA_Mistralton_Text_LockedDoor:
 	.string "> The door is locked.$"
 
 name_confused_lady:
-	.string "Confused-looking lady$"
+	.string "Confused-looking woman$"

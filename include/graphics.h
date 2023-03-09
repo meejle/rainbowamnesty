@@ -7404,7 +7404,6 @@ extern const u32 gDecorIconPalette_RegisteelDoll[];
 
 extern const u32 gWallClock_Gfx[];
 extern const u16 gWallClockMale_Pal[];
-extern const u16 gWallClockFemale_Pal[];
 extern const u32 gWallClockStart_Tilemap[];
 extern const u32 gWallClockView_Tilemap[];
 
@@ -8852,13 +8851,11 @@ extern const u8 gMenuInfoElements_Gfx[];
 // item menu graphics
 extern const u32 gBagScreen_Gfx[];
 extern const u32 gBagScreen_GfxTileMap[];
-extern const u32 gBagScreenFemale_Pal[];
 extern const u32 gBagScreenMale_Pal[];
 extern const u8 gBagMenuHMIcon_Gfx[];
 
 // item menu icons graphics
 extern const u32 gBagMaleTiles[];
-extern const u32 gBagFemaleTiles[];
 extern const u32 gBagPalette[];
 extern const u32 gBerryCheckCircle_Gfx[];
 

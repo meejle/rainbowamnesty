@@ -310,8 +310,8 @@ static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
     [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
 };
 
-static const u8 *const gFemalePresetNames[] = {
-    gText_DefaultNameKimmy,
+static const u8 *const gFemalePresetNames[] = { // Default names for the Rival character
+    gText_DefaultNameRival,
 };
 
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[];

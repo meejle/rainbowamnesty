@@ -17,19 +17,12 @@ VerdanturfTown_BattleTentBattleRoom_OnTransition:
 	end
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_SetPlayerGfx::
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, VerdanturfTown_BattleTentBattleRoom_EventScript_SetPlayerGfxMale
-	goto_if_eq VAR_RESULT, FEMALE, VerdanturfTown_BattleTentBattleRoom_EventScript_SetPlayerGfxFemale
+	goto VerdanturfTown_BattleTentBattleRoom_EventScript_SetPlayerGfxMale
 	return
 
 VerdanturfTown_BattleTentBattleRoom_EventScript_SetPlayerGfxMale::
 	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL
-	return
-
-VerdanturfTown_BattleTentBattleRoom_EventScript_SetPlayerGfxFemale::
-	setvar VAR_OBJ_GFX_ID_1, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RIVAL_MAY_NORMAL
 	return
 
 VerdanturfTown_BattleTentBattleRoom_OnFrame:
