@@ -167,13 +167,44 @@ RA_Mistralton_Script_DontForgetToSave::
 	release
 	end
 
+RA_Mistralton_Script_Poryphone_Debug_Lady::
+	playse MUS_LEVEL_UP
+	lock
+	faceplayer
+	msgbox RA_Mistralton_Text_Add_Debug_Lady, MSGBOX_POKENAV
+	closemessage
+	playse SE_POKENAV_OFF
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	waitmovement 0
+	playse SE_POKENAV_CALL
+	namebox name_poryphone_debug_lady
+	msgbox RA_Mistralton_Text_Answer_Debug_Lady, MSGBOX_POKENAV
+	playse SE_POKENAV_ON
+	msgbox RA_Lipsum_Poryphone_Formatted, MSGBOX_POKENAV
+	closemessage
+	hidenamebox
+	playse SE_POKENAV_HANG_UP
+	release
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
+	end
+
+RA_Mistralton_Text_Add_Debug_Lady:
+	.string "> You saved {COLOR GREEN}Debug lady's\n"
+	.string "{COLOR DARK_GRAY}number to your {COLOR RED}Poryphone{COLOR DARK_GRAY}.$"
+
+RA_Mistralton_Text_Answer_Debug_Lady:
+	.string "> You answered an incoming\n"
+	.string "{COLOR RED}Poryphone {COLOR DARK_GRAY}call.$"
+
+name_poryphone_debug_lady:
+	.string "Poryphone debug lady$"
+
 RA_Mistralton_Script_TechIsAmazing::
 	lock
 	faceplayer
 	namebox name_tech_enthusiast
 	message RA_Mistralton_Text_TechIsAmazing
 	waitmessage
-	playse SE_WIN_OPEN
 	multichoice2 20, 8, RA_Mistralton_Options_TechIsAmazing
 	goto_if_eq VAR_RESULT, 0, RA_Mistralton_Script_AgreeTech
 	msgbox RA_Mistralton_Text_DisagreeTech, MSGBOX_DEFAULT
@@ -183,6 +214,7 @@ RA_Mistralton_Script_TechIsAmazing::
 	end
 
 RA_Mistralton_Script_AgreeTech::
+	call RA_Player_Chatter
 	msgbox RA_Mistralton_Text_AgreeTech, MSGBOX_DEFAULT
 	closemessage
 	hidenamebox
@@ -211,8 +243,8 @@ RA_Mistralton_Text_NameTheRival3:
 	.string "taken an interest in you, is that it?\p"
 	.string "I give it a week before they drop you...\p"
 	.string "And, guess what? I don't need a dumb\n"
-	.string "“{COLOR RED}Institute{COLOR DARK_GRAY}” to take down the\l"
-	.string "{COLOR RED}Rainbow Rockets{COLOR DARK_GRAY}.\p"
+	.string "“{COLOR RED}Institute{COLOR DARK_GRAY}” to take down\l"
+	.string "{COLOR RED}Team Rainbow Rocket{COLOR DARK_GRAY}.\p"
 	.string "I'm doing to do it on my own.\p"
 	.string "Sorry to rain on your parade and all.\p"
 	.string "My name's...$"
@@ -225,7 +257,7 @@ RA_Mistralton_Text_NameTheRival4:
 
 RA_Mistralton_Text_TechIsAmazing:
 	.string "I overheard some scientist dudes\n"
-	.string "talking about something interesting...{PAUSE 15}$"
+	.string "talking about something interesting...{PAUSE_UNTIL_PRESS}$"
 
 RA_Mistralton_Text_AgreeTech:
 	.string "Apparently the {COLOR RED}Cargo Service {COLOR DARK_GRAY}has a new\n"
@@ -234,7 +266,8 @@ RA_Mistralton_Text_AgreeTech:
 	.string "between regions, and it doesn't even\l"
 	.string "show up on radar!\p"
 	.string "Technology is incredible!\p"
-	.string "Sadly, they won't let me see it...$"
+	.string "Sadly, no matter how enthusiastic I am,\n"
+	.string "they still won't let me see it...$"
 
 RA_Mistralton_Text_DisagreeTech:
 	.string "Haha, suit yourself!$"
@@ -298,4 +331,4 @@ name_confused_lady:
 	.string "Confused-looking woman$"
 
 name_tech_enthusiast:
-	.string "Tech enthusiast$"
+	.string "Science fanboy$"
