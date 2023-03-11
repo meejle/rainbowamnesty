@@ -123,8 +123,10 @@ RA_Mistralton_Script_CheckpointSign::
 
 RA_Mistralton_Script_DotDotDot::
 	faceplayer
-	msgbox RA_Lipsum, MSGBOX_NPC
+	namebox name_confused_lady
+	msgbox RA_Lipsum, MSGBOX_DEFAULT
 	closemessage
+	hidenamebox
 	end
 
 RA_Mistralton_Script_CitySign::
@@ -165,6 +167,33 @@ RA_Mistralton_Script_DontForgetToSave::
 	release
 	end
 
+RA_Mistralton_Script_TechIsAmazing::
+	lock
+	faceplayer
+	namebox name_tech_enthusiast
+	message RA_Mistralton_Text_TechIsAmazing
+	waitmessage
+	playse SE_WIN_OPEN
+	multichoice2 20, 8, RA_Mistralton_Options_TechIsAmazing
+	goto_if_eq VAR_RESULT, 0, RA_Mistralton_Script_AgreeTech
+	msgbox RA_Mistralton_Text_DisagreeTech, MSGBOX_DEFAULT
+	closemessage
+	hidenamebox
+	release
+	end
+
+RA_Mistralton_Script_AgreeTech::
+	msgbox RA_Mistralton_Text_AgreeTech, MSGBOX_DEFAULT
+	closemessage
+	hidenamebox
+	release
+	end
+
+RA_Mistralton_Options_TechIsAmazing:
+	.string "{FONT 13}Tell me more!$"
+	.string "{FONT 13}I'm a bit busy...$"
+	.string "$"
+
 RA_Mistralton_Move_ReturnSouth:
 	walk_down
 	step_end
@@ -180,10 +209,11 @@ RA_Mistralton_Text_NameTheRival3:
 	.string "So, what? You think you're special\n"
 	.string "because the granny and gramps have\l"
 	.string "taken an interest in you, is that it?\p"
-	.string "As if you even need a dumb “{COLOR RED}Institute{COLOR DARK_GRAY}”\n"
-	.string "to take down the {COLOR RED}Rainbow Rockets{COLOR DARK_GRAY}...\p"
-	.string "Well guess what? I'm going to do it on\n"
-	.string "my own.\p"
+	.string "I give it a week before they drop you...\p"
+	.string "And, guess what? I don't need a dumb\n"
+	.string "“{COLOR RED}Institute{COLOR DARK_GRAY}” to take down the\l"
+	.string "{COLOR RED}Rainbow Rockets{COLOR DARK_GRAY}.\p"
+	.string "I'm doing to do it on my own.\p"
 	.string "Sorry to rain on your parade and all.\p"
 	.string "My name's...$"
 
@@ -192,6 +222,22 @@ RA_Mistralton_Text_NameTheRival4:
 	.string "not forget it.\p"
 	.string "Here, maybe this will help you\n"
 	.string "remember.$"
+
+RA_Mistralton_Text_TechIsAmazing:
+	.string "I overheard some scientist dudes\n"
+	.string "talking about something interesting...{PAUSE 15}$"
+
+RA_Mistralton_Text_AgreeTech:
+	.string "Apparently the {COLOR RED}Cargo Service {COLOR DARK_GRAY}has a new\n"
+	.string "device called a “{COLOR RED}ReEngine{COLOR DARK_GRAY}”.\p"
+	.string "It allows near-instantaneous travel\n"
+	.string "between regions, and it doesn't even\l"
+	.string "show up on radar!\p"
+	.string "Technology is incredible!\p"
+	.string "Sadly, they won't let me see it...$"
+
+RA_Mistralton_Text_DisagreeTech:
+	.string "Haha, suit yourself!$"
 
 RA_Mistralton_Text_DontForgetToSave:
 	.string "Don't forget to save your progress\n"
@@ -250,3 +296,6 @@ RA_Mistralton_Text_LockedDoor:
 
 name_confused_lady:
 	.string "Confused-looking woman$"
+
+name_tech_enthusiast:
+	.string "Tech enthusiast$"

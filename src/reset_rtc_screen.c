@@ -709,6 +709,7 @@ static void Task_ResetRtcScreen(u8 taskId)
         }
         else
         {
+            PlaySE(SE_BOO);
             ShowMessage(gText_SaveFailed);
         }
         tState = MAINSTATE_WAIT_EXIT;

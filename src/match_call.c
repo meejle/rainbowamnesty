@@ -1189,7 +1189,6 @@ static void StartMatchCall(void)
         StopPlayerAvatar();
     }
 
-    PlaySE(SE_POKENAV_CALL);
     CreateTask(ExecuteMatchCall, 1);
 }
 
@@ -1198,7 +1197,7 @@ static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/match_call/
 static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/match_call/nav_icon.gbapal");
 static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/nav_icon.4bpp.lz");
 
-static const u8 sText_PokenavCallEllipsis[] = _("………………\p");
+static const u8 sText_PokenavCallEllipsis[] = _("> You received a call on your\n{COLOR RED}Poryphone{COLOR DARK_GRAY}.\p");
 
 #define tState      data[0]
 #define tWindowId   data[2]
@@ -1269,7 +1268,7 @@ static bool32 MatchCall_LoadGfx(u8 taskId)
     FillWindowPixelBuffer(tWindowId, PIXEL_FILL(8));
     LoadPalette(sMatchCallWindow_Pal, BG_PLTT_ID(14), sizeof(sMatchCallWindow_Pal));
     LoadPalette(sPokenavIcon_Pal, BG_PLTT_ID(15), sizeof(sPokenavIcon_Pal));
-    ChangeBgY(0, -0x2000, BG_COORD_SET);
+    ChangeBgY(0, 0, BG_COORD_SET);
     return TRUE;
 }
 
@@ -1291,14 +1290,7 @@ static bool32 MatchCall_DrawWindow(u8 taskId)
 static bool32 MatchCall_ReadyIntro(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (!IsDma3ManagerBusyWithBgCopy())
-    {
-        // Note that "..." is not printed yet, just readied
-        InitMatchCallTextPrinter(tWindowId, sText_PokenavCallEllipsis);
-        return TRUE;
-    }
-
-    return FALSE;
+    return TRUE;
 }
 
 static bool32 MatchCall_SlideWindowIn(u8 taskId)
@@ -1334,9 +1326,7 @@ static bool32 MatchCall_PrintMessage(u8 taskId)
     s16 *data = gTasks[taskId].data;
     if (!RunMatchCallTextPrinter(tWindowId) && !IsSEPlaying() && JOY_NEW(A_BUTTON | B_BUTTON))
     {
-        FillWindowPixelBuffer(tWindowId, PIXEL_FILL(8));
         CopyWindowToVram(tWindowId, COPYWIN_GFX);
-        PlaySE(SE_POKENAV_HANG_UP);
         return TRUE;
     }
 
@@ -1346,38 +1336,19 @@ static bool32 MatchCall_PrintMessage(u8 taskId)
 static bool32 MatchCall_SlideWindowOut(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-    if (ChangeBgY(0, 0x600, BG_COORD_SUB) <= -0x2000)
-    {
-        FillBgTilemapBufferRect_Palette0(0, 0, 0, 14, 30, 6);
-        DestroyTask(tIconTaskId);
-        RemoveWindow(tWindowId);
-        CopyBgTilemapBufferToVram(0);
-        return TRUE;
-    }
-
-    return FALSE;
+    DestroyTask(tIconTaskId);
+    return TRUE;
 }
 
 static bool32 MatchCall_EndCall(u8 taskId)
 {
     u8 playerObjectId;
-    if (!IsDma3ManagerBusyWithBgCopy() && !IsSEPlaying())
-    {
-        ChangeBgY(0, 0, BG_COORD_SET);
-        if (!sMatchCallState.triggeredFromScript)
-        {
-            LoadMessageBoxAndBorderGfx();
-            playerObjectId = GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0);
-            ObjectEventClearHeldMovementIfFinished(&gObjectEvents[playerObjectId]);
-            ScriptMovement_UnfreezeObjectEvents();
-            UnfreezeObjectEvents();
-            UnlockPlayerFieldControls();
-        }
-
-        return TRUE;
-    }
-
-    return FALSE;
+    playerObjectId = GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_PLAYER, 0, 0);
+    ObjectEventClearHeldMovementIfFinished(&gObjectEvents[playerObjectId]);
+    ScriptMovement_UnfreezeObjectEvents();
+    UnfreezeObjectEvents();
+    UnlockPlayerFieldControls();
+    return TRUE;
 }
 
 static void DrawMatchCallTextBoxBorder_Internal(u32 windowId, u32 tileOffset, u32 paletteId)
@@ -1407,7 +1378,7 @@ static void InitMatchCallTextPrinter(int windowId, const u8 *str)
     struct TextPrinterTemplate printerTemplate;
     printerTemplate.currentChar = str;
     printerTemplate.windowId = windowId;
-    printerTemplate.fontId = FONT_NORMAL;
+    printerTemplate.fontId = FONT_NORMAL_SUBPIXEL;
     printerTemplate.x = 32;
     printerTemplate.y = 1;
     printerTemplate.currentX = 32;
