@@ -3016,6 +3016,15 @@ extern const u8 gText_Rank5[];
 extern const u8 gText_Rank6[];
 extern const u8 gText_Rank7[];
 extern const u8 gText_Rank8[];
+extern const u8 gText_White_Rank0[];
+extern const u8 gText_White_Rank1[];
+extern const u8 gText_White_Rank2[];
+extern const u8 gText_White_Rank3[];
+extern const u8 gText_White_Rank4[];
+extern const u8 gText_White_Rank5[];
+extern const u8 gText_White_Rank6[];
+extern const u8 gText_White_Rank7[];
+extern const u8 gText_White_Rank8[];
 
 extern const u8 gText_Perks0[];
 extern const u8 gText_Perks1[];
