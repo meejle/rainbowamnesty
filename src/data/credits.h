@@ -149,6 +149,24 @@ static const struct CreditsEntry sCreditsEntry_TilemapStudio1[] = {11, FALSE, sC
 static const u8 sCreditsText_TilemapStudio2[] = _("{FONT_SMALL}https://github.com/Rangi42/tilemap-studio");
 static const struct CreditsEntry sCreditsEntry_TilemapStudio2[] = {11, FALSE, sCreditsText_TilemapStudio2};
 
+static const u8 sCreditsText_SubpixelFonts1[] = _("“Faux-antialiased”");
+static const struct CreditsEntry sCreditsEntry_SubpixelFonts1[] = {11, TRUE, sCreditsText_SubpixelFonts1};
+static const u8 sCreditsText_SubpixelFonts2[] = _("Pokémon Emerald fonts");
+static const struct CreditsEntry sCreditsEntry_SubpixelFonts2[] = {11, TRUE, sCreditsText_SubpixelFonts2};
+static const u8 sCreditsText_SubpixelFonts3[] = _("{FONT_NARROW}Created by meejle");
+static const struct CreditsEntry sCreditsEntry_SubpixelFonts3[] = {11, FALSE, sCreditsText_SubpixelFonts3};
+static const u8 sCreditsText_SubpixelFonts4[] = _("{FONT_SMALL}Download link coming soon");
+static const struct CreditsEntry sCreditsEntry_SubpixelFonts4[] = {11, FALSE, sCreditsText_SubpixelFonts4};
+
+static const u8 sCreditsText_Logo1[] = _("Logo design");
+static const struct CreditsEntry sCreditsEntry_Logo1[] = {11, TRUE, sCreditsText_Logo1};
+static const u8 sCreditsText_Logo2[] = _("{FONT_NARROW}meejle");
+static const struct CreditsEntry sCreditsEntry_Logo2[] = {11, FALSE, sCreditsText_Logo2};
+static const u8 sCreditsText_Logo5[] = _("{FONT_NARROW}Edit Undo Line font created by {FONT 14}q{FONT 7}nigma");
+static const struct CreditsEntry sCreditsEntry_Logo5[] = {11, FALSE, sCreditsText_Logo5};
+static const u8 sCreditsText_Logo6[] = _("{FONT_SMALL}https://www.dafont.com/edit-undo-line.font");
+static const struct CreditsEntry sCreditsEntry_Logo6[] = {11, FALSE, sCreditsText_Logo6};
+
 // Reserved space
 
 static const u8 sCreditsText_PkmnEmeraldVersion[] = _("Pokémon Emerald Version");
@@ -510,18 +528,18 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
     },
     [PAGE_GRAPHIC_DESIGNERS_3] = {
+        sCreditsEntry_SubpixelFonts1,
+        sCreditsEntry_SubpixelFonts2,
+        sCreditsEntry_SubpixelFonts3,
         _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
-        _,
+        sCreditsEntry_SubpixelFonts4,
     },
     [PAGE_MUSIC_COMPOSITION] = {
+        sCreditsEntry_Logo1,
+        sCreditsEntry_Logo2,
         _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
-        _,
+        sCreditsEntry_Logo5,
+        sCreditsEntry_Logo6,
     },
     [PAGE_SOUND_EFFECTS] = {
         _,

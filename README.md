@@ -70,3 +70,10 @@ Pokémon games don&rsquo;t always do a good job of explaining their mechanics. T
 
 **Built using Tilemap Studio:** Created by Rangi42  
 https://github.com/Rangi42/tilemap-studio
+
+**&ldquo;Faux-antialiased&rdquo; Pokémon Emerald fonts:** Created by meejle  
+Download link coming soon
+
+**Logo design:** meejle  
+Edit Undo Line font created by &AElig;nigma  
+https://www.dafont.com/edit-undo-line.font
