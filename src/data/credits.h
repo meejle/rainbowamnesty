@@ -149,6 +149,15 @@ static const struct CreditsEntry sCreditsEntry_TilemapStudio1[] = {11, FALSE, sC
 static const u8 sCreditsText_TilemapStudio2[] = _("{FONT_SMALL}https://github.com/Rangi42/tilemap-studio");
 static const struct CreditsEntry sCreditsEntry_TilemapStudio2[] = {11, FALSE, sCreditsText_TilemapStudio2};
 
+static const u8 sCreditsText_TBS1[] = _("Built using Pokémon Emerald");
+static const struct CreditsEntry sCreditsEntry_TBS1[] = {11, TRUE, sCreditsText_TBS1};
+static const u8 sCreditsText_TBS1b[] = _("Textbox Simulator");
+static const struct CreditsEntry sCreditsEntry_TBS1b[] = {11, TRUE, sCreditsText_TBS1b};
+static const u8 sCreditsText_TBS2[] = _("{FONT_NARROW}Created by meejle");
+static const struct CreditsEntry sCreditsEntry_TBS2[] = {11, FALSE, sCreditsText_TBS2};
+static const u8 sCreditsText_TBS3[] = _("{FONT_SMALL}https://meejle.github.io");
+static const struct CreditsEntry sCreditsEntry_TBS3[] = {11, FALSE, sCreditsText_TBS3};
+
 static const u8 sCreditsText_SubpixelFonts1[] = _("“Faux-antialiased”");
 static const struct CreditsEntry sCreditsEntry_SubpixelFonts1[] = {11, TRUE, sCreditsText_SubpixelFonts1};
 static const u8 sCreditsText_SubpixelFonts2[] = _("Pokémon Emerald fonts");
@@ -528,25 +537,25 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
     },
     [PAGE_GRAPHIC_DESIGNERS_3] = {
+        sCreditsEntry_TBS1,
+        sCreditsEntry_TBS1b,
+        sCreditsEntry_TBS2,
+        _,
+        sCreditsEntry_TBS3,
+    },
+    [PAGE_MUSIC_COMPOSITION] = {
         sCreditsEntry_SubpixelFonts1,
         sCreditsEntry_SubpixelFonts2,
         sCreditsEntry_SubpixelFonts3,
         _,
         sCreditsEntry_SubpixelFonts4,
     },
-    [PAGE_MUSIC_COMPOSITION] = {
+    [PAGE_SOUND_EFFECTS] = {
         sCreditsEntry_Logo1,
         sCreditsEntry_Logo2,
         _,
         sCreditsEntry_Logo5,
         sCreditsEntry_Logo6,
-    },
-    [PAGE_SOUND_EFFECTS] = {
-        _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
-        _,
     },
     [PAGE_GAME_DESIGNERS_1] = {
         _,
