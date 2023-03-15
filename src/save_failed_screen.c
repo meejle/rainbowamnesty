@@ -112,7 +112,7 @@ static const struct WindowTemplate sWindowTemplate_Clock[] =
 {
     {
         .bg = 0,
-        .tilemapLeft = 14,
+        .tilemapLeft = 27,
         .tilemapTop = 9,
         .width = 2,
         .height = 2,
@@ -151,7 +151,7 @@ static void SaveFailedScreenTextPrint(const u8 *text, u8 x, u8 y)
     u8 color[3];
 
     color[0] = TEXT_COLOR_TRANSPARENT;
-    color[1] = TEXT_DYNAMIC_COLOR_6;
+    color[1] = TEXT_COLOR_DARK_GRAY;
     color[2] = TEXT_COLOR_LIGHT_GRAY;
     AddTextPrinterParameterized4(sWindowIds[TEXT_WIN_ID], FONT_NORMAL_SUBPIXEL, x * 8, y * 8 + 1, 0, 0, color, 0, text);
 }
@@ -196,9 +196,9 @@ static void CB2_SaveFailedScreen(void)
         DmaFill16(3, 0, VRAM, VRAM_SIZE);
         DmaFill32(3, 0, OAM, OAM_SIZE);
         DmaFill16(3, 0, PLTT, PLTT_SIZE);
-        LZ77UnCompVram(gBirchBagGrass_Gfx, (void *)VRAM);
-        LZ77UnCompVram(gBirchBagTilemap, (void *)(BG_SCREEN_ADDR(14)));
-        LZ77UnCompVram(gBirchGrassTilemap, (void *)(BG_SCREEN_ADDR(15)));
+        LZ77UnCompVram(gBirchBagGrass_Gfx_Psyduck, (void *)VRAM);
+        LZ77UnCompVram(gBirchBagTilemap_Psyduck, (void *)(BG_SCREEN_ADDR(14)));
+        LZ77UnCompVram(gBirchGrassTilemap_Psyduck, (void *)(BG_SCREEN_ADDR(15)));
         LZ77UnCompVram(sSaveFailedClockGfx, (void *)(OBJ_VRAM0 + 0x20));
         ResetBgsAndClearDma3BusyFlags(0);
         InitBgsFromTemplates(0, sBgTemplates, ARRAY_COUNT(sBgTemplates));
@@ -214,7 +214,7 @@ static void CB2_SaveFailedScreen(void)
         ResetSpriteData();
         ResetTasks();
         ResetPaletteFade();
-        LoadPalette(gBirchBagGrass_Pal, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
+        LoadPalette(gBirchBagGrass_Pal_Psyduck, BG_PLTT_ID(0), 2 * PLTT_SIZE_4BPP);
         LoadPalette(sSaveFailedClockPal, OBJ_PLTT_ID(0), PLTT_SIZE_4BPP);
         LoadPalette(gTextWindowFrame1_Pal, BG_PLTT_ID(14), PLTT_SIZE_4BPP);
         LoadPalette(gStandardMenuPalette, BG_PLTT_ID(15), PLTT_SIZE_4BPP);
@@ -337,7 +337,7 @@ static void VBlankCB_UpdateClockGraphics(void)
     u32 n = (gMain.vblankCounter2 >> 3) & 7;
 
     gMain.oamBuffer[0] = sClockOamData;
-    gMain.oamBuffer[0].x = 112;
+    gMain.oamBuffer[0].x = 216;
     gMain.oamBuffer[0].y = (CLOCK_WIN_TOP + 1) * 8;
 
     if (sClockInfo[CLOCK_RUNNING])

@@ -132,7 +132,7 @@ static const u8 sCreditsText_AddScript5[] = _("{FONT_NARROW}LOuroboros   meekrhi
 static const struct CreditsEntry sCreditsEntry_AddScript5[] = {11, FALSE, sCreditsText_AddScript5};
 static const u8 sCreditsText_AddScript6[] = _("{FONT_NARROW}ProfLeonDiasBackup   Samu   ShinyDragonHunter"); // Long line
 static const struct CreditsEntry sCreditsEntry_AddScript6[] = {11, FALSE, sCreditsText_AddScript6};
-static const u8 sCreditsText_AddScript7[] = _("{FONT_NARROW}SonikkuA-DatH    Temporalin   tustin2121   {FONT_NORMAL}{JPN}セケツ");
+static const u8 sCreditsText_AddScript7[] = _("{FONT_NARROW}SonikkuA-DatH   Temporalin   tustin2121   {FONT_NORMAL}{JPN}セケツ");
 static const struct CreditsEntry sCreditsEntry_AddScript7[] = {11, FALSE, sCreditsText_AddScript7};
 
 static const u8 sCreditsText_Porymap[] = _("Built using Porymap");
@@ -175,6 +175,13 @@ static const u8 sCreditsText_Logo5[] = _("{FONT_NARROW}Edit Undo Line font creat
 static const struct CreditsEntry sCreditsEntry_Logo5[] = {11, FALSE, sCreditsText_Logo5};
 static const u8 sCreditsText_Logo6[] = _("{FONT_SMALL}https://www.dafont.com/edit-undo-line.font");
 static const struct CreditsEntry sCreditsEntry_Logo6[] = {11, FALSE, sCreditsText_Logo6};
+
+static const u8 sCreditsText_Spriters1[] = _("Assets from The Spriters Resource");
+static const struct CreditsEntry sCreditsEntry_Spriters1[] = {11, TRUE, sCreditsText_Spriters1};
+static const u8 sCreditsText_Spriters2[] = _("Provided by");
+static const struct CreditsEntry sCreditsEntry_Spriters2[] = {11, TRUE, sCreditsText_Spriters2};
+static const u8 sCreditsText_Spriters3[] = _("{FONT_NARROW}Dialga   Dragoon   TheEric132");
+static const struct CreditsEntry sCreditsEntry_Spriters3[] = {11, FALSE, sCreditsText_Spriters3};
 
 // Reserved space
 
@@ -558,9 +565,9 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         sCreditsEntry_Logo6,
     },
     [PAGE_GAME_DESIGNERS_1] = {
-        _,
-        sCreditsEntry_Reserved,
-        _,
+        sCreditsEntry_Spriters1,
+        sCreditsEntry_Spriters2,
+        sCreditsEntry_Spriters3,
         _,
         _,
     },
