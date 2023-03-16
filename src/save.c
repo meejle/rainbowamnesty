@@ -772,7 +772,7 @@ u8 TrySavingData(u8 saveType)
     }
 
     HandleSavingData(saveType);
-    if (!gDamagedSaveSectors)
+    if (!gDamagedSaveSectors) // Reverse the if statement to debug the Save Failed screen
     {
         gSaveAttemptStatus = SAVE_STATUS_OK;
         return SAVE_STATUS_OK;

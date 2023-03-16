@@ -126,11 +126,11 @@ static const u8 sClockFrames[8][3] =
     { 1, 0, 0 },
     { 5, 0, 0 },
     { 9, 0, 0 },
-    { 5, 0, 1 },
-    { 1, 0, 1 },
-    { 5, 1, 1 },
-    { 9, 1, 0 },
-    { 5, 1, 0 },
+    { 13, 0, 0 },
+    { 17, 0, 0 },
+    { 21, 0, 0 },
+    { 25, 0, 0 },
+    { 29, 0, 0 },
 };
 
 static const u8 sSaveFailedClockPal[] = INCBIN_U8("graphics/misc/clock_small.gbapal");
@@ -306,7 +306,7 @@ static void CB2_GameplayCannotBeContinued(void)
 
 static void CB2_FadeAndReturnToTitleScreen(void)
 {
-    sClockInfo[CLOCK_RUNNING] = FALSE;
+    sClockInfo[CLOCK_RUNNING] = FALSE; // Change to TRUE to keep the "clock" running for debug
 
     if (JOY_NEW(A_BUTTON))
     {
