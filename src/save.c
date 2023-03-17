@@ -142,7 +142,6 @@ static u8 WriteSaveSectorOrSlot(u16 sectorId, const struct SaveSectorLocation *l
     u16 i;
 
     gReadWriteSector = &gSaveDataBuffer;
-
     if (sectorId != FULL_SAVE_SLOT)
     {
         // A sector was specified, just write that sector.
@@ -159,8 +158,13 @@ static u8 WriteSaveSectorOrSlot(u16 sectorId, const struct SaveSectorLocation *l
         gSaveCounter++;
         status = SAVE_STATUS_OK;
 
+        // This is where I want to put my animation
         for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
+        {
+            AnimateSprites();
+            BuildOamBuffer();
             HandleWriteSector(i, locations);
+        }
 
         if (gDamagedSaveSectors)
         {
@@ -712,6 +716,7 @@ u8 HandleSavingData(u8 saveType)
     u8 *tempAddr;
 
     gTrainerHillVBlankCounter = NULL;
+
     UpdateSaveAddresses();
     switch (saveType)
     {

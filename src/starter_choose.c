@@ -51,6 +51,7 @@ static void SpriteCB_StarterPokemon(struct Sprite *sprite);
 
 static u16 sStarterLabelWindowId;
 
+// "Starter Pokémon machine" assets for starter_choose.c
 const u16 gBirchBagGrass_Pal[] = INCBIN_U16("graphics/starter_choose/tiles.gbapal");
 static const u16 sPokeballSelection_Pal[] = INCBIN_U16("graphics/starter_choose/pokeball_selection.gbapal");
 static const u16 sStarterCircle_Pal[] = INCBIN_U16("graphics/starter_choose/starter_circle.gbapal");
@@ -60,17 +61,17 @@ const u32 gBirchBagGrass_Gfx[] = INCBIN_U32("graphics/starter_choose/tiles.4bpp.
 const u32 gPokeballSelection_Gfx[] = INCBIN_U32("graphics/starter_choose/pokeball_selection.4bpp.lz");
 static const u32 sStarterCircle_Gfx[] = INCBIN_U32("graphics/starter_choose/starter_circle.4bpp.lz");
 
-// Had to reinstate the originals, as the Credits use them...
-const u16 gBirchBagGrass_Pal_Original[] = INCBIN_U16("graphics/starter_choose/tiles_original.gbapal");
-const u32 gBirchBagTilemap_Original[] = INCBIN_U32("graphics/starter_choose/birch_bag_original.bin.lz");
-const u32 gBirchGrassTilemap_Original[] = INCBIN_U32("graphics/starter_choose/birch_grass_original.bin.lz");
-const u32 gBirchBagGrass_Gfx_Original[] = INCBIN_U32("graphics/starter_choose/tiles_original.4bpp.lz");
+// Original "Birch's bag" assets for credits.c
+const u16 gBirchBagGrass_Pal_Original[] = INCBIN_U16("graphics/credits/birchs_bag.gbapal");
+const u32 gBirchBagTilemap_Original[] = INCBIN_U32("graphics/credits/birchs_bag_fg.bin.lz");
+const u32 gBirchGrassTilemap_Original[] = INCBIN_U32("graphics/credits/birchs_bag_bg.bin.lz");
+const u32 gBirchBagGrass_Gfx_Original[] = INCBIN_U32("graphics/credits/birchs_bag.4bpp.lz");
 
-// And these special ones are for the Save Failed screen.
-const u16 gBirchBagGrass_Pal_Psyduck[] = INCBIN_U16("graphics/starter_choose/tiles_psyduck.gbapal");
-const u32 gBirchBagTilemap_Psyduck[] = INCBIN_U32("graphics/starter_choose/birch_bag_psyduck.bin.lz");
-const u32 gBirchGrassTilemap_Psyduck[] = INCBIN_U32("graphics/starter_choose/birch_grass_psyduck.bin.lz");
-const u32 gBirchBagGrass_Gfx_Psyduck[] = INCBIN_U32("graphics/starter_choose/tiles_psyduck.4bpp.lz");
+// "Psyduck roadblock" assets for save_failed_screen.c
+const u16 gBirchBagGrass_Pal_Psyduck[] = INCBIN_U16("graphics/misc/save_failed_tiles.gbapal");
+const u32 gBirchBagTilemap_Psyduck[] = INCBIN_U32("graphics/misc/save_failed_fg.bin.lz");
+const u32 gBirchGrassTilemap_Psyduck[] = INCBIN_U32("graphics/misc/save_failed_bg.bin.lz");
+const u32 gBirchBagGrass_Gfx_Psyduck[] = INCBIN_U32("graphics/misc/save_failed_tiles.4bpp.lz");
 
 static const struct WindowTemplate sWindowTemplates[] =
 {
