@@ -135,7 +135,7 @@ void ShowThrobber(void)
     u8 spriteId;
     LoadCompressedSpriteSheet(&sSpriteSheet_Throbber[0]);
     LoadSpritePalettes(sSpritePalettes_Throbber);
-    spriteId = CreateSprite(&sSpriteTemplate_Throbber, 224, 98, 2);
+    spriteId = CreateSprite(&sSpriteTemplate_Throbber, 224, 99, 2);
     gSprites[spriteId].sTaskId = taskId;
     gSprites[spriteId].sThrobberID = 0;
 }
