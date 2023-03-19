@@ -3,6 +3,7 @@
 #include "battle_pyramid.h"
 #include "battle_pyramid_bag.h"
 #include "bg.h"
+#include "decompress.h"
 #include "debug.h"
 #include "event_data.h"
 #include "event_object_movement.h"
@@ -48,15 +49,6 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
-
-
-
-
-
-
-// Trying to add a save animation
-
-#include "decompress.h"
 #define TAG_THROBBER 0x1000
 static const u16 sThrobber_Pal[] = INCBIN_U16("graphics/text_window/throbber.gbapal");
 const u32 gThrobber_Gfx[] = INCBIN_U32("graphics/text_window/throbber.4bpp.lz");
@@ -132,11 +124,6 @@ void ShowThrobber(void)
     // 217 and 123 are the x and y coordinates (in pixels)
     spriteId = CreateSprite(&sSpriteTemplate_Throbber, 217, 123, 2);
 };
-
-
-
-
-
 
 // Menu actions
 enum

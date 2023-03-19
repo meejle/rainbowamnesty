@@ -169,12 +169,8 @@ static u8 WriteSaveSectorOrSlot(u16 sectorId, const struct SaveSectorLocation *l
 
         prevVblankCB = gMain.vblankCallback;
         SetVBlankCallback(VBlankCB_Saving);
-
         for (i = 0; i < NUM_SECTORS_PER_SLOT; i++)
-        {
             HandleWriteSector(i, locations);
-        }
-
         SetVBlankCallback(prevVblankCB);
 
         if (gDamagedSaveSectors)
