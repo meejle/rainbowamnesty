@@ -60,6 +60,7 @@
 #define TAG_THROBBER 0x1000
 static const u16 sThrobber_Pal[] = INCBIN_U16("graphics/text_window/throbber.gbapal");
 const u32 gThrobber_Gfx[] = INCBIN_U32("graphics/text_window/throbber.4bpp.lz");
+static u8 spriteId;
 
 static const struct OamData sOam_Throbber =
 {
@@ -68,10 +69,10 @@ static const struct OamData sOam_Throbber =
     .objMode = ST_OAM_OBJ_NORMAL,
     .mosaic = FALSE,
     .bpp = ST_OAM_4BPP,
-    .shape = SPRITE_SHAPE(32x32),
+    .shape = SPRITE_SHAPE(32x64),
     .x = 0,
     .matrixNum = 0,
-    .size = SPRITE_SIZE(32x32),
+    .size = SPRITE_SIZE(32x64),
     .tileNum = 0,
     .priority = 0,
     .paletteNum = 0,
@@ -81,26 +82,23 @@ static const struct OamData sOam_Throbber =
 static const union AnimCmd sAnim_Throbber[] =
 {
     ANIMCMD_FRAME(0, 4),
-    ANIMCMD_FRAME(16, 4),
     ANIMCMD_FRAME(32, 4),
-    ANIMCMD_FRAME(48, 4),
     ANIMCMD_FRAME(64, 4),
-    ANIMCMD_FRAME(80, 4),
     ANIMCMD_FRAME(96, 4),
-    ANIMCMD_FRAME(112, 4),
+    ANIMCMD_FRAME(128, 4),
+    ANIMCMD_FRAME(160, 4),
+    ANIMCMD_FRAME(192, 4),
+    ANIMCMD_FRAME(224, 4),
     ANIMCMD_JUMP(0),
 };
 
-static const union AnimCmd * const sAnims_Throbber[] =
-{
-    sAnim_Throbber,
-};
+static const union AnimCmd * const sAnims_Throbber[] = { sAnim_Throbber, };
 
 static const struct CompressedSpriteSheet sSpriteSheet_Throbber[] =
 {
     {
         .data = gThrobber_Gfx,
-        .size = 0x1600,
+        .size = 0x3200,
         .tag = TAG_THROBBER
     },
     {}
@@ -126,19 +124,14 @@ static const struct SpriteTemplate sSpriteTemplate_Throbber =
     .callback = SpriteCallbackDummy
 };
 
-#define sTaskId data[0]
-#define sThrobberID data[1]
-
 void ShowThrobber(void)
 {
-    u8 taskId;
-    u8 spriteId;
     LoadCompressedSpriteSheet(&sSpriteSheet_Throbber[0]);
     LoadSpritePalettes(sSpritePalettes_Throbber);
-    spriteId = CreateSprite(&sSpriteTemplate_Throbber, 224, 99, 2);
-    gSprites[spriteId].sTaskId = taskId;
-    gSprites[spriteId].sThrobberID = 0;
-}
+
+    // 217 and 123 are the x and y coordinates (in pixels)
+    spriteId = CreateSprite(&sSpriteTemplate_Throbber, 217, 123, 2);
+};
 
 
 
@@ -1242,10 +1235,12 @@ static u8 SaveDoSaveCallback(void)
 
     if (saveStatus == SAVE_STATUS_OK)
     {
+        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_PlayerSavedGame, SaveSuccessCallback);
     }
     else
     {
+        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_SaveError, SaveErrorCallback);
     }
 
@@ -1275,10 +1270,12 @@ static u8 SaveDoRTCSaveCallback(void)
     {
         
         PlaySE(SE_SELECT);
+        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_SavingInGameClock, SaveSuccessCallback);
     }
     else
     {
+        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_SaveError, SaveErrorCallback);
     }
 
