@@ -1222,13 +1222,13 @@ static u8 SaveDoSaveCallback(void)
 
     if (saveStatus == SAVE_STATUS_OK)
     {
-        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_PlayerSavedGame, SaveSuccessCallback);
+        DestroySprite(&gSprites[spriteId]);
     }
     else
     {
-        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_SaveError, SaveErrorCallback);
+        DestroySprite(&gSprites[spriteId]);
     }
 
     SaveStartTimer();
@@ -1257,13 +1257,13 @@ static u8 SaveDoRTCSaveCallback(void)
     {
         
         PlaySE(SE_SELECT);
-        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_SavingInGameClock, SaveSuccessCallback);
+        DestroySprite(&gSprites[spriteId]);
     }
     else
     {
-        DestroySprite(&gSprites[spriteId]);
         ShowSaveMessage(gText_SaveError, SaveErrorCallback);
+        DestroySprite(&gSprites[spriteId]);
     }
 
     SaveStartTimer();
