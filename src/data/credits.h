@@ -76,7 +76,7 @@ static const u8 sCreditsText_POKeMIKE[] = _("{FONT_NARROW}meejle");
 static const struct CreditsEntry sCreditsEntry_POKeMIKE[] = {11, FALSE, sCreditsText_POKeMIKE};
 static const u8 sCreditsText_Scenario[] = _("Scenario");
 static const struct CreditsEntry sCreditsEntry_Scenario[] = {11, TRUE, sCreditsText_Scenario};
-static const u8 sCreditsText_mattmck[] = _("{FONT_NARROW}{UNDERSCORE}mattmck");
+static const u8 sCreditsText_mattmck[] = _("{FONT_NARROW}{FONT 14}×{FONT 7}mattmck"); // {FONT 14}/{FONT 13} is the subpixel equivalent
 static const struct CreditsEntry sCreditsEntry_mattmck[] = {11, FALSE, sCreditsText_mattmck};
 
 static const u8 sCreditsText_PokemonEmeraldDecomp[] = _("Powered by pokeemerald");
