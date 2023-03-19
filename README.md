@@ -1,6 +1,6 @@
 # Pokémon Rainbow Amnesty
 
-![Pokémon Rainbow Amnesty logo](https://user-images.githubusercontent.com/35422415/219498539-0667de72-469d-4a12-b58d-991a0cdd2082.png)
+![Pokémon Rainbow Amnesty logo](https://user-images.githubusercontent.com/35422415/226213769-05babb25-a640-4a09-906b-64661e456dfe.png)
 
 A Pokémon Emerald ROM hack.
 
@@ -71,9 +71,8 @@ Pokémon games don&rsquo;t always do a good job of explaining their mechanics. T
 **Built using Tilemap Studio:** Created by Rangi42  
 https://github.com/Rangi42/tilemap-studio
 
-**&ldquo;Faux-antialiased&rdquo; Pokémon Emerald fonts:** Created by meejle  
-Download link coming soon
-
-**Logo design:** meejle  
-Edit Undo Line font created by &AElig;nigma  
+**Logo font:** “Edit Undo Line”  
+Created by &AElig;nigma  
 https://www.dafont.com/edit-undo-line.font
+
+**&ldquo;The Spriters Resource&rdquo; assets from:** Dialga, Dragoon, TheEric132
