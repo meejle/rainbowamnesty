@@ -95,18 +95,18 @@ static const struct WindowTemplate sOptionMenuWinTemplates[] =
         .tilemapLeft = 2,
         .tilemapTop = 1,
         .width = 26,
-        .height = 2,
+        .height = 4,
         .paletteNum = 1,
-        .baseBlock = 2
+        .baseBlock = 1
     },
     [WIN_OPTIONS] = {
         .bg = 0,
         .tilemapLeft = 2,
-        .tilemapTop = 5,
+        .tilemapTop = 7,
         .width = 26,
-        .height = 14,
+        .height = 12,
         .paletteNum = 1,
-        .baseBlock = 0x36
+        .baseBlock = 0x69
     },
     DUMMY_WIN_TEMPLATE
 };
@@ -393,7 +393,7 @@ static void Task_OptionMenuFadeOut(u8 taskId)
 static void HighlightOptionMenuItem(u8 index)
 {
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(16, DISPLAY_WIDTH - 16));
-    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(index * 16 + 40, index * 16 + 56));
+    SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(index * 16 + 40 + 16, index * 16 + 56 + 16));
 }
 
 static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
@@ -404,14 +404,14 @@ static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
     for (i = 0; *text != EOS && i < ARRAY_COUNT(dst) - 1; i++)
         dst[i] = *(text++);
 
-    if (style != 0)
+    if (style == 0)
     {
-        dst[2] = TEXT_COLOR_RED;
-        dst[5] = TEXT_COLOR_LIGHT_RED;
+        dst[2] = TEXT_COLOR_TRANSPARENT;
+        dst[5] = TEXT_COLOR_TRANSPARENT;
     }
 
     dst[i] = EOS;
-    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, dst, x, y + 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL_SUBPIXEL, dst, x, y + 2, TEXT_SKIP_DRAW, NULL);
 }
 
 // static u8 TextSpeed_ProcessInput(u8 selection)
@@ -479,8 +479,8 @@ static void BattleScene_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_BattleSceneOn, 151, YPOS_BATTLESCENE, styles[0]);
-    DrawOptionMenuChoice(gText_BattleSceneOff, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleSceneOff, 198), YPOS_BATTLESCENE, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_BATTLESCENE, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_BATTLESCENE, styles[0]);
 }
 
 static u8 BattleStyle_ProcessInput(u8 selection)
@@ -502,8 +502,8 @@ static void BattleStyle_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_BattleStyleShift, 151, YPOS_BATTLESTYLE, styles[0]);
-    DrawOptionMenuChoice(gText_BattleStyleSet, GetStringRightAlignXOffset(FONT_NORMAL, gText_BattleStyleSet, 198), YPOS_BATTLESTYLE, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_BATTLESTYLE, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_BATTLESTYLE, styles[0]);
 }
 
 static u8 Confirm_ProcessInput(u8 selection)
@@ -525,8 +525,8 @@ static void Confirm_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_SoundMono, 151, YPOS_CONFIRM, styles[0]);
-    DrawOptionMenuChoice(gText_SoundStereo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SoundStereo, 198), YPOS_CONFIRM, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_CONFIRM, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_CONFIRM, styles[0]);
 }
 
 static u8 SaveRemind_ProcessInput(u8 selection)
@@ -548,8 +548,8 @@ static void SaveRemind_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_SaveRemindYes, 151, YPOS_SAVEREMIND, styles[0]);
-    DrawOptionMenuChoice(gText_SaveRemindNo, GetStringRightAlignXOffset(FONT_NORMAL, gText_SaveRemindNo, 198), YPOS_SAVEREMIND, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_SAVEREMIND, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_SAVEREMIND, styles[0]);
 }
 
 static u8 TxExp_ProcessInput(u8 selection)
@@ -571,14 +571,14 @@ static void TxExp_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_TxExpYes, 151, YPOS_TXEXP, styles[0]);
-    DrawOptionMenuChoice(gText_TxExpNo, GetStringRightAlignXOffset(FONT_NORMAL, gText_TxExpNo, 198), YPOS_TXEXP, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_TXEXP, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_TXEXP, styles[0]);
 }
 
 static void DrawHeaderText(void)
 {
     FillWindowPixelBuffer(WIN_HEADER, PIXEL_FILL(1));
-    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL, gText_Option, 8, 1, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(WIN_HEADER, FONT_NORMAL_SUBPIXEL, gText_Option, 4, 1, TEXT_SKIP_DRAW, NULL);
     CopyWindowToVram(WIN_HEADER, COPYWIN_FULL);
 }
 
@@ -588,7 +588,7 @@ static void DrawOptionMenuTexts(void)
 
     FillWindowPixelBuffer(WIN_OPTIONS, PIXEL_FILL(1));
     for (i = 0; i < MENUITEM_COUNT; i++)
-        AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, sOptionMenuItemsNames[i], 8, (i * 16) + 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(WIN_OPTIONS, FONT_SMALL_SUBPIXEL, sOptionMenuItemsNames[i], 4, (i * 16) + 1, TEXT_SKIP_DRAW, NULL);
     CopyWindowToVram(WIN_OPTIONS, COPYWIN_FULL);
 }
 
@@ -608,18 +608,18 @@ static void DrawBgWindowFrames(void)
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  0,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  0, 27,  1,  7);
     FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  0,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  1,  1,  2,  7);
-    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  1,  1,  2,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1,  3,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2,  3, 27,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28,  3,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  1,  1,  4,  7);
+    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  1,  1,  4,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1,  5,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2,  5, 27,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28,  5,  1,  1,  7);
 
     // Draw options list window frame
-    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  4,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  4, 26,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  4,  1,  1,  7);
-    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  5,  1, 18,  7);
-    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  5,  1, 18,  7);
+    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_L,  1,  6,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_TOP_EDGE,      2,  6, 26,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_TOP_CORNER_R, 28,  6,  1,  1,  7);
+    FillBgTilemapBufferRect(1, TILE_LEFT_EDGE,     1,  7,  1, 16,  7);
+    FillBgTilemapBufferRect(1, TILE_RIGHT_EDGE,   28,  7,  1, 16,  7);
     FillBgTilemapBufferRect(1, TILE_BOT_CORNER_L,  1, 19,  1,  1,  7);
     FillBgTilemapBufferRect(1, TILE_BOT_EDGE,      2, 19, 26,  1,  7);
     FillBgTilemapBufferRect(1, TILE_BOT_CORNER_R, 28, 19,  1,  1,  7);
