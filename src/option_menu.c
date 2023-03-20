@@ -406,6 +406,7 @@ static void DrawOptionMenuChoice(const u8 *text, u8 x, u8 y, u8 style)
 
     if (style == 0)
     {
+        dst[8] = TEXT_COLOR_TRANSPARENT;
         dst[2] = TEXT_COLOR_TRANSPARENT;
         dst[5] = TEXT_COLOR_TRANSPARENT;
     }
@@ -479,8 +480,8 @@ static void BattleScene_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_BATTLESCENE, styles[1]);
-    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_BATTLESCENE, styles[0]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 188, YPOS_BATTLESCENE, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 188, YPOS_BATTLESCENE, styles[0]);
 }
 
 static u8 BattleStyle_ProcessInput(u8 selection)
@@ -502,8 +503,8 @@ static void BattleStyle_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_BATTLESTYLE, styles[1]);
-    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_BATTLESTYLE, styles[0]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 188, YPOS_BATTLESTYLE, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 188, YPOS_BATTLESTYLE, styles[0]);
 }
 
 static u8 Confirm_ProcessInput(u8 selection)
@@ -525,8 +526,8 @@ static void Confirm_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_CONFIRM, styles[1]);
-    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_CONFIRM, styles[0]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 188, YPOS_CONFIRM, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 188, YPOS_CONFIRM, styles[0]);
 }
 
 static u8 SaveRemind_ProcessInput(u8 selection)
@@ -548,8 +549,8 @@ static void SaveRemind_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_SAVEREMIND, styles[1]);
-    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_SAVEREMIND, styles[0]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 188, YPOS_SAVEREMIND, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 188, YPOS_SAVEREMIND, styles[0]);
 }
 
 static u8 TxExp_ProcessInput(u8 selection)
@@ -571,8 +572,8 @@ static void TxExp_DrawChoices(u8 selection)
     styles[1] = 0;
     styles[selection] = 1;
 
-    DrawOptionMenuChoice(gText_OptionMenuOff, 184, YPOS_TXEXP, styles[1]);
-    DrawOptionMenuChoice(gText_OptionMenuOn, 184, YPOS_TXEXP, styles[0]);
+    DrawOptionMenuChoice(gText_OptionMenuOff, 188, YPOS_TXEXP, styles[1]);
+    DrawOptionMenuChoice(gText_OptionMenuOn, 188, YPOS_TXEXP, styles[0]);
 }
 
 static void DrawHeaderText(void)
