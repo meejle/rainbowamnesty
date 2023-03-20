@@ -1086,7 +1086,7 @@ static void SpriteCB_InputArrow(struct Sprite *sprite)
 
 static void SpriteCB_Underscore(struct Sprite *sprite)
 {
-    const s16 y[] = {2, 3, 2, 1};
+    const s16 y[] = {1, 0, 1, 0};
     u8 pos;
 
     pos = GetTextEntryPosition();
@@ -1362,7 +1362,7 @@ static void CreateTextEntrySprites(void)
     xPos = sNamingScreen->inputCharBaseXPos;
     for (i = 0; i < sNamingScreen->template->maxChars; i++, xPos += 8)
     {
-        spriteId = CreateSprite(&sSpriteTemplate_Underscore, xPos + 3, 60, 0);
+        spriteId = CreateSprite(&sSpriteTemplate_Underscore, xPos + 3, 61, 0);
         gSprites[spriteId].oam.priority = 3;
         gSprites[spriteId].data[0] = i;
         gSprites[spriteId].invisible = TRUE;
@@ -2019,7 +2019,7 @@ static void DrawKeyboardPageOnDeck(void)
 
 static void PrintControls(void)
 {
-    const u8 color[3] = { TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY };
+    const u8 color[3] = { TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_DYNAMIC_COLOR_6 };
 
     FillWindowPixelBuffer(sNamingScreen->windows[WIN_BANNER], PIXEL_FILL(15));
     AddTextPrinterParameterized3(sNamingScreen->windows[WIN_BANNER], FONT_SMALL, 2, 1, color, 0, gText_MoveOkBack);

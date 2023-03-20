@@ -124,8 +124,8 @@ struct
     u8 height;
 } static const sKeypadIcons[] =
 {
-    [CHAR_A_BUTTON]       = { 0x00,  7, 12 },
-    [CHAR_B_BUTTON]       = { 0x01,  7, 12 },
+    [CHAR_A_BUTTON]       = { 0x00,  8, 12 },
+    [CHAR_B_BUTTON]       = { 0x01,  8, 12 },
     [CHAR_L_BUTTON]       = { 0x02, 16, 12 },
     [CHAR_R_BUTTON]       = { 0x04, 16, 12 },
     [CHAR_START_BUTTON]   = { 0x06, 23, 12 },
