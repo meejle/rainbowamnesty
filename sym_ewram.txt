@@ -151,3 +151,4 @@
 	.include "src/debug.o"
 	.include "src/field_name_box.o"
 	.include "src/mugshot.o"
+	.include "src/awards.o"

@@ -149,19 +149,25 @@ static const struct CreditsEntry sCreditsEntry_TilemapStudio1[] = {11, FALSE, sC
 static const u8 sCreditsText_TilemapStudio2[] = _("{FONT_SMALL}https://github.com/Rangi42/tilemap-studio");
 static const struct CreditsEntry sCreditsEntry_TilemapStudio2[] = {11, FALSE, sCreditsText_TilemapStudio2};
 
-static const u8 sCreditsText_Logo1[] = _("Logo font");
-static const struct CreditsEntry sCreditsEntry_Logo1[] = {11, TRUE, sCreditsText_Logo1};
-static const u8 sCreditsText_Logo2[] = _("{FONT_NARROW}“Edit Undo Line”");
-static const struct CreditsEntry sCreditsEntry_Logo2[] = {11, FALSE, sCreditsText_Logo2};
-static const u8 sCreditsText_Logo5[] = _("{FONT_NARROW}Created by {FONT 14}q{FONT 7}nigma");
-static const struct CreditsEntry sCreditsEntry_Logo5[] = {11, FALSE, sCreditsText_Logo5};
-static const u8 sCreditsText_Logo6[] = _("{FONT_SMALL}https://www.dafont.com/edit-undo-line.font");
-static const struct CreditsEntry sCreditsEntry_Logo6[] = {11, FALSE, sCreditsText_Logo6};
+static const u8 sCreditsText_Fonts[] = _("Third-party fonts");
+static const struct CreditsEntry sCreditsEntry_Fonts[] = {11, TRUE, sCreditsText_Fonts};
+static const u8 sCreditsText_Fonts1[] = _("{FONT_NARROW}“Edit Undo Line”");
+static const struct CreditsEntry sCreditsEntry_Fonts1[] = {11, FALSE, sCreditsText_Fonts1};
+static const u8 sCreditsText_Fonts2[] = _("{FONT_NARROW}Created by {FONT 14}q{FONT 7}nigma");
+static const struct CreditsEntry sCreditsEntry_Fonts2[] = {11, FALSE, sCreditsText_Fonts2};
+static const u8 sCreditsText_Fonts3[] = _("{FONT_NARROW}“Bolgart Display”");
+static const struct CreditsEntry sCreditsEntry_Fonts3[] = {11, FALSE, sCreditsText_Fonts3};
+static const u8 sCreditsText_Fonts4[] = _("{FONT_NARROW}Created by Maulana Creative");
+static const struct CreditsEntry sCreditsEntry_Fonts4[] = {11, FALSE, sCreditsText_Fonts4};
 
-static const u8 sCreditsText_Spriters1[] = _("“The Spriters Resource” assets from");
-static const struct CreditsEntry sCreditsEntry_Spriters1[] = {11, TRUE, sCreditsText_Spriters1};
-static const u8 sCreditsText_Spriters3[] = _("{FONT_NARROW}Dialga   Dragoon   TheEric132");
-static const struct CreditsEntry sCreditsEntry_Spriters3[] = {11, FALSE, sCreditsText_Spriters3};
+static const u8 sCreditsText_SpritersRes[] = _("The Spriters Resource");
+static const struct CreditsEntry sCreditsEntry_SpritersRes[] = {11, TRUE, sCreditsText_SpritersRes};
+static const u8 sCreditsText_SpritersRes1[] = _("assets contributed by");
+static const struct CreditsEntry sCreditsEntry_SpritersRes1[] = {11, TRUE, sCreditsText_SpritersRes1};
+static const u8 sCreditsText_SpritersRes2[] = _("{FONT_NARROW}bbpanzu   Dialga   Dragoon   redblueyellow");
+static const struct CreditsEntry sCreditsEntry_SpritersRes2[] = {11, FALSE, sCreditsText_SpritersRes2};
+static const u8 sCreditsText_SpritersRes3[] = _("{FONT_NARROW}TheEric132");
+static const struct CreditsEntry sCreditsEntry_SpritersRes3[] = {11, FALSE, sCreditsText_SpritersRes3};
 
 // Reserved space
 
@@ -524,17 +530,17 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
     },
     [PAGE_GRAPHIC_DESIGNERS_3] = {
-        sCreditsEntry_Logo1,
-        sCreditsEntry_Logo2,
-        sCreditsEntry_Logo5,
-        _,
-        sCreditsEntry_Logo6,
+        sCreditsEntry_Fonts,
+        sCreditsEntry_Fonts1,
+        sCreditsEntry_Fonts2,
+        sCreditsEntry_Fonts3,
+        sCreditsEntry_Fonts4,
     },
     [PAGE_MUSIC_COMPOSITION] = {
-        sCreditsEntry_Spriters1,
-        sCreditsEntry_Spriters3,
-        _,
-        _,
+        sCreditsEntry_SpritersRes,
+        sCreditsEntry_SpritersRes1,
+        sCreditsEntry_SpritersRes2,
+        sCreditsEntry_SpritersRes3,
         _,
     },
     [PAGE_SOUND_EFFECTS] = {

@@ -1379,6 +1379,7 @@ const u8 gText_MenuPokemon[] = _("Pokémon");
 const u8 gText_MenuBag[] = _("Bag");
 const u8 gText_MenuPokenav[] = _("{COLOR RED}Poryphone");
 const u8 gText_MenuPlayer[] = _("{COLOR GREEN}{PLAYER}");
+const u8 gText_MenuAwards[] = _("Awards");
 const u8 gText_MenuSave[] = _("Save");
 const u8 gText_MenuOption[] = _("Options");
 const u8 gText_MenuExit[] = _("Exit");
