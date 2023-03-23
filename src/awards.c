@@ -70,7 +70,19 @@ static const struct Medal sAwardGfx_Medals[] = {
 
 // Set up other misc. text strings
 static const u8 sButtonTxt[] = _("{DPAD_NONE} Select   {B_BUTTON} Exit");
-static const u8 sProgressTxt_Dummy[] = _("100 of 526 earned");
+static const u8 sProgressTxt_Dummy[] = _("0 of 151 earned");
+
+
+// Set up suffixes
+static const u8 sSuffix_ed[] = _("ed");
+static const u8 sSuffix_d[] = _("d");
+static const u8 sSuffix_ve[] = _("ve");
+static const u8 sSuffix_ught[] = _("ught");
+static const u8 sSuffix_tch[] = _("tch");
+static const u8 sSuffix_ind[] = _("ind");
+static const u8 sSuffix_ound[] = _("ound");
+static const u8 sSuffix_ome[] = _("ome");
+static const u8 sSuffix_ame[] = _("ame");
 
 
 // Set up scrollbars and cursor
@@ -567,8 +579,8 @@ static void PrintToSelectedWindow(u8 windowId, u8 colorIdx)
     u8 y = 5;
     
     FillWindowPixelBuffer(WINDOW_SELECTED, PIXEL_FILL(TEXT_COLOR_TRANSPARENT));
-    AddTextPrinterParameterized4(WINDOW_SELECTED, 0, x, y, 0, 0, sAwardsWindowFontColors[colorIdx], 0xFF, sAwardTxt_Dummy_Title);
-    AddTextPrinterParameterized4(WINDOW_SELECTED, 0, x, y + 26, 0, 0, sAwardsWindowFontColors[FONT_WHITE_WITH_SHADOW], 0xFF, sAwardTxt_Dummy_Blurb);
+    AddTextPrinterParameterized4(WINDOW_SELECTED, 0, x, y, 0, 0, sAwardsWindowFontColors[colorIdx], 0xFF, sAwardTxt_Unknown_Title);
+    AddTextPrinterParameterized4(WINDOW_SELECTED, 0, x, y + 26, 0, 0, sAwardsWindowFontColors[FONT_WHITE_WITH_SHADOW], 0xFF, sAwardTxt_Unknown_Blurb);
     PutWindowTilemap(WINDOW_SELECTED);
     CopyWindowToVram(WINDOW_SELECTED, 3);
 }
