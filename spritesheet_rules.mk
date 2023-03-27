@@ -719,5 +719,58 @@ $(FLDEFFGFXDIR)/secret_power_tree.4bpp: %.4bpp: %.png
 $(FLDEFFGFXDIR)/record_mix_lights.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 1
 
-graphics/door_anims/battle_tower_multi_corridor.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -mwidth 2 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/common_Welcom.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_e_to_Mistralto.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_on_Cargo_Serv.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_vice__Our.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_r_slogan_is_Qu.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_uick_and_Safe.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton__Due_t.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_o_the_current.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_t_situation_we.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_e_are_unable_t.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_to_ship_to_or_f.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_from_Akala_Isl.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_and_or_the_Ae.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_ether_Paradis.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_e_in_Alola_Tha.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_ank_you_for_yo.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_our_understan.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
+
+$(OBJEVENTGFXDIR)/tickers/Mistralton_nding.4bpp: %.4bpp: %.png
+	$(GFX) $< $@ -mwidth 8 -mheight 4
