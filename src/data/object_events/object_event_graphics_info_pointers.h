@@ -232,26 +232,6 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphir
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RubySapphireMay;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
-
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_common_Welcom;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_e_to_Mistralto;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_on_Cargo_Serv;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_vice__Our;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_r_slogan_is_Qu;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_uick_and_Safe;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton__Due_t;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_o_the_current;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_t_situation_we;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_e_are_unable_t;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_to_ship_to_or_f;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_from_Akala_Isl;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_and_or_the_Ae;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_ether_Paradis;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_e_in_Alola_Tha;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_ank_you_for_yo;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_our_understan;
-extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Ticker_Mistralton_nding;
-
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Trader;
@@ -498,25 +478,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_LINK_RS_MAY] =              &gObjectEventGraphicsInfo_RubySapphireMay,
     [OBJ_EVENT_GFX_LUGIA] =                    &gObjectEventGraphicsInfo_Lugia,
     [OBJ_EVENT_GFX_HOOH] =                     &gObjectEventGraphicsInfo_HoOh,
-
-    [OBJ_EVENT_GFX_TICKER_COMMON_WELCOM] =              &gObjectEventGraphicsInfo_Ticker_common_Welcom,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_E_TO_MISTRALTO] =  &gObjectEventGraphicsInfo_Ticker_Mistralton_e_to_Mistralto,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_ON_CARGO_SERV] =   &gObjectEventGraphicsInfo_Ticker_Mistralton_on_Cargo_Serv,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_VICE__OUR] =       &gObjectEventGraphicsInfo_Ticker_Mistralton_vice__Our,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_R_SLOGAN_IS_QU] =  &gObjectEventGraphicsInfo_Ticker_Mistralton_r_slogan_is_Qu,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_UICK_AND_SAFE] =   &gObjectEventGraphicsInfo_Ticker_Mistralton_uick_and_Safe,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON__DUE_T] =          &gObjectEventGraphicsInfo_Ticker_Mistralton__Due_t,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_O_THE_CURRENT] =   &gObjectEventGraphicsInfo_Ticker_Mistralton_o_the_current,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_T_SITUATION_WE] =  &gObjectEventGraphicsInfo_Ticker_Mistralton_t_situation_we,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_E_ARE_UNABLE_T] =  &gObjectEventGraphicsInfo_Ticker_Mistralton_e_are_unable_t,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_TO_SHIP_TO_OR_F] = &gObjectEventGraphicsInfo_Ticker_Mistralton_to_ship_to_or_f,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_FROM_AKALA_ISL] =  &gObjectEventGraphicsInfo_Ticker_Mistralton_from_Akala_Isl,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_AND_OR_THE_AE] =   &gObjectEventGraphicsInfo_Ticker_Mistralton_and_or_the_Ae,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_ETHER_PARADIS] =   &gObjectEventGraphicsInfo_Ticker_Mistralton_ether_Paradis,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_E_IN_ALOLA_THA] =  &gObjectEventGraphicsInfo_Ticker_Mistralton_e_in_Alola_Tha,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_ANK_YOU_FOR_YO] =  &gObjectEventGraphicsInfo_Ticker_Mistralton_ank_you_for_yo,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_OUR_UNDERSTAN] =   &gObjectEventGraphicsInfo_Ticker_Mistralton_our_understan,
-    [OBJ_EVENT_GFX_TICKER_MISTRALTON_NDING] =           &gObjectEventGraphicsInfo_Ticker_Mistralton_nding,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

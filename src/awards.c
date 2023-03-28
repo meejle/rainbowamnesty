@@ -1735,6 +1735,3 @@ static void Task_AwardsMain(u8 taskId)
         gTasks[taskId].func = Task_AwardsTurnOff;
     }
 }
-
-
-

@@ -371,32 +371,3 @@ const u32 gObjectEventPic_Lugia[] = INCBIN_U32("graphics/object_events/pics/poke
 const u16 gObjectEventPal_Lugia[] = INCBIN_U16("graphics/object_events/palettes/lugia.gbapal");
 const u32 gObjectEventPic_HoOh[] = INCBIN_U32("graphics/object_events/pics/pokemon/ho_oh.4bpp");
 const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/ho_oh.gbapal");
-
-
-// Tickers
-
-// Ticker palette
-const u16 gObjectEventPal_Tickers[] = INCBIN_U16("graphics/object_events/pics/tickers/common_Welcom.gbapal");
-
-// Common ticker tiles
-const u32 gObjectEventPic_Ticker_common_Welcom[] = INCBIN_U32("graphics/object_events/pics/tickers/common_Welcom.4bpp");                                // __ Welcom
-
-// Mistralton City
-// Amnesty HQ 1F
-const u32 gObjectEventPic_Ticker_Mistralton_e_to_Mistralto[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_e_to_Mistralto.4bpp");        // e to Mistralto
-const u32 gObjectEventPic_Ticker_Mistralton_on_Cargo_Serv[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_on_Cargo_Serv.4bpp");          // on Cargo Serv
-const u32 gObjectEventPic_Ticker_Mistralton_vice__Our[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_vice__Our.4bpp");                  // vice. __ Our
-const u32 gObjectEventPic_Ticker_Mistralton_r_slogan_is_Qu[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_r_slogan_is_Qu.4bpp");        // r slogan is “Qu
-const u32 gObjectEventPic_Ticker_Mistralton_uick_and_Safe[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_uick_and_Safe.4bpp");          // ick and Safe
-const u32 gObjectEventPic_Ticker_Mistralton__Due_t[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton__Due_t.4bpp");                        // !” __ Due t
-const u32 gObjectEventPic_Ticker_Mistralton_o_the_current[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_o_the_current.4bpp");          // o the current
-const u32 gObjectEventPic_Ticker_Mistralton_t_situation_we[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_t_situation_we.4bpp");        // t situation, we
-const u32 gObjectEventPic_Ticker_Mistralton_e_are_unable_t[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_e_are_unable_t.4bpp");        // e are unable t
-const u32 gObjectEventPic_Ticker_Mistralton_to_ship_to_or_f[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_to_ship_to_or_f.4bpp");      // to ship to or f
-const u32 gObjectEventPic_Ticker_Mistralton_from_Akala_Isl[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_from_Akala_Isl.4bpp");        // from Akala Isl
-const u32 gObjectEventPic_Ticker_Mistralton_and_or_the_Ae[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_and_or_the_Ae.4bpp");          // and or the Ae
-const u32 gObjectEventPic_Ticker_Mistralton_ether_Paradis[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_ether_Paradis.4bpp");          // ether Paradis
-const u32 gObjectEventPic_Ticker_Mistralton_e_in_Alola_Tha[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_e_in_Alola_Tha.4bpp");        // e in Alola. __ Tha
-const u32 gObjectEventPic_Ticker_Mistralton_ank_you_for_yo[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_ank_you_for_yo.4bpp");        // ank you for yo
-const u32 gObjectEventPic_Ticker_Mistralton_our_understan[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_our_understan.4bpp");          // our understan
-const u32 gObjectEventPic_Ticker_Mistralton_nding[] = INCBIN_U32("graphics/object_events/pics/tickers/Mistralton_nding.4bpp");                          // nding.

@@ -238,35 +238,7 @@
 #define OBJ_EVENT_GFX_LUGIA                      232
 #define OBJ_EVENT_GFX_HOOH                       233
 
-#define OBJ_EVENT_GFX_TICKER_COMMON_WELCOM              234
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_E_TO_MISTRALTO  235
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_ON_CARGO_SERV   236
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_VICE__OUR       237
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_R_SLOGAN_IS_QU  238
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_UICK_AND_SAFE   239
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON__DUE_T          240
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_O_THE_CURRENT   241
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_T_SITUATION_WE  242
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_E_ARE_UNABLE_T  243
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_TO_SHIP_TO_OR_F 244
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_FROM_AKALA_ISL  245
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_AND_OR_THE_AE   246
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_ETHER_PARADIS   247
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_E_IN_ALOLA_THA  248
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_ANK_YOU_FOR_YO  249
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_OUR_UNDERSTAN   250
-#define OBJ_EVENT_GFX_TICKER_MISTRALTON_NDING           251
-
-// NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
-//
-// Object event graphics ids are 1 byte in size (max value of 255), and the dynamic
-// graphics ids that start after NUM_OBJ_EVENT_GFX reach this limit. No graphics id
-// uses the value 239 itself, so removing the "+ 1" in OBJ_EVENT_GFX_VARS would
-// allow increasing NUM_OBJ_EVENT_GFX to 240. There are also a handful of unused
-// object graphics that can be removed. If more graphics are needed, anything that
-// stores graphics ids will need to be increased in size. See wiki entry below:
-// https://github.com/pret/pokeemerald/wiki/Feature-Branches#overworld-expansion
-#define NUM_OBJ_EVENT_GFX                        252
+#define NUM_OBJ_EVENT_GFX                        234
 
 
 // These are dynamic object gfx ids.
