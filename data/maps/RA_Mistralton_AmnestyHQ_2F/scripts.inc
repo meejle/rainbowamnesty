@@ -132,14 +132,14 @@ RA_AmnestyHQ_2F_Move_MagnoliaMeets:
 	step_end
 
 RA_AmnestyHQ_2F_Text_LookerMagicHappens:
-	.string "{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}! This is where, so they say,\n"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}! This is where, so they say,\n"
 	.string "the “magic happens”!\p"
 	.string "It's more or less business as usual for\n"
-	.string "the {COLOR RED}Cargo Service{COLOR DARK_GRAY}, downstairs...\p"
+	.string "the {COLOR RED}{SHADOW LIGHT_RED}Cargo Service{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, downstairs...\p"
 	.string "...which has made it easier to keep our\n"
 	.string "little command centre under the radar.\p"
 	.string "Ah! Speaking of “command”, the\n"
-	.string "{COLOR GREEN}Professor {COLOR DARK_GRAY}has been dying to meet you.\p"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Professor {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has been dying to meet you.\p"
 	.string "This way.$"
 
 name_magnolia:
@@ -8717,161 +8717,161 @@ RA_Magnolia_ThreeDots_FaceLeft::
 	return
 
 RA_Player_Text_Gain_Rank0:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}took you on as\n"
-	.string "a {COLOR RED}Trainee{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}took you on as\n"
+	.string "a {COLOR RED}{SHADOW LIGHT_RED}Trainee{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_PokePass:
-	.string "> You finally got your own {COLOR RED}Poké Pass{COLOR DARK_GRAY}!$"
+	.string "> You finally got your own {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge0:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}White Band {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}White Band {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge0:
-	.string "> The {COLOR RED}White Band {COLOR DARK_GRAY}is your first\n"
-	.string "{COLOR RED}Rank Insignia{COLOR DARK_GRAY}.\p"
-	.string "> You'll gain more {COLOR RED}Insignia {COLOR DARK_GRAY}as you rise\n"
-	.string "through the {COLOR RED}Amnesty Institute's Ranks{COLOR DARK_GRAY}.\p"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}White Band {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}is your first\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Rank Insignia{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
+	.string "> You'll gain more {COLOR RED}{SHADOW LIGHT_RED}Insignia {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}as you rise\n"
+	.string "through the {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute's Ranks{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
 	.string "> Open the {FONT 14}RS{FONT 11} menu to check your\n"
-	.string "{COLOR RED}Poké Pass {COLOR DARK_GRAY}and admire your {COLOR RED}Insignia{COLOR DARK_GRAY}!\p"
-	.string "> With the {COLOR RED}White Band{COLOR DARK_GRAY}, you can catch\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Poké Pass {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}and admire your {COLOR RED}{SHADOW LIGHT_RED}Insignia{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}White Band{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, you can catch\n"
 	.string "and train Pokémon.\p"
 	.string "> But, you'll still have to follow the\n"
-	.string "rules when you're in a {COLOR RED}Restricted Zone{COLOR DARK_GRAY}.\p"
+	.string "rules when you're in a {COLOR RED}{SHADOW LIGHT_RED}Restricted Zone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
 	.string "> And, you now have access to\n"
-	.string "{COLOR RED}Pokémon Centres{COLOR DARK_GRAY}.\p"
-	.string "> As for the {COLOR RED}White Band {COLOR DARK_GRAY}itself...\p"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Pokémon Centres{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}White Band {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
 	.string "> It's an understated lapel pin made here\n"
-	.string "in {COLOR RED}Unova{COLOR DARK_GRAY}. It's warm to the touch.$"
+	.string "in {COLOR RED}{SHADOW LIGHT_RED}Unova{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}. It's warm to the touch.$"
 
 RA_Player_Text_Gain_Rank1:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Recruit{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Recruit{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge1:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Red Gem {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Red Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge1:
-	.string "> With the {COLOR RED}Red Gem{COLOR DARK_GRAY}, Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Red Gem{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, Pokémon\n"
 	.string "up to Lv. 20 will obey your commands.$"
 
 RA_Player_Text_Explain_Badge1_Stat_Boost:
-	.string "> Your team's {COLOR RED}Attack\n"
-	.string "{COLOR DARK_GRAY}stats also rose a bit.\p"
+	.string "> Your team's {COLOR RED}{SHADOW LIGHT_RED}Attack\n"
+	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}stats also rose a bit.\p"
 	.string "> And, you now have access to\n"
-	.string "{COLOR RED}Battle Clubs{COLOR DARK_GRAY}.\p"
-	.string "> As for the {COLOR RED}Red Gem {COLOR DARK_GRAY}itself...\p"
-	.string "> It formed underground in {COLOR RED}Hoenn{COLOR DARK_GRAY}, due\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Battle Clubs{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Red Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
+	.string "> It formed underground in {COLOR RED}{SHADOW LIGHT_RED}Hoenn{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, due\n"
 	.string "to immense heat. It resembles a ruby.$"
 
 RA_Player_Text_Gain_Rank2:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Officer{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Officer{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge2:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Orange Gem {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Orange Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge2:
-	.string "> With the {COLOR RED}Orange Gem{COLOR DARK_GRAY}, Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Orange Gem{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, Pokémon\n"
 	.string "up to Lv. 30 will obey your commands.\p"
-	.string "> As for the {COLOR RED}Orange Gem {COLOR DARK_GRAY}itself...\p"
-	.string "> It washed up on a beach in the {COLOR RED}Alola\n"
-	.string "{COLOR DARK_GRAY}region. It reflects the sun beautifully.$"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Orange Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
+	.string "> It washed up on a beach in the {COLOR RED}{SHADOW LIGHT_RED}Alola\n"
+	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}region. It reflects the sun beautifully.$"
 
 RA_Player_Text_Gain_Rank3:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Sergeant{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Sergeant{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge3:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Yellow Gem {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Yellow Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge3:
-	.string "> With the {COLOR RED}Yellow Gem{COLOR DARK_GRAY}, Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Yellow Gem{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, Pokémon\n"
 	.string "up to Lv. 40 will obey your commands.$"
 
 RA_Player_Text_Explain_Badge3_Stat_Boost:
-	.string "> Your team's {COLOR RED}Speed\n"
-	.string "{COLOR DARK_GRAY}stats also rose a bit.\p"
-	.string "> As for the {COLOR RED}Yellow Gem {COLOR DARK_GRAY}itself...\p"
+	.string "> Your team's {COLOR RED}{SHADOW LIGHT_RED}Speed\n"
+	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}stats also rose a bit.\p"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Yellow Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
 	.string "> It holds a faint electrical charge.\n"
-	.string "It was found in {COLOR RED}Kanto's Power Plant{COLOR DARK_GRAY}.$"
+	.string "It was found in {COLOR RED}{SHADOW LIGHT_RED}Kanto's Power Plant{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Gain_Rank4:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Detective{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Detective{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge4:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Green Gem {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Green Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge4:
-	.string "> With the {COLOR RED}Green Gem{COLOR DARK_GRAY}, Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Green Gem{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, Pokémon\n"
 	.string "up to Lv. 50 will obey your commands.\p"
 	.string "> And, you now have access to\n"
-	.string "any {COLOR RED}Research Hubs {COLOR DARK_GRAY}you come across.\p"
-	.string "> As for the {COLOR RED}Green Gem {COLOR DARK_GRAY}itself...\p"
-	.string "> Researchers in {COLOR RED}Kalos {COLOR DARK_GRAY}say it contains\n"
+	.string "any {COLOR RED}{SHADOW LIGHT_RED}Research Hubs {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}you come across.\p"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Green Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
+	.string "> Researchers in {COLOR RED}{SHADOW LIGHT_RED}Kalos {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}say it contains\n"
 	.string "living cells from a legendary Pokémon.$"
 
 RA_Player_Text_Gain_Rank5:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Lieutenant{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Lieutenant{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge5:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Blue Gem {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Blue Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge5:
-	.string "> With the {COLOR RED}Blue Gem{COLOR DARK_GRAY}, Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Blue Gem{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, Pokémon\n"
 	.string "up to Lv. 60 will obey your commands.$"
 
 RA_Player_Text_Explain_Badge5_Stat_Boost:
-	.string "> Your team's {COLOR RED}Defence\n"
-	.string "{COLOR DARK_GRAY}stats also rose a bit.\p"
-	.string "> As for the {COLOR RED}Blue Gem {COLOR DARK_GRAY}itself...\p"
+	.string "> Your team's {COLOR RED}{SHADOW LIGHT_RED}Defence\n"
+	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}stats also rose a bit.\p"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Blue Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
 	.string "> It's actually a rare, blue-tinted\n"
-	.string "type of diamond found only in {COLOR RED}Sinnoh{COLOR DARK_GRAY}.$"
+	.string "type of diamond found only in {COLOR RED}{SHADOW LIGHT_RED}Sinnoh{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Gain_Rank6:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Captain{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Captain{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge6:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Indigo Gem {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Indigo Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge6:
-	.string "> With the {COLOR RED}Indigo Gem{COLOR DARK_GRAY}, Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Indigo Gem{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, Pokémon\n"
 	.string "up to Lv. 70 will obey your commands.\p"
-	.string "> As for the {COLOR RED}Indigo Gem {COLOR DARK_GRAY}itself...\p"
-	.string "> It contains bits of {COLOR RED}Wishing Stars {COLOR DARK_GRAY}from\n"
-	.string "{COLOR RED}Galar{COLOR DARK_GRAY}. In the light, it looks reddish.$"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Indigo Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
+	.string "> It contains bits of {COLOR RED}{SHADOW LIGHT_RED}Wishing Stars {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}from\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Galar{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}. In the light, it looks reddish.$"
 
 RA_Player_Text_Gain_Rank7:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Commander{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Commander{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge7:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Violet Gem {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Violet Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge7:
-	.string "> With the {COLOR RED}Violet Gem{COLOR DARK_GRAY}, Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Violet Gem{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, Pokémon\n"
 	.string "up to Lv. 80 will obey your commands.$"
 
 RA_Player_Text_Explain_Badge7_Stat_Boost:
-	.string "> Your team's {COLOR RED}Special Attack {COLOR DARK_GRAY}and\n"
-	.string "{COLOR RED}Special Defence {COLOR DARK_GRAY}stats also rose a bit.\p"
-	.string "> As for the {COLOR RED}Violet Gem {COLOR DARK_GRAY}itself...\p"
-	.string "> It's only found in the {COLOR RED}Paldea {COLOR DARK_GRAY}region.\n"
-	.string "Its traditional name is “{COLOR RED}Uva Violeta{COLOR DARK_GRAY}”.$"
+	.string "> Your team's {COLOR RED}{SHADOW LIGHT_RED}Special Attack {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}and\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Special Defence {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}stats also rose a bit.\p"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Violet Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
+	.string "> It's only found in the {COLOR RED}{SHADOW LIGHT_RED}Paldea {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}region.\n"
+	.string "Its traditional name is “{COLOR RED}{SHADOW LIGHT_RED}Uva Violeta{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}”.$"
 
 RA_Player_Text_Gain_Rank8:
-	.string "> The {COLOR RED}Amnesty Institute {COLOR DARK_GRAY}has promoted\n"
-	.string "you to {COLOR RED}Chief{COLOR DARK_GRAY}!$"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has promoted\n"
+	.string "you to {COLOR RED}{SHADOW LIGHT_RED}Chief{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Rank8_Climbed:
 	.string "> You've finally climbed to the top of\n"
@@ -8879,15 +8879,15 @@ RA_Player_Text_Gain_Rank8_Climbed:
 
 RA_Player_Text_Gain_Badge8:
 	.string "> You carefully attached the\n"
-	.string "{COLOR RED}Gold Ring {COLOR DARK_GRAY}to your {COLOR RED}Poké Pass{COLOR DARK_GRAY}.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Gold Ring {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge8:
-	.string "> With the {COLOR RED}Gold Ring{COLOR DARK_GRAY}, all Pokémon\n"
+	.string "> With the {COLOR RED}{SHADOW LIGHT_RED}Gold Ring{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, all Pokémon\n"
 	.string "will obey your commands.\p"
 	.string "> And, you can now take part in\n"
-	.string "the {COLOR RED}Pokémon League{COLOR DARK_GRAY}!\p"
-	.string "> As for the {COLOR RED}Gold Ring {COLOR DARK_GRAY}itself...\p"
-	.string "> The gold was mined in {COLOR RED}Johto{COLOR DARK_GRAY}. It looks\n"
+	.string "the {COLOR RED}{SHADOW LIGHT_RED}Pokémon League{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
+	.string "> As for the {COLOR RED}{SHADOW LIGHT_RED}Gold Ring {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}itself...\p"
+	.string "> The gold was mined in {COLOR RED}{SHADOW LIGHT_RED}Johto{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}. It looks\n"
 	.string "right at home among the rainbow colours.$"
 
 RA_Player_Gain_Rank::

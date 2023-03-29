@@ -409,10 +409,9 @@ static const struct WindowTemplate sNewGameBirchSpeechTextWindows[] =
 static const u16 sMainMenuBgPal[] = INCBIN_U16("graphics/interface/main_menu_bg.gbapal");
 static const u16 sMainMenuTextPal[] = INCBIN_U16("graphics/interface/main_menu_text.gbapal");
 
-static const u8 sTextColor_Headers[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_GRAY};
-static const u8 sTextColor_SubHeaders[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_LIGHT_BLUE, TEXT_COLOR_LIGHT_GRAY};
+static const u8 sTextColor_Headers[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_BLUE, TEXT_COLOR_LIGHT_BLUE};
 static const u8 sTextColor_MenuInfo[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_LIGHT_GRAY};
-static const u8 sTextColor_PlayerName[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_GREEN, TEXT_COLOR_LIGHT_GRAY};
+static const u8 sTextColor_PlayerName[] = {TEXT_DYNAMIC_COLOR_1, TEXT_COLOR_GREEN, TEXT_COLOR_LIGHT_GREEN};
 
 static const struct BgTemplate sMainMenuBgTemplates[] = {
     {

@@ -2,7 +2,7 @@
   "map_sections": [
     {
       "map_section": "MAPSEC_LITTLEROOT_TOWN",
-      "name": "{COLOR RED}Mistralton City",
+      "name": "{COLOR RED}{SHADOW LIGHT_RED}Mistralton City",
       "x": 4,
       "y": 11,
       "width": 1,

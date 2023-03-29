@@ -1,6 +1,6 @@
 	.align 2
 gText_ConfirmSave::
-	.string "> Will you update your {COLOR RED}Mission Log {COLOR DARK_GRAY}and\n"
+	.string "> Will you update your {COLOR RED}{SHADOW LIGHT_RED}Mission Log {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}and\n"
 	.string "save your progress?$"
 
 gText_AlreadySavedFile::
@@ -11,7 +11,7 @@ gText_SavingDontTurnOff::
 	.string "> Saving... Don't close the emulator.$"
 
 gText_PlayerSavedGame::
-	.string "> Your {COLOR RED}Mission Log {COLOR DARK_GRAY}is now up to date.$"
+	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Mission Log {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}is now up to date.$"
 
 gText_DifferentSaveFile::
 	.string "> Warning!\p"
@@ -40,4 +40,4 @@ gText_SavingInGameClock::
 	.string "> In case you can't remember all that...\p"
 	.string "> We've added it to the manual on the\n"
 	.string "desk in your house.\p{PAUSE 32}"
-	.string "> Your {COLOR RED}Mission Log {COLOR DARK_GRAY}is now up to date.$"
+	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Mission Log {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}is now up to date.$"

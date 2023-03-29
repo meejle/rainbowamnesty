@@ -219,7 +219,7 @@ RA_PlayersHouse_2F_Move_ReturnToWest:
 
 RA_PlayersHouse_2F_Text_2WeeksLater:
 	.string "> Two weeks later\n"
-	.string "{COLOR RED}Mistralton City {COLOR DARK_GRAY}- {COLOR GREEN}{PLAYER}'s {COLOR DARK_GRAY}house$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Mistralton City {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}- {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}'s {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}house$"
 
 RA_PlayersHouse_2F_Text_GotEmail:
 	.string "> It sounds like you've got a new\n"
@@ -234,38 +234,38 @@ RA_PlayersHouse_2F_Text_ShouldReadEmailFirst:
 	.string "you go anywhere else.$"
 
 RA_PlayersHouse_2F_Text_LookerEmail:
-	.string "> It's an email from {COLOR GREEN}Chief Looker{COLOR DARK_GRAY}.$"
+	.string "> It's an email from {COLOR GREEN}{SHADOW LIGHT_GREEN}Commander Looker{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_2F_Text_LookerEmail2:
 	.string "My young friend,\p"
 	.string "The time, it has finally come!\p"
 	.string "That is to say, it is time for you to\n"
-	.string "start your training at the {COLOR RED}Institute{COLOR DARK_GRAY}!\p"
+	.string "start your training at the {COLOR RED}{SHADOW LIGHT_RED}Institute{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
 	.string "Do not worry! We plan to -- ah, how to\n"
 	.string "put this -- “go easy on you”, at first.\p"
 	.string "When you read this, head for the\n"
-	.string "building of {COLOR RED}Mistralton Cargo Service{COLOR DARK_GRAY}.\p"
+	.string "building of {COLOR RED}{SHADOW LIGHT_RED}Mistralton Cargo Service{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
 	.string "Make haste, you understand, but not\n"
 	.string "speed! If you need to go anywhere else\l"
 	.string "in town first, that is OK with me.\p"
-	.string "Young {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, I look forward to the\n"
+	.string "Young {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, I look forward to the\n"
 	.string "making of your acquaintance!\p"
 	.string "Best wishes! :-)\n"
-	.string "{COLOR GREEN}Looker{COLOR DARK_GRAY}$"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Looker{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}$"
 
 RA_PlayersHouse_2F_Text_LookerEmail3:
-	.string "> Will you read {COLOR GREEN}Looker's {COLOR DARK_GRAY}email again?$"
+	.string "> Will you read {COLOR GREEN}{SHADOW LIGHT_GREEN}Looker's {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}email again?$"
 
 RA_PlayersHouse_2F_Text_LookAtGCN:
-	.string "> It's a {COLOR RED}Retroid Pocket 3+{COLOR DARK_GRAY}.\p"
-	.string "> A mini HDMI cable and a {COLOR RED}Nintendo\n"
-	.string "Switch Pro Controller {COLOR DARK_GRAY}are connected.\p"
+	.string "> It's a {COLOR RED}{SHADOW LIGHT_RED}Retroid Pocket 3+{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
+	.string "> A mini HDMI cable and a {COLOR RED}{SHADOW LIGHT_RED}Nintendo\n"
+	.string "Switch Pro Controller {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}are connected.\p"
 	.string "> You've been using it to play your\n"
 	.string "favourite ROM hacks on the TV.$"
 
 RA_PlayersHouse_2F_Text_LookAtTV:
-	.string "> The {COLOR RED}Amnesty Institute's\n"
-	.string "{COLOR DARK_GRAY}accommodation came with a TV.\p"
+	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute's\n"
+	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}accommodation came with a TV.\p"
 	.string "> It doesn't pick up any channels,\n"
 	.string "so you just use it for gaming.$"
 
@@ -275,26 +275,26 @@ RA_PlayersHouse_2F_Text_LookAtBoxes:
 	.string "to unpacking the rest of your boxes...$"
 
 RA_PlayersHouse_2F_Text_LookAtBook:
-	.string "> It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}training\n"
+	.string "> It's the {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute's {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}training\n"
 	.string "manual for prospective agents.\p"
 	.string "Lesson number 1:\n"
 	.string "Use {FONT 14}RS{FONT 11} to open the menu.\p"
 	.string "Lesson number 2:\n"
-	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
+	.string "Update your {COLOR RED}{SHADOW LIGHT_RED}Mission Log{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} with Save.\p"
 	.string "Lesson number 3:\n"
-	.string "Hold {FONT 14}W{FONT 11} to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
+	.string "Hold {FONT 14}W{FONT 11} to use your {COLOR RED}{SHADOW LIGHT_RED}Running Shoes{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
 	.string "> The rest is too technical for you to\n"
 	.string "understand...$"
 
 RA_PlayersHouse_2F_Text_LookAtBookRTC:
-	.string "> It's the {COLOR RED}Amnesty Institute's {COLOR DARK_GRAY}training\n"
+	.string "> It's the {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute's {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}training\n"
 	.string "manual for prospective agents.\p"
 	.string "Lesson number 1:\n"
 	.string "Use {FONT 14}RS{FONT 11} to open the menu.\p"
 	.string "Lesson number 2:\n"
-	.string "Update your {COLOR RED}Mission Log{COLOR DARK_GRAY} with Save.\p"
+	.string "Update your {COLOR RED}{SHADOW LIGHT_RED}Mission Log{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} with Save.\p"
 	.string "Lesson number 3:\n"
-	.string "Hold {FONT 14}W{FONT 11} to use your {COLOR RED}Running Shoes{COLOR DARK_GRAY}.\p"
+	.string "Hold {FONT 14}W{FONT 11} to use your {COLOR RED}{SHADOW LIGHT_RED}Running Shoes{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
 	.string "Lesson number 4:\n"
 	.string "Adjust your clock by pressing\l"
 	.string "{FONT 14}AB{FONT 11} + {FONT 14}TU{FONT 11} + {FONT 14}W{FONT 11} together\lon the title screen.\p"

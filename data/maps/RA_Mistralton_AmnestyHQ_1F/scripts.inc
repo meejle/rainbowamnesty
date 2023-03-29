@@ -138,16 +138,16 @@ RA_AmnestyHQ_1F_Move_LookerFaces:
 
 RA_AmnestyHQ_1F_Text_LookerGreets:
 	.string "Well, if it isn't my young friend\n"
-	.string "{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}!\p"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
 	.string "Much, we have to discuss.\nBut not here!\p"
 	.string "Follow me upstairs, so we can talk away\n"
 	.string "from prying... erm, ears.$"
 
 RA_AmnestyHQ_1F_Text_LookerFakeout:
-	.string "Ah, you don't have a {COLOR RED}Poké Pass{COLOR DARK_GRAY} yet,\n"
+	.string "Ah, you don't have a {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} yet,\n"
 	.string "do you?\p"
 	.string "Here, I'll open the barrier for you.$"
 
 RA_AmnestyHQ_1F_Text_AllonsY:
-	.string "Well then... after you, {COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}!\n"
+	.string "Well then... after you, {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\n"
 	.string "Andiamo!$"

@@ -844,7 +844,7 @@ gText_PokemartSign::
 
 gText_PokemonCenterSign::
 	.string "“Rejuvenate your tired partners!”\n"
-	.string "{COLOR RED}Pokémon Centre{COLOR DARK_GRAY}$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Pokémon Centre{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}$"
 
 gText_MomOrDadMightLikeThisProgram::
 	.string "{STR_VAR_1} might like this program.\n"

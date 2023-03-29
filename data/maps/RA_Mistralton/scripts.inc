@@ -189,12 +189,12 @@ RA_Mistralton_Script_Poryphone_Debug_Lady::
 	end
 
 RA_Mistralton_Text_Add_Debug_Lady:
-	.string "> You saved {COLOR GREEN}Debug lady's\n"
-	.string "{COLOR DARK_GRAY}number to your {COLOR RED}Poryphone{COLOR DARK_GRAY}.$"
+	.string "> You saved {COLOR GREEN}{SHADOW LIGHT_GREEN}Debug lady's\n"
+	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}number to your {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Mistralton_Text_Answer_Debug_Lady:
 	.string "> You answered an incoming\n"
-	.string "{COLOR RED}Poryphone {COLOR DARK_GRAY}call.$"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Poryphone {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}call.$"
 
 name_poryphone_debug_lady:
 	.string "Poryphone debug lady$"
@@ -243,14 +243,14 @@ RA_Mistralton_Text_NameTheRival3:
 	.string "taken an interest in you, is that it?\p"
 	.string "I give it a week before they drop you...\p"
 	.string "And, guess what? I don't need a dumb\n"
-	.string "“{COLOR RED}Institute{COLOR DARK_GRAY}” to take down\l"
-	.string "{COLOR RED}Team Rainbow Rocket{COLOR DARK_GRAY}.\p"
+	.string "“{COLOR RED}{SHADOW LIGHT_RED}Institute{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}” to take down\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
 	.string "I'm doing to do it on my own.\p"
 	.string "Sorry to rain on your parade and all.\p"
 	.string "My name's...$"
 
 RA_Mistralton_Text_NameTheRival4:
-	.string "My name's {COLOR GREEN}{RIVAL}{COLOR DARK_GRAY}, and you'd better\n"
+	.string "My name's {COLOR GREEN}{SHADOW LIGHT_GREEN}{RIVAL}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, and you'd better\n"
 	.string "not forget it.\p"
 	.string "Here, maybe this will help you\n"
 	.string "remember.$"
@@ -260,8 +260,8 @@ RA_Mistralton_Text_TechIsAmazing:
 	.string "talking about something interesting...{PAUSE_UNTIL_PRESS}$"
 
 RA_Mistralton_Text_AgreeTech:
-	.string "Apparently the {COLOR RED}Cargo Service {COLOR DARK_GRAY}has a new\n"
-	.string "device called a “{COLOR RED}ReEngine{COLOR DARK_GRAY}”.\p"
+	.string "Apparently the {COLOR RED}{SHADOW LIGHT_RED}Cargo Service {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has a new\n"
+	.string "device called a “{COLOR RED}{SHADOW LIGHT_RED}ReEngine{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}”.\p"
 	.string "It allows near-instantaneous travel\n"
 	.string "between regions, and it doesn't even\l"
 	.string "show up on radar!\p"
@@ -285,10 +285,10 @@ RA_Mistralton_Text_DontForgetToSave:
 RA_Mistralton_Text_GymDoorSign:
 	.string "> There's a sign on the door.\p"
 	.string "GYM CLOSED - PRIVATE TRAINING ONLY\n"
-	.string "BY ORDER OF {COLOR RED}TEAM RAINBOW ROCKET{COLOR DARK_GRAY}$"
+	.string "BY ORDER OF {COLOR RED}{SHADOW LIGHT_RED}TEAM RAINBOW ROCKET{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}$"
 
 RA_Mistralton_Text_PlayerDoorSign:
-	.string "{COLOR GREEN}{PLAYER}'s{COLOR DARK_GRAY} house$"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}'s{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} house$"
 	.string "> ...\p"
 	.string "> You decided to experiment with the\n"
 	.string "in-game camera.$"
@@ -304,24 +304,24 @@ RA_Mistralton_Text_PlayerDoorSign_3:
 RA_Mistralton_Text_PkmnCentreSign:
 	.string "> The door won't open.\p"
 	.string "> It looks like you need something\n"
-	.string "called a {COLOR RED}Poké Pass {COLOR DARK_GRAY}to get in.$"
+	.string "called a {COLOR RED}{SHADOW LIGHT_RED}Poké Pass {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to get in.$"
 
 RA_Mistralton_Text_CheckpointSign:
 	.string "CHECKPOINT CLOSED UNTIL FURTHER\n"
 	.string "NOTICE\p"
-	.string "BY ORDER OF {COLOR RED}TEAM RAINBOW ROCKET{COLOR DARK_GRAY}$"
+	.string "BY ORDER OF {COLOR RED}{SHADOW LIGHT_RED}TEAM RAINBOW ROCKET{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}$"
 
 RA_Mistralton_Text_CitySign:
-	.string "{COLOR RED}Mistralton City{COLOR DARK_GRAY}\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Mistralton City{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}\n"
 	.string "Strewn with Windblown Leaves$"
 
 RA_Mistralton_Text_CargoSign:
-	.string "{COLOR RED}Mistralton Cargo Service{COLOR DARK_GRAY}\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Mistralton Cargo Service{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}\n"
 	.string "Our slogan is “Quick and Safe!”$"
 
 RA_Mistralton_Text_GymSign:
-	.string "{COLOR RED}Mistralton City Pokémon Gym{COLOR DARK_GRAY}\n"
-	.string "Leader: {COLOR GREEN}Skyla{COLOR DARK_GRAY}\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Mistralton City Pokémon Gym{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}\n"
+	.string "Leader: {COLOR GREEN}{SHADOW LIGHT_GREEN}Skyla{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}\l"
 	.string "“The High-Flying Girl”$"
 
 RA_Mistralton_Text_LockedDoor:
