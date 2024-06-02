@@ -189,15 +189,15 @@ RA_Mistralton_Script_Poryphone_Debug_Lady::
 	end
 
 RA_Mistralton_Text_Add_Debug_Lady:
-	.string "> You saved {COLOR GREEN}{SHADOW LIGHT_GREEN}Debug lady's\n"
-	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}number to your {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "You saved the {COLOR GREEN}Debug lady's\n"
+	.string "{COLOR DARK_GRAY}number to your {COLOR RED}Poryphone{COLOR DARK_GRAY}.$"
 
 RA_Mistralton_Text_Answer_Debug_Lady:
-	.string "> You answered an incoming\n"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}Poryphone {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}call.$"
+	.string "You answered an incoming {COLOR RED}Poryphone\n"
+	.string "{COLOR DARK_GRAY}call.$"
 
 name_poryphone_debug_lady:
-	.string "Poryphone debug lady$"
+	.string "Debug lady$"
 
 RA_Mistralton_Script_TechIsAmazing::
 	lock
