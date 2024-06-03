@@ -157,19 +157,64 @@ RA_PlayersHouse_1F_Script_PlayCredits::
 	releaseall
 	end
 
-RA_PlayersHouse_1F_Script_LookAtBoxes::
-	lock
-	msgbox RA_PlayersHouse_2F_Text_LookAtBoxes, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
-
 RA_PlayersHouse_1F_Script_DontPlayCredits::
 	releaseall
 	end
 
 RA_PlayersHouse_1F_Script_CreditsSaveIssue::
 	playse SE_SELECT
+	releaseall
+	end
+
+RA_PlayersHouse_1F_Script_RightCabinet::
+	lock
+	msgbox RA_PlayersHouse_1F_Text_Experiment_BW1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RA_PlayersHouse_1F_Script_RightCabinetYes
+	goto_if_eq VAR_RESULT, NO, RA_PlayersHouse_1F_Script_DontPlayCredits
+	end
+
+RA_PlayersHouse_1F_Script_RightCabinetYes::
+	msgbox RA_PlayersHouse_1F_Text_Experiment_BW2, MSGBOX_DEFAULT
+	namebox name_ghetsis
+	msgbox RA_PlayersHouse_1F_Text_Experiment_BW3, MSGBOX_DEFAULT
+	closemessage
+	hidenamebox
+	setvar VAR_0x8000, MUGSHOT_BWEXPERIMENT1
+	callnative DrawMugshot
+	delay 32
+	setvar VAR_0x8000, MUGSHOT_BWEXPERIMENT2
+	callnative DrawMugshot
+	delay 92
+	callnative ClearMugshot
+	namebox name_ghetsis
+	msgbox RA_PlayersHouse_1F_Text_Experiment_BW4, MSGBOX_DEFAULT
+	closemessage
+	hidenamebox
+	releaseall
+	end
+
+RA_PlayersHouse_1F_Script_LeftCabinet::
+	lock
+	msgbox RA_PlayersHouse_1F_Text_Experiment_SM1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RA_PlayersHouse_1F_Script_LeftCabinetYes
+	goto_if_eq VAR_RESULT, NO, RA_PlayersHouse_1F_Script_DontPlayCredits
+	end
+
+RA_PlayersHouse_1F_Script_LeftCabinetYes::
+	setvar VAR_0x8000, MUGSHOT_SMEXPERIMENT1
+	callnative DrawMugshot
+	playfanfare MUS_LEVEL_UP
+	msgbox RA_PlayersHouse_1F_Text_Experiment_SM2, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	callnative ClearMugshot
+	msgbox RA_PlayersHouse_1F_Text_Experiment_SM5, MSGBOX_DEFAULT
+	setvar VAR_0x8000, MUGSHOT_SMEXPERIMENT3
+	callnative DrawMugshot
+	playse SE_PC_LOGIN
+	msgbox RA_PlayersHouse_1F_Text_Experiment_SM4, MSGBOX_DEFAULT
+	closemessage
+	callnative ClearMugshot
 	releaseall
 	end
 
@@ -237,3 +282,41 @@ RA_PlayersHouse_1F_Text_Sink_Rank0:
 
 RA_PlayersHouse_1F_Text_Sink_Unavailable:
 	.string "Nothing happened.$"
+
+RA_PlayersHouse_1F_Text_Experiment_BW1:
+	.string "It's the {COLOR RED}{SHADOW LIGHT_RED}Right-hand Cabinet of Pokémon\n"
+	.string "Black and White-style Exclamations{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
+	.string "Will you open it?$"
+
+RA_PlayersHouse_1F_Text_Experiment_BW2:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Ghetsis's {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}voice echoed from somewhere\n"
+	.string "far away...$"
+
+RA_PlayersHouse_1F_Text_Experiment_BW3:
+	.string "Tell me, what is our responsibility to\n"
+	.string "these wonderful beings called Pokémon?$"
+
+RA_PlayersHouse_1F_Text_Experiment_BW4:
+	.string "That's right, we must liberate the\n"
+	.string "Pokémon!$"
+
+RA_PlayersHouse_1F_Text_Experiment_SM1:
+	.string "It's the {COLOR RED}{SHADOW LIGHT_RED}Left-hand Cabinet of Creative,\n"
+	.string "Experimental Textbox Designs{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
+	.string "Will you open it?$"
+
+RA_PlayersHouse_1F_Text_Experiment_SM2:
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Burnt Letter {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}added to the\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Court Record{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+
+RA_PlayersHouse_1F_Text_Experiment_SM4:
+	.string "It's an email from {COLOR GREEN}{SHADOW LIGHT_GREEN}Commander Looker{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+
+RA_PlayersHouse_1F_Text_Experiment_SM5:
+	.string "What's next...? Oh!$"
+
+RA_PlayersHouse_1F_Text_Experiment_SM6:
+	.string "It's a textbook about Bronzong.$"
+
+name_ghetsis:
+	.string "Ghetsis$"

@@ -8724,7 +8724,7 @@ RA_Player_Text_Gain_PokePass:
 	.string "You finally got your own {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_Player_Text_Gain_Badge0:
-	.string "You carefully attached the{COLOR RED}{SHADOW LIGHT_RED}White Band\n"
+	.string "You carefully attached the {COLOR RED}{SHADOW LIGHT_RED}White Band\n"
 	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to your {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Player_Text_Explain_Badge0:

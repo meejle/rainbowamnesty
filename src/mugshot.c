@@ -41,6 +41,13 @@ static const u32 sMugshotImg_VioletGem[] = INCBIN_U32("graphics/mugshots/VioletG
 static const u16 sMugshotPal_VioletGem[] = INCBIN_U16("graphics/mugshots/VioletGem.gbapal");
 static const u32 sMugshotImg_GoldRing[] = INCBIN_U32("graphics/mugshots/GoldRing.4bpp.lz");
 static const u16 sMugshotPal_GoldRing[] = INCBIN_U16("graphics/mugshots/GoldRing.gbapal");
+static const u32 sMugshotImg_BWExperiment1[] = INCBIN_U32("graphics/mugshots/BWExperiment1.4bpp.lz");
+static const u16 sMugshotPal_BWExperiment[] = INCBIN_U16("graphics/mugshots/BWExperiment1.gbapal");
+static const u32 sMugshotImg_BWExperiment2[] = INCBIN_U32("graphics/mugshots/BWExperiment2.4bpp.lz");
+static const u32 sMugshotImg_SMExperiment1[] = INCBIN_U32("graphics/mugshots/SMExperiment1.4bpp.lz");
+static const u16 sMugshotPal_SMExperiment1[] = INCBIN_U16("graphics/mugshots/SMExperiment1.gbapal");
+static const u32 sMugshotImg_SMExperiment3[] = INCBIN_U32("graphics/mugshots/SMExperiment3.4bpp.lz");
+static const u16 sMugshotPal_SMExperiment3[] = INCBIN_U16("graphics/mugshots/SMExperiment3.gbapal");
 
 
 static const struct Mugshot sMugshots[] = {
@@ -54,6 +61,10 @@ static const struct Mugshot sMugshots[] = {
     [MUGSHOT_INDIGOGEM] = {.x = 19, .y = 4, .width = 80, .height = 80, .image = sMugshotImg_IndigoGem, .palette = sMugshotPal_IndigoGem},
     [MUGSHOT_VIOLETGEM] = {.x = 19, .y = 4, .width = 80, .height = 80, .image = sMugshotImg_VioletGem, .palette = sMugshotPal_VioletGem},
     [MUGSHOT_GOLDRING] = {.x = 19, .y = 4, .width = 80, .height = 80, .image = sMugshotImg_GoldRing, .palette = sMugshotPal_GoldRing},
+    [MUGSHOT_BWEXPERIMENT1] = {.x = 3, .y = 1, .width = 120, .height = 32, .image = sMugshotImg_BWExperiment1, .palette = sMugshotPal_BWExperiment},
+    [MUGSHOT_BWEXPERIMENT2] = {.x = 3, .y = 1, .width = 208, .height = 80, .image = sMugshotImg_BWExperiment2, .palette = sMugshotPal_BWExperiment},
+    [MUGSHOT_SMEXPERIMENT1] = {.x = 3, .y = 1, .width = 200, .height = 104, .image = sMugshotImg_SMExperiment1, .palette = sMugshotPal_SMExperiment1},
+    [MUGSHOT_SMEXPERIMENT3] = {.x = 2, .y = 1, .width = 208, .height = 104, .image = sMugshotImg_SMExperiment3, .palette = sMugshotPal_SMExperiment3},
 };
 
 
