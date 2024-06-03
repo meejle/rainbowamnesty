@@ -116,24 +116,33 @@ static const struct CreditsEntry sCreditsEntry_DebuggingSupport[] = {11, TRUE, s
 static const u8 sCreditsText_DebugSupport1[] = _("{FONT_NARROW}Anon822");
 static const struct CreditsEntry sCreditsEntry_DebugSupport1[] = {11, FALSE, sCreditsText_DebugSupport1};
 
-static const u8 sCreditsText_AdditionalScripting[] = _("Additional programming");
+static const u8 sCreditsText_AdditionalScripting[] = _("Script contributors");
 static const struct CreditsEntry sCreditsEntry_AdditionalScripting[] = {11, TRUE, sCreditsText_AdditionalScripting};
-static const u8 sCreditsText_AddScript1[] = _("{FONT_NARROW}aueuaio   Blackforest92   daniilS   Delta231");
+static const u8 sCreditsText_AddScript1[] = _("{FONT_NARROW}aueuaio   Blackforest92   BLAx501");
 static const struct CreditsEntry sCreditsEntry_AddScript1[] = {11, FALSE, sCreditsText_AddScript1};
-static const u8 sCreditsText_AddScript2[] = _("{FONT_NARROW}Deokishisu   devolov   ellabrella   Faith120");
+static const u8 sCreditsText_AddScript2[] = _("{FONT_NARROW}daniilS   Delta231   Deokishisu   devolov");
 static const struct CreditsEntry sCreditsEntry_AddScript2[] = {11, FALSE, sCreditsText_AddScript2};
 
-static const u8 sCreditsText_AddScript3[] = _("{FONT_NARROW}FieryMewtwo   hjk321   ipatix   Jaizu");
+static const u8 sCreditsText_AddScript3[] = _("{FONT_NARROW}dr-pop   ellabrella   Faith120");
 static const struct CreditsEntry sCreditsEntry_AddScript3[] = {11, FALSE, sCreditsText_AddScript3};
-static const u8 sCreditsText_AddScript4[] = _("{FONT_NARROW}JamesAndrewJackson13   jrz3   ketsuban");
+static const u8 sCreditsText_AddScript4[] = _("{FONT_NARROW}FieryMewtwo   hjk321   ipatix   Jaizu");
 static const struct CreditsEntry sCreditsEntry_AddScript4[] = {11, FALSE, sCreditsText_AddScript4};
-
-static const u8 sCreditsText_AddScript5[] = _("{FONT_NARROW}LOuroboros   meekrhino   Mkol103   NotToDisturb"); // Long line
+static const u8 sCreditsText_AddScript5[] = _("{FONT_NARROW}JamesAndrewJackson13   jrz3   ketsuban");
 static const struct CreditsEntry sCreditsEntry_AddScript5[] = {11, FALSE, sCreditsText_AddScript5};
-static const u8 sCreditsText_AddScript6[] = _("{FONT_NARROW}ProfLeonDiasBackup   Samu   ShinyDragonHunter"); // Long line
+
+static const u8 sCreditsText_AddScript6[] = _("{FONT_NARROW}LOuroboros   meekrhino   Mkol103");
 static const struct CreditsEntry sCreditsEntry_AddScript6[] = {11, FALSE, sCreditsText_AddScript6};
-static const u8 sCreditsText_AddScript7[] = _("{FONT_NARROW}SonikkuA-DatH   Temporalin   tustin2121   {FONT_NORMAL}{JPN}セケツ");
+static const u8 sCreditsText_AddScript7[] = _("{FONT_NARROW}nicholatian   NotToDisturb");
 static const struct CreditsEntry sCreditsEntry_AddScript7[] = {11, FALSE, sCreditsText_AddScript7};
+static const u8 sCreditsText_AddScript8[] = _("{FONT_NARROW}ProfLeonDiasBackup   Samu");
+static const struct CreditsEntry sCreditsEntry_AddScript8[] = {11, FALSE, sCreditsText_AddScript8};
+
+static const u8 sCreditsText_AddScript9[] = _("{FONT_NARROW}ShinyDragonHunter   Slawter666");
+static const struct CreditsEntry sCreditsEntry_AddScript9[] = {11, FALSE, sCreditsText_AddScript9};
+static const u8 sCreditsText_AddScript10[] = _("{FONT_NARROW}smithk200   SonikkuA-DatH   Temporalin");
+static const struct CreditsEntry sCreditsEntry_AddScript10[] = {11, FALSE, sCreditsText_AddScript10};
+static const u8 sCreditsText_AddScript11[] = _("{FONT_NARROW}tustin2121   {FONT_NORMAL}{JPN}セケツ");
+static const struct CreditsEntry sCreditsEntry_AddScript11[] = {11, FALSE, sCreditsText_AddScript11};
 
 static const u8 sCreditsText_Porymap[] = _("Built using Porymap");
 static const struct CreditsEntry sCreditsEntry_Porymap[] = {11, TRUE, sCreditsText_Porymap};
@@ -513,41 +522,41 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         sCreditsEntry_AddScript5,
         sCreditsEntry_AddScript6,
         sCreditsEntry_AddScript7,
-        _,
+        sCreditsEntry_AddScript8,
     },
     [PAGE_GRAPHIC_DESIGNERS_1] = {
+        sCreditsEntry_AdditionalScripting,
+        sCreditsEntry_AddScript9,
+        sCreditsEntry_AddScript10,
+        sCreditsEntry_AddScript11,
+        _,
+    },
+    [PAGE_GRAPHIC_DESIGNERS_2] = {
         sCreditsEntry_Porymap,
         sCreditsEntry_Porymap1,
         _,
         sCreditsEntry_Porymap2,
         _,
     },
-    [PAGE_GRAPHIC_DESIGNERS_2] = {
+    [PAGE_GRAPHIC_DESIGNERS_3] = {
         sCreditsEntry_TilemapStudio,
         sCreditsEntry_TilemapStudio1,
         _,
         sCreditsEntry_TilemapStudio2,
         _,
     },
-    [PAGE_GRAPHIC_DESIGNERS_3] = {
+    [PAGE_MUSIC_COMPOSITION] = {
         sCreditsEntry_Fonts,
         sCreditsEntry_Fonts1,
         sCreditsEntry_Fonts2,
         sCreditsEntry_Fonts3,
         sCreditsEntry_Fonts4,
     },
-    [PAGE_MUSIC_COMPOSITION] = {
+    [PAGE_SOUND_EFFECTS] = {
         sCreditsEntry_SpritersRes,
         sCreditsEntry_SpritersRes1,
         sCreditsEntry_SpritersRes2,
         sCreditsEntry_SpritersRes3,
-        _,
-    },
-    [PAGE_SOUND_EFFECTS] = {
-        _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
         _,
     },
     [PAGE_GAME_DESIGNERS_1] = {
