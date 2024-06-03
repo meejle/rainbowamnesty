@@ -234,7 +234,7 @@ RA_Mistralton_Text_NameTheRival1:
 	.string "Hmph.$"
 
 RA_Mistralton_Text_NameTheRival2:
-	.string "> An unfriendly-looking girl is looking\n"
+	.string "An unfriendly-looking girl is looking\n"
 	.string "you up and down.$"
 
 RA_Mistralton_Text_NameTheRival3:
@@ -245,7 +245,7 @@ RA_Mistralton_Text_NameTheRival3:
 	.string "And, guess what? I don't need a dumb\n"
 	.string "“{COLOR RED}{SHADOW LIGHT_RED}Institute{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}” to take down\l"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
-	.string "I'm doing to do it on my own.\p"
+	.string "I'm going to do it on my own.\p"
 	.string "Sorry to rain on your parade and all.\p"
 	.string "My name's...$"
 
@@ -283,28 +283,28 @@ RA_Mistralton_Text_DontForgetToSave:
 	.string "...$"
 
 RA_Mistralton_Text_GymDoorSign:
-	.string "> There's a sign on the door.\p"
+	.string "There's a sign on the door.\p"
 	.string "GYM CLOSED - PRIVATE TRAINING ONLY\n"
 	.string "BY ORDER OF {COLOR RED}{SHADOW LIGHT_RED}TEAM RAINBOW ROCKET{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}$"
 
 RA_Mistralton_Text_PlayerDoorSign:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}'s{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} house$"
-	.string "> ...\p"
-	.string "> You decided to experiment with the\n"
+	.string "...\p"
+	.string "You decided to experiment with the\n"
 	.string "in-game camera.$"
 
 RA_Mistralton_Text_PlayerDoorSign_2:
-	.string "> ...\p"
-	.string "> You decided to experiment with the\n"
+	.string "...\p"
+	.string "You decided to experiment with the\n"
 	.string "in-game camera.$"
 
 RA_Mistralton_Text_PlayerDoorSign_3:
-	.string "> Nice.$"
+	.string "Nice.$"
 
 RA_Mistralton_Text_PkmnCentreSign:
-	.string "> The door won't open.\p"
-	.string "> It looks like you need something\n"
-	.string "called a {COLOR RED}{SHADOW LIGHT_RED}Poké Pass {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to get in.$"
+	.string "The door won't open.\p"
+	.string "It looks like you need something called\n"
+	.string "a {COLOR RED}{SHADOW LIGHT_RED}Poké Pass {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}to get in.$"
 
 RA_Mistralton_Text_CheckpointSign:
 	.string "CHECKPOINT CLOSED UNTIL FURTHER\n"
@@ -325,7 +325,7 @@ RA_Mistralton_Text_GymSign:
 	.string "“The High-Flying Girl”$"
 
 RA_Mistralton_Text_LockedDoor:
-	.string "> The door is locked.$"
+	.string "The door is locked.$"
 
 name_confused_lady:
 	.string "Confused-looking woman$"

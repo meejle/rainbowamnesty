@@ -1197,7 +1197,7 @@ static const u8 sMatchCallWindow_Gfx[] = INCBIN_U8("graphics/pokenav/match_call/
 static const u16 sPokenavIcon_Pal[] = INCBIN_U16("graphics/pokenav/match_call/nav_icon.gbapal");
 static const u32 sPokenavIcon_Gfx[] = INCBIN_U32("graphics/pokenav/match_call/nav_icon.4bpp.lz");
 
-static const u8 sText_PokenavCallEllipsis[] = _("> You received a call on your\n{COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p");
+static const u8 sText_PokenavCallEllipsis[] = _("You received a call on your\n{COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p");
 
 #define tState      data[0]
 #define tWindowId   data[2]

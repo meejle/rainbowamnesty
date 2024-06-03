@@ -860,8 +860,8 @@ gText_SandstormIsVicious::
 	.string "It's impossible to keep going.$"
 
 gText_SelectWithoutRegisteredItem::
-	.string "> You can register an item in your bag\n"
-	.string "to {FONT 14}TU{FONT 11} for easy use.$"
+	.string "You can register an item in your bag to\n"
+	.string "{FONT 14}TU{FONT 11} for easy use.$"
 
 gText_PokemonTrainerSchoolEmail::
 	.string "There's an e-mail from POKéMON TRAINER\n"

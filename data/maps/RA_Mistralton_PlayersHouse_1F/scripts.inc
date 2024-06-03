@@ -174,72 +174,66 @@ RA_PlayersHouse_1F_Script_CreditsSaveIssue::
 	end
 
 RA_PlayersHouse_1F_Text_FridgeLetter:
-	.string "> There's a letter wedged under your\n"
+	.string "There's a letter wedged under your\n"
 	.string "bottle of {COLOR RED}{SHADOW LIGHT_RED}Moomoo Milk{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
-	.string "> You decide to open it.$"
+	.string "Let's see what it says...$"
 
 RA_PlayersHouse_1F_Text_WantToWatchCredits:
-	.string "> Do you want to watch the credits?\p"
-	.string "> You won't be able to skip them, so you'll\n"
+	.string "Do you want to watch the credits?\p"
+	.string "You won't be able to skip them, so you'll\n"
 	.string "have to save your progress first.$"
 
 RA_PlayersHouse_1F_Text_FridgeIsEmpty:
-	.string "> The {COLOR RED}{SHADOW LIGHT_RED}Fridge of Blessings {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has no more\n"
+	.string "The {COLOR RED}{SHADOW LIGHT_RED}Fridge of Blessings {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}has no more\n"
 	.string "gifts to bestow unto you...$"
 
 RA_PlayersHouse_1F_Text_ShouldIFridge:
-	.string "> It's the {COLOR RED}{SHADOW LIGHT_RED}Fridge of Blessings{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\n"
-	.string "Will you take a look inside?$"
+	.string "It's the {COLOR RED}{SHADOW LIGHT_RED}Fridge of Blessings{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}! Will you\n"
+	.string "take a look inside?$"
 
 RA_PlayersHouse_1F_Text_ShouldISink:
-	.string "> It's the {COLOR RED}{SHADOW LIGHT_RED}Sink of Shadows{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\n"
-	.string "Will you turn on the tap?$"
+	.string "It's the {COLOR RED}{SHADOW LIGHT_RED}Sink of Shadows{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}! Will you turn\n"
+	.string "on the tap?$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank8:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Gold Ring {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Commander{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Gold Ring {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Commander{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank7:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Violet Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Captain{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Violet Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Captain{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank6:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Indigo Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Lieutenant{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Indigo Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
+	.string "plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Lieutenant{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank5:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Blue Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Detective{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Blue Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Detective{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank4:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Green Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Sergeant{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Green Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Sergeant{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank3:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Yellow Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Officer{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Yellow Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Officer{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank2:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Orange Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Recruit{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Orange Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
+	.string "plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Recruit{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank1:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Red Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Trainee{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Red Gem {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the plughole...\p"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Rank {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell to {COLOR RED}{SHADOW LIGHT_RED}Trainee{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Sink_Rank0:
-	.string "> Your {COLOR RED}{SHADOW LIGHT_RED}White Band {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
-	.string "plughole!\p"
-	.string "> You're no longer part of the\n"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "Your {COLOR RED}{SHADOW LIGHT_RED}White Band {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}fell down the\n"
+	.string "plughole...\p"
+	.string "You're no longer part of the\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_PlayersHouse_1F_Text_Sink_Unavailable:
-	.string "> Nothing happened.$"
+	.string "Nothing happened.$"
