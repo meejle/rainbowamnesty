@@ -175,21 +175,21 @@ RA_PlayersHouse_1F_Script_RightCabinet::
 
 RA_PlayersHouse_1F_Script_RightCabinetYes::
 	msgbox RA_PlayersHouse_1F_Text_Experiment_BW2, MSGBOX_DEFAULT
-	namebox name_ghetsis
-	msgbox RA_PlayersHouse_1F_Text_Experiment_BW3, MSGBOX_DEFAULT
-	closemessage
-	hidenamebox
+	smallnamebox name_ghetsis
+	message RA_PlayersHouse_1F_Text_Experiment_BW3
+	delay 64
 	setvar VAR_0x8000, MUGSHOT_BWEXPERIMENT1
 	callnative DrawMugshot
 	delay 32
 	setvar VAR_0x8000, MUGSHOT_BWEXPERIMENT2
 	callnative DrawMugshot
-	delay 92
+	delay 48
+	waitbuttonpress
+	playse SE_SELECT
 	callnative ClearMugshot
-	namebox name_ghetsis
 	msgbox RA_PlayersHouse_1F_Text_Experiment_BW4, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	releaseall
 	end
 
@@ -206,6 +206,7 @@ RA_PlayersHouse_1F_Script_LeftCabinetYes::
 	playfanfare MUS_LEVEL_UP
 	msgbox RA_PlayersHouse_1F_Text_Experiment_SM2, MSGBOX_DEFAULT
 	waitfanfare
+	msgbox RA_PlayersHouse_1F_Text_Experiment_SM2B, MSGBOX_DEFAULT
 	closemessage
 	callnative ClearMugshot
 	msgbox RA_PlayersHouse_1F_Text_Experiment_SM5, MSGBOX_DEFAULT
@@ -215,6 +216,7 @@ RA_PlayersHouse_1F_Script_LeftCabinetYes::
 	msgbox RA_PlayersHouse_1F_Text_Experiment_SM4, MSGBOX_DEFAULT
 	closemessage
 	callnative ClearMugshot
+	playse SE_PC_OFF
 	releaseall
 	end
 
@@ -309,14 +311,17 @@ RA_PlayersHouse_1F_Text_Experiment_SM2:
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Burnt Letter {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}added to the\n"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Court Record{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
+RA_PlayersHouse_1F_Text_Experiment_SM2B:
+	.string "We could also show this image on its own\n"
+	.string "UI screen, with a fade-in and fade-out.\p"
+	.string "Then we could say, “Check the {COLOR RED}{SHADOW LIGHT_RED}Burnt\n"
+	.string "Letter {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}in your bag to read it again.”$"
+
 RA_PlayersHouse_1F_Text_Experiment_SM4:
 	.string "It's an email from {COLOR GREEN}{SHADOW LIGHT_GREEN}Commander Looker{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_PlayersHouse_1F_Text_Experiment_SM5:
-	.string "What's next...? Oh!$"
-
-RA_PlayersHouse_1F_Text_Experiment_SM6:
-	.string "It's a textbook about Bronzong.$"
+	.string "OK, what's next...?\pOh!$"
 
 name_ghetsis:
 	.string "Ghetsis$"

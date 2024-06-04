@@ -10392,10 +10392,12 @@ extern const u8 gFrontierFactorySelectMenu_Tilemap[];
 extern const u16 gFrontierFactorySelectMenu_Pal[];
 
 // Object event pals
+extern const u16 gObjectEventPal_Avery[];
 extern const u16 gObjectEventPal_Brendan[];
 extern const u16 gObjectEventPal_May[];
 extern const u16 gObjectEventPal_RubySapphireBrendan[];
 extern const u16 gObjectEventPal_RubySapphireMay[];
+extern const u16 gObjectEventPal_RAEmoticons[];
 
 // Mail
 extern const u16 gMailPalette_Orange[];

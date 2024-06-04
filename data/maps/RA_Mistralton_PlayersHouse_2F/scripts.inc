@@ -111,11 +111,11 @@ RA_PlayersHouse_2F_Script_ReadEmail::
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 2
 	setvar VAR_RA_DIRECTION_OF_APPROACH, 5
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail, MSGBOX_DEFAULT
-	namebox name_looker
+	smallnamebox name_looker
 	playse SE_SELECT
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail2, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	playse SE_PC_OFF
 	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOffEffect
@@ -131,11 +131,11 @@ RA_PlayersHouse_2F_Script_ReadEmailAgain::
 	setvar VAR_0x8004, PC_LOCATION_BRENDANS_HOUSE
 	special DoPCTurnOnEffect
 	delay 32
-	namebox name_looker
+	smallnamebox name_looker
 	playse SE_SELECT
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail2, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	playse SE_PC_OFF
 	special DoPCTurnOffEffect
 	release

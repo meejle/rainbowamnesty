@@ -23,18 +23,18 @@ RA_Mistralton_Script_NameTheRival::
 	applymovement 12, Common_Movement_Delay48
 	waitmovement 0
 
-	namebox name_unknown
+	smallnamebox name_unknown
 	msgbox RA_Mistralton_Text_NameTheRival1, MSGBOX_DEFAULT
-	hidenamebox
+	hidesmallnamebox
 	msgbox RA_Mistralton_Text_NameTheRival2, MSGBOX_DEFAULT
-	namebox name_unknown
+	smallnamebox name_unknown
 	msgbox RA_Mistralton_Text_NameTheRival3, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special NameRival
 	waitstate
-	namebox name_rival
+	smallnamebox name_rival
 	msgbox RA_Mistralton_Text_NameTheRival4, MSGBOX_DEFAULT
-	hidenamebox
+	hidesmallnamebox
 	closemessage
 	setvar VAR_MUGSHOT_ID, MUGSHOT_RIVAL
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, Route103_Text_MayDefeated
@@ -123,10 +123,10 @@ RA_Mistralton_Script_CheckpointSign::
 
 RA_Mistralton_Script_DotDotDot::
 	faceplayer
-	namebox name_confused_lady
+	smallnamebox name_unknown
 	msgbox RA_Lipsum, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	end
 
 RA_Mistralton_Script_CitySign::
@@ -177,12 +177,12 @@ RA_Mistralton_Script_Poryphone_Debug_Lady::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
 	playse SE_POKENAV_CALL
-	namebox name_poryphone_debug_lady
+	smallnamebox name_poryphone_debug_lady
 	msgbox RA_Mistralton_Text_Answer_Debug_Lady, MSGBOX_POKENAV
 	playse SE_POKENAV_ON
 	msgbox RA_Lipsum_Poryphone_Formatted, MSGBOX_POKENAV
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	playse SE_POKENAV_HANG_UP
 	release
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
@@ -202,14 +202,14 @@ name_poryphone_debug_lady:
 RA_Mistralton_Script_TechIsAmazing::
 	lock
 	faceplayer
-	namebox name_tech_enthusiast
+	smallnamebox name_tech_enthusiast
 	message RA_Mistralton_Text_TechIsAmazing
 	waitmessage
 	multichoice2 20, 8, RA_Mistralton_Options_TechIsAmazing
 	goto_if_eq VAR_RESULT, 0, RA_Mistralton_Script_AgreeTech
 	msgbox RA_Mistralton_Text_DisagreeTech, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	release
 	end
 
@@ -217,7 +217,7 @@ RA_Mistralton_Script_AgreeTech::
 	call RA_Player_Chatter
 	msgbox RA_Mistralton_Text_AgreeTech, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	release
 	end
 
@@ -331,4 +331,4 @@ name_confused_lady:
 	.string "Confused-looking woman$"
 
 name_tech_enthusiast:
-	.string "Science fanboy$"
+	.string "Science fan$"

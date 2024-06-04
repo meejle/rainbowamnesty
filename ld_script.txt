@@ -345,6 +345,7 @@ SECTIONS {
         src/pokemon_debug.o(.text);
         src/expansion_intro.o(.text);
         src/field_name_box.o(.text);
+        src/field_small_name_box.o(.text);
         src/mugshot.o(.text);
         src/awards.o(.text);
     } =0
@@ -715,6 +716,7 @@ SECTIONS {
         src/pokemon_debug.o(.rodata);
         src/expansion_intro.o(.rodata);
         src/field_name_box.o(.rodata);
+        src/field_small_name_box.o(.rodata);
         src/mugshot.o(.rodata);
         src/awards.o(.rodata);
     } =0

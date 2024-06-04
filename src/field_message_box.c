@@ -7,6 +7,7 @@
 #include "field_message_box.h"
 
 #include "field_name_box.h"
+#include "field_small_name_box.h"
 
 static EWRAM_DATA u8 sFieldMessageBoxMode = 0;
 

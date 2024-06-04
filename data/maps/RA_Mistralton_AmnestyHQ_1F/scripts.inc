@@ -22,10 +22,10 @@ RA_AmnestyHQ_1F_Script_WalkToLooker::
 	applymovement LOCALID_LOOKER, Common_Movement_Delay48
 	waitmovement 0
 
-	namebox name_looker
+	smallnamebox name_looker
 	msgbox RA_AmnestyHQ_1F_Text_LookerGreets, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 
 	applymovement LOCALID_LOOKER, RA_AmnestyHQ_1F_Move_LookerFakeOut
 	waitmovement 0
@@ -38,10 +38,10 @@ RA_AmnestyHQ_1F_Script_WalkToLooker::
 	applymovement LOCALID_LOOKER, Common_Movement_Delay48
 	waitmovement 0
 
-	namebox name_looker
+	smallnamebox name_looker
 	msgbox RA_AmnestyHQ_1F_Text_LookerFakeout, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 
 	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_1F_Move_PlayerWaits
 	waitmovement 0
@@ -71,10 +71,10 @@ RA_AmnestyHQ_1F_Script_WalkToLooker::
 	applymovement LOCALID_LOOKER, RA_AmnestyHQ_1F_Move_LookerFaces
 	waitmovement 0
 
-	namebox name_looker
+	smallnamebox name_looker
 	msgbox RA_AmnestyHQ_1F_Text_AllonsY, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 3
 	releaseall
@@ -83,10 +83,10 @@ RA_AmnestyHQ_1F_Script_WalkToLooker::
 RA_AmnestyHQ_1F_Script_LookerInteract::
 	lock
 	faceplayer
-	namebox name_looker
+	smallnamebox name_looker
 	msgbox RA_AmnestyHQ_1F_Text_AllonsY, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	release
 	end
 

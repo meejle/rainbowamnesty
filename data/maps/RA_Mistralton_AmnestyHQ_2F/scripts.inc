@@ -39,10 +39,10 @@ RA_AmnestyHQ_2F_Script_PlayerEnters::
 	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_PlayerFaces
 	waitmovement 0
 
-	namebox name_looker
+	smallnamebox name_looker
 	msgbox RA_AmnestyHQ_2F_Text_LookerMagicHappens, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 	delay 16
 	delay 16
 
@@ -60,10 +60,10 @@ RA_AmnestyHQ_2F_Script_PlayerEnters::
 	delay 16
 	delay 16
 
-	namebox name_magnolia
+	smallnamebox name_magnolia
 	msgbox RA_Lipsum, MSGBOX_DEFAULT
 	closemessage
-	hidenamebox
+	hidesmallnamebox
 
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 5
 	releaseall

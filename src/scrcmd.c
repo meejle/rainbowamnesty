@@ -51,6 +51,7 @@
 #include "constants/event_objects.h"
 
 #include "field_name_box.h"
+#include "field_small_name_box.h"
 
 typedef u16 (*SpecialFunc)(void);
 typedef void (*NativeFunc)(void);
@@ -2351,6 +2352,21 @@ bool8 ScrCmd_namebox(struct ScriptContext *ctx) {
 bool8 ScrCmd_hidenamebox(struct ScriptContext *ctx) {
     if(IsNameboxDisplayed())
         ClearNamebox();
+    return FALSE;
+}
+
+bool8 ScrCmd_smallnamebox(struct ScriptContext *ctx) {
+    const u8 *name = (const u8 *)ScriptReadWord(ctx);
+
+    if (name == NULL)
+        name = (const u8 *)ctx->data[0];
+    ShowFieldSmallName(name);
+    return FALSE;
+}
+
+bool8 ScrCmd_hidesmallnamebox(struct ScriptContext *ctx) {
+    if(IsSmallNameboxDisplayed())
+        ClearSmallNamebox();
     return FALSE;
 }
 
