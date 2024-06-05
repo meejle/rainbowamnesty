@@ -182,12 +182,6 @@ RA_Lipsum:
 	.string "Nunc et interdum orci... Eget facilisis\n"
 	.string "tellus!$"
 
-RA_Lipsum_Poryphone_Formatted:
-	.string "Lorem ipsum dolor sit amet,\n"
-	.string "consectetur adipiscing elit.\p"
-	.string "Nunc et interdum orci... Eget\n"
-	.string "facilisis tellus!$"
-
 
 @Object1 scripts
 

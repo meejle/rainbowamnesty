@@ -29,6 +29,7 @@ static u16 FontFunc_Normal_Subpixel(struct TextPrinter *);
 static u16 FontFunc_Short_Subpixel(struct TextPrinter *);
 static u16 FontFunc_Narrow_Subpixel(struct TextPrinter *);
 static u16 FontFunc_Continue_Subpixel(struct TextPrinter *);
+static u16 FontFunc_GB(struct TextPrinter *);
 
 static void DecompressGlyph_Small(u16, bool32);
 static void DecompressGlyph_Normal(u16, bool32);
@@ -42,6 +43,7 @@ static void DecompressGlyph_Normal_Subpixel(u16, bool32);
 static void DecompressGlyph_Short_Subpixel(u16, bool32);
 static void DecompressGlyph_Narrow_Subpixel(u16, bool32);
 static void DecompressGlyph_Continue_Subpixel(u16, bool32);
+static void DecompressGlyph_GB(u16, bool32);
 
 static u32 GetGlyphWidth_Small(u16, bool32);
 static u32 GetGlyphWidth_Normal(u16, bool32);
@@ -54,6 +56,7 @@ static u32 GetGlyphWidth_Normal_Subpixel(u16, bool32);
 static u32 GetGlyphWidth_Short_Subpixel(u16, bool32);
 static u32 GetGlyphWidth_Narrow_Subpixel(u16, bool32);
 static u32 GetGlyphWidth_Continue_Subpixel(u16, bool32);
+static u32 GetGlyphWidth_GB(u16, bool32);
 
 static EWRAM_DATA struct TextPrinter sTempTextPrinter = {0};
 static EWRAM_DATA struct TextPrinter sTextPrinters[NUM_TEXT_PRINTERS] = {0};
@@ -114,7 +117,8 @@ static const struct GlyphWidthFunc sGlyphWidthFuncs[] =
     { FONT_NORMAL_SUBPIXEL,       GetGlyphWidth_Normal_Subpixel },
     { FONT_SHORT_SUBPIXEL,        GetGlyphWidth_Short_Subpixel },
     { FONT_NARROW_SUBPIXEL,       GetGlyphWidth_Narrow_Subpixel },
-    { FONT_CONTINUE_SUBPIXEL,     GetGlyphWidth_Continue_Subpixel }
+    { FONT_CONTINUE_SUBPIXEL,     GetGlyphWidth_Continue_Subpixel },
+    { FONT_GB,                    GetGlyphWidth_GB }
 };
 
 struct
@@ -292,6 +296,16 @@ static const struct FontInfo sFontInfos[] =
         .fgColor = 2,
         .bgColor = 1,
         .shadowColor = 3,
+    },
+    [FONT_GB] = {
+        .fontFunction = FontFunc_GB,
+        .maxLetterWidth = 8,
+        .maxLetterHeight = 16,
+        .letterSpacing = 0,
+        .lineSpacing = 0,
+        .fgColor = 2,
+        .bgColor = 1,
+        .shadowColor = 1,
     }
 };
 
@@ -311,7 +325,8 @@ static const u8 sMenuCursorDimensions[][2] =
     [FONT_NORMAL_SUBPIXEL]       = { 8,  15 },
     [FONT_SHORT_SUBPIXEL]        = { 8,  14 },
     [FONT_NARROW_SUBPIXEL]       = { 8,  15 },
-    [FONT_CONTINUE_SUBPIXEL]     = { 8,  15 }
+    [FONT_CONTINUE_SUBPIXEL]     = { 8,  15 },
+    [FONT_GB]                    = { 8,  15 }
 };
 
 static const u16 sFontBoldJapaneseGlyphs[] = INCBIN_U16("graphics/fonts/bold.hwjpnfont");
@@ -910,6 +925,18 @@ static u16 FontFunc_Continue_Subpixel(struct TextPrinter *textPrinter)
     return RenderText(textPrinter);
 }
 
+static u16 FontFunc_GB(struct TextPrinter *textPrinter)
+{
+    struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
+
+    if (subStruct->hasFontIdBeenSet == FALSE)
+    {
+        subStruct->fontId = FONT_GB;
+        subStruct->hasFontIdBeenSet = TRUE;
+    }
+    return RenderText(textPrinter);
+}
+
 void TextPrinterInitDownArrowCounters(struct TextPrinter *textPrinter)
 {
     struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
@@ -1311,6 +1338,9 @@ static u16 RenderText(struct TextPrinter *textPrinter)
                     break;
                 case FONT_CONTINUE_SUBPIXEL:
                     DecompressGlyph_Continue_Subpixel(currChar, textPrinter->japanese);
+                    break;
+                case FONT_GB:
+                    DecompressGlyph_GB(currChar, textPrinter->japanese);
                     break;
                 case FONT_BRAILLE:
                     break;
@@ -2257,6 +2287,40 @@ static void DecompressGlyph_Continue_Subpixel(u16 glyphId, bool32 isJapanese)
     }
 }
 
+static void DecompressGlyph_GB(u16 glyphId, bool32 isJapanese)
+{
+    const u16 *glyphs;
+
+    if (isJapanese == TRUE)
+    {
+        glyphs = gFontNormalJapaneseGlyphs + (0x100 * (glyphId >> 0x4)) + (0x8 * (glyphId % 0x10));
+        DecompressGlyphTile(glyphs, gCurGlyph.gfxBufferTop);
+        DecompressGlyphTile(glyphs + 0x80, gCurGlyph.gfxBufferBottom);
+        gCurGlyph.width = 8;
+        gCurGlyph.height = 15;
+    }
+    else
+    {
+        glyphs = gFontGBGlyphs + (0x20 * glyphId);
+        gCurGlyph.width = gFontGBGlyphWidths[glyphId];
+
+        if (gCurGlyph.width <= 8)
+        {
+            DecompressGlyphTile(glyphs, gCurGlyph.gfxBufferTop);
+            DecompressGlyphTile(glyphs + 0x10, gCurGlyph.gfxBufferBottom);
+        }
+        else
+        {
+            DecompressGlyphTile(glyphs, gCurGlyph.gfxBufferTop);
+            DecompressGlyphTile(glyphs + 0x8, gCurGlyph.gfxBufferTop + 8);
+            DecompressGlyphTile(glyphs + 0x10, gCurGlyph.gfxBufferBottom);
+            DecompressGlyphTile(glyphs + 0x18, gCurGlyph.gfxBufferBottom + 8);
+        }
+
+        gCurGlyph.height = 15;
+    }
+}
+
 static u32 GetGlyphWidth_Normal(u16 glyphId, bool32 isJapanese)
 {
     if (isJapanese == TRUE)
@@ -2279,6 +2343,14 @@ static u32 GetGlyphWidth_Continue_Subpixel(u16 glyphId, bool32 isJapanese)
         return 8;
     else
         return gFontContinueSubpixelGlyphWidths[glyphId];
+}
+
+static u32 GetGlyphWidth_GB(u16 glyphId, bool32 isJapanese)
+{
+    if (isJapanese == TRUE)
+        return 8;
+    else
+        return gFontGBGlyphWidths[glyphId];
 }
 
 static void DecompressGlyph_Bold(u16 glyphId)

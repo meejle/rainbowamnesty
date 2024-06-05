@@ -924,7 +924,7 @@ u8 FldEff_ExclamationMarkIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ExclamationQuestionMark, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -937,7 +937,7 @@ u8 FldEff_QuestionMarkIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ExclamationQuestionMark, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -950,7 +950,7 @@ u8 FldEff_HeartIcon(void)
 {
     u8 spriteId;
 
-    LoadSpritePalette(&gObjectEventPal_Npc1);
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_HeartIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -968,7 +968,7 @@ u8 FldEff_SingleQuestionMarkIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_SingleQuestionMarkIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -981,7 +981,7 @@ u8 FldEff_DoubleExclamationMarkIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_DoubleExclamationMarkIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -994,7 +994,7 @@ u8 FldEff_DoubleQuestionMarkIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_DoubleQuestionMarkIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1007,7 +1007,7 @@ u8 FldEff_CrossEyesIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_CrossEyesIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1020,7 +1020,7 @@ u8 FldEff_DizzySpiralIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_DizzySpiralIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1033,7 +1033,7 @@ u8 FldEff_AngryEyesIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_AngryEyesIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1046,7 +1046,7 @@ u8 FldEff_ZeeZeeZeeIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ZeeZeeZeeIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1059,7 +1059,7 @@ u8 FldEff_AnimeEyesIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_AnimeEyesIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1072,7 +1072,7 @@ u8 FldEff_DotDotDotIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_DotDotDotIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1085,7 +1085,7 @@ u8 FldEff_SweatDropIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_SweatDropIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)
@@ -1098,7 +1098,7 @@ u8 FldEff_ChatterChatterIcon(void)
 {
     u8 spriteId;
 
-    LoadObjectEventPalette(0x1100); //LoadObjectEventPalette(OBJ_EVENT_PAL_TAG_BRENDAN)
+    LoadObjectEventPalette(0x1125);
     spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ChatterChatterIcon, 0, 0, 0x52);
 
     if (spriteId != MAX_SPRITES)

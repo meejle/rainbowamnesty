@@ -177,27 +177,37 @@ RA_Mistralton_Script_Poryphone_Debug_Lady::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	waitmovement 0
 	playse SE_POKENAV_CALL
-	smallnamebox name_poryphone_debug_lady
 	msgbox RA_Mistralton_Text_Answer_Debug_Lady, MSGBOX_POKENAV
 	playse SE_POKENAV_ON
-	msgbox RA_Lipsum_Poryphone_Formatted, MSGBOX_POKENAV
+	msgbox RA_Mistralton_Text_Answer_Debug_Lady_Ramble, MSGBOX_POKENAV
 	closemessage
-	hidesmallnamebox
 	playse SE_POKENAV_HANG_UP
 	release
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_Delay48
 	end
 
 RA_Mistralton_Text_Add_Debug_Lady:
-	.string "You saved the {COLOR GREEN}Debug lady's\n"
-	.string "{COLOR DARK_GRAY}number to your {COLOR RED}Poryphone{COLOR DARK_GRAY}.$"
+	.string "Saved DEBUG LADY{CIRCLE_5}\n"
+	.string "contact details to the\l"
+	.string "PORYPHONE.$"
 
 RA_Mistralton_Text_Answer_Debug_Lady:
-	.string "You answered an incoming {COLOR RED}Poryphone\n"
-	.string "{COLOR DARK_GRAY}call.$"
+	.string "Incoming PORYPHONE call\n"
+	.string "from DEBUG LADY…$"
 
-name_poryphone_debug_lady:
-	.string "Debug lady$"
+RA_Mistralton_Text_Answer_Debug_Lady_Ramble:
+	.string "DEBUG LADY: Hello? It{CIRCLE_5}\n"
+	.string "good to speak to you\l"
+	.string "again!\p"
+	.string "I just battled a rad\n"
+	.string "CATERPIE, but it got\l"
+	.string "away before I could\l"
+	.string "catch it!\p"
+	.string "Oh, well!\p"
+	.string "I{CIRCLE_2}l call you again next\n"
+	.string "time I battle a cool\l"
+	.string "POKéMON!\p"
+	.string "OK, bye!$"
 
 RA_Mistralton_Script_TechIsAmazing::
 	lock
