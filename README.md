@@ -119,7 +119,7 @@ Pokémon games don&rsquo;t always do a good job of explaining their mechanics. T
 **Contributors:** https://github.com/rh-hideout/pokeemerald-expansion/graphs/contributors
 
 **Pokémon Rainbow Amnesty**  
-**Support programmers:** Anon822
+**Programming support:** Anon822
 
 **Script contributors:** aueuaio, Blackforest92, BLAx501, daniilS, Delta231, Deokishisu, devolov, dr-pop, ellabrella, Faith120, FieryMewtwo, hjk321, ipatix, Jaizu, JamesAndrewJackson13, jrz3, ketsuban, LOuroboros, meekrhino, Mkol103, nicholatian, NotToDisturb, ProfLeonDiasBackup, Samu, ShinyDragonHunter, Slawter666, smithk200, SonikkuA-DatH, Temporalin, tustin2121, セケツ
 

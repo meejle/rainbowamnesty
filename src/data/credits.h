@@ -111,7 +111,7 @@ static const struct CreditsEntry sCreditsEntry_pokeemeraldExpansion2[] = {11, TR
 static const u8 sCreditsText_ExpansionContrib[] = _("{FONT_SMALL}Contributors: https://github.com/rh-hideout/\npokeemerald-expansion/graphs/contributors");
 static const struct CreditsEntry sCreditsEntry_ExpansionContrib[] = {11, FALSE, sCreditsText_ExpansionContrib};
 
-static const u8 sCreditsText_DebuggingSupport[] = _("Support programmers");
+static const u8 sCreditsText_DebuggingSupport[] = _("Programming support");
 static const struct CreditsEntry sCreditsEntry_DebuggingSupport[] = {11, TRUE, sCreditsText_DebuggingSupport};
 static const u8 sCreditsText_DebugSupport1[] = _("{FONT_NARROW}Anon822");
 static const struct CreditsEntry sCreditsEntry_DebugSupport1[] = {11, FALSE, sCreditsText_DebugSupport1};
