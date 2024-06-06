@@ -158,6 +158,17 @@ static const struct CreditsEntry sCreditsEntry_TilemapStudio1[] = {11, FALSE, sC
 static const u8 sCreditsText_TilemapStudio2[] = _("{FONT_SMALL}https://github.com/Rangi42/tilemap-studio");
 static const struct CreditsEntry sCreditsEntry_TilemapStudio2[] = {11, FALSE, sCreditsText_TilemapStudio2};
 
+static const u8 sCreditsText_TextboxSimTitle1[] = _("Built using Pokémon Emerald");
+static const struct CreditsEntry sCreditsEntry_TextboxSimTitle1[] = {11, TRUE, sCreditsText_TextboxSimTitle1};
+static const u8 sCreditsText_TextboxSimTitle2[] = _("Textbox Simulator");
+static const struct CreditsEntry sCreditsEntry_TextboxSimTitle2[] = {11, TRUE, sCreditsText_TextboxSimTitle2};
+static const u8 sCreditsText_TextboxSimBody1[] = _("{FONT_NARROW}Created by meejle");
+static const struct CreditsEntry sCreditsEntry_TextboxSimBody1[] = {11, FALSE, sCreditsText_TextboxSimBody1};
+static const u8 sCreditsText_TextboxSimBody2[] = _("{FONT_NARROW}Font by aztecwarrior28");
+static const struct CreditsEntry sCreditsEntry_TextboxSimBody2[] = {11, FALSE, sCreditsText_TextboxSimBody2};
+static const u8 sCreditsText_TextboxSimBody3[] = _("{FONT_SMALL}https://meejle.github.io");
+static const struct CreditsEntry sCreditsEntry_TextboxSimBody3[] = {11, FALSE, sCreditsText_TextboxSimBody3};
+
 static const u8 sCreditsText_Fonts[] = _("Third-party fonts");
 static const struct CreditsEntry sCreditsEntry_Fonts[] = {11, TRUE, sCreditsText_Fonts};
 static const u8 sCreditsText_Fonts1[] = _("{FONT_NARROW}“Edit Undo Line”");
@@ -546,24 +557,24 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
     },
     [PAGE_MUSIC_COMPOSITION] = {
+        sCreditsEntry_TextboxSimTitle1,
+        sCreditsEntry_TextboxSimTitle2,
+        sCreditsEntry_TextboxSimBody1,
+        sCreditsEntry_TextboxSimBody2,
+        sCreditsEntry_TextboxSimBody3,
+    },
+    [PAGE_SOUND_EFFECTS] = {
         sCreditsEntry_Fonts,
         sCreditsEntry_Fonts1,
         sCreditsEntry_Fonts2,
         sCreditsEntry_Fonts3,
         sCreditsEntry_Fonts4,
     },
-    [PAGE_SOUND_EFFECTS] = {
+    [PAGE_GAME_DESIGNERS_1] = {
         sCreditsEntry_SpritersRes,
         sCreditsEntry_SpritersRes1,
         sCreditsEntry_SpritersRes2,
         sCreditsEntry_SpritersRes3,
-        _,
-    },
-    [PAGE_GAME_DESIGNERS_1] = {
-        _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
         _,
     },
     [PAGE_GAME_DESIGNERS_2] = {

@@ -129,6 +129,10 @@ Pokémon games don&rsquo;t always do a good job of explaining their mechanics. T
 **Built using Tilemap Studio:** Created by Rangi42  
 https://github.com/Rangi42/tilemap-studio
 
+**Built using Pok&eacute;mon Emerald Textbox Simulator:** Created by meejle  
+Font by aztecwarrior28  
+https://meejle.github.io
+
 **Logo font:** “Edit Undo Line”  
 Created by &AElig;nigma  
 https://www.dafont.com/edit-undo-line.font
