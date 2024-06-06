@@ -187,26 +187,25 @@ RA_Mistralton_Script_Poryphone_Debug_Lady::
 	end
 
 RA_Mistralton_Text_Add_Debug_Lady:
-	.string "Saved DEBUG LADY{CIRCLE_5}\n"
-	.string "contact details to the\l"
-	.string "PORYPHONE.$"
+	.string "Saved the {COLOR GREEN}{SHADOW LIGHT_GREEN}Debug Lady{CIRCLE_5}\n"
+	.string "{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}number to the {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
 
 RA_Mistralton_Text_Answer_Debug_Lady:
-	.string "Incoming PORYPHONE call\n"
-	.string "from DEBUG LADY…$"
+	.string "Incoming {COLOR RED}{SHADOW LIGHT_RED}Poryphone {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}call\n"
+	.string "from the {COLOR GREEN}{SHADOW LIGHT_GREEN}Debug Lady{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}…$"
 
 RA_Mistralton_Text_Answer_Debug_Lady_Ramble:
-	.string "DEBUG LADY: Hello? It{CIRCLE_5}\n"
-	.string "good to speak to you\l"
-	.string "again!\p"
-	.string "I just battled a rad\n"
-	.string "CATERPIE, but it got\l"
-	.string "away before I could\l"
-	.string "catch it!\p"
+	.string "Hello? {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}?\p"
+	.string "It{CIRCLE_5} so good to speak to\n"
+	.string "you again!\p"
+	.string "I battled a really big\n"
+	.string "Metapod on {COLOR RED}{SHADOW LIGHT_RED}Route U12{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
+	.string "But, it got away before\n"
+	.string "I could catch it…\p"
 	.string "Oh, well!\p"
-	.string "I{CIRCLE_2}l call you again next\n"
-	.string "time I battle a cool\l"
-	.string "POKéMON!\p"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, I{CIRCLE_2}l call you\n"
+	.string "again next time I find\l"
+	.string "an interesting Pokémon!\p"
 	.string "OK, bye!$"
 
 RA_Mistralton_Script_TechIsAmazing::
