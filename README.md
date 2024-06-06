@@ -20,6 +20,64 @@ In this globetrotting, alternate-universe adventure, the Pokémon world has fall
 
 \* Content subject to change. Beta versions may lack certain content.
 
+## Screenshots (click to enlarge)
+
+The following screenshots represent the game in a very, very early stage of development &ndash; its appearance will change dramatically as development continues.
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/2c17f867-cc69-424d-af25-89f17cfd9e5b">
+      <br />
+      Copyright screen
+    </td>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/e08d087b-7241-4c02-b218-14eb49b71170">
+      <br />
+      Title screen
+    </td>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/57373099-cd82-48db-b311-9c91582d31ca">
+      <br />
+      Main menu
+    </td>
+  </tr>
+  <tr>
+    <td style="vertical-align: top;">
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/2b509781-1dff-4c50-9cfd-26daec401371">
+      <br />
+      Options screen
+    </td>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/ccd17bdb-d4f0-40f2-846d-52e3651fb15f">
+      <br />
+      Prof. Magnolia&rsquo;s speech
+    </td>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/99faa3d6-7abd-42b9-bdb9-5d805d680e47">
+      <br />
+      Reading Looker&rsquo;s email
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/4ecdf7d1-4339-4bd1-ab32-20207b94e6f5">
+      <br />
+      Choosing a Starter Pok&eacute;mon
+    </td>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/438f351f-521a-42b8-84cd-46afff0b2f09">
+      <br />
+      Multi-choice dialogues
+    </td>
+    <td>
+      <img src="https://github.com/meejle/rainbowamnesty/assets/35422415/e35004b0-d672-49d8-97e5-eff5a21cf340">
+      <br />
+      Pok&eacute; Pass
+    </td>
+  </tr>
+</table>
+
 ## New features
 
 ### Unlock the world with your Poké Pass
