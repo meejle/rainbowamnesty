@@ -54,17 +54,20 @@ static void SpriteCB_AMIndicator(struct Sprite *sprite);
 #define GFXTAG_WALL_CLOCK_HAND   0x1000
 #define PALTAG_WALL_CLOCK_MALE   0x1000
 
-enum
-{
+enum {
     PERIOD_AM,
     PERIOD_PM,
 };
 
-enum
-{
+enum {
     MOVE_NONE,
     MOVE_BACKWARD,
     MOVE_FORWARD,
+};
+
+enum {
+    WIN_MSG,
+    WIN_BUTTON_LABEL,
 };
 
 static const u32 sHand_Gfx[] = INCBIN_U32("graphics/wallclock/hand.4bpp.lz");
@@ -72,7 +75,7 @@ static const u16 sTextPrompt_Pal[] = INCBIN_U16("graphics/wallclock/text_prompt.
 
 static const struct WindowTemplate sWindowTemplates[] =
 {
-    {
+    [WIN_MSG] = {
         .bg = 0,
         .tilemapLeft = 3,
         .tilemapTop = 17,
@@ -81,7 +84,7 @@ static const struct WindowTemplate sWindowTemplates[] =
         .paletteNum = 14,
         .baseBlock = 512
     },
-    {
+    [WIN_BUTTON_LABEL] = {
         .bg = 2,
         .tilemapLeft = 24,
         .tilemapTop = 16,
@@ -709,8 +712,8 @@ void CB2_StartWallClock(void)
 
     WallClockInit();
 
-    AddTextPrinterParameterized(1, FONT_NORMAL, gText_Confirm3, 0, 1, 0, NULL);
-    PutWindowTilemap(1);
+    AddTextPrinterParameterized(WIN_BUTTON_LABEL, FONT_NORMAL, gText_Confirm3, 0, 1, 0, NULL);
+    PutWindowTilemap(WIN_BUTTON_LABEL);
     ScheduleBgCopyTilemapToVram(2);
 }
 
@@ -757,8 +760,8 @@ void CB2_ViewWallClock(void)
 
     WallClockInit();
 
-    AddTextPrinterParameterized(1, FONT_NORMAL, gText_Cancel4, 0, 1, 0, NULL);
-    PutWindowTilemap(1);
+    AddTextPrinterParameterized(WIN_BUTTON_LABEL, FONT_NORMAL, gText_Cancel4, 0, 1, 0, NULL);
+    PutWindowTilemap(WIN_BUTTON_LABEL);
     ScheduleBgCopyTilemapToVram(2);
 }
 
@@ -821,9 +824,9 @@ static void Task_SetClock_HandleInput(u8 taskId)
 
 static void Task_SetClock_AskConfirm(u8 taskId)
 {
-    DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x250, 0x0d);
-    AddTextPrinterParameterized(0, FONT_NORMAL_SUBPIXEL, gText_IsThisTheCorrectTime, 0, 1, 0, NULL);
-    PutWindowTilemap(0);
+    DrawStdFrameWithCustomTileAndPalette(WIN_MSG, FALSE, 0x250, 0x0d);
+    AddTextPrinterParameterized(WIN_MSG, FONT_NORMAL_SUBPIXEL, gText_IsThisTheCorrectTime, 0, 1, 0, NULL);
+    PutWindowTilemap(WIN_MSG);
     ScheduleBgCopyTilemapToVram(0);
     CreateYesNoMenu(&sWindowTemplate_ConfirmYesNo, 0x250, 0x0d, 1);
     gTasks[taskId].func = Task_SetClock_HandleConfirmInput;
@@ -840,8 +843,8 @@ static void Task_SetClock_HandleConfirmInput(u8 taskId)
     case 1: // NO
     case MENU_B_PRESSED:
         PlaySE(SE_SELECT);
-        ClearStdWindowAndFrameToTransparent(0, FALSE);
-        ClearWindowTilemap(0);
+        ClearStdWindowAndFrameToTransparent(WIN_MSG, FALSE);
+        ClearWindowTilemap(WIN_MSG);
         gTasks[taskId].func = Task_SetClock_HandleInput;
         break;
     }

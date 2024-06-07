@@ -959,14 +959,6 @@ void FieldShowRegionMap(void)
     SetMainCallback2(CB2_FieldShowRegionMap);
 }
 
-// Task data for Task_PCTurnOnEffect and Task_LotteryCornerComputerEffect
-#define tPaused       data[0] // Never set
-#define tTaskId       data[1]
-#define tFlickerCount data[2]
-#define tTimer        data[3]
-#define tIsScreenOn   data[4]
-
-// For this special, gSpecialVar_0x8004 is expected to be some PC_LOCATION_* value.
 static bool8 IsPlayerInFrontOfPC(void)
 {
     u16 x, y;
@@ -983,6 +975,14 @@ static bool8 IsPlayerInFrontOfPC(void)
          || tileInFront == METATILE_Building_PC_Off);
 }
 
+// Task data for Task_PCTurnOnEffect and Task_LotteryCornerComputerEffect
+#define tPaused       data[0] // Never set
+#define tTaskId       data[1]
+#define tFlickerCount data[2]
+#define tTimer        data[3]
+#define tIsScreenOn   data[4]
+
+// For this special, gSpecialVar_0x8004 is expected to be some PC_LOCATION_* value.
 void DoPCTurnOnEffect(void)
 {
     if (FuncIsActiveTask(Task_PCTurnOnEffect) != TRUE && IsPlayerInFrontOfPC() == TRUE)
