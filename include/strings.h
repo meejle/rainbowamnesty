@@ -3000,6 +3000,12 @@ extern const u8 gText_BoxName[];
 extern const u8 gText_PkmnsNickname[];
 extern const u8 gText_TellHimTheWords[];
 
+// Exp. Share
+extern const u8 gText_ExpShareOn[];
+extern const u8 gText_ExpShareOff[];
+
+// Custom strings
+
 extern const u8 gText_Rank0[];
 extern const u8 gText_Rank1[];
 extern const u8 gText_Rank2[];

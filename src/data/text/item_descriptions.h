@@ -1303,17 +1303,17 @@ static const u8 sEverstoneDesc[] = _(
 static const u8 sBlackAuguriteDesc[] = _(
     "A black stone that\n"
     "makes some Pokémon\n"
-    "evolve.");;
+    "evolve.{COLOR RED}{SHADOW LIGHT_RED}");;
 
 static const u8 sLinkingCordDesc[] = _(
     "A mysterious string\n"
     "that makes some\n"
-    "Pokémon evolve.");
+    "Pokémon evolve.{COLOR RED}{SHADOW LIGHT_RED}");
 
 static const u8 sPeatBlockDesc[] = _(
     "A block of material\n"
     "that makes some\n"
-    "Pokémon evolve.");
+    "Pokémon evolve.{COLOR RED}{SHADOW LIGHT_RED}");
 
 // Nectars
 static const u8 sRedNectarDesc[] = _(
@@ -2406,9 +2406,15 @@ static const u8 sWhiteHerbDesc[] = _(
     "lowered stat.{COLOR RED}{SHADOW LIGHT_RED}");
 
 static const u8 sExpShareDesc[] = _(
+#if I_EXP_SHARE_ITEM >= GEN_6
+    "This device gives\n"
+    "exp. to other\n"
+    "party members.{COLOR RED}{SHADOW LIGHT_RED}");
+#else
     "A hold item that\n"
     "gets Exp. points\n"
     "from battles.{COLOR RED}{SHADOW LIGHT_RED}");
+#endif
 
 static const u8 sQuickClawDesc[] = _(
     "A hold item that\n"
