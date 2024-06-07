@@ -4,8 +4,8 @@ gText_Birch_Welcome::
 	.string "at {COLOR RED}{SHADOW LIGHT_RED}Unova's Amnesty Institute{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
 	.string "Together, we battle against the forces\nthat have invaded our world.\p"
 	.string "Perhaps you're already aware...\p"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}now has\nstrongholds in nine regions, and\l"
-	.string "only we remain to oppose them.\p"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}now has\nstrongholds in nine regions, and only we\l"
+	.string "remain to oppose them.\p"
 	.string "However!\pWhile they have their “secret weapon”,\nin the form of {COLOR RED}{SHADOW LIGHT_RED}Ultra Wormholes{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}...\p$"
 
 @ Unused; for some reason this is set in strings.c
@@ -23,7 +23,7 @@ gText_Birch_WhatsYourName::
 	.string "What did you say your name was, again?$"
 
 gText_Birch_SoItsPlayer::
-	.string "“{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}”...\ndid I get that right?$"
+	.string "“{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}”... did I get that right?$"
 
 gText_Birch_YourePlayer::
 	.string "Well, {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, I think you'll fit in just\nfine.\p"

@@ -79,6 +79,11 @@ static const struct CreditsEntry sCreditsEntry_Scenario[] = {11, TRUE, sCreditsT
 static const u8 sCreditsText_mattmck[] = _("{FONT_NARROW}{FONT 14}×{FONT 7}mattmck"); // {FONT 14}/{FONT 13} is the subpixel equivalent
 static const struct CreditsEntry sCreditsEntry_mattmck[] = {11, FALSE, sCreditsText_mattmck};
 
+static const u8 sCreditsText_MainCharacterDesign[] = _("Main character design");
+static const struct CreditsEntry sCreditsEntry_MainCharacterDesign[] = {11, TRUE, sCreditsText_MainCharacterDesign};
+static const u8 sCreditsText_MainCharacterDesign1[] = _("{FONT_NARROW}dweadpiwate");
+static const struct CreditsEntry sCreditsEntry_MainCharacterDesign1[] = {11, FALSE, sCreditsText_MainCharacterDesign1};
+
 static const u8 sCreditsText_PokemonEmeraldDecomp[] = _("Powered by pokeemerald");
 static const struct CreditsEntry sCreditsEntry_PokemonEmeraldDecomp[] = {11, TRUE, sCreditsText_PokemonEmeraldDecomp};
 static const u8 sCreditsText_pret[] = _("{FONT_NARROW}Created by pret");
@@ -169,6 +174,13 @@ static const struct CreditsEntry sCreditsEntry_TextboxSimBody2[] = {11, FALSE, s
 static const u8 sCreditsText_TextboxSimBody3[] = _("{FONT_SMALL}https://meejle.github.io");
 static const struct CreditsEntry sCreditsEntry_TextboxSimBody3[] = {11, FALSE, sCreditsText_TextboxSimBody3};
 
+static const u8 sCreditsText_CherryTree1[] = _("Planned using CherryTree");
+static const struct CreditsEntry sCreditsEntry_CherryTree1[] = {11, TRUE, sCreditsText_CherryTree1};
+static const u8 sCreditsText_CherryTree2[] = _("{FONT_NARROW}Created by giuspen");
+static const struct CreditsEntry sCreditsEntry_CherryTree2[] = {11, FALSE, sCreditsText_CherryTree2};
+static const u8 sCreditsText_CherryTree3[] = _("{FONT_SMALL}Contributors: https://github.com/giuspen/\ncherrytree/graphs/contributors");
+static const struct CreditsEntry sCreditsEntry_CherryTree3[] = {11, FALSE, sCreditsText_CherryTree3};
+
 static const u8 sCreditsText_Fonts[] = _("Third-party fonts");
 static const struct CreditsEntry sCreditsEntry_Fonts[] = {11, TRUE, sCreditsText_Fonts};
 static const u8 sCreditsText_Fonts1[] = _("{FONT_NARROW}“Edit Undo Line”");
@@ -188,6 +200,19 @@ static const u8 sCreditsText_SpritersRes2[] = _("{FONT_NARROW}bbpanzu   Dialga  
 static const struct CreditsEntry sCreditsEntry_SpritersRes2[] = {11, FALSE, sCreditsText_SpritersRes2};
 static const u8 sCreditsText_SpritersRes3[] = _("{FONT_NARROW}TheEric132");
 static const struct CreditsEntry sCreditsEntry_SpritersRes3[] = {11, FALSE, sCreditsText_SpritersRes3};
+
+static const u8 sCreditsText_Inspo[] = _("ROM hacks that inspired us");
+static const struct CreditsEntry sCreditsEntry_Inspo[] = {11, TRUE, sCreditsText_Inspo};
+static const u8 sCreditsText_InspoChrysocolla[] = _("{FONT_NARROW}Pokémon Chrysocolla");
+static const struct CreditsEntry sCreditsEntry_InspoChrysocolla[] = {11, FALSE, sCreditsText_InspoChrysocolla};
+static const u8 sCreditsText_InspoFools[] = _("{FONT_NARROW}Pokémon Fool's Gold");
+static const struct CreditsEntry sCreditsEntry_InspoFools[] = {11, FALSE, sCreditsText_InspoFools};
+static const u8 sCreditsText_InspoGaia[] = _("{FONT_NARROW}Pokémon Gaia Version");
+static const struct CreditsEntry sCreditsEntry_InspoGaia[] = {11, FALSE, sCreditsText_InspoGaia};
+static const u8 sCreditsText_InspoRocket[] = _("{FONT_NARROW}Pokémon FireRed: Rocket Edition");
+static const struct CreditsEntry sCreditsEntry_InspoRocket[] = {11, FALSE, sCreditsText_InspoRocket};
+static const u8 sCreditsText_InspoUnbound[] = _("{FONT_NARROW}Pokémon Unbound");
+static const struct CreditsEntry sCreditsEntry_InspoUnbound[] = {11, FALSE, sCreditsText_InspoUnbound};
 
 // Reserved space
 
@@ -487,120 +512,120 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
     },
     [PAGE_ART_DIRECTOR] = {
+        _,
+        sCreditsEntry_MainCharacterDesign,
+        sCreditsEntry_MainCharacterDesign1,
+        _,
+        _,
+    },
+    [PAGE_WORLD_DIRECTOR] = {
         sCreditsEntry_PokemonEmeraldDecomp,
         sCreditsEntry_pret,
         _,
         sCreditsEntry_pokeemeraldContrib,
         _,
     },
-    [PAGE_WORLD_DIRECTOR] = {
+    [PAGE_LEAD_PROGRAMMER] = {
         sCreditsEntry_pokeemeraldExpansion,
         sCreditsEntry_DizzyEggg,
         sCreditsEntry_MaintainedBy,
         sCreditsEntry_ExpansionMaintain1,
         sCreditsEntry_ExpansionMaintain2,
     },
-    [PAGE_LEAD_PROGRAMMER] = {
+    [PAGE_PROGRAMMERS_1] = {
         sCreditsEntry_pokeemeraldExpansion2,
         sCreditsEntry_MainContributors,
         sCreditsEntry_ExpansionCredit1,
         sCreditsEntry_ExpansionCredit2,
         sCreditsEntry_ExpansionCredit3,
     },
-    [PAGE_PROGRAMMERS_1] = {
+    [PAGE_PROGRAMMERS_2] = {
         sCreditsEntry_pokeemeraldExpansion2,
         _,
         sCreditsEntry_ExpansionContrib,
         _,
         _,
     },
-    [PAGE_PROGRAMMERS_2] = {
+    [PAGE_PROGRAMMERS_3] = {
         _,
         sCreditsEntry_PkmnRainbowAmnesty,
         sCreditsEntry_DebuggingSupport,
         sCreditsEntry_DebugSupport1,
         _,
     },
-    [PAGE_PROGRAMMERS_3] = {
+    [PAGE_PROGRAMMERS_4] = {
         sCreditsEntry_AdditionalScripting,
         sCreditsEntry_AddScript1,
         sCreditsEntry_AddScript2,
         sCreditsEntry_AddScript3,
         sCreditsEntry_AddScript4,
     },
-    [PAGE_PROGRAMMERS_4] = {
+    [PAGE_GRAPHIC_DESIGNERS_1] = {
         sCreditsEntry_AdditionalScripting,
         sCreditsEntry_AddScript5,
         sCreditsEntry_AddScript6,
         sCreditsEntry_AddScript7,
         sCreditsEntry_AddScript8,
     },
-    [PAGE_GRAPHIC_DESIGNERS_1] = {
+    [PAGE_GRAPHIC_DESIGNERS_2] = {
         sCreditsEntry_AdditionalScripting,
         sCreditsEntry_AddScript9,
         sCreditsEntry_AddScript10,
         sCreditsEntry_AddScript11,
         _,
     },
-    [PAGE_GRAPHIC_DESIGNERS_2] = {
+    [PAGE_GRAPHIC_DESIGNERS_3] = {
         sCreditsEntry_Porymap,
         sCreditsEntry_Porymap1,
         _,
         sCreditsEntry_Porymap2,
         _,
     },
-    [PAGE_GRAPHIC_DESIGNERS_3] = {
+    [PAGE_MUSIC_COMPOSITION] = {
         sCreditsEntry_TilemapStudio,
         sCreditsEntry_TilemapStudio1,
         _,
         sCreditsEntry_TilemapStudio2,
         _,
     },
-    [PAGE_MUSIC_COMPOSITION] = {
+    [PAGE_SOUND_EFFECTS] = {
         sCreditsEntry_TextboxSimTitle1,
         sCreditsEntry_TextboxSimTitle2,
         sCreditsEntry_TextboxSimBody1,
         sCreditsEntry_TextboxSimBody2,
         sCreditsEntry_TextboxSimBody3,
     },
-    [PAGE_SOUND_EFFECTS] = {
+    [PAGE_GAME_DESIGNERS_1] = {
+        sCreditsEntry_CherryTree1,
+        sCreditsEntry_CherryTree2,
+        _,
+        sCreditsEntry_CherryTree3,
+        _,
+    },
+    [PAGE_GAME_DESIGNERS_2] = {
         sCreditsEntry_Fonts,
         sCreditsEntry_Fonts1,
         sCreditsEntry_Fonts2,
         sCreditsEntry_Fonts3,
         sCreditsEntry_Fonts4,
     },
-    [PAGE_GAME_DESIGNERS_1] = {
+    [PAGE_GAME_DESIGNERS_3] = {
         sCreditsEntry_SpritersRes,
         sCreditsEntry_SpritersRes1,
         sCreditsEntry_SpritersRes2,
         sCreditsEntry_SpritersRes3,
         _,
     },
-    [PAGE_GAME_DESIGNERS_2] = {
-        _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
-        _,
-    },
-    [PAGE_GAME_DESIGNERS_3] = {
-        _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
-        _,
-    },
     [PAGE_SCENARIO_PLOT] = {
-        _,
-        sCreditsEntry_Reserved,
-        _,
-        _,
-        _,
+        sCreditsEntry_Inspo,
+        sCreditsEntry_InspoChrysocolla,
+        sCreditsEntry_InspoFools,
+        sCreditsEntry_InspoGaia,
+        sCreditsEntry_InspoRocket,
     },
     [PAGE_SCENARIO] = {
-        _,
-        sCreditsEntry_Reserved,
+        sCreditsEntry_Inspo,
+        sCreditsEntry_InspoUnbound,
         _,
         _,
         _,

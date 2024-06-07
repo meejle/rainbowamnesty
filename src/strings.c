@@ -40,7 +40,7 @@ ALIGNED(4) const u8 gText_PickCancel[] = _("{DPAD_UPDOWN}PICK {A_BUTTON}{B_BUTTO
 ALIGNED(4) const u8 gText_AButtonExit[] = _("{A_BUTTON}EXIT");
 const u8 gText_DefaultNamePlayer[] = _("Avery");
 const u8 gText_DefaultNameRival[] = _("Beth");
-const u8 gText_ThisIsAPokemon[] = _("So, too, do we have our own “weapon”\nof sorts!{PAUSE 96}{PAUSE 96}\p"); // Default pause was 96
+const u8 gText_ThisIsAPokemon[] = _("So, too, do we have our own “weapon” of\nsorts!{PAUSE 96}{PAUSE 96}\p"); // Default pause was 96
 const u8 gText_5MarksPokemon[] = _("????? Pokémon");
 const u8 gText_UnkHeight[] = _("{CLEAR_TO 0x0C}??'??”");
 const u8 gText_UnkWeight[] = _("????.? lbs.");
@@ -1623,7 +1623,7 @@ const u8 gText_MoveRelearnerJam[] = _("JAM");
 
 const u8 gText_ClearAllSaveData[] = _(" Delete all save data? Your progress,\n items, and Pokémon will be lost forever.");
 const u8 gText_ClearingData[] = _(" Delete all save data? Your progress,\n items, and Pokémon will be lost forever.");
-const u8 gText_IsThisTheCorrectTime[] = _("Is this the correct time?");
+const u8 gText_IsThisTheCorrectTime[] = _(" Is this the correct time?");
 const u8 gText_Confirm3[] = _("Confirm");
 const u8 gText_Cancel4[] = _("Cancel");
 const u8 gText_DelAll[] = _("Del. all");
