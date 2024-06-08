@@ -26,6 +26,17 @@ enum MapPopUp_Themes
     MAPPOPUP_THEME_BRICK,
     MAPPOPUP_THEME_UNDERWATER,
     MAPPOPUP_THEME_STONE2,
+    MAPPOPUP_THEME_BLANK,
+    MAPPOPUP_THEME_KANTO,
+    MAPPOPUP_THEME_JOHTO,
+    MAPPOPUP_THEME_HOENN,
+    MAPPOPUP_THEME_SINNOH,
+    MAPPOPUP_THEME_UNOVA,
+    MAPPOPUP_THEME_KALOS,
+    MAPPOPUP_THEME_ALOLA,
+    MAPPOPUP_THEME_GALAR,
+    MAPPOPUP_THEME_PALDEA,
+    MAPPOPUP_THEME_UNKNOWN
 };
 
 // static functions
@@ -45,6 +56,17 @@ static const u8 sMapPopUp_Table[][960] =
     [MAPPOPUP_THEME_BRICK]      = INCBIN_U8("graphics/map_popup/brick.4bpp"),
     [MAPPOPUP_THEME_UNDERWATER] = INCBIN_U8("graphics/map_popup/underwater.4bpp"),
     [MAPPOPUP_THEME_STONE2]     = INCBIN_U8("graphics/map_popup/stone2.4bpp"),
+    [MAPPOPUP_THEME_BLANK]     = INCBIN_U8("graphics/map_popup/blank.4bpp"),
+    [MAPPOPUP_THEME_KANTO]     = INCBIN_U8("graphics/map_popup/kanto.4bpp"),
+    [MAPPOPUP_THEME_JOHTO]     = INCBIN_U8("graphics/map_popup/johto.4bpp"),
+    [MAPPOPUP_THEME_HOENN]     = INCBIN_U8("graphics/map_popup/hoenn.4bpp"),
+    [MAPPOPUP_THEME_SINNOH]     = INCBIN_U8("graphics/map_popup/sinnoh.4bpp"),
+    [MAPPOPUP_THEME_UNOVA]     = INCBIN_U8("graphics/map_popup/unova.4bpp"),
+    [MAPPOPUP_THEME_KALOS]     = INCBIN_U8("graphics/map_popup/kalos.4bpp"),
+    [MAPPOPUP_THEME_ALOLA]     = INCBIN_U8("graphics/map_popup/alola.4bpp"),
+    [MAPPOPUP_THEME_GALAR]     = INCBIN_U8("graphics/map_popup/galar.4bpp"),
+    [MAPPOPUP_THEME_PALDEA]     = INCBIN_U8("graphics/map_popup/paldea.4bpp"),
+    [MAPPOPUP_THEME_UNKNOWN]     = INCBIN_U8("graphics/map_popup/unknown.4bpp"),
 };
 
 static const u8 sMapPopUp_OutlineTable[][960] =
@@ -55,6 +77,17 @@ static const u8 sMapPopUp_OutlineTable[][960] =
     [MAPPOPUP_THEME_BRICK]      = INCBIN_U8("graphics/map_popup/brick_outline.4bpp"),
     [MAPPOPUP_THEME_UNDERWATER] = INCBIN_U8("graphics/map_popup/underwater_outline.4bpp"),
     [MAPPOPUP_THEME_STONE2]     = INCBIN_U8("graphics/map_popup/stone2_outline.4bpp"),
+    [MAPPOPUP_THEME_BLANK]     = INCBIN_U8("graphics/map_popup/blank_outline.4bpp"),
+    [MAPPOPUP_THEME_KANTO]     = INCBIN_U8("graphics/map_popup/kanto_outline.4bpp"),
+    [MAPPOPUP_THEME_JOHTO]     = INCBIN_U8("graphics/map_popup/johto_outline.4bpp"),
+    [MAPPOPUP_THEME_HOENN]     = INCBIN_U8("graphics/map_popup/hoenn_outline.4bpp"),
+    [MAPPOPUP_THEME_SINNOH]     = INCBIN_U8("graphics/map_popup/sinnoh_outline.4bpp"),
+    [MAPPOPUP_THEME_UNOVA]     = INCBIN_U8("graphics/map_popup/unova_outline.4bpp"),
+    [MAPPOPUP_THEME_KALOS]     = INCBIN_U8("graphics/map_popup/kalos_outline.4bpp"),
+    [MAPPOPUP_THEME_ALOLA]     = INCBIN_U8("graphics/map_popup/alola_outline.4bpp"),
+    [MAPPOPUP_THEME_GALAR]     = INCBIN_U8("graphics/map_popup/galar_outline.4bpp"),
+    [MAPPOPUP_THEME_PALDEA]     = INCBIN_U8("graphics/map_popup/paldea_outline.4bpp"),
+    [MAPPOPUP_THEME_UNKNOWN]     = INCBIN_U8("graphics/map_popup/unknown_outline.4bpp"),
 };
 
 static const u16 sMapPopUp_PaletteTable[][16] =
@@ -65,13 +98,24 @@ static const u16 sMapPopUp_PaletteTable[][16] =
     [MAPPOPUP_THEME_BRICK]      = INCBIN_U16("graphics/map_popup/brick_outline.gbapal"),
     [MAPPOPUP_THEME_UNDERWATER] = INCBIN_U16("graphics/map_popup/underwater_outline.gbapal"),
     [MAPPOPUP_THEME_STONE2]     = INCBIN_U16("graphics/map_popup/stone2_outline.gbapal"),
+    [MAPPOPUP_THEME_BLANK]     = INCBIN_U16("graphics/map_popup/blank.gbapal"),
+    [MAPPOPUP_THEME_KANTO]     = INCBIN_U16("graphics/map_popup/kanto.gbapal"),
+    [MAPPOPUP_THEME_JOHTO]     = INCBIN_U16("graphics/map_popup/johto.gbapal"),
+    [MAPPOPUP_THEME_HOENN]     = INCBIN_U16("graphics/map_popup/hoenn.gbapal"),
+    [MAPPOPUP_THEME_SINNOH]     = INCBIN_U16("graphics/map_popup/sinnoh.gbapal"),
+    [MAPPOPUP_THEME_UNOVA]     = INCBIN_U16("graphics/map_popup/unova.gbapal"),
+    [MAPPOPUP_THEME_KALOS]     = INCBIN_U16("graphics/map_popup/kalos.gbapal"),
+    [MAPPOPUP_THEME_ALOLA]     = INCBIN_U16("graphics/map_popup/alola.gbapal"),
+    [MAPPOPUP_THEME_GALAR]     = INCBIN_U16("graphics/map_popup/galar.gbapal"),
+    [MAPPOPUP_THEME_PALDEA]     = INCBIN_U16("graphics/map_popup/paldea.gbapal"),
+    [MAPPOPUP_THEME_UNKNOWN]     = INCBIN_U16("graphics/map_popup/unknown.gbapal"),
 };
 
 static const u16 sMapPopUp_Palette_Underwater[16] = INCBIN_U16("graphics/map_popup/underwater.gbapal");
 
 static const u8 sRegionMapSectionId_To_PopUpThemeIdMapping[] =
 {
-    [MAPSEC_LITTLEROOT_TOWN] = MAPPOPUP_THEME_WOOD,
+    [MAPSEC_LITTLEROOT_TOWN] = MAPPOPUP_THEME_UNOVA,
     [MAPSEC_OLDALE_TOWN] = MAPPOPUP_THEME_WOOD,
     [MAPSEC_DEWFORD_TOWN] = MAPPOPUP_THEME_WOOD,
     [MAPSEC_LAVARIDGE_TOWN] = MAPPOPUP_THEME_WOOD,
@@ -326,11 +370,11 @@ static void ShowMapNamePopUpWindow(void)
     }
     AddMapNamePopUpWindow();
     LoadMapNamePopUpWindowBg();
-    x = GetStringCenterAlignXOffset(FONT_NARROW, withoutPrefixPtr, 80);
+    x = GetStringCenterAlignXOffset(FONT_NARROW_SUBPIXEL, withoutPrefixPtr, 80);
     mapDisplayHeader[0] = EXT_CTRL_CODE_BEGIN;
     mapDisplayHeader[1] = EXT_CTRL_CODE_HIGHLIGHT;
     mapDisplayHeader[2] = TEXT_COLOR_TRANSPARENT;
-    AddTextPrinterParameterized(GetMapNamePopUpWindowId(), FONT_NARROW, mapDisplayHeader, x, 3, TEXT_SKIP_DRAW, NULL);
+    AddTextPrinterParameterized(GetMapNamePopUpWindowId(), FONT_NARROW_SUBPIXEL, mapDisplayHeader, x, 3, TEXT_SKIP_DRAW, NULL);
     CopyWindowToVram(GetMapNamePopUpWindowId(), COPYWIN_FULL);
 }
 
