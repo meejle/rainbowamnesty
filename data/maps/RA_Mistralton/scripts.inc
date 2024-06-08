@@ -25,10 +25,6 @@ RA_Mistralton_Script_NameTheRival::
 
 	smallnamebox name_unknown
 	msgbox RA_Mistralton_Text_NameTheRival1, MSGBOX_DEFAULT
-	hidesmallnamebox
-	msgbox RA_Mistralton_Text_NameTheRival2, MSGBOX_DEFAULT
-	smallnamebox name_unknown
-	msgbox RA_Mistralton_Text_NameTheRival3, MSGBOX_DEFAULT
 	fadescreen FADE_TO_BLACK
 	special NameRival
 	waitstate
@@ -240,13 +236,7 @@ RA_Mistralton_Move_ReturnSouth:
 	step_end
 
 RA_Mistralton_Text_NameTheRival1:
-	.string "Hmph.$"
-
-RA_Mistralton_Text_NameTheRival2:
-	.string "An unfriendly-looking girl is looking\n"
-	.string "you up and down.$"
-
-RA_Mistralton_Text_NameTheRival3:
+	.string "Hmph...\p"
 	.string "So, what? You think you're special\n"
 	.string "because the granny and gramps have\l"
 	.string "taken an interest in you, is that it?\p"
