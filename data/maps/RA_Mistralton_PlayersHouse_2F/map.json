@@ -40,15 +40,6 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 6,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "0",
-      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
-    },
-    {
-      "type": "trigger",
       "x": 7,
       "y": 3,
       "elevation": 0,
@@ -58,84 +49,12 @@
     },
     {
       "type": "trigger",
-      "x": 8,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "0",
-      "script": "RA_PlayersHouse_2F_Script_ApproachFromEast"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "2",
-      "script": "RA_PlayersHouse_2F_Script_ShouldReadEmailFirst"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "4",
-      "script": "RA_PlayersHouse_2F_Script_ShouldReadEmailFirst"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "3",
-      "script": "RA_PlayersHouse_2F_Script_ShouldReadEmailFirst"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "4",
-      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "3",
-      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "2",
-      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 3,
-      "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "3",
-      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
+      "x": 1,
       "y": 4,
       "elevation": 0,
-      "var": "VAR_RA_DIRECTION_OF_APPROACH",
-      "var_value": "3",
-      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_NotTimeForBed"
     },
     {
       "type": "trigger",
@@ -148,12 +67,354 @@
     },
     {
       "type": "trigger",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "0",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromEast"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "0",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
       "x": 1,
       "y": 4,
       "elevation": 0,
       "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_HealPokemon"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
       "var_value": "2",
-      "script": "RA_PlayersHouse_2F_Script_NotTimeForBed"
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromEast"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromEast"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ShouldReadEmailFirst"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ShouldReadEmailFirst"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ShouldReadEmailFirst"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "0",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "0",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromEast"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromEast"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromEast"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "2",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
     }
   ],
   "bg_events": [

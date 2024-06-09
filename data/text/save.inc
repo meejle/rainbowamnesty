@@ -30,14 +30,3 @@ gText_SaveError::
 
 gText_SavingDontTurnOffPower::
 	.string "Saving... Don't close the emulator.$"
-
-gText_SavingInGameClock::
-	.string "By the way...\p"
-	.string "You can now adjust the in-game clock\n"
-	.string "whenever you want.\p"
-	.string "Just press {FONT 14}AB{FONT 11} + {FONT 14}TU{FONT 11} + {FONT 14}W{FONT 11}\n"
-	.string "together on the title screen.\p"
-	.string "In case you can't remember all that...\p"
-	.string "We've added it to the handbook on the\n"
-	.string "desk in your house.\p{PAUSE 32}"
-	.string "Your {COLOR RED}{SHADOW LIGHT_RED}Mission Log {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}is now up to date.$"

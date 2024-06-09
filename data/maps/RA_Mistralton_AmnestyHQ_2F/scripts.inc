@@ -62,11 +62,24 @@ RA_AmnestyHQ_2F_Script_PlayerEnters::
 
 	smallnamebox name_magnolia
 	msgbox RA_Lipsum, MSGBOX_DEFAULT
-	closemessage
-	hidesmallnamebox
-
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_UsedToGiveStarter, MSGBOX_DEFAULT
+	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_Magnolia_UsedToGiveStarter
+	waitmovement 0
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_SmallRuralTown, MSGBOX_DEFAULT
+	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_MagnoliaFaces
+	waitmovement 0
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_RaidsStarted, MSGBOX_DEFAULT
+	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted
+	waitmovement 0
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_LabCoatAndPokemon, MSGBOX_DEFAULT
+	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_Magnolia_LabCoatAndPokemon
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_ChooseStarter, MSGBOX_DEFAULT
+	fadescreen FADE_TO_BLACK
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 5
-	releaseall
+	special ChooseStarter
+	waitstate
+	setflag FLAG_SYS_POKEMON_GET
+	bufferleadmonspeciesname STR_VAR_1
 	end
 
 RA_AmnestyHQ_2F_Move_PlayerEnters:
@@ -131,6 +144,20 @@ RA_AmnestyHQ_2F_Move_MagnoliaMeets:
 	face_down
 	step_end
 
+RA_AmnestyHQ_2F_Move_Magnolia_UsedToGiveStarter:
+	walk_slow_up
+	step_end
+
+RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted:
+	walk_slow_up
+	face_left
+	step_end
+
+RA_AmnestyHQ_2F_Move_Magnolia_LabCoatAndPokemon:
+	walk_slow_down
+	walk_slow_down
+	step_end
+
 RA_AmnestyHQ_2F_Text_LookerMagicHappens:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}! This is where, so they say,\n"
 	.string "the “magic happens”!\p"
@@ -145,17 +172,132 @@ RA_AmnestyHQ_2F_Text_LookerMagicHappens:
 name_magnolia:
 	.string "Magnolia$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_UsedToGiveStarter:
+	.string "Back in {COLOR RED}{SHADOW LIGHT_RED}Galar{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, I... used to be\n"
+	.string "responsible for giving new Trainers\l"
+	.string "their first Pokémon.$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_SmallRuralTown:
+	.string "I come from a small, rural town -- more\n"
+	.string "notable for its transport links than\l"
+	.string "anything, really.$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_RaidsStarted:
+	.string "Needless to say, when the raids\n"
+	.string "started, we could only do so much.\p"
+	.string "Especially with the {COLOR GREEN}{SHADOW LIGHT_GREEN}Champion {SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}being\n"
+	.string "needed elsewhere...$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_LabCoatAndPokemon:
+	.string "...\p"
+	.string "...\p"
+	.string "All I managed to escape with was my lab\n"
+	.string "coat, and the three Pokémon in the\l"
+	.string "machine behind me.$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_ChooseStarter:
+	.string "But, one cannot afford to be precious\n"
+	.string "at a time like this.\p"
+	.string "The Pokémon you choose will be your\n"
+	.string "indispensable partner in the fight\l"
+	.string "against {COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\p"
+	.string "And really, what could be more fitting?\p"
+	.string "Go right ahead; choose one!$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_ChoseGrookey:
+	.string "Grookey are skilled healers, as they're\n"
+	.string "sensitive to Earth's natural rhythms.\p"
+	.string "I'd say this one's particularly {COLOR RED}{SHADOW LIGHT_RED}Attuned{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\n"
+	.string "It'll help you out in sticky situations!$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_ChoseSobble:
+	.string "Sobble tend to be timid but, with proper\n"
+	.string "training, they're dependable partners!\p"
+	.string "This one seems especially {COLOR RED}{SHADOW LIGHT_RED}Twitchy{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}. You\n"
+	.string "may find it notices things you don't!$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_ChoseScorbunny:
+	.string "Scorbunny is a handful, but its energy\n"
+	.string "makes it a speedy, formidable battler!\p"
+	.string "This one is especially {COLOR RED}{SHADOW LIGHT_RED}Spirited{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} -- it\n"
+	.string "won't give up, even if things seem dire.$"
 
+RA_AmnestyHQ_2F_Text_System_GotStarter:
+	.string "You chose {STR_VAR_1} as your partner\n"
+	.string "Pokémon!$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_NameStarter:
+	.string "Are you going to give your {STR_VAR_1} a\n"
+	.string "nickname?\p"
+	.string "You can change its name in the {FONT 14}RS{FONT 11}\n"
+	.string "menu, later, so don't overthink it!$"
 
+RA_AmnestyHQ_2F_Text_System_NameStarter:
+	.string "Give {STR_VAR_1} a nickname?$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_TakePokedex:
+	.string "At this point, this is more tradition\n"
+	.string "than anything, but here -- take this\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Pokédex{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+
+RA_AmnestyHQ_2F_Text_System_GotPokedex:
+	.string "You received a {COLOR RED}{SHADOW LIGHT_RED}Pokédex{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
+
+RA_AmnestyHQ_2F_Text_Magnolia_ExplainPokedex:
+	.string "The {COLOR RED}{SHADOW LIGHT_RED}Pokédex{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} is a high-tech device that\n"
+	.string "automatically records data about the\l"
+	.string "Pokémon you encounter.\p"
+	.string "Of course, you'll have to capture a\n"
+	.string "Pokémon to unlock its full data.\p"
+	.string "You can read up on your {STR_VAR_1} to\n"
+	.string "try it out!\p"
+	.string "I'll also give you some {COLOR RED}{SHADOW LIGHT_RED}Poké Balls{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} to get\n"
+	.string "you started.\p"
+	.string "Just be mindful of the Poké Ball\n"
+	.string "restrictions.$"
+
+RA_AmnestyHQ_2F_Text_System_GetFirstPokeBalls:
+	.string "You got 5 {COLOR RED}{SHADOW LIGHT_RED}Poké Balls{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+
+RA_AmnestyHQ_2F_Text_System_PutAwayFirstPokeBalls:
+	.string "You put the {COLOR RED}{SHADOW LIGHT_RED}Poké Balls{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} away in the bag's\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Poké Ball{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} pocket.$"
+
+RA_AmnestyHQ_2F_Text_Looker_ItemsOfImportance:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}! I have a couple of items of\n"
+	.string "importance to give to you, too!$"
+
+RA_AmnestyHQ_2F_Text_System_GetPoryphone:
+	.string "You received a {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
+
+RA_AmnestyHQ_2F_Text_Looker_ExplainPoryphone:
+	.string "The {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} -- it is a “Porygon”\n"
+	.string "inside of a “telephone”, do you see!?\p"
+	.string "Porygon, meet {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}. I hope that you\n"
+	.string "will get along.$"
+
+RA_AmnestyHQ_2F_Text_Poryphone_Greeting:
+	.string "{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, it is very nice\n"
+	.string "to meet you.\p"
+	.string "Greeting achieved.\p"
+	.string "Entering sleep mode.$"
+
+RA_AmnestyHQ_2F_Text_Looker_RotomPhones:
+	.string "Ah, the look on your face is one of\n"
+	.string "disappointment, if I am not mistaken.\p"
+	.string "“Today's youth favour {COLOR RED}{SHADOW LIGHT_RED}Rotom Phones{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}”,\n"
+	.string "you are probably thinking.\p"
+	.string "“How primitive this {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} seems in\n"
+	.string "comparison!”\p"
+	.string "And yet!\p"
+	.string "The {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} -- it has one special\n"
+	.string "feature that a {COLOR RED}{SHADOW LIGHT_RED}Rotom Phone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} cannot\l"
+	.string "hope to match.\p"
+	.string "It cannot be tracked by those of\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
+	.string "So while it is a little, ah, “rougher\n"
+	.string "around the edges”, young {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, you\l"
+	.string "understand why it is vital.$"
 
 
 @Defining common scripts to save time

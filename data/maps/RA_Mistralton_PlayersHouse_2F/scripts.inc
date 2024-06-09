@@ -56,6 +56,15 @@ RA_PlayersHouse_2F_Script_NotTimeForBed::
 	waitmovement 0
 	msgbox RA_PlayersHouse_2F_Text_NotTimeForBed, MSGBOX_DEFAULT
 	closemessage
+	goto_if_eq VAR_RA_DIRECTION_OF_APPROACH, 2, RA_PlayersHouse_2F_Script_ReturnToEast
+	goto_if_eq VAR_RA_DIRECTION_OF_APPROACH, 4, RA_PlayersHouse_2F_Script_ReturnToWest
+	release
+	end
+
+RA_PlayersHouse_2F_Script_HealPokemon::
+	lock
+	msgbox RA_PlayersHouse_2F_Text_HealedPokemon, MSGBOX_DEFAULT
+	closemessage
 	release
 	end
 
@@ -72,6 +81,11 @@ RA_PlayersHouse_2F_Script_ApproachFromSouth::
 	end
 
 RA_PlayersHouse_2F_Script_ShouldReadEmailFirst::
+	goto_if_lt VAR_RA_PLAYERSHOUSE_INTRO_STATE, 2, RA_PlayersHouse_2F_Script_ShouldReadEmailFirst2
+	setvar VAR_RA_DIRECTION_OF_APPROACH, 0
+	end
+
+RA_PlayersHouse_2F_Script_ShouldReadEmailFirst2::
 	lock
 	msgbox RA_PlayersHouse_2F_Text_ShouldReadEmailFirst, MSGBOX_DEFAULT
 	closemessage
@@ -109,7 +123,6 @@ RA_PlayersHouse_2F_Script_ReadEmail::
 	goto_if_eq VAR_RA_PLAYERSHOUSE_INTRO_STATE, 2, RA_PlayersHouse_2F_Script_ReadEmailAgain
 	lock
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 2
-	setvar VAR_RA_DIRECTION_OF_APPROACH, 5
 	msgbox RA_PlayersHouse_2F_Text_LookerEmail, MSGBOX_DEFAULT
 	smallnamebox name_looker
 	playse SE_SELECT
@@ -185,9 +198,17 @@ RA_PlayersHouse_2F_Script_LookAtClock::
 	goto_if_set FLAG_SET_WALL_CLOCK, RA_PlayersHouse_2F_Script_ShowTheRTC
 	msgbox RA_PlayersHouse_2F_Text_LookAtClock, MSGBOX_DEFAULT
 	call PlayersHouse_2F_EventScript_SetWallClock
-	delay 30
+	message RA_PlayersHouse_2F_Text_ClockSet
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_SET_IN_GAME_CLOCK
+	waitmessage
+	delay 32
+	playse SE_WIN_OPEN
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	playse SE_SELECT
+	callnative ClearMugshot
 	setflag FLAG_SET_WALL_CLOCK
-	setflag FLAG_SYS_FIRST_SAVE_SINCE_RTC_SET
 	releaseall
 	end
 
@@ -223,6 +244,10 @@ RA_PlayersHouse_2F_Text_2WeeksLater:
 
 RA_PlayersHouse_2F_Text_GotEmail:
 	.string "It sounds like you've got a new email...$"
+
+RA_PlayersHouse_2F_Text_HealedPokemon:
+	.string "You and your Pokémon are fully rested\n"
+	.string "and fighting fit! (Doesn't work yet.)$"
 
 RA_PlayersHouse_2F_Text_NotTimeForBed:
 	.string "It's tempting, but now isn't the time to\n"
@@ -302,6 +327,9 @@ RA_PlayersHouse_2F_Text_LookAtBookRTC:
 RA_PlayersHouse_2F_Text_LookAtClock:
 	.string "The clock is stopped...\p"
 	.string "You'd better set it and start it!$"
+
+RA_PlayersHouse_2F_Text_ClockSet:
+	.string "The clock has been set.$"
 
 name_looker:
 	.string "Looker$"
