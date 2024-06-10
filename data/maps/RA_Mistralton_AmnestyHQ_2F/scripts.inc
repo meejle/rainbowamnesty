@@ -69,18 +69,262 @@ RA_AmnestyHQ_2F_Script_PlayerEnters::
 	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_MagnoliaFaces
 	waitmovement 0
 	msgbox RA_AmnestyHQ_2F_Text_Magnolia_RaidsStarted, MSGBOX_DEFAULT
-	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted
+	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted1
+	waitmovement 0
+	delay 12
+	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted2
 	waitmovement 0
 	msgbox RA_AmnestyHQ_2F_Text_Magnolia_LabCoatAndPokemon, MSGBOX_DEFAULT
 	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_Magnolia_LabCoatAndPokemon
 	msgbox RA_AmnestyHQ_2F_Text_Magnolia_ChooseStarter, MSGBOX_DEFAULT
-	fadescreen FADE_TO_BLACK
+	closemessage
+	hidesmallnamebox
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 5
+	setvar VAR_RA_DIRECTION_OF_APPROACH, 0
+	releaseall
+	end
+
+RA_AmnestyHQ_2F_Script_StarterMachine::
+	lockall
+	goto_if_set FLAG_SYS_POKEMON_GET, RA_AmnestyHQ_2F_Script_StarterMachineDummy
+	fadescreen FADE_TO_BLACK
+	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 6
 	special ChooseStarter
 	waitstate
+	special Script_FadeOutMapMusic
 	setflag FLAG_SYS_POKEMON_GET
-	bufferleadmonspeciesname STR_VAR_1
+	applymovement LOCALID_MAGNOLIA, RA_AmnestyHQ_2F_Move_PlayerFaces
+	goto_if_eq VAR_RA_DIRECTION_OF_APPROACH, 3, RA_AmnestyHQ_2F_Script_StarterMachine_South
+	goto_if_eq VAR_RA_DIRECTION_OF_APPROACH, 4, RA_AmnestyHQ_2F_Script_StarterMachine_West
 	end
+
+RA_AmnestyHQ_2F_Script_StarterMachine_South::
+	delay 32
+	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_PlayerReturnsSouth
+	waitmovement 0
+	playbgm MUS_BIRCH_LAB TRUE
+	delay 12
+	call RA_Magnolia_Heart_FaceRight
+	switch VAR_STARTER_MON
+	case 0, RA_AmnestyHQ_2F_Script_PostStarterMachine_Grookey
+	case 1, RA_AmnestyHQ_2F_Script_PostStarterMachine_Scorbunny
+	case 2, RA_AmnestyHQ_2F_Script_PostStarterMachine_Sobble
+	end
+
+RA_AmnestyHQ_2F_Script_StarterMachine_West::
+	delay 32
+	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_PlayerReturnsWest
+	waitmovement 0
+	playbgm MUS_BIRCH_LAB TRUE
+	delay 12
+	call RA_Magnolia_Heart_FaceRight
+	switch VAR_STARTER_MON
+	case 0, RA_AmnestyHQ_2F_Script_PostStarterMachine_Grookey
+	case 1, RA_AmnestyHQ_2F_Script_PostStarterMachine_Scorbunny
+	case 2, RA_AmnestyHQ_2F_Script_PostStarterMachine_Sobble
+	end
+
+RA_AmnestyHQ_2F_Script_PostStarterMachine_Grookey::
+	applymovement LOCALID_LOOKER, RA_AmnestyHQ_2F_Move_PlayerFaces
+	smallnamebox name_magnolia
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_ChoseGrookey, MSGBOX_DEFAULT
+	hidesmallnamebox
+	bufferleadmonspeciesname STR_VAR_1
+	message RA_AmnestyHQ_2F_Text_System_GotStarter
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_STARTER_ABILITIES_1
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	playse SE_WIN_OPEN
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_STARTER_ABILITIES_2_GROOKEY
+	playse SE_SELECT
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	playse SE_SELECT
+	callnative ClearMugshot
+	goto RA_AmnestyHQ_2F_Script_NicknamePokemon
+	end
+
+RA_AmnestyHQ_2F_Script_PostStarterMachine_Scorbunny::
+	applymovement LOCALID_LOOKER, RA_AmnestyHQ_2F_Move_PlayerFaces
+	smallnamebox name_magnolia
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_ChoseScorbunny, MSGBOX_DEFAULT
+	hidesmallnamebox
+	bufferleadmonspeciesname STR_VAR_1
+	message RA_AmnestyHQ_2F_Text_System_GotStarter
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_STARTER_ABILITIES_1
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	playse SE_WIN_OPEN
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_STARTER_ABILITIES_2_SCORBUNNY
+	playse SE_SELECT
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	playse SE_SELECT
+	callnative ClearMugshot
+	goto RA_AmnestyHQ_2F_Script_NicknamePokemon
+	end
+
+RA_AmnestyHQ_2F_Script_PostStarterMachine_Sobble::
+	applymovement LOCALID_LOOKER, RA_AmnestyHQ_2F_Move_PlayerFaces
+	smallnamebox name_magnolia
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_ChoseSobble, MSGBOX_DEFAULT
+	hidesmallnamebox
+	bufferleadmonspeciesname STR_VAR_1
+	message RA_AmnestyHQ_2F_Text_System_GotStarter
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_STARTER_ABILITIES_1
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	playse SE_WIN_OPEN
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_STARTER_ABILITIES_2_SOBBLE
+	playse SE_SELECT
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	playse SE_SELECT
+	callnative ClearMugshot
+	goto RA_AmnestyHQ_2F_Script_NicknamePokemon
+	end
+	
+RA_AmnestyHQ_2F_Script_NicknamePokemon::
+	smallnamebox name_magnolia
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_NameStarter, MSGBOX_DEFAULT
+	hidesmallnamebox
+	msgbox RA_AmnestyHQ_2F_Text_System_NameStarter, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, RA_AmnestyHQ_2F_Script_NicknamePokemon_Yes
+	goto_if_eq VAR_RESULT, NO, RA_AmnestyHQ_2F_Script_NicknamePokemon_No
+	end
+
+RA_AmnestyHQ_2F_Script_NicknamePokemon_Yes::
+	setvar VAR_0x8004, 0
+	call Common_EventScript_NameReceivedPartyMon
+	goto RA_AmnestyHQ_2F_Script_NicknamePokemon_No
+	end
+
+RA_AmnestyHQ_2F_Script_NicknamePokemon_No::
+	smallnamebox name_magnolia
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_TakePokedex, MSGBOX_DEFAULT
+	hidesmallnamebox
+	message RA_AmnestyHQ_2F_Text_System_GotPokedex
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	smallnamebox name_magnolia
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_ExplainPokedex, MSGBOX_DEFAULT
+	hidesmallnamebox
+	message RA_AmnestyHQ_2F_Text_System_GetFirstPokeBalls
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_BALL_RESTRICTIONS_1
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	playse SE_WIN_OPEN
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	setvar VAR_0x8000, MUGSHOT_TUTORIAL_BALL_RESTRICTIONS_2
+	playse SE_SELECT
+	callnative DrawMugshot
+	delay 64
+	waitbuttonpress
+	playse SE_SELECT
+	callnative ClearMugshot
+	msgbox RA_AmnestyHQ_2F_Text_System_PutAwayFirstPokeBalls, MSGBOX_DEFAULT
+	closemessage
+	call RA_Looker_Happy_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_MagnoliaFaces
+	smallnamebox name_looker
+	msgbox RA_AmnestyHQ_2F_Text_Looker_ItemsOfImportance, MSGBOX_DEFAULT
+	closemessage
+	hidesmallnamebox
+	message RA_AmnestyHQ_2F_Text_System_GetPoryphone
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	smallnamebox name_looker
+	msgbox RA_AmnestyHQ_2F_Text_Looker_ExplainPoryphone, MSGBOX_DEFAULT
+	closemessage
+	hidesmallnamebox
+	delay 32
+	playse SE_POKENAV_ON
+	msgbox RA_AmnestyHQ_2F_Text_Poryphone_Greeting, MSGBOX_POKENAV
+	closemessage
+	playse SE_POKENAV_HANG_UP
+	delay 64
+	call RA_Player_ThreeDots_FaceDown
+	smallnamebox name_looker
+	msgbox RA_AmnestyHQ_2F_Text_Looker_RotomPhones, MSGBOX_DEFAULT
+	closemessage
+	hidesmallnamebox
+	releaseall
+	end
+
+RA_AmnestyHQ_2F_Script_StarterMachineDummy::
+	lock
+	msgbox RA_AmnestyHQ_2F_Text_RemainingPokemon, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+RA_AmnestyHQ_2F_Script_MagnoliaGoAhead::
+	lock
+	faceplayer
+	smallnamebox name_magnolia
+	msgbox RA_AmnestyHQ_2F_Text_Magnolia_GoAheadAndChoose, MSGBOX_DEFAULT
+	closemessage
+	hidesmallnamebox
+	release
+	end
+
+RA_AmnestyHQ_2F_Script_LookerGoAhead::
+	lock
+	faceplayer
+	smallnamebox name_looker
+	msgbox RA_AmnestyHQ_2F_Text_Looker_GoAheadAndChoose, MSGBOX_DEFAULT
+	closemessage
+	hidesmallnamebox
+	release
+	end
+
+RA_AmnestyHQ_2F_Script_WhereGoing::
+	lock
+	applymovement LOCALID_LOOKER, RA_AmnestyHQ_2F_Move_MagnoliaFaces
+	smallnamebox name_looker
+	msgbox RA_AmnestyHQ_2F_Text_Looker_WhereGoing, MSGBOX_DEFAULT
+	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_PlayerFaces
+	msgbox RA_AmnestyHQ_2F_Text_Looker_WhereGoing2, MSGBOX_DEFAULT
+	closemessage
+	hidesmallnamebox
+	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_2F_Move_Player_WhereGoing
+	waitmovement 0
+	release
+	end
+
+RA_AmnestyHQ_2F_Move_PlayerReturnsWest:
+	walk_down
+	walk_down
+	walk_down
+	face_left
+	step_end
+
+RA_AmnestyHQ_2F_Move_PlayerReturnsSouth:
+	walk_left
+	walk_down
+	walk_down
+	face_left
+	step_end
 
 RA_AmnestyHQ_2F_Move_PlayerEnters:
 	walk_down
@@ -148,8 +392,11 @@ RA_AmnestyHQ_2F_Move_Magnolia_UsedToGiveStarter:
 	walk_slow_up
 	step_end
 
-RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted:
+RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted1:
 	walk_slow_up
+	step_end
+
+RA_AmnestyHQ_2F_Move_Magnolia_RaidsStarted2:
 	face_left
 	step_end
 
@@ -157,6 +404,14 @@ RA_AmnestyHQ_2F_Move_Magnolia_LabCoatAndPokemon:
 	walk_slow_down
 	walk_slow_down
 	step_end
+
+RA_AmnestyHQ_2F_Move_Player_WhereGoing:
+	walk_up
+	step_end
+
+RA_AmnestyHQ_2F_Text_RemainingPokemon:
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Professor Magnolia's{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} two remaining\n"
+	.string "Pokémon are still in the machine.$"
 
 RA_AmnestyHQ_2F_Text_LookerMagicHappens:
 	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}! This is where, so they say,\n"
@@ -204,15 +459,30 @@ RA_AmnestyHQ_2F_Text_Magnolia_ChooseStarter:
 	.string "And really, what could be more fitting?\p"
 	.string "Go right ahead; choose one!$"
 
+RA_AmnestyHQ_2F_Text_Magnolia_GoAheadAndChoose:
+	.string "Go ahead and choose a Pokémon,\n"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
+
+RA_AmnestyHQ_2F_Text_Looker_GoAheadAndChoose:
+	.string "This is an exciting moment in any\n"
+	.string "Trainer's journey!$"
+
+RA_AmnestyHQ_2F_Text_Looker_WhereGoing:
+	.string "Where are you going, {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!?$"
+
+RA_AmnestyHQ_2F_Text_Looker_WhereGoing2:
+	.string "The Pokémon are over here, behind\n"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Professor Magnolia{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+
 RA_AmnestyHQ_2F_Text_Magnolia_ChoseGrookey:
 	.string "Grookey are skilled healers, as they're\n"
-	.string "sensitive to Earth's natural rhythms.\p"
+	.string "sensitive to Earth's natural rhythms!\p"
 	.string "I'd say this one's particularly {COLOR RED}{SHADOW LIGHT_RED}Attuned{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.\n"
-	.string "It'll help you out in sticky situations!$"
+	.string "It'll help you out in sticky situations.$"
 
 RA_AmnestyHQ_2F_Text_Magnolia_ChoseSobble:
 	.string "Sobble tend to be timid but, with proper\n"
-	.string "training, they're dependable partners!\p"
+	.string "training, they're dependable partners.\p"
 	.string "This one seems especially {COLOR RED}{SHADOW LIGHT_RED}Twitchy{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}. You\n"
 	.string "may find it notices things you don't!$"
 
@@ -227,10 +497,10 @@ RA_AmnestyHQ_2F_Text_System_GotStarter:
 	.string "Pokémon!$"
 
 RA_AmnestyHQ_2F_Text_Magnolia_NameStarter:
-	.string "Are you going to give your {STR_VAR_1} a\n"
+	.string "Are you going to give {STR_VAR_1} a\n"
 	.string "nickname?\p"
 	.string "You can change its name in the {FONT 14}RS{FONT 11}\n"
-	.string "menu, later, so don't overthink it!$"
+	.string "menu later, so don't overthink it!$"
 
 RA_AmnestyHQ_2F_Text_System_NameStarter:
 	.string "Give {STR_VAR_1} a nickname?$"
@@ -249,15 +519,13 @@ RA_AmnestyHQ_2F_Text_Magnolia_ExplainPokedex:
 	.string "Pokémon you encounter.\p"
 	.string "Of course, you'll have to capture a\n"
 	.string "Pokémon to unlock its full data.\p"
-	.string "You can read up on your {STR_VAR_1} to\n"
-	.string "try it out!\p"
 	.string "I'll also give you some {COLOR RED}{SHADOW LIGHT_RED}Poké Balls{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} to get\n"
 	.string "you started.\p"
 	.string "Just be mindful of the Poké Ball\n"
-	.string "restrictions.$"
+	.string "restrictions outside of town.$"
 
 RA_AmnestyHQ_2F_Text_System_GetFirstPokeBalls:
-	.string "You got 5 {COLOR RED}{SHADOW LIGHT_RED}Poké Balls{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}.$"
+	.string "You got 5 {COLOR RED}{SHADOW LIGHT_RED}Poké Balls{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!$"
 
 RA_AmnestyHQ_2F_Text_System_PutAwayFirstPokeBalls:
 	.string "You put the {COLOR RED}{SHADOW LIGHT_RED}Poké Balls{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} away in the bag's\n"
@@ -279,13 +547,14 @@ RA_AmnestyHQ_2F_Text_Looker_ExplainPoryphone:
 RA_AmnestyHQ_2F_Text_Poryphone_Greeting:
 	.string "{COLOR GREEN}{PLAYER}{COLOR DARK_GRAY}, it is very nice\n"
 	.string "to meet you.\p"
-	.string "Greeting achieved.\p"
+	.string "…\p"
+	.string "Greeting achieved.\n"
 	.string "Entering sleep mode.$"
 
 RA_AmnestyHQ_2F_Text_Looker_RotomPhones:
 	.string "Ah, the look on your face is one of\n"
 	.string "disappointment, if I am not mistaken.\p"
-	.string "“Today's youth favour {COLOR RED}{SHADOW LIGHT_RED}Rotom Phones{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}”,\n"
+	.string "“Today's youth favours {COLOR RED}{SHADOW LIGHT_RED}Rotom Phones{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}”,\n"
 	.string "you are probably thinking.\p"
 	.string "“How primitive this {COLOR RED}{SHADOW LIGHT_RED}Poryphone{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} seems in\n"
 	.string "comparison!”\p"
@@ -295,7 +564,7 @@ RA_AmnestyHQ_2F_Text_Looker_RotomPhones:
 	.string "hope to match.\p"
 	.string "It cannot be tracked by those of\n"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}!\p"
-	.string "So while it is a little, ah, “rougher\n"
+	.string "So: while it may be a little, ah, “rough\n"
 	.string "around the edges”, young {COLOR GREEN}{SHADOW LIGHT_GREEN}{PLAYER}{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY}, you\l"
 	.string "understand why it is vital.$"
 

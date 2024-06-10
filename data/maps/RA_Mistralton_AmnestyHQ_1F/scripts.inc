@@ -13,6 +13,9 @@ RA_AmnestyHQ_1F_Script_WalkToLooker::
 	lockall
 	applymovement OBJ_EVENT_ID_PLAYER, RA_AmnestyHQ_1F_Move_WalkToLooker
 	waitmovement 0
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_CAMERA, RA_AmnestyHQ_1F_Move_ShiftCameraUp
+	waitmovement 0
 
 	playse SE_M_DETECT
 	applymovement LOCALID_LOOKER, Common_Movement_AnimeEyes
@@ -77,6 +80,10 @@ RA_AmnestyHQ_1F_Script_WalkToLooker::
 	hidesmallnamebox
 
 	setvar VAR_RA_PLAYERSHOUSE_INTRO_STATE, 3
+	
+	applymovement OBJ_EVENT_ID_CAMERA, RA_AmnestyHQ_1F_Move_ShiftCameraDown
+	waitmovement 0
+	special RemoveCameraObject
 	releaseall
 	end
 
@@ -89,6 +96,14 @@ RA_AmnestyHQ_1F_Script_LookerInteract::
 	hidesmallnamebox
 	release
 	end
+	
+RA_AmnestyHQ_1F_Move_ShiftCameraUp:
+	walk_slow_up
+	step_end
+
+RA_AmnestyHQ_1F_Move_ShiftCameraDown:
+	walk_slow_down
+	step_end
 
 RA_AmnestyHQ_1F_Move_WalkToLooker:
 	walk_up

@@ -19,12 +19,12 @@
       "x": 13,
       "y": 8,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_AmnestyHQ_2F_Script_LookerGoAhead",
       "flag": "FLAG_TEMP_5"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "RA_AmnestyHQ_2F_Script_MagnoliaGoAhead",
       "flag": "0"
     }
   ],
@@ -51,9 +51,168 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "0",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromWest"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "0",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ApproachFromSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "3",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_RA_DIRECTION_OF_APPROACH",
+      "var_value": "4",
+      "script": "RA_PlayersHouse_2F_Script_ResetApproach"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "5",
+      "script": "RA_AmnestyHQ_2F_Script_WhereGoing"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "5",
+      "script": "RA_AmnestyHQ_2F_Script_WhereGoing"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "5",
+      "script": "RA_AmnestyHQ_2F_Script_WhereGoing"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "5",
+      "script": "RA_AmnestyHQ_2F_Script_WhereGoing"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "5",
+      "script": "RA_AmnestyHQ_2F_Script_WhereGoing"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "5",
+      "script": "RA_AmnestyHQ_2F_Script_WhereGoing"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_RA_PLAYERSHOUSE_INTRO_STATE",
+      "var_value": "5",
+      "script": "RA_AmnestyHQ_2F_Script_WhereGoing"
+    }
   ],
   "bg_events": [
-
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RA_AmnestyHQ_2F_Script_StarterMachine"
+    }
   ]
 }
