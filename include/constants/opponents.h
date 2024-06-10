@@ -815,6 +815,8 @@
 #define TRAINER_BRANDON                     811
 #define TRAINER_ANDRES_2                    812
 #define TRAINER_ANDRES_3                    813
+
+// TRANSITION TESTS START
 #define TRAINER_ANDRES_4                    814
 #define TRAINER_ANDRES_5                    815
 #define TRAINER_CORY_2                      816
@@ -852,6 +854,8 @@
 #define TRAINER_MARIELA                     848
 #define TRAINER_ALVARO                      849
 #define TRAINER_EVERETT                     850
+// TRANSITION TESTS END
+
 #define TRAINER_RED                         851
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853

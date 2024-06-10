@@ -875,6 +875,83 @@ u8 GetTrainerBattleTransition(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
         return B_TRANSITION_CHAMPION;
 
+    // TRANSITION TESTING STARTS
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_01)
+        return B_TRANSITION_BLUR;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_02)
+        return B_TRANSITION_SWIRL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_03)
+        return B_TRANSITION_SHUFFLE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_04)
+        return B_TRANSITION_BIG_POKEBALL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_05)
+        return B_TRANSITION_POKEBALLS_TRAIL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_06)
+        return B_TRANSITION_CLOCKWISE_WIPE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_07)
+        return B_TRANSITION_RIPPLE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_08)
+        return B_TRANSITION_WAVE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_09)
+        return B_TRANSITION_SLICE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_10)
+        return B_TRANSITION_WHITE_BARS_FADE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_11)
+        return B_TRANSITION_GRID_SQUARES;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_12)
+        return B_TRANSITION_ANGLED_WIPES;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_13)
+        return B_TRANSITION_AQUA;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_14)
+        return B_TRANSITION_MAGMA;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_15)
+        return B_TRANSITION_REGICE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_16)
+        return B_TRANSITION_REGISTEEL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_17)
+        return B_TRANSITION_REGIROCK;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_18)
+        return B_TRANSITION_KYOGRE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_19)
+        return B_TRANSITION_GROUDON;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_20)
+        return B_TRANSITION_RAYQUAZA;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_21)
+        return B_TRANSITION_SHRED_SPLIT;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_22)
+        return B_TRANSITION_BLACKHOLE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_23)
+        return B_TRANSITION_BLACKHOLE_PULSATE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_24)
+        return B_TRANSITION_RECTANGULAR_SPIRAL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_25)
+        return B_TRANSITION_FRONTIER_LOGO_WIGGLE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_26)
+        return B_TRANSITION_FRONTIER_LOGO_WAVE;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_27)
+        return B_TRANSITION_FRONTIER_SQUARES;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_28)
+        return B_TRANSITION_FRONTIER_SQUARES_SCROLL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_29)
+        return B_TRANSITION_FRONTIER_SQUARES_SPIRAL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_30)
+        return B_TRANSITION_FRONTIER_CIRCLES_MEET;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_31)
+        return B_TRANSITION_FRONTIER_CIRCLES_CROSS;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_32)
+        return B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_33)
+        return B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_34)
+        return B_TRANSITION_FRONTIER_CIRCLES_MEET_IN_SEQ;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_35)
+        return B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_36)
+        return B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ;
+    if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_37)
+        return B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ;
+    // TRANSITION TESTING ENDS
+
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TEAM_MAGMA
         || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MAGMA_LEADER
         || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MAGMA_ADMIN)

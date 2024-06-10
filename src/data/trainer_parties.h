@@ -6587,7 +6587,7 @@ static const struct TrainerMon sParty_MayRoute119Mudkip[] = {
 static const struct TrainerMon sParty_MayRoute103Treecko[] = {
     {
     .lvl = 5,
-    .species = SPECIES_TORCHIC,
+    .species = SPECIES_SENTRET,
     }
 };
 
@@ -11105,21 +11105,12 @@ static const struct TrainerMon sParty_Andres3[] = {
     }
 };
 
+// PARTY FOR TRANSITION TESTING
 static const struct TrainerMon sParty_Andres4[] = {
     {
-    .iv = TRAINER_PARTY_IVS(3, 3, 3, 3, 3, 3),
-    .lvl = 35,
-    .species = SPECIES_NOSEPASS,
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(3, 3, 3, 3, 3, 3),
-    .lvl = 35,
-    .species = SPECIES_SANDSHREW,
-    },
-    {
-    .iv = TRAINER_PARTY_IVS(3, 3, 3, 3, 3, 3),
-    .lvl = 35,
-    .species = SPECIES_SANDSHREW,
+    .iv = TRAINER_PARTY_IVS(1, 1, 1, 1, 1, 1),
+    .lvl = 1,
+    .species = SPECIES_MAGIKARP,
     }
 };
 
