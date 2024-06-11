@@ -879,7 +879,7 @@ u8 GetTrainerBattleTransition(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_01)
         return B_TRANSITION_AETHER_FOUNDATION;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_02)
-        return B_TRANSITION_SWIRL;
+        return B_TRANSITION_AMNESTY_INSTITUTE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_03)
         return B_TRANSITION_SHUFFLE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_04)

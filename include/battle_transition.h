@@ -59,6 +59,7 @@ enum {
 
     // Custom transitions
     B_TRANSITION_AETHER_FOUNDATION,
+    B_TRANSITION_AMNESTY_INSTITUTE,
 
     B_TRANSITION_COUNT
 };

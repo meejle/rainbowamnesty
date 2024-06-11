@@ -340,7 +340,7 @@ RA_Mistralton_Text_Transition_Defeat:
 	.string "Cool, huh?$"
 
 RA_Mistralton_Text_Transition_01:
-	.string "Transition test No. 1 of 37:\n"
+	.string "Custom transition test:\n"
 	.string "“Aether Foundation”$"
 
 RA_Mistralton_EventScript_Transition_01::
@@ -352,8 +352,8 @@ RA_Mistralton_EventScript_Transition_01::
 	end
 
 RA_Mistralton_Text_Transition_02:
-	.string "Transition test No. 2 of 37:\n"
-	.string "“Swirl”$"
+	.string "Custom transition test:\n"
+	.string "“Amnesty Institute”$"
 
 RA_Mistralton_EventScript_Transition_02::
 	lockall
@@ -364,7 +364,7 @@ RA_Mistralton_EventScript_Transition_02::
 	end
 
 RA_Mistralton_Text_Transition_03:
-	.string "Transition test No. 3 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Shuffle”$"
 
 RA_Mistralton_EventScript_Transition_03::
@@ -376,7 +376,7 @@ RA_Mistralton_EventScript_Transition_03::
 	end
 
 RA_Mistralton_Text_Transition_04:
-	.string "Transition test No. 4 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Big Poké Ball”$"
 
 RA_Mistralton_EventScript_Transition_04::
@@ -388,7 +388,7 @@ RA_Mistralton_EventScript_Transition_04::
 	end
 
 RA_Mistralton_Text_Transition_05:
-	.string "Transition test No. 5 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Poké Balls Trail”$"
 
 RA_Mistralton_EventScript_Transition_05::
@@ -400,7 +400,7 @@ RA_Mistralton_EventScript_Transition_05::
 	end
 
 RA_Mistralton_Text_Transition_06:
-	.string "Transition test No. 6 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Clockwise Wipe”$"
 
 RA_Mistralton_EventScript_Transition_06::
@@ -412,7 +412,7 @@ RA_Mistralton_EventScript_Transition_06::
 	end
 
 RA_Mistralton_Text_Transition_07:
-	.string "Transition test No. 7 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Ripple”$"
 
 RA_Mistralton_EventScript_Transition_07::
@@ -424,7 +424,7 @@ RA_Mistralton_EventScript_Transition_07::
 	end
 
 RA_Mistralton_Text_Transition_08:
-	.string "Transition test No. 8 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Wave”$"
 
 RA_Mistralton_EventScript_Transition_08::
@@ -436,7 +436,7 @@ RA_Mistralton_EventScript_Transition_08::
 	end
 
 RA_Mistralton_Text_Transition_09:
-	.string "Transition test No. 9 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Slice”$"
 
 RA_Mistralton_EventScript_Transition_09::
@@ -448,7 +448,7 @@ RA_Mistralton_EventScript_Transition_09::
 	end
 
 RA_Mistralton_Text_Transition_10:
-	.string "Transition test No. 10 of 37:\n"
+	.string "Transition test:\n"
 	.string "“White Bars Fade”$"
 
 RA_Mistralton_EventScript_Transition_10::
@@ -460,7 +460,7 @@ RA_Mistralton_EventScript_Transition_10::
 	end
 
 RA_Mistralton_Text_Transition_11:
-	.string "Transition test No. 11 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Grid Squares”$"
 
 RA_Mistralton_EventScript_Transition_11::
@@ -472,7 +472,7 @@ RA_Mistralton_EventScript_Transition_11::
 	end
 
 RA_Mistralton_Text_Transition_12:
-	.string "Transition test No. 12 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Angled Wipes”$"
 
 RA_Mistralton_EventScript_Transition_12::
@@ -484,7 +484,7 @@ RA_Mistralton_EventScript_Transition_12::
 	end
 
 RA_Mistralton_Text_Transition_13:
-	.string "Transition test No. 13 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Aqua”$"
 
 RA_Mistralton_EventScript_Transition_13::
@@ -496,7 +496,7 @@ RA_Mistralton_EventScript_Transition_13::
 	end
 
 RA_Mistralton_Text_Transition_14:
-	.string "Transition test No. 14 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Magma”$"
 
 RA_Mistralton_EventScript_Transition_14::
@@ -508,7 +508,7 @@ RA_Mistralton_EventScript_Transition_14::
 	end
 
 RA_Mistralton_Text_Transition_15:
-	.string "Transition test No. 15 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Regice”$"
 
 RA_Mistralton_EventScript_Transition_15::
@@ -520,7 +520,7 @@ RA_Mistralton_EventScript_Transition_15::
 	end
 
 RA_Mistralton_Text_Transition_16:
-	.string "Transition test No. 16 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Registeel”$"
 
 RA_Mistralton_EventScript_Transition_16::
@@ -532,7 +532,7 @@ RA_Mistralton_EventScript_Transition_16::
 	end
 
 RA_Mistralton_Text_Transition_17:
-	.string "Transition test No. 17 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Regirock”$"
 
 RA_Mistralton_EventScript_Transition_17::
@@ -544,7 +544,7 @@ RA_Mistralton_EventScript_Transition_17::
 	end
 
 RA_Mistralton_Text_Transition_18:
-	.string "Transition test No. 18 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Kyogre”$"
 
 RA_Mistralton_EventScript_Transition_18::
@@ -556,7 +556,7 @@ RA_Mistralton_EventScript_Transition_18::
 	end
 
 RA_Mistralton_Text_Transition_19:
-	.string "Transition test No. 19 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Groudon”$"
 
 RA_Mistralton_EventScript_Transition_19::
@@ -568,7 +568,7 @@ RA_Mistralton_EventScript_Transition_19::
 	end
 
 RA_Mistralton_Text_Transition_20:
-	.string "Transition test No. 20 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Rayquaza”$"
 
 RA_Mistralton_EventScript_Transition_20::
@@ -580,7 +580,7 @@ RA_Mistralton_EventScript_Transition_20::
 	end
 
 RA_Mistralton_Text_Transition_21:
-	.string "Transition test No. 21 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Shred Split”$"
 
 RA_Mistralton_EventScript_Transition_21::
@@ -592,7 +592,7 @@ RA_Mistralton_EventScript_Transition_21::
 	end
 
 RA_Mistralton_Text_Transition_22:
-	.string "Transition test No. 22 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Black Hole”$"
 
 RA_Mistralton_EventScript_Transition_22::
@@ -604,7 +604,7 @@ RA_Mistralton_EventScript_Transition_22::
 	end
 
 RA_Mistralton_Text_Transition_23:
-	.string "Transition test No. 23 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Black Hole Pulsate”$"
 
 RA_Mistralton_EventScript_Transition_23::
@@ -616,7 +616,7 @@ RA_Mistralton_EventScript_Transition_23::
 	end
 
 RA_Mistralton_Text_Transition_24:
-	.string "Transition test No. 24 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Rectangular Spiral”$"
 
 RA_Mistralton_EventScript_Transition_24::
@@ -628,7 +628,7 @@ RA_Mistralton_EventScript_Transition_24::
 	end
 
 RA_Mistralton_Text_Transition_25:
-	.string "Transition test No. 25 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Logo Wiggle”$"
 
 RA_Mistralton_EventScript_Transition_25::
@@ -640,7 +640,7 @@ RA_Mistralton_EventScript_Transition_25::
 	end
 
 RA_Mistralton_Text_Transition_26:
-	.string "Transition test No. 26 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Logo Wave”$"
 
 RA_Mistralton_EventScript_Transition_26::
@@ -652,7 +652,7 @@ RA_Mistralton_EventScript_Transition_26::
 	end
 
 RA_Mistralton_Text_Transition_27:
-	.string "Transition test No. 27 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Squares”$"
 
 RA_Mistralton_EventScript_Transition_27::
@@ -664,7 +664,7 @@ RA_Mistralton_EventScript_Transition_27::
 	end
 
 RA_Mistralton_Text_Transition_28:
-	.string "Transition test No. 28 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Squares Scroll”$"
 
 RA_Mistralton_EventScript_Transition_28::
@@ -676,7 +676,7 @@ RA_Mistralton_EventScript_Transition_28::
 	end
 
 RA_Mistralton_Text_Transition_29:
-	.string "Transition test No. 29 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Squares Spiral”$"
 
 RA_Mistralton_EventScript_Transition_29::
@@ -688,7 +688,7 @@ RA_Mistralton_EventScript_Transition_29::
 	end
 
 RA_Mistralton_Text_Transition_30:
-	.string "Transition test No. 30 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Meet”$"
 
 RA_Mistralton_EventScript_Transition_30::
@@ -700,7 +700,7 @@ RA_Mistralton_EventScript_Transition_30::
 	end
 
 RA_Mistralton_Text_Transition_31:
-	.string "Transition test No. 31 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Cross”$"
 
 RA_Mistralton_EventScript_Transition_31::
@@ -712,7 +712,7 @@ RA_Mistralton_EventScript_Transition_31::
 	end
 
 RA_Mistralton_Text_Transition_32:
-	.string "Transition test No. 32 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Asymmetric Spiral”$"
 
 RA_Mistralton_EventScript_Transition_32::
@@ -724,7 +724,7 @@ RA_Mistralton_EventScript_Transition_32::
 	end
 
 RA_Mistralton_Text_Transition_33:
-	.string "Transition test No. 33 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Symmetric Spiral”$"
 
 RA_Mistralton_EventScript_Transition_33::
@@ -736,7 +736,7 @@ RA_Mistralton_EventScript_Transition_33::
 	end
 
 RA_Mistralton_Text_Transition_34:
-	.string "Transition test No. 34 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Meet in Sequence”$"
 
 RA_Mistralton_EventScript_Transition_34::
@@ -748,7 +748,7 @@ RA_Mistralton_EventScript_Transition_34::
 	end
 
 RA_Mistralton_Text_Transition_35:
-	.string "Transition test No. 35 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Cross in Sequence”$"
 
 RA_Mistralton_EventScript_Transition_35::
@@ -760,7 +760,7 @@ RA_Mistralton_EventScript_Transition_35::
 	end
 
 RA_Mistralton_Text_Transition_36:
-	.string "Transition test No. 36 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Asymmetric Spiral in\l"
 	.string "Sequence”$"
 
@@ -773,7 +773,7 @@ RA_Mistralton_EventScript_Transition_36::
 	end
 
 RA_Mistralton_Text_Transition_37:
-	.string "Transition test No. 37 of 37:\n"
+	.string "Transition test:\n"
 	.string "“Frontier Circles Symmetric Spiral in\l"
 	.string "Sequence”$"
 

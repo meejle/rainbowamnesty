@@ -67,8 +67,8 @@ const u8 gTrainerClassNames[][27] = { // Long enough to fit "Team Rainbow Rocket
     [TRAINER_CLASS_RS_PROTAG] = _("Pokémon Trainer"),
 
     // TRANSITION TESTS START
-    [TRAINER_CLASS_TRANSITION_01] = _("Transition Tester No."),
-    [TRAINER_CLASS_TRANSITION_02] = _("Transition Tester No."),
+    [TRAINER_CLASS_TRANSITION_01] = _("Aether Foundation"),
+    [TRAINER_CLASS_TRANSITION_02] = _("Amnesty Institute"),
     [TRAINER_CLASS_TRANSITION_03] = _("Transition Tester No."),
     [TRAINER_CLASS_TRANSITION_04] = _("Transition Tester No."),
     [TRAINER_CLASS_TRANSITION_05] = _("Transition Tester No."),

@@ -154,6 +154,7 @@ static void VBlankCB_Rayquaza(void);
 
 // Custom transitions
 static void Task_TransitionAetherFoundation(u8);
+static void Task_TransitionAmnestyInstitute(u8);
 
 static bool8 Blur_Init(struct Task *);
 static bool8 Blur_Main(struct Task *);
@@ -268,6 +269,8 @@ static bool8 Mugshot_End(struct Task *);
 // Custom transitions
 static bool8 TransitionAetherFoundation_Init(struct Task *);
 static bool8 TransitionAetherFoundation_SetGfx(struct Task *);
+static bool8 TransitionAmnestyInstitute_Init(struct Task *);
+static bool8 TransitionAmnestyInstitute_SetGfx(struct Task *);
 
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
@@ -350,6 +353,9 @@ static const u32 sFrontierSquares_Tilemap[] = INCBIN_U32("graphics/battle_transi
 static const u16 sTransitionAetherFoundation_Palette[] = INCBIN_U16("graphics/battle_transitions/aether_foundation.gbapal");
 static const u32 sTransitionAetherFoundation_Tileset[] = INCBIN_U32("graphics/battle_transitions/aether_foundation.4bpp.lz");
 static const u32 sTransitionAetherFoundation_Tilemap[] = INCBIN_U32("graphics/battle_transitions/aether_foundation.bin.lz");
+static const u16 sTransitionAmnestyInstitute_Palette[] = INCBIN_U16("graphics/battle_transitions/amnesty_institute.gbapal");
+static const u32 sTransitionAmnestyInstitute_Tileset[] = INCBIN_U32("graphics/battle_transitions/amnesty_institute.4bpp.lz");
+static const u32 sTransitionAmnestyInstitute_Tilemap[] = INCBIN_U32("graphics/battle_transitions/amnesty_institute.bin.lz");
 
 // All battle transitions use the same intro
 static const TaskFunc sTasks_Intro[B_TRANSITION_COUNT] =
@@ -407,6 +413,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
 
     // Custom transitions
     [B_TRANSITION_AETHER_FOUNDATION] = Task_TransitionAetherFoundation,
+    [B_TRANSITION_AMNESTY_INSTITUTE] = Task_TransitionAmnestyInstitute,
 };
 
 static const TransitionStateFunc sTaskHandlers[] =
@@ -988,6 +995,16 @@ static const TransitionStateFunc sTransitionAetherFoundation_Funcs[] =
 {
     TransitionAetherFoundation_Init,
     TransitionAetherFoundation_SetGfx,
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionAmnestyInstitute_Funcs[] =
+{
+    TransitionAmnestyInstitute_Init,
+    TransitionAmnestyInstitute_SetGfx,
     PatternWeave_Blend1,
     PatternWeave_Blend2,
     PatternWeave_FinishAppear,
@@ -4829,6 +4846,47 @@ static bool8 TransitionAetherFoundation_SetGfx(struct Task *task)
 static void Task_TransitionAetherFoundation(u8 taskId)
 {
     while (sTransitionAetherFoundation_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_AMNESTY_INSTITUTE
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionAmnestyInstitute_Init(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionAmnestyInstitute_Tileset, tileset);
+    LoadPalette(sTransitionAmnestyInstitute_Palette, BG_PLTT_ID(15), sizeof(sTransitionAmnestyInstitute_Palette));
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionAmnestyInstitute_SetGfx(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionAmnestyInstitute_Tilemap, tilemap);
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionAmnestyInstitute(u8 taskId)
+{
+    while (sTransitionAmnestyInstitute_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
 #undef tSinIndex
