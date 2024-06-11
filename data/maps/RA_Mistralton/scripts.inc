@@ -12,6 +12,26 @@ RA_Mistralton_Script_Debug_ChooseStarter::
 	giveitem ITEM_RARE_CANDY, 5
 	end
 
+RA_Mistralton_Script_Poke_Mart_Worker::
+	lockall
+	namebox name_mart_worker
+	msgbox RA_Mistralton_Text_Mart_Worker, MSGBOX_DEFAULT
+	hidenamebox
+	giveitem ITEM_DEVON_PARTS, 5
+	giveitem ITEM_CHERI_BERRY, 5
+	giveitem ITEM_ABILITY_PATCH, 5
+	giveitem ITEM_OLD_GATEAU, 5
+	giveitem ITEM_DYNAMAX_CANDY, 5
+	giveitem ITEM_GUARD_SPEC, 5
+	giveitem ITEM_CHARIZARDITE_X, 5
+	giveitem ITEM_DEEP_SEA_TOOTH, 5
+	giveitem ITEM_SILK_SCARF, 5
+	giveitem ITEM_KEY_TO_ROOM_4, 5
+	giveitem ITEM_SCROLL_OF_DARKNESS, 5
+	giveitem ITEM_POKE_BALL, 5
+	releaseall
+	end
+
 RA_Mistralton_Script_NameTheRival::
 	lock
 	faceplayer
@@ -327,11 +347,24 @@ RA_Mistralton_Text_GymSign:
 RA_Mistralton_Text_LockedDoor:
 	.string "The door is locked.$"
 
+RA_Mistralton_Text_Mart_Worker:
+	.string "Hi! I work at the {COLOR RED}{SHADOW LIGHT_RED}Poké Mart{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} on the top\n"
+	.string "floor of this {COLOR RED}{SHADOW LIGHT_RED}Pokémon Centre{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.\p"
+	.string "But I've forgotten my {COLOR RED}{SHADOW LIGHT_RED}Poké Pass{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, so I\n"
+	.string "can't get in...\p"
+	.string "Here, let me offload some of this stock\n"
+	.string "on you, before it gets sun damaged.\p"
+	.string "And it'll be a good chance to {COLOR BLUE}{SHADOW LIGHT_BLUE}test your\n"
+	.string "fancy multiple-item-receiving script{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}!$"
+
 name_confused_lady:
 	.string "Confused-looking woman$"
 
 name_tech_enthusiast:
 	.string "Science fan$"
+
+name_mart_worker:
+	.string "Poké Mart worker$"
 
 
 
@@ -364,8 +397,8 @@ RA_Mistralton_EventScript_Transition_02::
 	end
 
 RA_Mistralton_Text_Transition_03:
-	.string "Transition test:\n"
-	.string "“Shuffle”$"
+	.string "Custom transition test:\n"
+	.string "“Team Rainbow Rocket”$"
 
 RA_Mistralton_EventScript_Transition_03::
 	lockall

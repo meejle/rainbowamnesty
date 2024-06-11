@@ -881,7 +881,7 @@ u8 GetTrainerBattleTransition(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_02)
         return B_TRANSITION_AMNESTY_INSTITUTE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_03)
-        return B_TRANSITION_SHUFFLE;
+        return B_TRANSITION_TEAM_RAINBOW_ROCKET;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_04)
         return B_TRANSITION_BIG_POKEBALL;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_05)

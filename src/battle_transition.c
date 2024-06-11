@@ -155,6 +155,7 @@ static void VBlankCB_Rayquaza(void);
 // Custom transitions
 static void Task_TransitionAetherFoundation(u8);
 static void Task_TransitionAmnestyInstitute(u8);
+static void Task_TransitionTeamRainbowRocket(u8);
 
 static bool8 Blur_Init(struct Task *);
 static bool8 Blur_Main(struct Task *);
@@ -271,6 +272,8 @@ static bool8 TransitionAetherFoundation_Init(struct Task *);
 static bool8 TransitionAetherFoundation_SetGfx(struct Task *);
 static bool8 TransitionAmnestyInstitute_Init(struct Task *);
 static bool8 TransitionAmnestyInstitute_SetGfx(struct Task *);
+static bool8 TransitionTeamRainbowRocket_Init(struct Task *);
+static bool8 TransitionTeamRainbowRocket_SetGfx(struct Task *);
 
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
@@ -356,6 +359,9 @@ static const u32 sTransitionAetherFoundation_Tilemap[] = INCBIN_U32("graphics/ba
 static const u16 sTransitionAmnestyInstitute_Palette[] = INCBIN_U16("graphics/battle_transitions/amnesty_institute.gbapal");
 static const u32 sTransitionAmnestyInstitute_Tileset[] = INCBIN_U32("graphics/battle_transitions/amnesty_institute.4bpp.lz");
 static const u32 sTransitionAmnestyInstitute_Tilemap[] = INCBIN_U32("graphics/battle_transitions/amnesty_institute.bin.lz");
+static const u16 sTransitionTeamRainbowRocket_Palette[] = INCBIN_U16("graphics/battle_transitions/team_rainbow_rocket.gbapal");
+static const u32 sTransitionTeamRainbowRocket_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_rainbow_rocket.4bpp.lz");
+static const u32 sTransitionTeamRainbowRocket_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_rainbow_rocket.bin.lz");
 
 // All battle transitions use the same intro
 static const TaskFunc sTasks_Intro[B_TRANSITION_COUNT] =
@@ -414,6 +420,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     // Custom transitions
     [B_TRANSITION_AETHER_FOUNDATION] = Task_TransitionAetherFoundation,
     [B_TRANSITION_AMNESTY_INSTITUTE] = Task_TransitionAmnestyInstitute,
+    [B_TRANSITION_TEAM_RAINBOW_ROCKET] = Task_TransitionTeamRainbowRocket,
 };
 
 static const TransitionStateFunc sTaskHandlers[] =
@@ -1005,6 +1012,16 @@ static const TransitionStateFunc sTransitionAmnestyInstitute_Funcs[] =
 {
     TransitionAmnestyInstitute_Init,
     TransitionAmnestyInstitute_SetGfx,
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamRainbowRocket_Funcs[] =
+{
+    TransitionTeamRainbowRocket_Init,
+    TransitionTeamRainbowRocket_SetGfx,
     PatternWeave_Blend1,
     PatternWeave_Blend2,
     PatternWeave_FinishAppear,
@@ -4887,6 +4904,47 @@ static bool8 TransitionAmnestyInstitute_SetGfx(struct Task *task)
 static void Task_TransitionAmnestyInstitute(u8 taskId)
 {
     while (sTransitionAmnestyInstitute_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_RAINBOW_ROCKET
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamRainbowRocket_Init(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamRainbowRocket_Tileset, tileset);
+    LoadPalette(sTransitionTeamRainbowRocket_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamRainbowRocket_Palette));
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamRainbowRocket_SetGfx(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamRainbowRocket_Tilemap, tilemap);
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamRainbowRocket(u8 taskId)
+{
+    while (sTransitionTeamRainbowRocket_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
 #undef tSinIndex
