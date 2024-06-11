@@ -151,6 +151,10 @@ static void VBlankCB_WhiteBarsFade_Blend(void);
 static void HBlankCB_WhiteBarsFade(void);
 static void VBlankCB_AngledWipes(void);
 static void VBlankCB_Rayquaza(void);
+
+// Custom transitions
+static void Task_TransitionAetherFoundation(u8);
+
 static bool8 Blur_Init(struct Task *);
 static bool8 Blur_Main(struct Task *);
 static bool8 Blur_End(struct Task *);
@@ -260,6 +264,11 @@ static bool8 Mugshot_GradualWhiteFade(struct Task *);
 static bool8 Mugshot_InitFadeWhiteToBlack(struct Task *);
 static bool8 Mugshot_FadeToBlack(struct Task *);
 static bool8 Mugshot_End(struct Task *);
+
+// Custom transitions
+static bool8 TransitionAetherFoundation_Init(struct Task *);
+static bool8 TransitionAetherFoundation_SetGfx(struct Task *);
+
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
 static void VBlankCB_Mugshots(void);
@@ -337,6 +346,11 @@ static const u32 sFrontierSquares_Shrink1_Tileset[] = INCBIN_U32("graphics/battl
 static const u32 sFrontierSquares_Shrink2_Tileset[] = INCBIN_U32("graphics/battle_transitions/frontier_square_4.4bpp.lz");
 static const u32 sFrontierSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/frontier_squares.bin");
 
+// Custom transitions
+static const u16 sTransitionAetherFoundation_Palette[] = INCBIN_U16("graphics/battle_transitions/aether_foundation.gbapal");
+static const u32 sTransitionAetherFoundation_Tileset[] = INCBIN_U32("graphics/battle_transitions/aether_foundation.4bpp.lz");
+static const u32 sTransitionAetherFoundation_Tilemap[] = INCBIN_U32("graphics/battle_transitions/aether_foundation.bin.lz");
+
 // All battle transitions use the same intro
 static const TaskFunc sTasks_Intro[B_TRANSITION_COUNT] =
 {
@@ -390,6 +404,9 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_FRONTIER_CIRCLES_CROSS_IN_SEQ] = Task_FrontierCirclesCrossInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_ASYMMETRIC_SPIRAL_IN_SEQ] = Task_FrontierCirclesAsymmetricSpiralInSeq,
     [B_TRANSITION_FRONTIER_CIRCLES_SYMMETRIC_SPIRAL_IN_SEQ] = Task_FrontierCirclesSymmetricSpiralInSeq,
+
+    // Custom transitions
+    [B_TRANSITION_AETHER_FOUNDATION] = Task_TransitionAetherFoundation,
 };
 
 static const TransitionStateFunc sTaskHandlers[] =
@@ -963,6 +980,18 @@ static const TransitionStateFunc sFrontierSquaresScroll_Funcs[] =
     FrontierSquaresScroll_SetBlack,
     FrontierSquaresScroll_Erase,
     FrontierSquaresScroll_End
+};
+
+// Custom transitions
+
+static const TransitionStateFunc sTransitionAetherFoundation_Funcs[] =
+{
+    TransitionAetherFoundation_Init,
+    TransitionAetherFoundation_SetGfx,
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
 };
 
 #define SQUARE_SIZE 4
@@ -4760,3 +4789,47 @@ static bool8 FrontierSquaresScroll_End(struct Task *task)
 #undef tScrollYDir
 #undef tScrollUpdateFlag
 #undef tSquareNum
+
+
+// Custom transitions
+
+//-----------------------------------
+// B_TRANSITION_AETHER_FOUNDATION
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionAetherFoundation_Init(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionAetherFoundation_Tileset, tileset);
+    LoadPalette(sTransitionAetherFoundation_Palette, BG_PLTT_ID(15), sizeof(sTransitionAetherFoundation_Palette));
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionAetherFoundation_SetGfx(struct Task *task)
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionAetherFoundation_Tilemap, tilemap);
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionAetherFoundation(u8 taskId)
+{
+    while (sTransitionAetherFoundation_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
+#undef tSinIndex
+#undef tAmplitude

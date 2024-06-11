@@ -9,6 +9,7 @@ RA_Mistralton_Script_Debug_ChooseStarter::
 	special ChooseStarter
 	waitstate
 	setflag FLAG_SYS_POKEMON_GET
+	giveitem ITEM_RARE_CANDY, 5
 	end
 
 RA_Mistralton_Script_NameTheRival::
@@ -336,567 +337,426 @@ name_tech_enthusiast:
 
 
 RA_Mistralton_Text_Transition_Defeat:
-	.string "Wasn't that a cool transition?$"
+	.string "Cool, huh?$"
 
 RA_Mistralton_Text_Transition_01:
 	.string "Transition test No. 1 of 37:\n"
-	.string "“Blur”$"
-
-RA_Mistralton_Script_Transition_01::
-	lock
-	msgbox RA_Mistralton_Text_Transition_01, MSGBOX_DEFAULT
-	closemessage
-	release
-	end
+	.string "“Aether Foundation”$"
 
 RA_Mistralton_EventScript_Transition_01::
+	lockall
+	msgbox RA_Mistralton_Text_Transition_01, MSGBOX_DEFAULT
+	closemessage
 	trainerbattle_no_intro TRAINER_ANDRES_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_02:
 	.string "Transition test No. 2 of 37:\n"
 	.string "“Swirl”$"
 
-RA_Mistralton_Script_Transition_02::
-	lock
+RA_Mistralton_EventScript_Transition_02::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_02, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_02::
 	trainerbattle_no_intro TRAINER_ANDRES_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_03:
 	.string "Transition test No. 3 of 37:\n"
 	.string "“Shuffle”$"
 
-RA_Mistralton_Script_Transition_03::
-	lock
+RA_Mistralton_EventScript_Transition_03::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_03, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_03::
 	trainerbattle_no_intro TRAINER_CORY_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_04:
 	.string "Transition test No. 4 of 37:\n"
 	.string "“Big Poké Ball”$"
 
-RA_Mistralton_Script_Transition_04::
-	lock
+RA_Mistralton_EventScript_Transition_04::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_04, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_04::
 	trainerbattle_no_intro TRAINER_CORY_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_05:
 	.string "Transition test No. 5 of 37:\n"
 	.string "“Poké Balls Trail”$"
 
-RA_Mistralton_Script_Transition_05::
-	lock
+RA_Mistralton_EventScript_Transition_05::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_05, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_05::
 	trainerbattle_no_intro TRAINER_CORY_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_06:
 	.string "Transition test No. 6 of 37:\n"
 	.string "“Clockwise Wipe”$"
 
-RA_Mistralton_Script_Transition_06::
-	lock
+RA_Mistralton_EventScript_Transition_06::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_06, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_06::
 	trainerbattle_no_intro TRAINER_CORY_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_07:
 	.string "Transition test No. 7 of 37:\n"
 	.string "“Ripple”$"
 
-RA_Mistralton_Script_Transition_07::
-	lock
+RA_Mistralton_EventScript_Transition_07::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_07, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_07::
 	trainerbattle_no_intro TRAINER_PABLO_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_08:
 	.string "Transition test No. 8 of 37:\n"
 	.string "“Wave”$"
 
-RA_Mistralton_Script_Transition_08::
-	lock
+RA_Mistralton_EventScript_Transition_08::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_08, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_08::
 	trainerbattle_no_intro TRAINER_PABLO_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_09:
 	.string "Transition test No. 9 of 37:\n"
 	.string "“Slice”$"
 
-RA_Mistralton_Script_Transition_09::
-	lock
+RA_Mistralton_EventScript_Transition_09::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_09, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_09::
 	trainerbattle_no_intro TRAINER_PABLO_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_10:
 	.string "Transition test No. 10 of 37:\n"
 	.string "“White Bars Fade”$"
 
-RA_Mistralton_Script_Transition_10::
-	lock
+RA_Mistralton_EventScript_Transition_10::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_10, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_10::
 	trainerbattle_no_intro TRAINER_PABLO_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_11:
 	.string "Transition test No. 11 of 37:\n"
 	.string "“Grid Squares”$"
 
-RA_Mistralton_Script_Transition_11::
-	lock
+RA_Mistralton_EventScript_Transition_11::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_11, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_11::
 	trainerbattle_no_intro TRAINER_KOJI_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_12:
 	.string "Transition test No. 12 of 37:\n"
 	.string "“Angled Wipes”$"
 
-RA_Mistralton_Script_Transition_12::
-	lock
+RA_Mistralton_EventScript_Transition_12::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_12, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_12::
 	trainerbattle_no_intro TRAINER_KOJI_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_13:
 	.string "Transition test No. 13 of 37:\n"
 	.string "“Aqua”$"
 
-RA_Mistralton_Script_Transition_13::
-	lock
+RA_Mistralton_EventScript_Transition_13::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_13, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_13::
 	trainerbattle_no_intro TRAINER_KOJI_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_14:
 	.string "Transition test No. 14 of 37:\n"
 	.string "“Magma”$"
 
-RA_Mistralton_Script_Transition_14::
-	lock
+RA_Mistralton_EventScript_Transition_14::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_14, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_14::
 	trainerbattle_no_intro TRAINER_KOJI_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_15:
 	.string "Transition test No. 15 of 37:\n"
 	.string "“Regice”$"
 
-RA_Mistralton_Script_Transition_15::
-	lock
+RA_Mistralton_EventScript_Transition_15::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_15, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_15::
 	trainerbattle_no_intro TRAINER_CRISTIN_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_16:
 	.string "Transition test No. 16 of 37:\n"
 	.string "“Registeel”$"
 
-RA_Mistralton_Script_Transition_16::
-	lock
+RA_Mistralton_EventScript_Transition_16::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_16, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_16::
 	trainerbattle_no_intro TRAINER_CRISTIN_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_17:
 	.string "Transition test No. 17 of 37:\n"
 	.string "“Regirock”$"
 
-RA_Mistralton_Script_Transition_17::
-	lock
+RA_Mistralton_EventScript_Transition_17::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_17, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_17::
 	trainerbattle_no_intro TRAINER_CRISTIN_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_18:
 	.string "Transition test No. 18 of 37:\n"
 	.string "“Kyogre”$"
 
-RA_Mistralton_Script_Transition_18::
-	lock
+RA_Mistralton_EventScript_Transition_18::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_18, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_18::
 	trainerbattle_no_intro TRAINER_CRISTIN_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_19:
 	.string "Transition test No. 19 of 37:\n"
 	.string "“Groudon”$"
 
-RA_Mistralton_Script_Transition_19::
-	lock
+RA_Mistralton_EventScript_Transition_19::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_19, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_19::
 	trainerbattle_no_intro TRAINER_FERNANDO_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_20:
 	.string "Transition test No. 20 of 37:\n"
 	.string "“Rayquaza”$"
 
-RA_Mistralton_Script_Transition_20::
-	lock
+RA_Mistralton_EventScript_Transition_20::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_20, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_20::
 	trainerbattle_no_intro TRAINER_FERNANDO_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_21:
 	.string "Transition test No. 21 of 37:\n"
 	.string "“Shred Split”$"
 
-RA_Mistralton_Script_Transition_21::
-	lock
+RA_Mistralton_EventScript_Transition_21::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_21, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_21::
 	trainerbattle_no_intro TRAINER_FERNANDO_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_22:
 	.string "Transition test No. 22 of 37:\n"
 	.string "“Black Hole”$"
 
-RA_Mistralton_Script_Transition_22::
-	lock
+RA_Mistralton_EventScript_Transition_22::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_22, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_22::
-
 	trainerbattle_no_intro TRAINER_FERNANDO_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_23:
 	.string "Transition test No. 23 of 37:\n"
 	.string "“Black Hole Pulsate”$"
 
-RA_Mistralton_Script_Transition_23::
-	lock
+RA_Mistralton_EventScript_Transition_23::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_23, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_23::
 	trainerbattle_no_intro TRAINER_SAWYER_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_24:
 	.string "Transition test No. 24 of 37:\n"
 	.string "“Rectangular Spiral”$"
 
-RA_Mistralton_Script_Transition_24::
-	lock
+RA_Mistralton_EventScript_Transition_24::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_24, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_24::
 	trainerbattle_no_intro TRAINER_SAWYER_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_25:
 	.string "Transition test No. 25 of 37:\n"
 	.string "“Frontier Logo Wiggle”$"
 
-RA_Mistralton_Script_Transition_25::
-	lock
+RA_Mistralton_EventScript_Transition_25::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_25, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_25::
 	trainerbattle_no_intro TRAINER_SAWYER_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_26:
 	.string "Transition test No. 26 of 37:\n"
 	.string "“Frontier Logo Wave”$"
 
-RA_Mistralton_Script_Transition_26::
-	lock
+RA_Mistralton_EventScript_Transition_26::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_26, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_26::
 	trainerbattle_no_intro TRAINER_SAWYER_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_27:
 	.string "Transition test No. 27 of 37:\n"
 	.string "“Frontier Squares”$"
 
-RA_Mistralton_Script_Transition_27::
-	lock
+RA_Mistralton_EventScript_Transition_27::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_27, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_27::
 	trainerbattle_no_intro TRAINER_GABRIELLE_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_28:
 	.string "Transition test No. 28 of 37:\n"
 	.string "“Frontier Squares Scroll”$"
 
-RA_Mistralton_Script_Transition_28::
-	lock
+RA_Mistralton_EventScript_Transition_28::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_28, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_28::
 	trainerbattle_no_intro TRAINER_GABRIELLE_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_29:
 	.string "Transition test No. 29 of 37:\n"
 	.string "“Frontier Squares Spiral”$"
 
-RA_Mistralton_Script_Transition_29::
-	lock
+RA_Mistralton_EventScript_Transition_29::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_29, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_29::
 	trainerbattle_no_intro TRAINER_GABRIELLE_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_30:
 	.string "Transition test No. 30 of 37:\n"
 	.string "“Frontier Circles Meet”$"
 
-RA_Mistralton_Script_Transition_30::
-	lock
+RA_Mistralton_EventScript_Transition_30::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_30, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_30::
 	trainerbattle_no_intro TRAINER_GABRIELLE_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_31:
 	.string "Transition test No. 31 of 37:\n"
 	.string "“Frontier Circles Cross”$"
 
-RA_Mistralton_Script_Transition_31::
-	lock
+RA_Mistralton_EventScript_Transition_31::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_31, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_31::
 	trainerbattle_no_intro TRAINER_THALIA_2, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_32:
 	.string "Transition test No. 32 of 37:\n"
 	.string "“Frontier Circles Asymmetric Spiral”$"
 
-RA_Mistralton_Script_Transition_32::
-	lock
+RA_Mistralton_EventScript_Transition_32::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_32, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_32::
 	trainerbattle_no_intro TRAINER_THALIA_3, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_33:
 	.string "Transition test No. 33 of 37:\n"
 	.string "“Frontier Circles Symmetric Spiral”$"
 
-RA_Mistralton_Script_Transition_33::
-	lock
+RA_Mistralton_EventScript_Transition_33::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_33, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_33::
 	trainerbattle_no_intro TRAINER_THALIA_4, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_34:
 	.string "Transition test No. 34 of 37:\n"
 	.string "“Frontier Circles Meet in Sequence”$"
 
-RA_Mistralton_Script_Transition_34::
-	lock
+RA_Mistralton_EventScript_Transition_34::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_34, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_34::
 	trainerbattle_no_intro TRAINER_THALIA_5, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_35:
 	.string "Transition test No. 35 of 37:\n"
 	.string "“Frontier Circles Cross in Sequence”$"
 
-RA_Mistralton_Script_Transition_35::
-	lock
+RA_Mistralton_EventScript_Transition_35::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_35, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_35::
 	trainerbattle_no_intro TRAINER_MARIELA, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_36:
@@ -904,16 +764,12 @@ RA_Mistralton_Text_Transition_36:
 	.string "“Frontier Circles Asymmetric Spiral in\l"
 	.string "Sequence”$"
 
-RA_Mistralton_Script_Transition_36::
-	lock
+RA_Mistralton_EventScript_Transition_36::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_36, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_36::
 	trainerbattle_no_intro TRAINER_ALVARO, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end
 
 RA_Mistralton_Text_Transition_37:
@@ -921,14 +777,10 @@ RA_Mistralton_Text_Transition_37:
 	.string "“Frontier Circles Symmetric Spiral in\l"
 	.string "Sequence”$"
 
-RA_Mistralton_Script_Transition_37::
-	lock
+RA_Mistralton_EventScript_Transition_37::
+	lockall
 	msgbox RA_Mistralton_Text_Transition_37, MSGBOX_DEFAULT
 	closemessage
-	release
-	end
-
-RA_Mistralton_EventScript_Transition_37::
 	trainerbattle_no_intro TRAINER_EVERETT, RA_Mistralton_Text_Transition_Defeat
-	msgbox RA_Mistralton_Text_Transition_Defeat, MSGBOX_AUTOCLOSE
+	releaseall
 	end

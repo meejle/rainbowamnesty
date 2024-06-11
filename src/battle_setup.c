@@ -877,7 +877,7 @@ u8 GetTrainerBattleTransition(void)
 
     // TRANSITION TESTING STARTS
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_01)
-        return B_TRANSITION_BLUR;
+        return B_TRANSITION_AETHER_FOUNDATION;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_02)
         return B_TRANSITION_SWIRL;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_03)
