@@ -378,7 +378,13 @@ RA_Mistralton_Text_Transition_01:
 	.string "“Battle Club Squares”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
 	.string "This will be used for fights against\n"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Battle Club{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Trainers, but not the more\l"
-	.string "powerful {COLOR RED}{SHADOW LIGHT_RED}Battle Club{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Coaches.$"
+	.string "powerful {COLOR RED}{SHADOW LIGHT_RED}Battle Club{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Coaches.\p"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Battle Clubs{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are something I'm\n"
+	.string "borrowing from the anime, and you\l"
+	.string "should look them up on {COLOR RED}{SHADOW LIGHT_RED}Bulbapedia{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.\p"
+	.string "With Poké Ball restrictions on some\n"
+	.string "routes, {COLOR RED}{SHADOW LIGHT_RED}Battle Clubs{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} will be a good way\l"
+	.string "to earn some extra Exp. Points.$"
 
 RA_Mistralton_EventScript_Transition_01::
 	lockall
