@@ -14,6 +14,7 @@ RA_Mistralton_Script_Debug_ChooseStarter::
 
 RA_Mistralton_Script_Poke_Mart_Worker::
 	lockall
+	faceplayer
 	namebox name_mart_worker
 	msgbox RA_Mistralton_Text_Mart_Worker, MSGBOX_DEFAULT
 	hidenamebox
@@ -373,8 +374,11 @@ RA_Mistralton_Text_Transition_Defeat:
 	.string "Cool, huh?$"
 
 RA_Mistralton_Text_Transition_01:
-	.string "Custom transition test:\n"
-	.string "“Aether Foundation”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Battle Club Squares”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "This will be used for fights against\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Battle Club{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Trainers, but not the more\l"
+	.string "powerful {COLOR RED}{SHADOW LIGHT_RED}Battle Club{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Coaches.$"
 
 RA_Mistralton_EventScript_Transition_01::
 	lockall
@@ -385,8 +389,10 @@ RA_Mistralton_EventScript_Transition_01::
 	end
 
 RA_Mistralton_Text_Transition_02:
-	.string "Custom transition test:\n"
-	.string "“Amnesty Institute”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Battle Club”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "This is the one we'll use when players\n"
+	.string "challenge the {COLOR RED}{SHADOW LIGHT_RED}Battle Club{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Coaches.$"
 
 RA_Mistralton_EventScript_Transition_02::
 	lockall
@@ -397,8 +403,14 @@ RA_Mistralton_EventScript_Transition_02::
 	end
 
 RA_Mistralton_Text_Transition_03:
-	.string "Custom transition test:\n"
-	.string "“Team Rainbow Rocket”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Rocket”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "We're going in generational order, now.\p"
+	.string "Yes, the game's about\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, but this still\l"
+	.string "might come in handy.\p"
+	.string "Maybe it can be used when players\n"
+	.string "battle {COLOR GREEN}{SHADOW LIGHT_GREEN}Giovanni{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}?$"
 
 RA_Mistralton_EventScript_Transition_03::
 	lockall
@@ -409,8 +421,12 @@ RA_Mistralton_EventScript_Transition_03::
 	end
 
 RA_Mistralton_Text_Transition_04:
-	.string "Transition test:\n"
-	.string "“Big Poké Ball”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Silph Co.”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "I'm not sure why {COLOR RED}{SHADOW LIGHT_RED}Silph Co.{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} would become\n"
+	.string "antagonistic, suddenly, but again, I\l"
+	.string "wanted to cover my bases.\p"
+	.string "Besides, their logo is cool.$"
 
 RA_Mistralton_EventScript_Transition_04::
 	lockall
@@ -421,8 +437,10 @@ RA_Mistralton_EventScript_Transition_04::
 	end
 
 RA_Mistralton_Text_Transition_05:
-	.string "Transition test:\n"
-	.string "“Poké Balls Trail”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Magma”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "These aren't the “vanilla” {COLOR RED}{SHADOW LIGHT_RED}Team Magma{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\n"
+	.string "and {COLOR RED}{SHADOW LIGHT_RED}Team Aqua{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} transitions...$"
 
 RA_Mistralton_EventScript_Transition_05::
 	lockall
@@ -433,8 +451,11 @@ RA_Mistralton_EventScript_Transition_05::
 	end
 
 RA_Mistralton_Text_Transition_06:
-	.string "Transition test:\n"
-	.string "“Clockwise Wipe”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Aqua”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "...for consistency's sake, I remade\n"
+	.string "these with brightly-coloured\l"
+	.string "backgrounds, too.$"
 
 RA_Mistralton_EventScript_Transition_06::
 	lockall
@@ -445,8 +466,8 @@ RA_Mistralton_EventScript_Transition_06::
 	end
 
 RA_Mistralton_Text_Transition_07:
-	.string "Transition test:\n"
-	.string "“Ripple”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Galactic”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 RA_Mistralton_EventScript_Transition_07::
 	lockall
@@ -457,8 +478,8 @@ RA_Mistralton_EventScript_Transition_07::
 	end
 
 RA_Mistralton_Text_Transition_08:
-	.string "Transition test:\n"
-	.string "“Wave”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Plasma”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 RA_Mistralton_EventScript_Transition_08::
 	lockall
@@ -469,8 +490,13 @@ RA_Mistralton_EventScript_Transition_08::
 	end
 
 RA_Mistralton_Text_Transition_09:
-	.string "Transition test:\n"
-	.string "“Slice”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Flare”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Flare's{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} transition was really cool\n"
+	.string "in {COLOR RED}{SHADOW LIGHT_RED}Pokémon X and Y{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, so it's a shame it's\l"
+	.string "one of the plainer ones here.\p"
+	.string "Not that {COLOR RED}{SHADOW LIGHT_RED}Team Flare{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} deserves anything\n"
+	.string "much.$"
 
 RA_Mistralton_EventScript_Transition_09::
 	lockall
@@ -481,8 +507,8 @@ RA_Mistralton_EventScript_Transition_09::
 	end
 
 RA_Mistralton_Text_Transition_10:
-	.string "Transition test:\n"
-	.string "“White Bars Fade”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Skull”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 RA_Mistralton_EventScript_Transition_10::
 	lockall
@@ -493,8 +519,16 @@ RA_Mistralton_EventScript_Transition_10::
 	end
 
 RA_Mistralton_Text_Transition_11:
-	.string "Transition test:\n"
-	.string "“Grid Squares”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Aether Foundation”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "The {COLOR RED}{SHADOW LIGHT_RED}Aether Foundation{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} more “got mixed\n"
+	.string "up in” the Ultra Beast debacle\l"
+	.string "(and {COLOR RED}{SHADOW LIGHT_RED}Team Rainbow Rocket's{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} takeover)\l"
+	.string "than “caused” either of them.\p"
+	.string "Aside from {COLOR GREEN}{SHADOW LIGHT_GREEN}Director Faba{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, anyway.\p"
+	.string "But they're close enough to both that\n"
+	.string "they'll almost certainly appear in our\l"
+	.string "story somewhere.$"
 
 RA_Mistralton_EventScript_Transition_11::
 	lockall
@@ -505,8 +539,8 @@ RA_Mistralton_EventScript_Transition_11::
 	end
 
 RA_Mistralton_Text_Transition_12:
-	.string "Transition test:\n"
-	.string "“Angled Wipes”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Rainbow Rocket”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 RA_Mistralton_EventScript_Transition_12::
 	lockall
@@ -517,8 +551,8 @@ RA_Mistralton_EventScript_Transition_12::
 	end
 
 RA_Mistralton_Text_Transition_13:
-	.string "Transition test:\n"
-	.string "“Aqua”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Yell”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 RA_Mistralton_EventScript_Transition_13::
 	lockall
@@ -529,8 +563,14 @@ RA_Mistralton_EventScript_Transition_13::
 	end
 
 RA_Mistralton_Text_Transition_14:
-	.string "Transition test:\n"
-	.string "“Magma”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Macro Cosmos”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "You may remember {COLOR RED}{SHADOW LIGHT_RED}Macro Cosmos{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} as\n"
+	.string "{COLOR GREEN}{SHADOW LIGHT_GREEN}Rose's {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}antagonistic-but-not-evil\l"
+	.string "company in {COLOR RED}{SHADOW LIGHT_RED}Pokémon Sword and Shield{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}.\p"
+	.string "Again, it's a toss-up whether or not\n"
+	.string "they'll appear, but our bases are well-\l"
+	.string "covered.$"
 
 RA_Mistralton_EventScript_Transition_14::
 	lockall
@@ -541,8 +581,14 @@ RA_Mistralton_EventScript_Transition_14::
 	end
 
 RA_Mistralton_Text_Transition_15:
-	.string "Transition test:\n"
-	.string "“Regice”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Rose Tower”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "It's weird that {COLOR RED}{SHADOW LIGHT_RED}Sword and Shield{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} used\n"
+	.string "the {COLOR RED}{SHADOW LIGHT_RED}Rose Tower{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} logo for its\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}“Macro Cosmos” {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Trainer Class, when\l"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Macro Cosmos {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}has its own logo.\p"
+	.string "But anyway, I made that transition,\n"
+	.string "too.$"
 
 RA_Mistralton_EventScript_Transition_15::
 	lockall
@@ -553,8 +599,11 @@ RA_Mistralton_EventScript_Transition_15::
 	end
 
 RA_Mistralton_Text_Transition_16:
-	.string "Transition test:\n"
-	.string "“Registeel”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Galaxy Expedition Team”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "A trip to {COLOR RED}{SHADOW LIGHT_RED}Hisui{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} (and/or “through time”)\n"
+	.string "isn't currently on the cards.\p"
+	.string "But, just in case...$"
 
 RA_Mistralton_EventScript_Transition_16::
 	lockall
@@ -565,8 +614,8 @@ RA_Mistralton_EventScript_Transition_16::
 	end
 
 RA_Mistralton_Text_Transition_17:
-	.string "Transition test:\n"
-	.string "“Regirock”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Star”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}$"
 
 RA_Mistralton_EventScript_Transition_17::
 	lockall
@@ -577,8 +626,16 @@ RA_Mistralton_EventScript_Transition_17::
 	end
 
 RA_Mistralton_Text_Transition_18:
-	.string "Transition test:\n"
-	.string "“Kyogre”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Team Break”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Team Break{SHADOW LIGHT_GRAY}{COLOR DARK_GRAY} only exists in\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Pokémon Masters EX's Pasio{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} region, but\l"
+	.string "I've always been quite taken with their\l"
+	.string "design, logo, and battle theme.\p"
+	.string "So, if I can find a way to squeeze them\n"
+	.string "in, I probably will.\p"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Poryphones{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} are also a {COLOR RED}{SHADOW LIGHT_RED}Pasio{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} thing, so it\n"
+	.string "wouldn't be completely out of the blue.$"
 
 RA_Mistralton_EventScript_Transition_18::
 	lockall
@@ -589,8 +646,16 @@ RA_Mistralton_EventScript_Transition_18::
 	end
 
 RA_Mistralton_Text_Transition_19:
-	.string "Transition test:\n"
-	.string "“Groudon”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Amnesty Institute”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "I like that this is both:\p"
+	.string "a) Good attention to detail if, say, a\n"
+	.string "friendly {COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Agent\l"
+	.string "battles you “to test out your new\l"
+	.string "Pokémon!”\p"
+	.string "b) Ready if we end up going down the\n"
+	.string "“{COLOR RED}{SHADOW LIGHT_RED}Amnesty Institute{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} also needs to be\l"
+	.string "taken down” route.$"
 
 RA_Mistralton_EventScript_Transition_19::
 	lockall
@@ -601,8 +666,12 @@ RA_Mistralton_EventScript_Transition_19::
 	end
 
 RA_Mistralton_Text_Transition_20:
-	.string "Transition test:\n"
-	.string "“Rayquaza”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Pokémon League Squares”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "After the main campaign, the\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Pokémon League{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} will open up.\p"
+	.string "This is the transition for Gym Trainers,\n"
+	.string "but not Gym Leaders.$"
 
 RA_Mistralton_EventScript_Transition_20::
 	lockall
@@ -613,8 +682,10 @@ RA_Mistralton_EventScript_Transition_20::
 	end
 
 RA_Mistralton_Text_Transition_21:
-	.string "Transition test:\n"
-	.string "“Shred Split”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Pokémon League”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "This fancier-looking one is the\n"
+	.string "Gym Leaders' transition.$"
 
 RA_Mistralton_EventScript_Transition_21::
 	lockall
@@ -625,8 +696,10 @@ RA_Mistralton_EventScript_Transition_21::
 	end
 
 RA_Mistralton_Text_Transition_22:
-	.string "Transition test:\n"
-	.string "“Black Hole”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Pokémon League Champion”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "Of course, the {COLOR RED}Pokémon League{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY} Champion\n"
+	.string "deserves an even fancier transition!$"
 
 RA_Mistralton_EventScript_Transition_22::
 	lockall
@@ -637,8 +710,14 @@ RA_Mistralton_EventScript_Transition_22::
 	end
 
 RA_Mistralton_Text_Transition_23:
-	.string "Transition test:\n"
-	.string "“Black Hole Pulsate”$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Built-in transition:\n"
+	.string "“Blur”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "These last few transitions already\n"
+	.string "existed in {COLOR RED}{SHADOW LIGHT_RED}Pokémon Emerald{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, but aren't\l"
+	.string "the ones I see all the time.\p"
+	.string "So I might use them for normal battles\n"
+	.string "against Trainers and wild Pokémon, just\l"
+	.string "to keep things fresh.$"
 
 RA_Mistralton_EventScript_Transition_23::
 	lockall

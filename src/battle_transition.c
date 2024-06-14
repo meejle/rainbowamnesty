@@ -425,9 +425,11 @@ static const u32 sTransitionAmnestyInstitute_Tilemap[] = INCBIN_U32("graphics/ba
 static const u16 sTransitionBattleClub_Palette[] = INCBIN_U16("graphics/battle_transitions/battle_club.gbapal");
 static const u32 sTransitionBattleClub_Tileset[] = INCBIN_U32("graphics/battle_transitions/battle_club.4bpp.lz");
 static const u32 sTransitionBattleClub_Tilemap[] = INCBIN_U32("graphics/battle_transitions/battle_club.bin.lz");
-static const u16 sTransitionBattleClubSquares_Palette[] = INCBIN_U16("graphics/battle_transitions/battle_club_square.gbapal");
-static const u32 sTransitionBattleClubSquares_Tileset[] = INCBIN_U32("graphics/battle_transitions/battle_club_square.4bpp.lz");
-static const u32 sTransitionBattleClubSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/battle_club_square.bin.lz");
+
+static const u16 sTransitionBattleClubSquares_Palette[] = INCBIN_U16("graphics/battle_transitions/battle_club_square_blanktiles.gbapal");
+static const u32 sTransitionBattleClubSquares_Tileset[] = INCBIN_U32("graphics/battle_transitions/battle_club_square_1.4bpp.lz");
+static const u32 sTransitionBattleClubSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/battle_club_squares.bin");
+
 static const u16 sTransitionGalaxyExpeditionTeam_Palette[] = INCBIN_U16("graphics/battle_transitions/galaxy_expedition_team.gbapal");
 static const u32 sTransitionGalaxyExpeditionTeam_Tileset[] = INCBIN_U32("graphics/battle_transitions/galaxy_expedition_team.4bpp.lz");
 static const u32 sTransitionGalaxyExpeditionTeam_Tilemap[] = INCBIN_U32("graphics/battle_transitions/galaxy_expedition_team.bin.lz");
@@ -440,9 +442,11 @@ static const u32 sTransitionPokemonLeague_Tilemap[] = INCBIN_U32("graphics/battl
 static const u16 sTransitionPokemonLeagueChampion_Palette[] = INCBIN_U16("graphics/battle_transitions/pokemon_league_champion.gbapal");
 static const u32 sTransitionPokemonLeagueChampion_Tileset[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_champion.4bpp.lz");
 static const u32 sTransitionPokemonLeagueChampion_Tilemap[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_champion.bin.lz");
-static const u16 sTransitionPokemonLeagueSquares_Palette[] = INCBIN_U16("graphics/battle_transitions/pokemon_league_square.gbapal");
-static const u32 sTransitionPokemonLeagueSquares_Tileset[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_square.4bpp.lz");
-static const u32 sTransitionPokemonLeagueSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_square.bin.lz");
+
+static const u16 sTransitionPokemonLeagueSquares_Palette[] = INCBIN_U16("graphics/battle_transitions/pokemon_league_square_blanktiles.gbapal");
+static const u32 sTransitionPokemonLeagueSquares_Tileset[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_square_1.4bpp.lz");
+static const u32 sTransitionPokemonLeagueSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_squares.bin");
+
 static const u16 sTransitionRoseTower_Palette[] = INCBIN_U16("graphics/battle_transitions/rose_tower.gbapal");
 static const u32 sTransitionRoseTower_Tileset[] = INCBIN_U32("graphics/battle_transitions/rose_tower.4bpp.lz");
 static const u32 sTransitionRoseTower_Tilemap[] = INCBIN_U32("graphics/battle_transitions/rose_tower.bin.lz");
@@ -2008,6 +2012,7 @@ static bool8 WeatherDuo_End(struct Task *task)
 // formed by a shimmering weave effect.
 static bool8 PatternWeave_Blend1(struct Task *task)
 {
+    PlaySE(SE_MUGSHOT);
     sTransitionData->VBlank_DMA = FALSE;
     if (task->tBlendDelay == 0 || --task->tBlendDelay == 0)
     {
@@ -2048,6 +2053,7 @@ static bool8 PatternWeave_Blend2(struct Task *task)
 
 static bool8 PatternWeave_FinishAppear(struct Task *task)
 {
+    // PlaySE(SE_M_COMET_PUNCH); Optionally we can play a sound effect when the transition finishes forming up.
     sTransitionData->VBlank_DMA = FALSE;
     task->tSinIndex += 8;
     task->tAmplitude -= 256;
@@ -5168,7 +5174,7 @@ static bool8 TransitionBattleClubSquares_Init(struct Task *task)
     u16 *tilemap, *tileset;
 
     GetBg0TilesDst(&tilemap, &tileset);
-    LZ77UnCompVram(sFrontierSquares_FilledBg_Tileset, tileset);
+    LZ77UnCompVram(sTransitionBattleClubSquares_Tileset, tileset);
     FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
     CopyBgTilemapBufferToVram(0);
     LoadPalette(sTransitionBattleClubSquares_Palette, BG_PLTT_ID(15), sizeof(sTransitionBattleClubSquares_Palette));
@@ -5280,7 +5286,7 @@ static bool8 TransitionPokemonLeagueSquares_Init(struct Task *task)
     u16 *tilemap, *tileset;
 
     GetBg0TilesDst(&tilemap, &tileset);
-    LZ77UnCompVram(sFrontierSquares_FilledBg_Tileset, tileset);
+    LZ77UnCompVram(sTransitionPokemonLeagueSquares_Tileset, tileset);
     FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
     CopyBgTilemapBufferToVram(0);
     LoadPalette(sTransitionPokemonLeagueSquares_Palette, BG_PLTT_ID(15), sizeof(sTransitionPokemonLeagueSquares_Palette));

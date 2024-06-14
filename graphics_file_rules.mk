@@ -447,6 +447,18 @@ $(BATTRANSGFXDIR)/frontier_square_4.4bpp: $(BATTRANSGFXDIR)/frontier_squares_bla
                                           $(BATTRANSGFXDIR)/frontier_squares_4.4bpp
 	@cat $^ >$@
 
+### Battle Club squares ###
+
+$(BATTRANSGFXDIR)/battle_club_square_1.4bpp: $(BATTRANSGFXDIR)/battle_club_square_blanktiles.4bpp \
+                                             $(BATTRANSGFXDIR)/battle_club_square.4bpp
+	@cat $^ >$@
+
+### Pokémon League sqaures ###
+
+$(BATTRANSGFXDIR)/pokemon_league_square_1.4bpp: $(BATTRANSGFXDIR)/pokemon_league_square_blanktiles.4bpp \
+                                                $(BATTRANSGFXDIR)/pokemon_league_square.4bpp
+	@cat $^ >$@
+
 $(SLOTMACHINEGFXDIR)/reel_time_gfx.4bpp: $(SLOTMACHINEGFXDIR)/reel_time_pikachu.4bpp \
                                          $(SLOTMACHINEGFXDIR)/reel_time_machine.4bpp
 	@cat $^ >$@
