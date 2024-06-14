@@ -155,7 +155,26 @@ static void VBlankCB_Rayquaza(void);
 // Custom transitions
 static void Task_TransitionAetherFoundation(u8);
 static void Task_TransitionAmnestyInstitute(u8);
+static void Task_TransitionBattleClub(u8);
+static void Task_TransitionBattleClubSquares(u8);
+static void Task_TransitionGalaxyExpeditionTeam(u8);
+static void Task_TransitionMacroCosmos(u8);
+static void Task_TransitionPokemonLeague(u8);
+static void Task_TransitionPokemonLeagueChampion(u8);
+static void Task_TransitionPokemonLeagueSquares(u8);
+static void Task_TransitionRoseTower(u8);
+static void Task_TransitionSilphCo(u8);
+static void Task_TransitionTeamAquaNew(u8);
+static void Task_TransitionTeamBreak(u8);
+static void Task_TransitionTeamFlare(u8);
+static void Task_TransitionTeamGalactic(u8);
+static void Task_TransitionTeamMagmaNew(u8);
+static void Task_TransitionTeamPlasma(u8);
 static void Task_TransitionTeamRainbowRocket(u8);
+static void Task_TransitionTeamRocket(u8);
+static void Task_TransitionTeamSkull(u8);
+static void Task_TransitionTeamStar(u8);
+static void Task_TransitionTeamYell(u8);
 
 static bool8 Blur_Init(struct Task *);
 static bool8 Blur_Main(struct Task *);
@@ -272,8 +291,52 @@ static bool8 TransitionAetherFoundation_Init(struct Task *);
 static bool8 TransitionAetherFoundation_SetGfx(struct Task *);
 static bool8 TransitionAmnestyInstitute_Init(struct Task *);
 static bool8 TransitionAmnestyInstitute_SetGfx(struct Task *);
+static bool8 TransitionBattleClub_Init(struct Task *);
+static bool8 TransitionBattleClub_SetGfx(struct Task *);
+static bool8 TransitionBattleClubSquares_Init(struct Task *);
+static bool8 TransitionBattleClubSquares_Draw(struct Task *);
+static bool8 TransitionBattleClubSquares_SetBlack(struct Task *);
+static bool8 TransitionBattleClubSquares_Erase(struct Task *);
+static bool8 TransitionBattleClubSquares_End(struct Task *);
+static bool8 TransitionGalaxyExpeditionTeam_Init(struct Task *);
+static bool8 TransitionGalaxyExpeditionTeam_SetGfx(struct Task *);
+static bool8 TransitionMacroCosmos_Init(struct Task *);
+static bool8 TransitionMacroCosmos_SetGfx(struct Task *);
+static bool8 TransitionPokemonLeague_Init(struct Task *);
+static bool8 TransitionPokemonLeague_SetGfx(struct Task *);
+static bool8 TransitionPokemonLeagueChampion_Init(struct Task *);
+static bool8 TransitionPokemonLeagueChampion_SetGfx(struct Task *);
+static bool8 TransitionPokemonLeagueSquares_Init(struct Task *);
+static bool8 TransitionPokemonLeagueSquares_Draw(struct Task *);
+static bool8 TransitionPokemonLeagueSquares_SetBlack(struct Task *);
+static bool8 TransitionPokemonLeagueSquares_Erase(struct Task *);
+static bool8 TransitionPokemonLeagueSquares_End(struct Task *);
+static bool8 TransitionRoseTower_Init(struct Task *);
+static bool8 TransitionRoseTower_SetGfx(struct Task *);
+static bool8 TransitionSilphCo_Init(struct Task *);
+static bool8 TransitionSilphCo_SetGfx(struct Task *);
+static bool8 TransitionTeamAquaNew_Init(struct Task *);
+static bool8 TransitionTeamAquaNew_SetGfx(struct Task *);
+static bool8 TransitionTeamBreak_Init(struct Task *);
+static bool8 TransitionTeamBreak_SetGfx(struct Task *);
+static bool8 TransitionTeamFlare_Init(struct Task *);
+static bool8 TransitionTeamFlare_SetGfx(struct Task *);
+static bool8 TransitionTeamGalactic_Init(struct Task *);
+static bool8 TransitionTeamGalactic_SetGfx(struct Task *);
+static bool8 TransitionTeamMagmaNew_Init(struct Task *);
+static bool8 TransitionTeamMagmaNew_SetGfx(struct Task *);
+static bool8 TransitionTeamPlasma_Init(struct Task *);
+static bool8 TransitionTeamPlasma_SetGfx(struct Task *);
 static bool8 TransitionTeamRainbowRocket_Init(struct Task *);
 static bool8 TransitionTeamRainbowRocket_SetGfx(struct Task *);
+static bool8 TransitionTeamRocket_Init(struct Task *);
+static bool8 TransitionTeamRocket_SetGfx(struct Task *);
+static bool8 TransitionTeamSkull_Init(struct Task *);
+static bool8 TransitionTeamSkull_SetGfx(struct Task *);
+static bool8 TransitionTeamStar_Init(struct Task *);
+static bool8 TransitionTeamStar_SetGfx(struct Task *);
+static bool8 TransitionTeamYell_Init(struct Task *);
+static bool8 TransitionTeamYell_SetGfx(struct Task *);
 
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
@@ -359,9 +422,66 @@ static const u32 sTransitionAetherFoundation_Tilemap[] = INCBIN_U32("graphics/ba
 static const u16 sTransitionAmnestyInstitute_Palette[] = INCBIN_U16("graphics/battle_transitions/amnesty_institute.gbapal");
 static const u32 sTransitionAmnestyInstitute_Tileset[] = INCBIN_U32("graphics/battle_transitions/amnesty_institute.4bpp.lz");
 static const u32 sTransitionAmnestyInstitute_Tilemap[] = INCBIN_U32("graphics/battle_transitions/amnesty_institute.bin.lz");
+static const u16 sTransitionBattleClub_Palette[] = INCBIN_U16("graphics/battle_transitions/battle_club.gbapal");
+static const u32 sTransitionBattleClub_Tileset[] = INCBIN_U32("graphics/battle_transitions/battle_club.4bpp.lz");
+static const u32 sTransitionBattleClub_Tilemap[] = INCBIN_U32("graphics/battle_transitions/battle_club.bin.lz");
+static const u16 sTransitionBattleClubSquares_Palette[] = INCBIN_U16("graphics/battle_transitions/battle_club_square.gbapal");
+static const u32 sTransitionBattleClubSquares_Tileset[] = INCBIN_U32("graphics/battle_transitions/battle_club_square.4bpp.lz");
+static const u32 sTransitionBattleClubSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/battle_club_square.bin.lz");
+static const u16 sTransitionGalaxyExpeditionTeam_Palette[] = INCBIN_U16("graphics/battle_transitions/galaxy_expedition_team.gbapal");
+static const u32 sTransitionGalaxyExpeditionTeam_Tileset[] = INCBIN_U32("graphics/battle_transitions/galaxy_expedition_team.4bpp.lz");
+static const u32 sTransitionGalaxyExpeditionTeam_Tilemap[] = INCBIN_U32("graphics/battle_transitions/galaxy_expedition_team.bin.lz");
+static const u16 sTransitionMacroCosmos_Palette[] = INCBIN_U16("graphics/battle_transitions/macro_cosmos.gbapal");
+static const u32 sTransitionMacroCosmos_Tileset[] = INCBIN_U32("graphics/battle_transitions/macro_cosmos.4bpp.lz");
+static const u32 sTransitionMacroCosmos_Tilemap[] = INCBIN_U32("graphics/battle_transitions/macro_cosmos.bin.lz");
+static const u16 sTransitionPokemonLeague_Palette[] = INCBIN_U16("graphics/battle_transitions/pokemon_league.gbapal");
+static const u32 sTransitionPokemonLeague_Tileset[] = INCBIN_U32("graphics/battle_transitions/pokemon_league.4bpp.lz");
+static const u32 sTransitionPokemonLeague_Tilemap[] = INCBIN_U32("graphics/battle_transitions/pokemon_league.bin.lz");
+static const u16 sTransitionPokemonLeagueChampion_Palette[] = INCBIN_U16("graphics/battle_transitions/pokemon_league_champion.gbapal");
+static const u32 sTransitionPokemonLeagueChampion_Tileset[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_champion.4bpp.lz");
+static const u32 sTransitionPokemonLeagueChampion_Tilemap[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_champion.bin.lz");
+static const u16 sTransitionPokemonLeagueSquares_Palette[] = INCBIN_U16("graphics/battle_transitions/pokemon_league_square.gbapal");
+static const u32 sTransitionPokemonLeagueSquares_Tileset[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_square.4bpp.lz");
+static const u32 sTransitionPokemonLeagueSquares_Tilemap[] = INCBIN_U32("graphics/battle_transitions/pokemon_league_square.bin.lz");
+static const u16 sTransitionRoseTower_Palette[] = INCBIN_U16("graphics/battle_transitions/rose_tower.gbapal");
+static const u32 sTransitionRoseTower_Tileset[] = INCBIN_U32("graphics/battle_transitions/rose_tower.4bpp.lz");
+static const u32 sTransitionRoseTower_Tilemap[] = INCBIN_U32("graphics/battle_transitions/rose_tower.bin.lz");
+static const u16 sTransitionSilphCo_Palette[] = INCBIN_U16("graphics/battle_transitions/silph_co.gbapal");
+static const u32 sTransitionSilphCo_Tileset[] = INCBIN_U32("graphics/battle_transitions/silph_co.4bpp.lz");
+static const u32 sTransitionSilphCo_Tilemap[] = INCBIN_U32("graphics/battle_transitions/silph_co.bin.lz");
+static const u16 sTransitionTeamAquaNew_Palette[] = INCBIN_U16("graphics/battle_transitions/team_aqua_new.gbapal");
+static const u32 sTransitionTeamAquaNew_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_aqua_new.4bpp.lz");
+static const u32 sTransitionTeamAquaNew_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_aqua_new.bin.lz");
+static const u16 sTransitionTeamBreak_Palette[] = INCBIN_U16("graphics/battle_transitions/team_break.gbapal");
+static const u32 sTransitionTeamBreak_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_break.4bpp.lz");
+static const u32 sTransitionTeamBreak_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_break.bin.lz");
+static const u16 sTransitionTeamFlare_Palette[] = INCBIN_U16("graphics/battle_transitions/team_flare.gbapal");
+static const u32 sTransitionTeamFlare_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_flare.4bpp.lz");
+static const u32 sTransitionTeamFlare_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_flare.bin.lz");
+static const u16 sTransitionTeamGalactic_Palette[] = INCBIN_U16("graphics/battle_transitions/team_galactic.gbapal");
+static const u32 sTransitionTeamGalactic_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_galactic.4bpp.lz");
+static const u32 sTransitionTeamGalactic_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_galactic.bin.lz");
+static const u16 sTransitionTeamMagmaNew_Palette[] = INCBIN_U16("graphics/battle_transitions/team_magma_new.gbapal");
+static const u32 sTransitionTeamMagmaNew_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_magma_new.4bpp.lz");
+static const u32 sTransitionTeamMagmaNew_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_magma_new.bin.lz");
+static const u16 sTransitionTeamPlasma_Palette[] = INCBIN_U16("graphics/battle_transitions/team_plasma.gbapal");
+static const u32 sTransitionTeamPlasma_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_plasma.4bpp.lz");
+static const u32 sTransitionTeamPlasma_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_plasma.bin.lz");
 static const u16 sTransitionTeamRainbowRocket_Palette[] = INCBIN_U16("graphics/battle_transitions/team_rainbow_rocket.gbapal");
 static const u32 sTransitionTeamRainbowRocket_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_rainbow_rocket.4bpp.lz");
 static const u32 sTransitionTeamRainbowRocket_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_rainbow_rocket.bin.lz");
+static const u16 sTransitionTeamRocket_Palette[] = INCBIN_U16("graphics/battle_transitions/team_rocket.gbapal");
+static const u32 sTransitionTeamRocket_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_rocket.4bpp.lz");
+static const u32 sTransitionTeamRocket_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_rocket.bin.lz");
+static const u16 sTransitionTeamSkull_Palette[] = INCBIN_U16("graphics/battle_transitions/team_skull.gbapal");
+static const u32 sTransitionTeamSkull_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_skull.4bpp.lz");
+static const u32 sTransitionTeamSkull_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_skull.bin.lz");
+static const u16 sTransitionTeamStar_Palette[] = INCBIN_U16("graphics/battle_transitions/team_star.gbapal");
+static const u32 sTransitionTeamStar_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_star.4bpp.lz");
+static const u32 sTransitionTeamStar_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_star.bin.lz");
+static const u16 sTransitionTeamYell_Palette[] = INCBIN_U16("graphics/battle_transitions/team_yell.gbapal");
+static const u32 sTransitionTeamYell_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_yell.4bpp.lz");
+static const u32 sTransitionTeamYell_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_yell.bin.lz");
 
 // All battle transitions use the same intro
 static const TaskFunc sTasks_Intro[B_TRANSITION_COUNT] =
@@ -420,7 +540,26 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     // Custom transitions
     [B_TRANSITION_AETHER_FOUNDATION] = Task_TransitionAetherFoundation,
     [B_TRANSITION_AMNESTY_INSTITUTE] = Task_TransitionAmnestyInstitute,
+    [B_TRANSITION_BATTLE_CLUB] = Task_TransitionBattleClub,
+    [B_TRANSITION_BATTLE_CLUB_SQUARES] = Task_TransitionBattleClubSquares,
+    [B_TRANSITION_GALAXY_EXPEDITION_TEAM] = Task_TransitionGalaxyExpeditionTeam,
+    [B_TRANSITION_MACRO_COSMOS] = Task_TransitionMacroCosmos,
+    [B_TRANSITION_POKEMON_LEAGUE] = Task_TransitionPokemonLeague,
+    [B_TRANSITION_POKEMON_LEAGUE_CHAMPION] = Task_TransitionPokemonLeagueChampion,
+    [B_TRANSITION_POKEMON_LEAGUE_SQUARES] = Task_TransitionPokemonLeagueSquares,
+    [B_TRANSITION_ROSE_TOWER] = Task_TransitionRoseTower,
+    [B_TRANSITION_SILPH_CO] = Task_TransitionSilphCo,
+    [B_TRANSITION_TEAM_AQUA_NEW] = Task_TransitionTeamAquaNew,
+    [B_TRANSITION_TEAM_BREAK] = Task_TransitionTeamBreak,
+    [B_TRANSITION_TEAM_FLARE] = Task_TransitionTeamFlare,
+    [B_TRANSITION_TEAM_GALACTIC] = Task_TransitionTeamGalactic,
+    [B_TRANSITION_TEAM_MAGMA_NEW] = Task_TransitionTeamMagmaNew,
+    [B_TRANSITION_TEAM_PLASMA] = Task_TransitionTeamPlasma,
     [B_TRANSITION_TEAM_RAINBOW_ROCKET] = Task_TransitionTeamRainbowRocket,
+    [B_TRANSITION_TEAM_ROCKET] = Task_TransitionTeamRocket,
+    [B_TRANSITION_TEAM_SKULL] = Task_TransitionTeamSkull,
+    [B_TRANSITION_TEAM_STAR] = Task_TransitionTeamStar,
+    [B_TRANSITION_TEAM_YELL] = Task_TransitionTeamYell,
 };
 
 static const TransitionStateFunc sTaskHandlers[] =
@@ -1000,8 +1139,8 @@ static const TransitionStateFunc sFrontierSquaresScroll_Funcs[] =
 
 static const TransitionStateFunc sTransitionAetherFoundation_Funcs[] =
 {
-    TransitionAetherFoundation_Init,
-    TransitionAetherFoundation_SetGfx,
+    TransitionAetherFoundation_Init, // Name here
+    TransitionAetherFoundation_SetGfx, // Name here
     PatternWeave_Blend1,
     PatternWeave_Blend2,
     PatternWeave_FinishAppear,
@@ -1010,8 +1149,156 @@ static const TransitionStateFunc sTransitionAetherFoundation_Funcs[] =
 
 static const TransitionStateFunc sTransitionAmnestyInstitute_Funcs[] =
 {
-    TransitionAmnestyInstitute_Init,
-    TransitionAmnestyInstitute_SetGfx,
+    TransitionAmnestyInstitute_Init, // Name here
+    TransitionAmnestyInstitute_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionBattleClub_Funcs[] =
+{
+    TransitionBattleClub_Init, // Name here
+    TransitionBattleClub_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionBattleClubSquares_Funcs[] =
+{
+    TransitionBattleClubSquares_Init, // Name here
+    TransitionBattleClubSquares_Draw, // Name here
+    TransitionBattleClubSquares_SetBlack, // Name here
+    TransitionBattleClubSquares_Erase, // Name here
+    TransitionBattleClubSquares_End // Name here
+};
+
+static const TransitionStateFunc sTransitionGalaxyExpeditionTeam_Funcs[] =
+{
+    TransitionGalaxyExpeditionTeam_Init, // Name here
+    TransitionGalaxyExpeditionTeam_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionMacroCosmos_Funcs[] =
+{
+    TransitionMacroCosmos_Init, // Name here
+    TransitionMacroCosmos_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionPokemonLeague_Funcs[] =
+{
+    TransitionPokemonLeague_Init, // Name here
+    TransitionPokemonLeague_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionPokemonLeagueChampion_Funcs[] =
+{
+    TransitionPokemonLeagueChampion_Init, // Name here
+    TransitionPokemonLeagueChampion_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionPokemonLeagueSquares_Funcs[] =
+{
+    TransitionPokemonLeagueSquares_Init, // Name here
+    TransitionPokemonLeagueSquares_Draw, // Name here
+    TransitionPokemonLeagueSquares_SetBlack, // Name here
+    TransitionPokemonLeagueSquares_Erase, // Name here
+    TransitionPokemonLeagueSquares_End // Name here
+};
+
+static const TransitionStateFunc sTransitionRoseTower_Funcs[] =
+{
+    TransitionRoseTower_Init, // Name here
+    TransitionRoseTower_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionSilphCo_Funcs[] =
+{
+    TransitionSilphCo_Init, // Name here
+    TransitionSilphCo_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamAquaNew_Funcs[] =
+{
+    TransitionTeamAquaNew_Init, // Name here
+    TransitionTeamAquaNew_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamBreak_Funcs[] =
+{
+    TransitionTeamBreak_Init, // Name here
+    TransitionTeamBreak_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamFlare_Funcs[] =
+{
+    TransitionTeamFlare_Init, // Name here
+    TransitionTeamFlare_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamGalactic_Funcs[] =
+{
+    TransitionTeamGalactic_Init, // Name here
+    TransitionTeamGalactic_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamMagmaNew_Funcs[] =
+{
+    TransitionTeamMagmaNew_Init, // Name here
+    TransitionTeamMagmaNew_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamPlasma_Funcs[] =
+{
+    TransitionTeamPlasma_Init, // Name here
+    TransitionTeamPlasma_SetGfx, // Name here
     PatternWeave_Blend1,
     PatternWeave_Blend2,
     PatternWeave_FinishAppear,
@@ -1020,8 +1307,48 @@ static const TransitionStateFunc sTransitionAmnestyInstitute_Funcs[] =
 
 static const TransitionStateFunc sTransitionTeamRainbowRocket_Funcs[] =
 {
-    TransitionTeamRainbowRocket_Init,
-    TransitionTeamRainbowRocket_SetGfx,
+    TransitionTeamRainbowRocket_Init, // Name here
+    TransitionTeamRainbowRocket_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamRocket_Funcs[] =
+{
+    TransitionTeamRocket_Init, // Name here
+    TransitionTeamRocket_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamSkull_Funcs[] =
+{
+    TransitionTeamSkull_Init, // Name here
+    TransitionTeamSkull_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamStar_Funcs[] =
+{
+    TransitionTeamStar_Init, // Name here
+    TransitionTeamStar_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
+static const TransitionStateFunc sTransitionTeamYell_Funcs[] =
+{
+    TransitionTeamYell_Init, // Name here
+    TransitionTeamYell_SetGfx, // Name here
     PatternWeave_Blend1,
     PatternWeave_Blend2,
     PatternWeave_FinishAppear,
@@ -1763,8 +2090,10 @@ static bool8 WeatherTrio_WaitFade(struct Task *task)
 // Do a shrinking circular mask to go to a black screen after the pattern appears.
 static bool8 PatternWeave_CircularMask(struct Task *task)
 {
+    u32 i;
     sTransitionData->VBlank_DMA = FALSE;
     if (task->tRadiusDelta < (4 << 8))
+        for(i = 0; i <= 200000; i++); // Arbitrary delay before circular mask triggers!
         task->tRadiusDelta += 128; // 256 is 1 unit of speed. Speed up every other frame (128 / 256)
     if (task->tRadius != 0)
     {
@@ -4470,7 +4799,11 @@ static void HBlankCB_FrontierLogoWave(void)
 
 //----------------------------------------------------------------------
 // B_TRANSITION_FRONTIER_SQUARES, B_TRANSITION_FRONTIER_SQUARES_SCROLL,
-// and B_TRANSITION_FRONTIER_SQUARES_SPIRAL
+// and B_TRANSITION_FRONTIER_SQUARES_SPIRAL, plus...
+//
+// Custom transitions:
+// B_TRANSITION_BATTLE_CLUB_SQUARES
+// and B_TRANSITION_POKEMON_LEAGUE_SQUARES
 //----------------------------------------------------------------------
 
 #define tPosX             data[2]
@@ -4493,6 +4826,16 @@ static void Task_FrontierSquaresSpiral(u8 taskId)
 static void Task_FrontierSquaresScroll(u8 taskId)
 {
     while (sFrontierSquaresScroll_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
+static void Task_TransitionBattleClubSquares(u8 taskId)
+{
+    while (sTransitionBattleClubSquares_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+}
+
+static void Task_TransitionPokemonLeagueSquares(u8 taskId)
+{
+    while (sTransitionPokemonLeagueSquares_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
 }
 
 static bool8 FrontierSquares_Init(struct Task *task)
@@ -4819,11 +5162,234 @@ static bool8 FrontierSquaresScroll_End(struct Task *task)
     return FALSE;
 }
 
+static bool8 TransitionBattleClubSquares_Init(struct Task *task)
+{
+    u8 taskId = 0;
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sFrontierSquares_FilledBg_Tileset, tileset);
+    FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+    CopyBgTilemapBufferToVram(0);
+    LoadPalette(sTransitionBattleClubSquares_Palette, BG_PLTT_ID(15), sizeof(sTransitionBattleClubSquares_Palette));
+
+    gBattle_BG0_X = 0;
+    gBattle_BG0_Y = 0;
+    SetGpuReg(REG_OFFSET_BG0VOFS, gBattle_BG0_X);
+    SetGpuReg(REG_OFFSET_BG0HOFS, gBattle_BG0_Y);
+
+    task->tSquareNum = 0;
+
+    // Start scrolling bg in a random direction.
+    taskId = CreateTask(Task_ScrollBg, 1);
+    switch (Random() % 4)
+    {
+    case 0: // Down/right
+        gTasks[taskId].tScrollXDir = 1;
+        gTasks[taskId].tScrollYDir = 1;
+        break;
+    case 1: // Up/left
+        gTasks[taskId].tScrollXDir = -1;
+        gTasks[taskId].tScrollYDir = -1;
+        break;
+    case 2: // Up/right
+        gTasks[taskId].tScrollXDir = 1;
+        gTasks[taskId].tScrollYDir = -1;
+        break;
+    default: // Down/left
+        gTasks[taskId].tScrollXDir = -1;
+        gTasks[taskId].tScrollYDir = 1;
+        break;
+    }
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionBattleClubSquares_Draw(struct Task *task)
+{
+    u8 pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
+    u8 x = pos / (NUM_SQUARES_PER_ROW + 1); // +1 because during scroll an additional column covers the margin.
+    u8 y = pos % (NUM_SQUARES_PER_ROW + 1);
+
+    CopyRectToBgTilemapBufferRect(0, &sTransitionBattleClubSquares_Tilemap, 0, 0,
+                                  SQUARE_SIZE, SQUARE_SIZE,
+                                  SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
+                                  SQUARE_SIZE, SQUARE_SIZE,
+                                  15, 0, 0);
+    CopyBgTilemapBufferToVram(0);
+
+    if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
+        task->tState++;
+    return 0;
+}
+
+// Now that the overworld is completely covered by the squares,
+// set it to black so it's not revealed when the squares are removed.
+static bool8 TransitionBattleClubSquares_SetBlack(struct Task *task)
+{
+    BlendPalettes(PALETTES_ALL & ~(1 << 15), 16, RGB_BLACK);
+
+    task->tSquareNum = 0;
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionBattleClubSquares_Erase(struct Task *task)
+{
+    u8 pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
+    u8 x = pos / (NUM_SQUARES_PER_ROW + 1);
+    u8 y = pos % (NUM_SQUARES_PER_ROW + 1);
+
+    FillBgTilemapBufferRect(0, 1,
+                            SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
+                            SQUARE_SIZE, SQUARE_SIZE,
+                            15);
+    CopyBgTilemapBufferToVram(0);
+
+    if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
+    {
+        DestroyTask(FindTaskIdByFunc(Task_ScrollBg));
+        task->tState++;
+    }
+
+    return FALSE;
+}
+
+static bool8 TransitionBattleClubSquares_End(struct Task *task)
+{
+    gBattle_BG0_X = 0;
+    gBattle_BG0_Y = 0;
+    SetGpuReg(REG_OFFSET_BG0VOFS, 0);
+    SetGpuReg(REG_OFFSET_BG0HOFS, gBattle_BG0_Y);
+
+    FillBgTilemapBufferRect_Palette0(0, 1, 0, 0, 32, 32);
+    CopyBgTilemapBufferToVram(0);
+    BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
+
+    DestroyTask(FindTaskIdByFunc(task->func));
+    task->tState++; // Changing value of a destroyed task
+
+    return FALSE;
+}
+
+static bool8 TransitionPokemonLeagueSquares_Init(struct Task *task)
+{
+    u8 taskId = 0;
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sFrontierSquares_FilledBg_Tileset, tileset);
+    FillBgTilemapBufferRect_Palette0(0, 0, 0, 0, 32, 32);
+    CopyBgTilemapBufferToVram(0);
+    LoadPalette(sTransitionPokemonLeagueSquares_Palette, BG_PLTT_ID(15), sizeof(sTransitionPokemonLeagueSquares_Palette));
+
+    gBattle_BG0_X = 0;
+    gBattle_BG0_Y = 0;
+    SetGpuReg(REG_OFFSET_BG0VOFS, gBattle_BG0_X);
+    SetGpuReg(REG_OFFSET_BG0HOFS, gBattle_BG0_Y);
+
+    task->tSquareNum = 0;
+
+    // Start scrolling bg in a random direction.
+    taskId = CreateTask(Task_ScrollBg, 1);
+    switch (Random() % 4)
+    {
+    case 0: // Down/right
+        gTasks[taskId].tScrollXDir = 1;
+        gTasks[taskId].tScrollYDir = 1;
+        break;
+    case 1: // Up/left
+        gTasks[taskId].tScrollXDir = -1;
+        gTasks[taskId].tScrollYDir = -1;
+        break;
+    case 2: // Up/right
+        gTasks[taskId].tScrollXDir = 1;
+        gTasks[taskId].tScrollYDir = -1;
+        break;
+    default: // Down/left
+        gTasks[taskId].tScrollXDir = -1;
+        gTasks[taskId].tScrollYDir = 1;
+        break;
+    }
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionPokemonLeagueSquares_Draw(struct Task *task)
+{
+    u8 pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
+    u8 x = pos / (NUM_SQUARES_PER_ROW + 1); // +1 because during scroll an additional column covers the margin.
+    u8 y = pos % (NUM_SQUARES_PER_ROW + 1);
+
+    CopyRectToBgTilemapBufferRect(0, &sTransitionPokemonLeagueSquares_Tilemap, 0, 0,
+                                  SQUARE_SIZE, SQUARE_SIZE,
+                                  SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
+                                  SQUARE_SIZE, SQUARE_SIZE,
+                                  15, 0, 0);
+    CopyBgTilemapBufferToVram(0);
+
+    if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
+        task->tState++;
+    return 0;
+}
+
+// Now that the overworld is completely covered by the squares,
+// set it to black so it's not revealed when the squares are removed.
+static bool8 TransitionPokemonLeagueSquares_SetBlack(struct Task *task)
+{
+    BlendPalettes(PALETTES_ALL & ~(1 << 15), 16, RGB_BLACK);
+
+    task->tSquareNum = 0;
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionPokemonLeagueSquares_Erase(struct Task *task)
+{
+    u8 pos = sFrontierSquaresScroll_Positions[task->tSquareNum];
+    u8 x = pos / (NUM_SQUARES_PER_ROW + 1);
+    u8 y = pos % (NUM_SQUARES_PER_ROW + 1);
+
+    FillBgTilemapBufferRect(0, 1,
+                            SQUARE_SIZE * x + MARGIN_SIZE, SQUARE_SIZE * y,
+                            SQUARE_SIZE, SQUARE_SIZE,
+                            15);
+    CopyBgTilemapBufferToVram(0);
+
+    if (++task->tSquareNum >= (int)ARRAY_COUNT(sFrontierSquaresScroll_Positions))
+    {
+        DestroyTask(FindTaskIdByFunc(Task_ScrollBg));
+        task->tState++;
+    }
+
+    return FALSE;
+}
+
+static bool8 TransitionPokemonLeagueSquares_End(struct Task *task)
+{
+    gBattle_BG0_X = 0;
+    gBattle_BG0_Y = 0;
+    SetGpuReg(REG_OFFSET_BG0VOFS, 0);
+    SetGpuReg(REG_OFFSET_BG0HOFS, gBattle_BG0_Y);
+
+    FillBgTilemapBufferRect_Palette0(0, 1, 0, 0, 32, 32);
+    CopyBgTilemapBufferToVram(0);
+    BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
+
+    DestroyTask(FindTaskIdByFunc(task->func));
+    task->tState++; // Changing value of a destroyed task
+
+    return FALSE;
+}
+
 #undef tScrollXDir
 #undef tScrollYDir
 #undef tScrollUpdateFlag
 #undef tSquareNum
-
 
 // Custom transitions
 
@@ -4834,35 +5400,35 @@ static bool8 FrontierSquaresScroll_End(struct Task *task)
 #define tSinIndex  data[4]
 #define tAmplitude data[5]
 
-static bool8 TransitionAetherFoundation_Init(struct Task *task)
+static bool8 TransitionAetherFoundation_Init(struct Task *task) // Name here
 {
     u16 *tilemap, *tileset;
 
     InitPatternWeaveTransition(task);
     GetBg0TilesDst(&tilemap, &tileset);
     CpuFill16(0, tilemap, BG_SCREEN_SIZE);
-    LZ77UnCompVram(sTransitionAetherFoundation_Tileset, tileset);
-    LoadPalette(sTransitionAetherFoundation_Palette, BG_PLTT_ID(15), sizeof(sTransitionAetherFoundation_Palette));
+    LZ77UnCompVram(sTransitionAetherFoundation_Tileset, tileset); // Name here
+    LoadPalette(sTransitionAetherFoundation_Palette, BG_PLTT_ID(15), sizeof(sTransitionAetherFoundation_Palette)); // Name here x2
 
     task->tState++;
     return FALSE;
 }
 
-static bool8 TransitionAetherFoundation_SetGfx(struct Task *task)
+static bool8 TransitionAetherFoundation_SetGfx(struct Task *task) // Name here
 {
     u16 *tilemap, *tileset;
 
     GetBg0TilesDst(&tilemap, &tileset);
-    LZ77UnCompVram(sTransitionAetherFoundation_Tilemap, tilemap);
+    LZ77UnCompVram(sTransitionAetherFoundation_Tilemap, tilemap); // Name here
     SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
 
     task->tState++;
     return TRUE;
 }
 
-static void Task_TransitionAetherFoundation(u8 taskId)
+static void Task_TransitionAetherFoundation(u8 taskId) // Name here
 {
-    while (sTransitionAetherFoundation_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sTransitionAetherFoundation_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
 }
 
 #undef tSinIndex
@@ -4875,76 +5441,773 @@ static void Task_TransitionAetherFoundation(u8 taskId)
 #define tSinIndex  data[4]
 #define tAmplitude data[5]
 
-static bool8 TransitionAmnestyInstitute_Init(struct Task *task)
+static bool8 TransitionAmnestyInstitute_Init(struct Task *task) // Name here
 {
     u16 *tilemap, *tileset;
 
     InitPatternWeaveTransition(task);
     GetBg0TilesDst(&tilemap, &tileset);
     CpuFill16(0, tilemap, BG_SCREEN_SIZE);
-    LZ77UnCompVram(sTransitionAmnestyInstitute_Tileset, tileset);
-    LoadPalette(sTransitionAmnestyInstitute_Palette, BG_PLTT_ID(15), sizeof(sTransitionAmnestyInstitute_Palette));
+    LZ77UnCompVram(sTransitionAmnestyInstitute_Tileset, tileset); // Name here
+    LoadPalette(sTransitionAmnestyInstitute_Palette, BG_PLTT_ID(15), sizeof(sTransitionAmnestyInstitute_Palette)); // Name here x2
 
     task->tState++;
     return FALSE;
 }
 
-static bool8 TransitionAmnestyInstitute_SetGfx(struct Task *task)
+static bool8 TransitionAmnestyInstitute_SetGfx(struct Task *task) // Name here
 {
     u16 *tilemap, *tileset;
 
     GetBg0TilesDst(&tilemap, &tileset);
-    LZ77UnCompVram(sTransitionAmnestyInstitute_Tilemap, tilemap);
+    LZ77UnCompVram(sTransitionAmnestyInstitute_Tilemap, tilemap); // Name here
     SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
 
     task->tState++;
     return TRUE;
 }
 
-static void Task_TransitionAmnestyInstitute(u8 taskId)
+static void Task_TransitionAmnestyInstitute(u8 taskId) // Name here
 {
-    while (sTransitionAmnestyInstitute_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sTransitionAmnestyInstitute_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
 }
 
 #undef tSinIndex
 #undef tAmplitude
 
 //-----------------------------------
-// B_TRANSITION_TEAM_RAINBOW_ROCKET
+// B_TRANSITION_BATTLE_CLUB
 //-----------------------------------
 
 #define tSinIndex  data[4]
 #define tAmplitude data[5]
 
-static bool8 TransitionTeamRainbowRocket_Init(struct Task *task)
+static bool8 TransitionBattleClub_Init(struct Task *task) // Name here
 {
     u16 *tilemap, *tileset;
 
     InitPatternWeaveTransition(task);
     GetBg0TilesDst(&tilemap, &tileset);
     CpuFill16(0, tilemap, BG_SCREEN_SIZE);
-    LZ77UnCompVram(sTransitionTeamRainbowRocket_Tileset, tileset);
-    LoadPalette(sTransitionTeamRainbowRocket_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamRainbowRocket_Palette));
+    LZ77UnCompVram(sTransitionBattleClub_Tileset, tileset); // Name here
+    LoadPalette(sTransitionBattleClub_Palette, BG_PLTT_ID(15), sizeof(sTransitionBattleClub_Palette)); // Name here x2
 
     task->tState++;
     return FALSE;
 }
 
-static bool8 TransitionTeamRainbowRocket_SetGfx(struct Task *task)
+static bool8 TransitionBattleClub_SetGfx(struct Task *task) // Name here
 {
     u16 *tilemap, *tileset;
 
     GetBg0TilesDst(&tilemap, &tileset);
-    LZ77UnCompVram(sTransitionTeamRainbowRocket_Tilemap, tilemap);
+    LZ77UnCompVram(sTransitionBattleClub_Tilemap, tilemap); // Name here
     SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
 
     task->tState++;
     return TRUE;
 }
 
-static void Task_TransitionTeamRainbowRocket(u8 taskId)
+static void Task_TransitionBattleClub(u8 taskId) // Name here
 {
-    while (sTransitionTeamRainbowRocket_Funcs[gTasks[taskId].tState](&gTasks[taskId]));
+    while (sTransitionBattleClub_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_GALAXY_EXPEDITION_TEAM
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionGalaxyExpeditionTeam_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionGalaxyExpeditionTeam_Tileset, tileset); // Name here
+    LoadPalette(sTransitionGalaxyExpeditionTeam_Palette, BG_PLTT_ID(15), sizeof(sTransitionGalaxyExpeditionTeam_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionGalaxyExpeditionTeam_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionGalaxyExpeditionTeam_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionGalaxyExpeditionTeam(u8 taskId) // Name here
+{
+    while (sTransitionGalaxyExpeditionTeam_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_MACRO_COSMOS
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionMacroCosmos_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionMacroCosmos_Tileset, tileset); // Name here
+    LoadPalette(sTransitionMacroCosmos_Palette, BG_PLTT_ID(15), sizeof(sTransitionMacroCosmos_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionMacroCosmos_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionMacroCosmos_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionMacroCosmos(u8 taskId) // Name here
+{
+    while (sTransitionMacroCosmos_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_POKEMON_LEAGUE
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionPokemonLeague_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionPokemonLeague_Tileset, tileset); // Name here
+    LoadPalette(sTransitionPokemonLeague_Palette, BG_PLTT_ID(15), sizeof(sTransitionPokemonLeague_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionPokemonLeague_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionPokemonLeague_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionPokemonLeague(u8 taskId) // Name here
+{
+    while (sTransitionPokemonLeague_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_POKEMON_LEAGUE_CHAMPION
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionPokemonLeagueChampion_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionPokemonLeagueChampion_Tileset, tileset); // Name here
+    LoadPalette(sTransitionPokemonLeagueChampion_Palette, BG_PLTT_ID(15), sizeof(sTransitionPokemonLeagueChampion_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionPokemonLeagueChampion_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionPokemonLeagueChampion_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionPokemonLeagueChampion(u8 taskId) // Name here
+{
+    while (sTransitionPokemonLeagueChampion_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_ROSE_TOWER
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionRoseTower_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionRoseTower_Tileset, tileset); // Name here
+    LoadPalette(sTransitionRoseTower_Palette, BG_PLTT_ID(15), sizeof(sTransitionRoseTower_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionRoseTower_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionRoseTower_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionRoseTower(u8 taskId) // Name here
+{
+    while (sTransitionRoseTower_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_SILPH_CO
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionSilphCo_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionSilphCo_Tileset, tileset); // Name here
+    LoadPalette(sTransitionSilphCo_Palette, BG_PLTT_ID(15), sizeof(sTransitionSilphCo_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionSilphCo_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionSilphCo_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionSilphCo(u8 taskId) // Name here
+{
+    while (sTransitionSilphCo_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_AQUA_NEW
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamAquaNew_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamAquaNew_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamAquaNew_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamAquaNew_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamAquaNew_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamAquaNew_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamAquaNew(u8 taskId) // Name here
+{
+    while (sTransitionTeamAquaNew_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_BREAK
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamBreak_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamBreak_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamBreak_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamBreak_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamBreak_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamBreak_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamBreak(u8 taskId) // Name here
+{
+    while (sTransitionTeamBreak_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_FLARE
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamFlare_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamFlare_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamFlare_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamFlare_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamFlare_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamFlare_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamFlare(u8 taskId) // Name here
+{
+    while (sTransitionTeamFlare_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_GALACTIC
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamGalactic_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamGalactic_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamGalactic_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamGalactic_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamGalactic_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamGalactic_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamGalactic(u8 taskId) // Name here
+{
+    while (sTransitionTeamGalactic_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_MAGMA_NEW
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamMagmaNew_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamMagmaNew_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamMagmaNew_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamMagmaNew_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamMagmaNew_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamMagmaNew_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamMagmaNew(u8 taskId) // Name here
+{
+    while (sTransitionTeamMagmaNew_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_PLASMA
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamPlasma_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamPlasma_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamPlasma_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamPlasma_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamPlasma_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamPlasma_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamPlasma(u8 taskId) // Name here
+{
+    while (sTransitionTeamPlasma_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_RAINBOW_ROCKET
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamRainbowRocket_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamRainbowRocket_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamRainbowRocket_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamRainbowRocket_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamRainbowRocket_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamRainbowRocket_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamRainbowRocket(u8 taskId) // Name here
+{
+    while (sTransitionTeamRainbowRocket_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_ROCKET
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamRocket_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamRocket_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamRocket_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamRocket_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamRocket_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamRocket_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamRocket(u8 taskId) // Name here
+{
+    while (sTransitionTeamRocket_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_SKULL
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamSkull_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamSkull_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamSkull_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamSkull_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamSkull_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamSkull_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamSkull(u8 taskId) // Name here
+{
+    while (sTransitionTeamSkull_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_STAR
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamStar_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamStar_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamStar_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamStar_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamStar_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamStar_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamStar(u8 taskId) // Name here
+{
+    while (sTransitionTeamStar_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_TEAM_YELL
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionTeamYell_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionTeamYell_Tileset, tileset); // Name here
+    LoadPalette(sTransitionTeamYell_Palette, BG_PLTT_ID(15), sizeof(sTransitionTeamYell_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionTeamYell_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionTeamYell_Tilemap, tilemap); // Name here
+    SetSinWave(gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionTeamYell(u8 taskId) // Name here
+{
+    while (sTransitionTeamYell_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
 }
 
 #undef tSinIndex

@@ -7626,6 +7626,17 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_PIKE_QUEEN:
         case TRAINER_CLASS_PYRAMID_KING:
             return MUS_VS_FRONTIER_BRAIN;
+        // Custom trainer classes
+        case TRAINER_CLASS_TRANSITION_02:
+            return MUS_VS_FRONTIER_BRAIN;
+        case TRAINER_CLASS_TRANSITION_05:
+            return MUS_VS_AQUA_MAGMA;
+        case TRAINER_CLASS_TRANSITION_06:
+            return MUS_VS_AQUA_MAGMA;
+        case TRAINER_CLASS_TRANSITION_21:
+            return MUS_VS_GYM_LEADER;
+        case TRAINER_CLASS_TRANSITION_22:
+            return MUS_VS_CHAMPION;
         default:
             return MUS_VS_TRAINER;
         }

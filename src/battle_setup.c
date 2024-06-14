@@ -877,49 +877,50 @@ u8 GetTrainerBattleTransition(void)
 
     // TRANSITION TESTING STARTS
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_01)
-        return B_TRANSITION_AETHER_FOUNDATION;
+        return B_TRANSITION_BATTLE_CLUB_SQUARES;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_02)
-        return B_TRANSITION_AMNESTY_INSTITUTE;
+        return B_TRANSITION_BATTLE_CLUB;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_03)
-        return B_TRANSITION_TEAM_RAINBOW_ROCKET;
+        return B_TRANSITION_TEAM_ROCKET;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_04)
-        return B_TRANSITION_BIG_POKEBALL;
+        return B_TRANSITION_SILPH_CO;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_05)
-        return B_TRANSITION_POKEBALLS_TRAIL;
+        return B_TRANSITION_TEAM_MAGMA_NEW;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_06)
-        return B_TRANSITION_CLOCKWISE_WIPE;
+        return B_TRANSITION_TEAM_AQUA_NEW;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_07)
-        return B_TRANSITION_RIPPLE;
+        return B_TRANSITION_TEAM_GALACTIC;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_08)
-        return B_TRANSITION_WAVE;
+        return B_TRANSITION_TEAM_PLASMA;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_09)
-        return B_TRANSITION_SLICE;
+        return B_TRANSITION_TEAM_FLARE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_10)
-        return B_TRANSITION_WHITE_BARS_FADE;
+        return B_TRANSITION_TEAM_SKULL;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_11)
-        return B_TRANSITION_GRID_SQUARES;
+        return B_TRANSITION_AETHER_FOUNDATION;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_12)
-        return B_TRANSITION_ANGLED_WIPES;
+        return B_TRANSITION_TEAM_RAINBOW_ROCKET;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_13)
-        return B_TRANSITION_AQUA;
+        return B_TRANSITION_TEAM_YELL;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_14)
-        return B_TRANSITION_MAGMA;
+        return B_TRANSITION_MACRO_COSMOS;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_15)
-        return B_TRANSITION_REGICE;
+        return B_TRANSITION_ROSE_TOWER;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_16)
-        return B_TRANSITION_REGISTEEL;
+        return B_TRANSITION_GALAXY_EXPEDITION_TEAM;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_17)
-        return B_TRANSITION_REGIROCK;
+        return B_TRANSITION_TEAM_STAR;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_18)
-        return B_TRANSITION_KYOGRE;
+        return B_TRANSITION_TEAM_BREAK;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_19)
-        return B_TRANSITION_GROUDON;
+        return B_TRANSITION_AMNESTY_INSTITUTE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_20)
-        return B_TRANSITION_RAYQUAZA;
+        return B_TRANSITION_POKEMON_LEAGUE_SQUARES;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_21)
-        return B_TRANSITION_SHRED_SPLIT;
+        return B_TRANSITION_POKEMON_LEAGUE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_22)
-        return B_TRANSITION_BLACKHOLE;
+        return B_TRANSITION_POKEMON_LEAGUE_CHAMPION;
+        // Existing (non-custom) transitions I like
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_23)
         return B_TRANSITION_BLACKHOLE_PULSATE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_24)
