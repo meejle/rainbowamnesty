@@ -2095,10 +2095,10 @@ static bool8 WeatherTrio_WaitFade(struct Task *task)
 // Do a shrinking circular mask to go to a black screen after the pattern appears.
 static bool8 PatternWeave_CircularMask(struct Task *task)
 {
-    u32 i;
+    volatile int i; // Arbitrary pause before circle mask
     sTransitionData->VBlank_DMA = FALSE;
     if (task->tRadiusDelta < (4 << 8))
-        for(i = 0; i <= 200000; i++); // Arbitrary delay before circular mask triggers!
+        for(i = 0; i <= 200000; i++); // Arbitrary pause before circle mask
         task->tRadiusDelta += 128; // 256 is 1 unit of speed. Speed up every other frame (128 / 256)
     if (task->tRadius != 0)
     {
