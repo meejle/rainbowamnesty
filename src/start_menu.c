@@ -262,7 +262,7 @@ static const struct WindowTemplate sWindowTemplate_PyramidPeak = {
     .baseBlock = 0x8
 };
 
-static const u8 gText_MenuDebug[] = _("DEBUG");
+static const u8 sText_MenuDebug[] = _("DEBUG");
 
 static const struct MenuAction sStartMenuItems[] =
 {
@@ -280,7 +280,7 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire,  {.u8_void = StartMenuBattlePyramidRetireCallback}},
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_AWARDS]          = {gText_MenuAwards,  {.u8_void = StartMenuAwardsCallback}},
-    [MENU_ACTION_DEBUG]           = {gText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
+    [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
@@ -392,11 +392,10 @@ static void BuildStartMenuActions(void)
     }
     else
     {
-    #if DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == TRUE
-        BuildDebugStartMenu();
-    #else
-        BuildNormalStartMenu();
-    #endif
+        if (DEBUG_OVERWORLD_MENU == TRUE && DEBUG_OVERWORLD_IN_MENU == TRUE)
+            BuildDebugStartMenu();
+        else
+            BuildNormalStartMenu();
     }
 }
 
@@ -616,7 +615,7 @@ static bool32 InitStartMenuStep(void)
         sInitStartMenuData[0]++;
         break;
     case 4:
-        if (PrintStartMenuActions(&sInitStartMenuData[1], 2))
+        if (PrintStartMenuActions((s8*) &sInitStartMenuData[1], 2))
             sInitStartMenuData[0]++;
         break;
     case 5:
@@ -1473,10 +1472,10 @@ static void Task_SaveAfterLinkBattle(u8 taskId)
     }
 }
 
+u8 gender;
 static void ShowSaveInfoWindow(void)
 {
     struct WindowTemplate saveInfoWindow = sSaveInfoWindowTemplate;
-    u8 gender;
     u8 color;
     u32 xOffset;
     u32 yOffset;

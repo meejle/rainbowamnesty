@@ -1289,7 +1289,7 @@ static bool32 MatchCall_DrawWindow(u8 taskId)
 
 static bool32 MatchCall_ReadyIntro(u8 taskId)
 {
-    s16 *data = gTasks[taskId].data;
+    // s16 *data = gTasks[taskId].data;
     return TRUE;
 }
 
@@ -2045,8 +2045,8 @@ void BufferPokedexRatingForMatchCall(u8 *destStr)
         *(str++) = CHAR_PROMPT_CLEAR;
         numSeen = GetNationalPokedexCount(FLAG_GET_SEEN);
         numCaught = GetNationalPokedexCount(FLAG_GET_CAUGHT);
-        ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 3);
-        ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 3);
+        ConvertIntToDecimalStringN(gStringVar1, numSeen, STR_CONV_MODE_LEFT_ALIGN, 4);
+        ConvertIntToDecimalStringN(gStringVar2, numCaught, STR_CONV_MODE_LEFT_ALIGN, 4);
         StringExpandPlaceholders(str, gBirchDexRatingText_OnANationwideBasis);
     }
 

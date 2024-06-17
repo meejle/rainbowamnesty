@@ -79,6 +79,9 @@
 #define FLDEFF_DOT_DOT_DOT_ICON     75
 #define FLDEFF_SWEAT_DROP_ICON     76
 #define FLDEFF_CHATTER_CHATTER_ICON     77
+#define FLDEFF_USE_VS_SEEKER             78
+#define FLDEFF_X_ICON                    79
+#define FLDEFF_DOUBLE_EXCL_MARK_ICON     80
 
 #define FLDEFFOBJ_SHADOW_S              0
 #define FLDEFFOBJ_SHADOW_M              1

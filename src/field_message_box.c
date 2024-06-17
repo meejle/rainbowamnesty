@@ -100,8 +100,7 @@ bool8 ShowFieldAutoScrollMessage(const u8 *str)
     return TRUE;
 }
 
-// Unused
-static bool8 ForceShowFieldAutoScrollMessage(const u8 *str)
+static bool8 UNUSED ForceShowFieldAutoScrollMessage(const u8 *str)
 {
     sFieldMessageBoxMode = FIELD_MESSAGE_BOX_AUTO_SCROLL;
     ExpandStringAndStartDrawFieldMessage(str, TRUE);
@@ -151,8 +150,7 @@ bool8 IsFieldMessageBoxHidden(void)
     return FALSE;
 }
 
-// Unused
-static void ReplaceFieldMessageWithFrame(void)
+static void UNUSED ReplaceFieldMessageWithFrame(void)
 {
     DestroyTask_DrawFieldMessage();
     DrawStdWindowFrame(0, TRUE);

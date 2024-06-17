@@ -210,18 +210,10 @@ static void NewGameBirchSpeech_StartFadePlatformIn(u8, u8);
 static void Task_NewGameBirchSpeech_SlidePlatformAway(u8);
 static void Task_NewGameBirchSpeech_StartPlayerFadeIn(u8);
 static void Task_NewGameBirchSpeech_WaitForPlayerFadeIn(u8);
-static void Task_NewGameBirchSpeech_BoyOrGirl(u8);
 static void LoadMainMenuWindowFrameTiles(u8, u16);
 static void DrawMainMenuWindowBorder(const struct WindowTemplate *, u16);
 static void Task_HighlightSelectedMainMenuItem(u8);
-static void Task_NewGameBirchSpeech_WaitToShowGenderMenu(u8);
-static void Task_NewGameBirchSpeech_ChooseGender(u8);
-static void NewGameBirchSpeech_ShowGenderMenu(void);
-static s8 NewGameBirchSpeech_ProcessGenderMenuInput(void);
-static void NewGameBirchSpeech_ClearGenderWindow(u8, u8);
 static void Task_NewGameBirchSpeech_WhatsYourName(u8);
-static void Task_NewGameBirchSpeech_SlideOutOldGenderSprite(u8);
-static void Task_NewGameBirchSpeech_SlideInNewGenderSprite(u8);
 static void Task_NewGameBirchSpeech_WaitForWhatsYourNameToPrint(u8);
 static void Task_NewGameBirchSpeech_WaitPressBeforeNameChoice(u8);
 static void Task_NewGameBirchSpeech_StartNamingScreen(u8);
@@ -701,7 +693,7 @@ static void Task_WaitForBatteryDryErrorWindow(u8 taskId)
 
 static void Task_DisplayMainMenu(u8 taskId)
 {
-    s16 *data = gTasks[taskId].data;
+    // s16 *data = gTasks[taskId].data;
     u16 palette;
 
     if (!gPaletteFade.active)
@@ -1336,31 +1328,6 @@ static void Task_NewGameBirchSpeech_WaitForPlayerFadeIn(u8 taskId)
     }
 }
 
-static void Task_NewGameBirchSpeech_BoyOrGirl(u8 taskId)
-{
-    // Dummied out
-}
-
-static void Task_NewGameBirchSpeech_WaitToShowGenderMenu(u8 taskId)
-{
-    // Dummied out
-}
-
-static void Task_NewGameBirchSpeech_ChooseGender(u8 taskId)
-{
-    // Dummied out
-}
-
-static void Task_NewGameBirchSpeech_SlideOutOldGenderSprite(u8 taskId)
-{
-    // Dummied out
-}
-
-static void Task_NewGameBirchSpeech_SlideInNewGenderSprite(u8 taskId)
-{
-    // Dummied out
-}
-
 static void Task_NewGameBirchSpeech_WhatsYourName(u8 taskId)
 {
     NewGameBirchSpeech_ClearWindow(0);
@@ -1867,16 +1834,6 @@ static void NewGameBirchSpeech_StartFadePlatformOut(u8 taskId, u8 delay)
 #undef tDelay
 #undef tDelayTimer
 
-static void NewGameBirchSpeech_ShowGenderMenu(void)
-{
-    // Dummied out
-}
-
-static s8 NewGameBirchSpeech_ProcessGenderMenuInput(void)
-{
-    // Dummied out
-}
-
 void NewGameBirchSpeech_SetDefaultPlayerName(u8 nameId)
 {
     const u8 *name;
@@ -2058,16 +2015,6 @@ static void ClearMainMenuWindowTilemap(const struct WindowTemplate *template)
 {
     FillBgTilemapBufferRect(template->bg, 0, template->tilemapLeft - 1, template->tilemapTop - 1, template->tilemapLeft + template->width + 1, template->tilemapTop + template->height + 1, 2);
     CopyBgTilemapBufferToVram(template->bg);
-}
-
-static void NewGameBirchSpeech_ClearGenderWindowTilemap(u8 bg, u8 x, u8 y, u8 width, u8 height, u8 unused)
-{
-    // Dummied out
-}
-
-static void NewGameBirchSpeech_ClearGenderWindow(u8 windowId, bool8 copyToVram)
-{
-    // Dummied out
 }
 
 static void NewGameBirchSpeech_ClearWindow(u8 windowId)

@@ -41,9 +41,7 @@ enum
 
 static EWRAM_DATA u16 sSaveFailedType = {0};
 static EWRAM_DATA u16 sClockInfo[2] = {0};
-static EWRAM_DATA u8 sUnused1[12] = {0};
 static EWRAM_DATA u8 sWindowIds[2] = {0};
-static EWRAM_DATA u8 sUnused2[4] = {0};
 
 static const struct OamData sClockOamData =
 {
@@ -414,8 +412,8 @@ void CB2_FlashNotDetectedScreen(void){
             .baseBlock = 1,
         }
     };
-	
-    static const char errorMsg[] = _(
+
+    const u8 errorMsg[] = _(
         "{FONT 13}{COLOR BLUE}{SHADOW LIGHT_BLUE}Flash memory not detected. Set your\n"
         "emulator's save type to Flash 1 Mb, then\nreload the ROM. "
         "Or, try a more modern\nemulator.\n"

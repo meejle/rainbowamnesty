@@ -1314,8 +1314,8 @@ enum WindowIds
     WINDOW_MEDALS
 };
 
-static EWRAM_DATA struct AwardsResources *sAwardsDataPtr = NULL;
-static EWRAM_DATA u8 *sBg1TilemapBuffer = NULL;
+static struct AwardsResources *sAwardsDataPtr = NULL;
+static u8 *sBg1TilemapBuffer = NULL;
 
 static void Awards_RunSetup(void);
 static bool8 Awards_DoGfxSetup(void);
@@ -1418,7 +1418,7 @@ static const u8 sAwardsWindowFontColors[][3] =
 
 void Task_OpenAwardsFromStartMenu(u8 taskId)
 {
-    s16 *data = gTasks[taskId].data;
+    // s16 *data = gTasks[taskId].data;
     if (!gPaletteFade.active)
     {
         CleanupOverworldWindowsAndTilemaps();
@@ -1470,9 +1470,10 @@ static void Awards_VBlankCB(void)
     TransferPlttBuffer();
 }
 
+u8 taskId;
+
 static bool8 Awards_DoGfxSetup(void)
 {
-    u8 taskId;
     switch (gMain.state)
     {
     case 0:
@@ -1610,7 +1611,7 @@ static bool8 Awards_LoadGraphics(void)
 
 static void Awards_InitWindows(void)
 {
-    u32 i;
+    // u32 i;
 
     InitWindows(sAwardsWindowTemplates);
     DeactivateAllTextPrinters();
@@ -1714,7 +1715,7 @@ static void Task_AwardsWaitFadeIn(u8 taskId)
 
 static void Task_AwardsTurnOff(u8 taskId)
 {
-    s16 *data = gTasks[taskId].data;
+    // s16 *data = gTasks[taskId].data;
 
     if (!gPaletteFade.active)
     {

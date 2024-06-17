@@ -411,7 +411,7 @@ static bool8 InitHallOfFameScreen(void)
     else
     {
         SetMainCallback2(CB2_StartCreditsSequence);
-        return;
+        return 0;
     }
 }
 
@@ -1486,7 +1486,7 @@ static void UpdateDomeConfetti(struct ConfettiUtil *util)
 static void Task_DoDomeConfetti(u8 taskId)
 {
     u32 id = 0;
-    u16 *data = gTasks[taskId].data;
+    s16 *data = gTasks[taskId].data;
 
     switch (tState)
     {

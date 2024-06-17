@@ -1,3 +1,4 @@
+	.include "gflib/malloc.o"
 	.include "src/decompress.o"
 	.include "src/main.o"
 	.include "gflib/window.o"
@@ -154,3 +155,4 @@
 	.include "src/field_small_name_box.o"
 	.include "src/mugshot.o"
 	.include "src/awards.o"
+	.include "src/pokedex_plus_hgss.o"

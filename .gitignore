@@ -21,7 +21,6 @@ sound/**/*.bin
 sound/songs/midi/*.s
 tools/agbcc
 *.map
-*.ld
 *.bat
 *.dump
 *.sa*
@@ -43,3 +42,4 @@ pokeemerald-*.png
 pokeemerald.ss*
 pokeemerald.sav
 *.Identifier
+src/data/map_group_count.h

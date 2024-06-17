@@ -1,5 +1,5 @@
 RA_Mistralton_EventScript_ItemPokeBall::
-	finditem ITEM_POKE_PASS
+	finditem ITEM_STAR_PIECE
 	end
 
 Route102_EventScript_ItemPotion::

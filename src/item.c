@@ -124,7 +124,7 @@ void CopyItemNameHandlePlural(u16 itemId, u8 *dst, u32 quantity)
         {
             // Append "-es" to the end of these item names
             // E.g. "Sacred Ash" becomes "Sacred Ashes"
-            if ((itemId == ITEM_SACRED_ASH) | (itemId == ITEM_CARBOS) | (itemId == ITEM_PP_MAX) | (itemId == ITEM_ABILITY_PATCH) | (itemId == ITEM_GROWTH_MULCH) | (itemId == ITEM_DAMP_MULCH) | (itemId == ITEM_STABLE_MULCH) | (itemId == ITEM_GOOEY_MULCH) | (itemId == ITEM_RICH_MULCH) | (itemId == ITEM_SURPRISE_MULCH) | (itemId == ITEM_BOOST_MULCH) | (itemId == ITEM_AMAZE_MULCH) | (itemId == ITEM_LUCKY_PUNCH) | (itemId == ITEM_POWER_LENS) | (itemId == ITEM_LUMINOUS_MOSS) | (itemId == ITEM_SCOPE_LENS) | (itemId == ITEM_WIDE_LENS) | (itemId == ITEM_FOCUS_SASH) | (itemId == ITEM_ZOOM_LENS) | (itemId == ITEM_REVEAL_GLASS) | (itemId == ITEM_BERRY_POUCH) | (itemId == ITEM_CONTEST_PASS) | (itemId == ITEM_TRI_PASS) | (itemId == ITEM_RAINBOW_PASS) | (itemId == ITEM_POKE_PASS))
+            if ((itemId == ITEM_SACRED_ASH) | (itemId == ITEM_CARBOS) | (itemId == ITEM_PP_MAX) | (itemId == ITEM_ABILITY_PATCH) | (itemId == ITEM_GROWTH_MULCH) | (itemId == ITEM_DAMP_MULCH) | (itemId == ITEM_STABLE_MULCH) | (itemId == ITEM_GOOEY_MULCH) | (itemId == ITEM_RICH_MULCH) | (itemId == ITEM_SURPRISE_MULCH) | (itemId == ITEM_BOOST_MULCH) | (itemId == ITEM_AMAZE_MULCH) | (itemId == ITEM_LUCKY_PUNCH) | (itemId == ITEM_POWER_LENS) | (itemId == ITEM_LUMINOUS_MOSS) | (itemId == ITEM_SCOPE_LENS) | (itemId == ITEM_WIDE_LENS) | (itemId == ITEM_FOCUS_SASH) | (itemId == ITEM_ZOOM_LENS) | (itemId == ITEM_REVEAL_GLASS) | (itemId == ITEM_BERRY_POUCH) | (itemId == ITEM_CONTEST_PASS) | (itemId == ITEM_TRI_PASS) | (itemId == ITEM_RAINBOW_PASS))
             {
                 StringAppend(dst, sText_Plural_es);
             }
@@ -1171,7 +1171,8 @@ void HideHeaderBox(void)
 #define ITEM_TAG 0x2722 //same as money label
 static void ShowItemIconSprite(u16 item, bool8 firstTime, bool8 flash)
 {
-    s16 x, y;
+    s16 x = ITEM_ICON_X;
+    s16 y = ITEM_ICON_Y;
     u8 iconSpriteId;   
     u8 spriteId2 = MAX_SPRITES;
 
@@ -1191,12 +1192,6 @@ static void ShowItemIconSprite(u16 item, bool8 firstTime, bool8 flash)
             //show in message box
             x = 213;
             y = 140;
-        }
-        else
-        {
-            // show in header box
-            x = ITEM_ICON_X;
-            y = ITEM_ICON_Y;
         }
 
         gSprites[iconSpriteId].x2 = x;

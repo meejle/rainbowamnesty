@@ -152,7 +152,7 @@ static void CreateTask_DisplaySmallNamebox() {
 }
 
 static void Task_DisplaySmallNamebox(u8 taskId) {
-    struct Task *task = &gTasks[taskId];
+    // struct Task *task = &gTasks[taskId];
     
     if (gTasks[taskId].tTimer) 
         gTasks[taskId].tTimer--;
