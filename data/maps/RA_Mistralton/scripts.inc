@@ -716,14 +716,12 @@ RA_Mistralton_EventScript_Transition_22::
 	end
 
 RA_Mistralton_Text_Transition_23:
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Built-in transition:\n"
-	.string "“Blur”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
-	.string "These last few transitions already\n"
-	.string "existed in {COLOR RED}{SHADOW LIGHT_RED}Pokémon Emerald{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}, but aren't\l"
-	.string "the ones I see all the time.\p"
-	.string "So I might use them for normal battles\n"
-	.string "against Trainers and wild Pokémon, just\l"
-	.string "to keep things fresh.$"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Custom transition:\n"
+	.string "“Hoopa”{COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}\p"
+	.string "It's looking like a Hoopa battle is\n"
+	.string "going to be a major point in our story.\p"
+	.string "So it's only natural it should have its\n"
+	.string "own transition.$"
 
 RA_Mistralton_EventScript_Transition_23::
 	lockall

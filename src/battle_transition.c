@@ -175,6 +175,7 @@ static void Task_TransitionTeamRocket(u8);
 static void Task_TransitionTeamSkull(u8);
 static void Task_TransitionTeamStar(u8);
 static void Task_TransitionTeamYell(u8);
+static void Task_TransitionHoopa(u8);
 
 static bool8 Blur_Init(struct Task *);
 static bool8 Blur_Main(struct Task *);
@@ -337,6 +338,8 @@ static bool8 TransitionTeamStar_Init(struct Task *);
 static bool8 TransitionTeamStar_SetGfx(struct Task *);
 static bool8 TransitionTeamYell_Init(struct Task *);
 static bool8 TransitionTeamYell_SetGfx(struct Task *);
+static bool8 TransitionHoopa_Init(struct Task *);
+static bool8 TransitionHoopa_SetGfx(struct Task *);
 
 static void DoMugshotTransition(u8);
 static void Mugshots_CreateTrainerPics(struct Task *);
@@ -486,6 +489,9 @@ static const u32 sTransitionTeamStar_Tilemap[] = INCBIN_U32("graphics/battle_tra
 static const u16 sTransitionTeamYell_Palette[] = INCBIN_U16("graphics/battle_transitions/team_yell.gbapal");
 static const u32 sTransitionTeamYell_Tileset[] = INCBIN_U32("graphics/battle_transitions/team_yell.4bpp.lz");
 static const u32 sTransitionTeamYell_Tilemap[] = INCBIN_U32("graphics/battle_transitions/team_yell.bin.lz");
+static const u16 sTransitionHoopa_Palette[] = INCBIN_U16("graphics/battle_transitions/hoopa.gbapal");
+static const u32 sTransitionHoopa_Tileset[] = INCBIN_U32("graphics/battle_transitions/hoopa.4bpp.lz");
+static const u32 sTransitionHoopa_Tilemap[] = INCBIN_U32("graphics/battle_transitions/hoopa.bin.lz");
 
 // All battle transitions use the same intro
 static const TaskFunc sTasks_Intro[B_TRANSITION_COUNT] =
@@ -564,6 +570,7 @@ static const TaskFunc sTasks_Main[B_TRANSITION_COUNT] =
     [B_TRANSITION_TEAM_SKULL] = Task_TransitionTeamSkull,
     [B_TRANSITION_TEAM_STAR] = Task_TransitionTeamStar,
     [B_TRANSITION_TEAM_YELL] = Task_TransitionTeamYell,
+    [B_TRANSITION_HOOPA] = Task_TransitionHoopa,
 };
 
 static const TransitionStateFunc sTaskHandlers[] =
@@ -1359,6 +1366,16 @@ static const TransitionStateFunc sTransitionTeamYell_Funcs[] =
     PatternWeave_CircularMask
 };
 
+static const TransitionStateFunc sTransitionHoopa_Funcs[] =
+{
+    TransitionHoopa_Init, // Name here
+    TransitionHoopa_SetGfx, // Name here
+    PatternWeave_Blend1,
+    PatternWeave_Blend2,
+    PatternWeave_FinishAppear,
+    PatternWeave_CircularMask
+};
+
 #define SQUARE_SIZE 4
 #define MARGIN_SIZE 1 // Squares do not fit evenly across the width, so there is a margin on either side.
 #define NUM_SQUARES_PER_ROW ((DISPLAY_WIDTH - (MARGIN_SIZE * 8 * 2)) / (SQUARE_SIZE * 8))
@@ -2052,7 +2069,7 @@ static bool8 PatternWeave_Blend2(struct Task *task)
 
 static bool8 PatternWeave_FinishAppear(struct Task *task)
 {
-    // PlaySE(SE_M_COMET_PUNCH); Optionally we can play a sound effect when the transition finishes forming up.
+    // PlaySE(SE_TRUCK_DOOR); Optionally we can play a sound effect when the transition finishes forming up.
     sTransitionData->VBlank_DMA = FALSE;
     task->tSinIndex += 8;
     task->tAmplitude -= 256;
@@ -2098,7 +2115,7 @@ static bool8 PatternWeave_CircularMask(struct Task *task)
     volatile int i; // Arbitrary pause before circle mask
     sTransitionData->VBlank_DMA = FALSE;
     if (task->tRadiusDelta < (4 << 8))
-        for(i = 0; i <= 200000; i++); // Arbitrary pause before circle mask
+        for(i = 0; i <= 90000; i++); // Arbitrary pause before circle mask
         task->tRadiusDelta += 128; // 256 is 1 unit of speed. Speed up every other frame (128 / 256)
     if (task->tRadius != 0)
     {
@@ -6213,6 +6230,47 @@ static bool8 TransitionTeamYell_SetGfx(struct Task *task) // Name here
 static void Task_TransitionTeamYell(u8 taskId) // Name here
 {
     while (sTransitionTeamYell_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
+}
+
+#undef tSinIndex
+#undef tAmplitude
+
+//-----------------------------------
+// B_TRANSITION_HOOPA
+//-----------------------------------
+
+#define tSinIndex  data[4]
+#define tAmplitude data[5]
+
+static bool8 TransitionHoopa_Init(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    InitPatternWeaveTransition(task);
+    GetBg0TilesDst(&tilemap, &tileset);
+    CpuFill16(0, tilemap, BG_SCREEN_SIZE);
+    LZ77UnCompVram(sTransitionHoopa_Tileset, tileset); // Name here
+    LoadPalette(sTransitionHoopa_Palette, BG_PLTT_ID(15), sizeof(sTransitionHoopa_Palette)); // Name here x2
+
+    task->tState++;
+    return FALSE;
+}
+
+static bool8 TransitionHoopa_SetGfx(struct Task *task) // Name here
+{
+    u16 *tilemap, *tileset;
+
+    GetBg0TilesDst(&tilemap, &tileset);
+    LZ77UnCompVram(sTransitionHoopa_Tilemap, tilemap); // Name here
+    SetSinWave((s16*)gScanlineEffectRegBuffers[0], 0, task->tSinIndex, 132, task->tAmplitude, DISPLAY_HEIGHT);
+
+    task->tState++;
+    return TRUE;
+}
+
+static void Task_TransitionHoopa(u8 taskId) // Name here
+{
+    while (sTransitionHoopa_Funcs[gTasks[taskId].tState](&gTasks[taskId])); // Name here
 }
 
 #undef tSinIndex

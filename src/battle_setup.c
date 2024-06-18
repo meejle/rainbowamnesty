@@ -943,9 +943,8 @@ u8 GetTrainerBattleTransition(void)
         return B_TRANSITION_POKEMON_LEAGUE;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_22)
         return B_TRANSITION_POKEMON_LEAGUE_CHAMPION;
-        // Existing (non-custom) transitions I like
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_23)
-        return B_TRANSITION_BLACKHOLE_PULSATE;
+        return B_TRANSITION_HOOPA;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_24)
         return B_TRANSITION_RECTANGULAR_SPIRAL;
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TRANSITION_25)

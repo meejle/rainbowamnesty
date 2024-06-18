@@ -5021,6 +5021,8 @@ u16 GetBattleBGM(void)
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_TRANSITION_22:
             return MUS_VS_CHAMPION;
+        case TRAINER_CLASS_TRANSITION_23:
+            return MUS_VS_KYOGRE_GROUDON;
         default:
             return MUS_VS_TRAINER;
         }
